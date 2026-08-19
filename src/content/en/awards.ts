@@ -10,7 +10,6 @@ export const awards = [
   {
     year: "2009",
     title: "Commendation, Minister of Land, Transport and Maritime Affairs",
-    reason: "Labor-management relations merit",
   },
   {
     year: "2018",

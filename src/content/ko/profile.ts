@@ -25,16 +25,15 @@ export const profile = {
   ],
 };
 
-export const contactChannels = [
+export const contactChannels: {
+  label: string;
+  value: string;
+  href: string;
+  valueSecondary?: string;
+}[] = [
   {
     label: "일반 문의",
     value: "sirius4600@gmail.com",
     href: "mailto:sirius4600@gmail.com",
-  },
-  {
-    label: "소속",
-    value: "한국해양수산연수원",
-    href: "tel:+82-51-620-5800",
-    valueSecondary: "051-620-5800",
   },
 ];

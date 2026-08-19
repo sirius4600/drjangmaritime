@@ -15,9 +15,11 @@ export function ImpactSection({ locale }: { locale: Locale }) {
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
               {ui.impact.heading}
             </h2>
-            <p className="mt-4 max-w-[40ch] text-[14px] leading-relaxed text-ink-soft">
-              {ui.impact.subtext}
-            </p>
+            {ui.impact.subtext && (
+              <p className="mt-4 max-w-[40ch] text-[14px] leading-relaxed text-ink-soft">
+                {ui.impact.subtext}
+              </p>
+            )}
 
             <ol className="mt-10 space-y-8 border-l border-line/70 pl-6">
               {impactTimeline.map((entry) => (

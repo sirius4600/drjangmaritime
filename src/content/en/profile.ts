@@ -30,16 +30,15 @@ export const profile = {
   ],
 };
 
-export const contactChannels = [
+export const contactChannels: {
+  label: string;
+  value: string;
+  href: string;
+  valueSecondary?: string;
+}[] = [
   {
     label: "General inquiries",
     value: "sirius4600@gmail.com",
     href: "mailto:sirius4600@gmail.com",
-  },
-  {
-    label: "Office",
-    value: "Korea Institute of Maritime and Fisheries Technology",
-    href: "tel:+82-51-620-5800",
-    valueSecondary: "+82-51-620-5800",
   },
 ];

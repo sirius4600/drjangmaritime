@@ -123,7 +123,7 @@ const ko: UiDictionary = {
   },
   impact: {
     heading: "최근 활동",
-    subtext: "진행 중인 연구와 국제표준 활동에서 검증된, 날짜가 있는 기록입니다.",
+    subtext: "",
   },
   tools: {
     heading: "해양 위험을 다르게 봅니다",

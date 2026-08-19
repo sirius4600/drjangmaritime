@@ -9,7 +9,6 @@ export const awards = [
   {
     year: "2009",
     title: "국토해양부 장관 표창",
-    reason: "노사업무 유공",
   },
   {
     year: "2018",
