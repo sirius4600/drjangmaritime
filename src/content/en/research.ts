@@ -13,6 +13,17 @@ export interface ResearchProject {
 // record of 50+ studies. Full list available on request.
 export const researchProjects: ResearchProject[] = [
   {
+    id: "safety-culture-program",
+    title:
+      "Research on Building a Safety Education Culture System for Shipping Companies and Workplaces",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Principal Researcher",
+    period: "2026",
+    status: "Ongoing",
+    theme: "Safety Systems",
+    flagship: true,
+  },
+  {
     id: "firefighting-mass",
     title:
       "Remote-Controllable Maritime Firefighting System Using Autonomous Ship Technology",

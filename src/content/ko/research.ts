@@ -2,6 +2,16 @@ import type { ResearchProject } from "../en/research";
 
 export const researchProjects: ResearchProject[] = [
   {
+    id: "safety-culture-program",
+    title: "선사와 사업장 안전 교육문화 활성화 체계마련 연구",
+    funder: "해양수산부",
+    role: "Principal Researcher",
+    period: "2026",
+    status: "Ongoing",
+    theme: "Safety Systems",
+    flagship: true,
+  },
+  {
     id: "firefighting-mass",
     title: "자율운항 선박 기술을 적용한 원격제어가 가능한 해상 소방 시스템 개발",
     funder: "KIET",
