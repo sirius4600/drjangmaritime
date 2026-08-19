@@ -217,7 +217,7 @@ const en: UiDictionary = {
   },
   impact: {
     heading: "Recent milestones",
-    subtext: "Verified, dated activity from ongoing research and international standards work.",
+    subtext: "",
   },
   tools: {
     heading: "See maritime risk differently",
