@@ -8,13 +8,14 @@ export function Footer({ locale }: { locale: Locale }) {
   const { profile } = getContent(locale);
 
   const footerNav = [
-    { label: ui.nav.intelligence, href: "#intelligence" },
-    { label: ui.nav.research, href: "#research" },
-    { label: ui.nav.tools, href: "#tools" },
-    { label: ui.nav.oceanBridge, href: "#ocean-bridge" },
-    { label: ui.nav.publications, href: "#publications" },
-    { label: ui.nav.about, href: "#about" },
-    { label: ui.contact.heading, href: "#contact" },
+    { label: ui.nav.intelligence, href: `/${locale}#intelligence` },
+    { label: ui.nav.research, href: `/${locale}#research` },
+    { label: ui.nav.news, href: `/${locale}/news` },
+    { label: ui.nav.tools, href: `/${locale}#tools` },
+    { label: ui.nav.oceanBridge, href: `/${locale}#ocean-bridge` },
+    { label: ui.nav.publications, href: `/${locale}#publications` },
+    { label: ui.nav.about, href: `/${locale}#about` },
+    { label: ui.contact.heading, href: `/${locale}#contact` },
   ];
 
   return (

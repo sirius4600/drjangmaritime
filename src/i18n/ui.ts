@@ -8,6 +8,7 @@ export interface UiDictionary {
   nav: {
     intelligence: string;
     research: string;
+    news: string;
     tools: string;
     oceanBridge: string;
     publications: string;
@@ -30,6 +31,24 @@ export interface UiDictionary {
   impact: {
     heading: string;
     subtext: string;
+  };
+  news: {
+    heading: string;
+    body: string;
+    readMore: string;
+    viewAll: string;
+    filterAll: string;
+    pagination: { prev: string; next: string };
+    categories: {
+      imo: string;
+      iala: string;
+      safety: string;
+      mass: string;
+      cyber: string;
+      green: string;
+      enav: string;
+      seafarer: string;
+    };
   };
   tools: {
     heading: string;
@@ -88,6 +107,7 @@ const ko: UiDictionary = {
   nav: {
     intelligence: "Maritime Intelligence",
     research: "연구",
+    news: "글로벌 동향",
     tools: "도구·데이터",
     oceanBridge: "Ocean Bridge",
     publications: "저서·논문",
@@ -124,6 +144,24 @@ const ko: UiDictionary = {
   impact: {
     heading: "최근 활동",
     subtext: "",
+  },
+  news: {
+    heading: "글로벌 해양 동향",
+    body: "IMO, IALA를 비롯한 국제기구와 업계의 최신 소식을 해양안전, 자율운항선박, 사이버보안, 친환경선박, e-Navigation 분야 중심으로 선별해 정리합니다. 각 카드는 원문 소스로 연결됩니다.",
+    readMore: "원문 보기",
+    viewAll: "전체 동향 보기",
+    filterAll: "전체",
+    pagination: { prev: "이전", next: "다음" },
+    categories: {
+      imo: "IMO",
+      iala: "IALA",
+      safety: "해양안전",
+      mass: "자율운항선박",
+      cyber: "사이버보안",
+      green: "친환경선박",
+      enav: "e-Navigation",
+      seafarer: "선원",
+    },
   },
   tools: {
     heading: "해양 위험을 다르게 봅니다",
@@ -182,6 +220,7 @@ const en: UiDictionary = {
   nav: {
     intelligence: "Maritime Intelligence",
     research: "Research",
+    news: "Global Trends",
     tools: "Tools & Data",
     oceanBridge: "Ocean Bridge",
     publications: "Publications",
@@ -218,6 +257,24 @@ const en: UiDictionary = {
   impact: {
     heading: "Recent milestones",
     subtext: "",
+  },
+  news: {
+    heading: "Global Maritime Trends",
+    body: "Curated updates from IMO, IALA and the wider industry, spanning maritime safety, autonomous ships, cybersecurity, green shipping and e-Navigation. Each card links to its primary source.",
+    readMore: "Read source",
+    viewAll: "View all trends",
+    filterAll: "All",
+    pagination: { prev: "Previous", next: "Next" },
+    categories: {
+      imo: "IMO",
+      iala: "IALA",
+      safety: "Maritime Safety",
+      mass: "Autonomous Ships",
+      cyber: "Cybersecurity",
+      green: "Green Shipping",
+      enav: "e-Navigation",
+      seafarer: "Seafarers",
+    },
   },
   tools: {
     heading: "See maritime risk differently",

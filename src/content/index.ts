@@ -26,6 +26,9 @@ import { awards as awardsKo, proofStats as proofStatsKo } from "./ko/awards";
 import { impactTimeline as impactTimelineEn, impactPillars as impactPillarsEn } from "./en/impact";
 import { impactTimeline as impactTimelineKo, impactPillars as impactPillarsKo } from "./ko/impact";
 
+import { newsItems as newsItemsEn } from "./en/news";
+import { newsItems as newsItemsKo } from "./ko/news";
+
 import {
   expertiseAreas as expertiseAreasEn,
   toolsAndData as toolsAndDataEn,
@@ -57,6 +60,7 @@ const bundles = {
     proofStats: proofStatsEn,
     impactTimeline: impactTimelineEn,
     impactPillars: impactPillarsEn,
+    newsItems: newsItemsEn,
     expertiseAreas: expertiseAreasEn,
     toolsAndData: toolsAndDataEn,
     organizationServices: organizationServicesEn,
@@ -78,6 +82,7 @@ const bundles = {
     proofStats: proofStatsKo,
     impactTimeline: impactTimelineKo,
     impactPillars: impactPillarsKo,
+    newsItems: newsItemsKo,
     expertiseAreas: expertiseAreasKo,
     toolsAndData: toolsAndDataKo,
     organizationServices: organizationServicesKo,

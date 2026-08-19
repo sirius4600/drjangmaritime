@@ -6,6 +6,7 @@ import { ImpactSection } from "@/components/ImpactSection";
 import { ToolsAndData } from "@/components/ToolsAndData";
 import { DrUKModel } from "@/components/DrUKModel";
 import { Research } from "@/components/Research";
+import { News } from "@/components/News";
 import { Expertise } from "@/components/Expertise";
 import { OceanBridge } from "@/components/OceanBridge";
 import { ForOrganizations } from "@/components/ForOrganizations";
@@ -36,6 +37,7 @@ export default async function Home({
         <ToolsAndData locale={locale} />
         <DrUKModel locale={locale} />
         <Research locale={locale} />
+        <News locale={locale} />
         <Expertise locale={locale} />
         <OceanBridge locale={locale} />
         <ForOrganizations locale={locale} />

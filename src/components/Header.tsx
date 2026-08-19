@@ -6,12 +6,13 @@ import { getUiDictionary } from "@/i18n/ui";
 export function Header({ locale }: { locale: Locale }) {
   const ui = getUiDictionary(locale);
   const navItems = [
-    { label: ui.nav.intelligence, href: "#intelligence" },
-    { label: ui.nav.research, href: "#research" },
-    { label: ui.nav.tools, href: "#tools" },
-    { label: ui.nav.oceanBridge, href: "#ocean-bridge" },
-    { label: ui.nav.publications, href: "#publications" },
-    { label: ui.nav.about, href: "#about" },
+    { label: ui.nav.intelligence, href: `/${locale}#intelligence` },
+    { label: ui.nav.research, href: `/${locale}#research` },
+    { label: ui.nav.news, href: `/${locale}/news` },
+    { label: ui.nav.tools, href: `/${locale}#tools` },
+    { label: ui.nav.oceanBridge, href: `/${locale}#ocean-bridge` },
+    { label: ui.nav.publications, href: `/${locale}#publications` },
+    { label: ui.nav.about, href: `/${locale}#about` },
   ];
 
   return (
@@ -32,7 +33,7 @@ export function Header({ locale }: { locale: Locale }) {
         <div className="flex items-center gap-4 shrink-0">
           <LanguageSwitcher locale={locale} />
           <a
-            href="#contact"
+            href={`/${locale}#contact`}
             className="rounded-full bg-ink px-4 py-2 text-[13px] font-semibold text-paper transition-colors hover:bg-accent-strong whitespace-nowrap"
           >
             {ui.nav.workWithHim}
