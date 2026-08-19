@@ -15,7 +15,7 @@ export const profile = {
   imoPhoto: {
     src: "/images/imo-sg-2016-kualalumpur.jpg",
     caption:
-      "2016년 쿠알라룸푸르 국제항로표지협회(IALA) 국제 VTS 심포지엄에서 임기택 국제해사기구(IMO) 사무총장과 함께.",
+      "2016년 쿠알라룸푸르 국제항로표지기구(IALA) 국제 VTS 심포지엄에서 임기택 국제해사기구(IMO) 사무총장과 함께.",
   },
   bioShort:
     "30년 이상 바다와 강단을 오간 해양안전 교육자이자 연구자, IMO 정책 자문위원. 이제는 차세대 해양 위험성 평가를 위한 AI·데이터 시스템을 만들고 있습니다.",

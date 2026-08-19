@@ -32,10 +32,10 @@ export function TrustEvidence({ locale }: { locale: Locale }) {
             <Image
               src={profile.heroPhoto}
               alt={profile.nameEn}
-              width={112}
-              height={112}
-              sizes="56px"
-              className="h-14 w-14 shrink-0 rounded-full object-cover"
+              width={160}
+              height={160}
+              sizes="80px"
+              className="h-20 w-20 shrink-0 rounded-full object-cover object-top"
             />
             <div>
               <p className="text-[15px] font-semibold text-ink">
