@@ -1,7 +1,10 @@
-import { proofStats } from "@/content/awards";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
 import { Container } from "./Container";
 
-export function ProofStrip() {
+export function ProofStrip({ locale }: { locale: Locale }) {
+  const { proofStats } = getContent(locale);
+
   return (
     <section className="border-y border-line/70 py-10">
       <Container>

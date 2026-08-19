@@ -4,24 +4,26 @@ import {
   Gauge,
   MapTrifold,
 } from "@phosphor-icons/react/dist/ssr";
-import { toolsAndData } from "@/content/expertise";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
 const icons = [Gauge, MapTrifold, ChartBar, Compass];
 
-export function ToolsAndData() {
+export function ToolsAndData({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { toolsAndData } = getContent(locale);
+
   return (
     <section id="tools" className="py-20 md:py-28">
       <Container>
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-            See maritime risk differently
+            {ui.tools.heading}
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
-            The next stage of this platform: data and tools that turn
-            accident records, traffic patterns and environmental factors
-            into usable maritime risk intelligence. Shown here as concepts
-            and works in progress, not finished commercial systems.
+            {ui.tools.body}
           </p>
         </div>
 

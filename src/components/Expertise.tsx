@@ -1,12 +1,17 @@
-import { expertiseAreas } from "@/content/expertise";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
-export function Expertise() {
+export function Expertise({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { expertiseAreas } = getContent(locale);
+
   return (
     <section className="py-20 md:py-28">
       <Container>
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-          Areas of expertise
+          {ui.expertise.heading}
         </h2>
 
         <div className="mt-10 grid grid-cols-2 border-l border-t border-line/70 md:grid-cols-4">

@@ -1,29 +1,33 @@
-import { books, papers, patents } from "@/content/publications";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
-const groups = [
-  { label: "Books", items: books.map((b) => ({ title: b.title, meta: b.year })) },
-  {
-    label: "Papers",
-    items: papers.map((p) => ({ title: p.title, meta: `${p.venue}, ${p.year}` })),
-  },
-  {
-    label: "Patents",
-    items: patents.map((p) => ({ title: p.title, meta: `${p.status}, ${p.year}` })),
-  },
-];
+export function Publications({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { books, papers, patents } = getContent(locale);
 
-export function Publications() {
+  const groups = [
+    { label: ui.publications.groups.books, items: books.map((b) => ({ title: b.title, meta: b.year })) },
+    {
+      label: ui.publications.groups.papers,
+      items: papers.map((p) => ({ title: p.title, meta: `${p.venue}, ${p.year}` })),
+    },
+    {
+      label: ui.publications.groups.patents,
+      items: patents.map((p) => ({ title: p.title, meta: `${p.status}, ${p.year}` })),
+    },
+  ];
+
   return (
     <section id="publications" className="py-20 md:py-28">
       <Container>
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-            Knowledge you can use
+            {ui.publications.heading}
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
-            Books, papers and patents from three decades of maritime safety
-            and VTS research.
+            {ui.publications.body}
           </p>
         </div>
 

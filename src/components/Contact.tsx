@@ -1,20 +1,24 @@
 import { EnvelopeSimple, Phone } from "@phosphor-icons/react/dist/ssr";
-import { contactChannels, profile } from "@/content/profile";
-import { contactPathways } from "@/content/expertise";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
-export function Contact() {
+const channelIcons = [EnvelopeSimple, Phone];
+
+export function Contact({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { contactChannels, contactPathways, profile } = getContent(locale);
+
   return (
     <section id="contact" className="py-20 md:py-28">
       <Container className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
         <div>
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-            What can we build together?
+            {ui.contact.heading}
           </h2>
           <p className="mt-4 max-w-[46ch] text-[15px] leading-relaxed text-ink-soft">
-            Career advice, research collaboration, a project, a speaker for
-            your event, or something else entirely. Start with whichever
-            fits.
+            {ui.contact.body}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2.5">
@@ -32,36 +36,35 @@ export function Contact() {
 
         <div className="rounded-2xl bg-navy p-8">
           <p className="text-[13px] font-semibold uppercase tracking-[0.14em] text-accent-strong">
-            Direct contact
+            {ui.contact.directContact}
           </p>
           <div className="mt-6 space-y-5">
-            {contactChannels.map((channel) => (
-              <div key={channel.label} className="flex items-start gap-3">
-                {channel.label === "General inquiries" ? (
-                  <EnvelopeSimple size={18} weight="light" className="mt-0.5 shrink-0 text-accent-strong" />
-                ) : (
-                  <Phone size={18} weight="light" className="mt-0.5 shrink-0 text-accent-strong" />
-                )}
-                <div>
-                  <p className="text-[12px] text-ink-soft-on-navy">{channel.label}</p>
-                  <p className="text-[14px] font-medium text-paper-on-navy">
-                    {channel.value}
-                  </p>
-                  {channel.valueSecondary && (
-                    <p className="text-[13px] text-ink-soft-on-navy">
-                      {channel.valueSecondary}
+            {contactChannels.map((channel, i) => {
+              const Icon = channelIcons[i];
+              return (
+                <div key={channel.label} className="flex items-start gap-3">
+                  <Icon size={18} weight="light" className="mt-0.5 shrink-0 text-accent-strong" />
+                  <div>
+                    <p className="text-[12px] text-ink-soft-on-navy">{channel.label}</p>
+                    <p className="text-[14px] font-medium text-paper-on-navy">
+                      {channel.value}
                     </p>
-                  )}
+                    {channel.valueSecondary && (
+                      <p className="text-[13px] text-ink-soft-on-navy">
+                        {channel.valueSecondary}
+                      </p>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           <a
             href={`mailto:${profile.email}`}
             className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-accent-strong px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-accent"
           >
-            Email Dr. Jang
+            {ui.contact.emailCta}
           </a>
         </div>
       </Container>

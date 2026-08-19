@@ -6,21 +6,26 @@ import {
   ShieldCheck,
   TestTube,
 } from "@phosphor-icons/react/dist/ssr";
-import { organizationServices } from "@/content/expertise";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
 const icons = [TestTube, ShieldCheck, Robot, ChartBar, GraduationCap, Globe];
 
-export function ForOrganizations() {
+export function ForOrganizations({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { organizationServices } = getContent(locale);
+
   return (
     <section className="py-20 md:py-28">
       <Container>
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-            Have a maritime challenge?
+            {ui.organizations.heading}
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
-            Research. Safety. AI. Data. Training. International cooperation.
+            {ui.organizations.subtext}
           </p>
         </div>
 
@@ -48,7 +53,7 @@ export function ForOrganizations() {
             href="#contact"
             className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-accent-strong"
           >
-            Work with Dr. Jang
+            {ui.organizations.cta}
           </a>
         </div>
       </Container>

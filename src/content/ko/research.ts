@@ -1,0 +1,130 @@
+import type { ResearchProject } from "../en/research";
+
+export const researchProjects: ResearchProject[] = [
+  {
+    id: "firefighting-mass",
+    title: "자율운항 선박 기술을 적용한 원격제어가 가능한 해상 소방 시스템 개발",
+    funder: "KIET",
+    role: "Principal Investigator",
+    period: "2023 - 2026",
+    status: "Ongoing",
+    theme: "MASS & AI",
+    flagship: true,
+  },
+  {
+    id: "mass-phase2",
+    title: "자율운항선박 기술개발연구 2단계 (해운 7세부)",
+    funder: "KIMST-KMI",
+    role: "Principal Investigator",
+    period: "2022 - 2025",
+    status: "Ongoing",
+    theme: "MASS & AI",
+    flagship: true,
+  },
+  {
+    id: "vts-cloud-platform",
+    title: "클라우드 기반 차세대 VTS 통합 플랫폼 개발",
+    funder: "KIMST",
+    role: "Co-Investigator",
+    period: "2021 - 2023",
+    status: "Completed",
+    theme: "VTS",
+    flagship: true,
+  },
+  {
+    id: "vts-english-assessment",
+    title: "선박교통관제사 관제영어능력 평가 연구",
+    funder: "해양경찰청",
+    role: "Principal Investigator",
+    period: "2020",
+    status: "Completed",
+    theme: "VTS",
+  },
+  {
+    id: "mass-ai-navigation",
+    title: "자율운항선박을 위한 운항관제 인공지능 시스템원천기술개발",
+    funder: "KEIT",
+    role: "Principal Investigator",
+    period: "2017 - 2019",
+    status: "Completed",
+    theme: "MASS & AI",
+    flagship: true,
+  },
+  {
+    id: "safety-index",
+    title: "선제적, 정량적 해사안전지수개발 기획연구",
+    funder: "KIMST",
+    role: "Principal Investigator",
+    period: "2017",
+    status: "Completed",
+    theme: "Safety Systems",
+  },
+  {
+    id: "imo-safety-management",
+    title: "IMO 차세대 해양안전 종합관리 체계 기술개발 연구",
+    funder: "KIMST",
+    role: "Principal Investigator",
+    period: "2016 - 2020",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "accident-prevention",
+    title: "해양안전사고 예방시스템 기반연구",
+    funder: "KIMST",
+    role: "Principal Investigator",
+    period: "2015 - 2019",
+    status: "Completed",
+    theme: "Safety Systems",
+  },
+  {
+    id: "vts-job-analysis",
+    title: "해상교통관제사 직무분석 및 인적요인 관리방안 연구",
+    funder: "국민안전처",
+    role: "Principal Investigator",
+    period: "2015",
+    status: "Completed",
+    theme: "VTS",
+  },
+  {
+    id: "vts-white-paper",
+    title: "선박교통관제(VTS) 백서 발간 연구",
+    funder: "해양수산부",
+    role: "Principal Investigator",
+    period: "2012",
+    status: "Completed",
+    theme: "VTS",
+    flagship: true,
+  },
+  {
+    id: "vts-qualification-system",
+    title: "해상교통관제사 자격제도 및 평가제도 도입연구",
+    funder: "해양수산부",
+    role: "Principal Investigator",
+    period: "2010",
+    status: "Completed",
+    theme: "VTS",
+  },
+];
+
+export const researchThemes = [
+  {
+    name: "자율운항선박 · MASS",
+    description:
+      "자율운항선박의 AI 항법제어, 충돌회피 능력평가, Human Element 연구.",
+  },
+  {
+    name: "VTS · 해양 AI",
+    description:
+      "관제사 직무역량, AI 기반 영어능력평가, 차세대 해상교통관제 플랫폼 연구.",
+  },
+  {
+    name: "해양안전시스템",
+    description:
+      "국가 사고·교통 데이터를 기반으로 한 사고예방체계와 정량적 안전지수 개발.",
+  },
+  {
+    name: "IMO · 해사정책",
+    description: "신기술 도입에 대비한 규제 대응방안과 국제협력 연구.",
+  },
+];

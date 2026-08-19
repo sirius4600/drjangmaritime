@@ -1,18 +1,22 @@
-import { impactPillars, impactTimeline } from "@/content/impact";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
-export function ImpactSection() {
+export function ImpactSection({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { impactTimeline, impactPillars } = getContent(locale);
+
   return (
     <section className="py-20 md:py-28">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
             <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-              Recent milestones
+              {ui.impact.heading}
             </h2>
             <p className="mt-4 max-w-[40ch] text-[14px] leading-relaxed text-ink-soft">
-              Verified, dated activity from ongoing research and
-              international standards work.
+              {ui.impact.subtext}
             </p>
 
             <ol className="mt-10 space-y-8 border-l border-line/70 pl-6">

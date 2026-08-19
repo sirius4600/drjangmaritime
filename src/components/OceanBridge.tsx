@@ -1,18 +1,21 @@
-import { oceanBridgeTracks } from "@/content/expertise";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
-export function OceanBridge() {
+export function OceanBridge({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { oceanBridgeTracks } = getContent(locale);
+
   return (
     <section id="ocean-bridge" className="bg-paper-raised py-20 md:py-28">
       <Container>
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-            Helping maritime people navigate their next move
+            {ui.oceanBridge.heading}
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
-            Maritime careers do not end when a person leaves the ship. They
-            evolve. Ocean Bridge is a knowledge and mentoring track for that
-            transition.
+            {ui.oceanBridge.body}
           </p>
         </div>
 

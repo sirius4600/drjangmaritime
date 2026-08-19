@@ -1,6 +1,6 @@
 export interface ImpactEntry {
   date: string;
-  category: "VTS" | "MASS & AI" | "Education" | "International";
+  category: string;
   title: string;
   detail: string;
 }

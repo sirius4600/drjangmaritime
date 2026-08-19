@@ -1,35 +1,38 @@
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Container } from "./Container";
 import { MaritimeIntelligenceVisual } from "./MaritimeIntelligenceVisual";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 
-export function Hero() {
+export function Hero({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+
   return (
     <section id="top" className="pt-14 md:pt-20 pb-16 md:pb-24">
       <Container className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-accent-strong">
-            Maritime Safety · AI Research
+            {ui.hero.eyebrow}
           </p>
           <h1 className="mt-4 text-4xl md:text-5xl font-semibold tracking-tight leading-[1.1] text-ink">
-            Understanding the maritime world. Building its future.
+            {ui.hero.headline}
           </h1>
           <p className="mt-6 max-w-[46ch] text-base md:text-lg leading-relaxed text-ink-soft">
-            Three decades of maritime safety, VTS and IMO experience, now
-            building the AI and data tools for maritime risk intelligence.
+            {ui.hero.subtext}
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
               href="#intelligence"
               className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-accent-strong"
             >
-              Explore Maritime Intelligence
+              {ui.hero.primaryCta}
               <ArrowRight size={16} weight="bold" />
             </a>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-semibold text-ink transition-colors hover:border-accent-strong hover:text-accent-strong"
             >
-              Work with Dr. Jang
+              {ui.hero.secondaryCta}
             </a>
           </div>
         </div>

@@ -1,30 +1,22 @@
-import { researchProjects, researchThemes } from "@/content/research";
+import { getContent } from "@/content";
+import type { Locale } from "@/i18n/config";
+import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 
-const flagshipTitles = [
-  "Remote-Controllable Maritime Firefighting System Using Autonomous Ship Technology",
-  "MASS Technology Development Research, Phase 2 (Shipping Sector 7)",
-  "Cloud-Based Next-Generation VTS Integration Platform",
-  "Source Technology Development of AI System for Autonomous Ship Navigation Control",
-  "VTS White Paper: Twenty Years of Vessel Traffic Services in Korea",
-];
-
-export function Research() {
-  const flagship = researchProjects.filter((p) =>
-    flagshipTitles.includes(p.title)
-  );
+export function Research({ locale }: { locale: Locale }) {
+  const ui = getUiDictionary(locale);
+  const { researchProjects, researchThemes } = getContent(locale);
+  const flagship = researchProjects.filter((p) => p.flagship);
 
   return (
     <section id="research" className="py-20 md:py-28">
       <Container>
         <div className="max-w-2xl">
           <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
-            Researching the future of maritime operations
+            {ui.research.heading}
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-soft">
-            Fifty-plus national R&amp;D and government-commissioned studies
-            since 2010, spanning autonomous ships, VTS and maritime safety
-            systems.
+            {ui.research.body}
           </p>
         </div>
 
@@ -44,7 +36,7 @@ export function Research() {
         <div className="mt-14 border-t border-line/70">
           {flagship.map((project) => (
             <div
-              key={project.title}
+              key={project.id}
               className="grid grid-cols-1 gap-2 border-b border-line/70 py-5 md:grid-cols-[1fr_auto] md:items-center md:gap-6"
             >
               <div>
@@ -66,7 +58,9 @@ export function Research() {
                       : "border border-line text-ink-soft"
                   }`}
                 >
-                  {project.status}
+                  {project.status === "Ongoing"
+                    ? ui.research.status.ongoing
+                    : ui.research.status.completed}
                 </span>
               </div>
             </div>
