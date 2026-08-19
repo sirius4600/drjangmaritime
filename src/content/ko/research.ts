@@ -5,7 +5,7 @@ export const researchProjects: ResearchProject[] = [
     id: "safety-culture-program",
     title: "선사와 사업장 안전 교육문화 활성화 체계마련 연구",
     funder: "해양수산부",
-    role: "Principal Researcher",
+    role: "Co-Researcher",
     period: "2026",
     status: "Ongoing",
     theme: "Safety Systems",

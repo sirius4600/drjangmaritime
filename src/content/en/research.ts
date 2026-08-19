@@ -17,7 +17,7 @@ export const researchProjects: ResearchProject[] = [
     title:
       "Research on Building a Safety Education Culture System for Shipping Companies and Workplaces",
     funder: "Ministry of Oceans and Fisheries",
-    role: "Principal Researcher",
+    role: "Co-Researcher",
     period: "2026",
     status: "Ongoing",
     theme: "Safety Systems",
