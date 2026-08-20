@@ -2,6 +2,13 @@ import type { ImpactEntry } from "../en/impact";
 
 export const impactTimeline: ImpactEntry[] = [
   {
+    date: "2022 - 현재",
+    category: "국제협력",
+    title: "IMO·해수부 공동 아시아태평양 해기사 훈련프로그램(GOBT)",
+    detail:
+      "국제해사기구(IMO)와 해양수산부·부산광역시의 공동기술협력으로 아시아태평양 지역 해기사를 대상으로 한 'Global Onboard Training Programme'을 한국해양수산연수원(KIMFT)에서 2022년부터 매년 진행하고 있습니다.",
+  },
+  {
     date: "2025.12",
     category: "VTS",
     title: "IALA VTS 관제영어능력 평가지침 제정 주도",
@@ -28,6 +35,13 @@ export const impactTimeline: ImpactEntry[] = [
     title: "한국항해항만학회 부회장 취임",
     detail:
       "국내 대표 항해항만 연구 학회인 한국항해항만학회 부회장, 해양환경안전학회 편집위원(교육정책분과위원장)을 맡고 있습니다.",
+  },
+  {
+    date: "2017",
+    category: "미디어",
+    title: "직업소개 프로그램 '오늘의 직업' 출연 — 해상교통관제사 편",
+    detail:
+      "worktv의 직업체험·소개 프로그램 '오늘의 직업'에 출연해 해상교통관제사(VTS 관제사)라는 직업을 소개했습니다.",
   },
 ];
 

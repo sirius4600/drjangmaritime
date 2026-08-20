@@ -30,6 +30,8 @@ export const experience: ExperienceEntry[] = [
     period: "2006.01 - 2009.01",
     role: "전략기획팀장 · 기획혁신팀장",
     org: "한국해양수산연수원",
+    detail:
+      "한국해양수산연수원 본원을 부산 남구에서 영도구로 이전·신축하는 사업을 기획하고 주도적으로 추진했습니다.",
   },
   {
     period: "2001.06 - 현재",
@@ -104,6 +106,11 @@ export const currentAffiliations: AffiliationEntry[] = [
     role: "위원",
     org: "부산광역시 해양교육협의회",
     period: "2022.03 - 현재",
+  },
+  {
+    role: "위원",
+    org: "해양수산안전 교육자문단, 해양수산부",
+    period: "2022.12 - 현재",
   },
   {
     role: "평가위원, IRIS 범부처 국가연구개발과제",

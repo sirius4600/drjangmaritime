@@ -10,6 +10,13 @@ export interface ImpactEntry {
 // until an editorial pipeline exists (see content/README).
 export const impactTimeline: ImpactEntry[] = [
   {
+    date: "2022 - Present",
+    category: "International Cooperation",
+    title: "IMO–Korea Global Onboard Training Programme for Asia-Pacific Officers",
+    detail:
+      "Delivering the Global Onboard Training Programme annually at KIMFT since 2022 — a joint technical-cooperation initiative with IMO, Korea's Ministry of Oceans and Fisheries, and Busan Metropolitan City for Asia-Pacific maritime officers.",
+  },
+  {
     date: "2025.12",
     category: "VTS",
     title: "Led the IALA VTS English Communication Competency Testing Guideline",
@@ -36,6 +43,13 @@ export const impactTimeline: ImpactEntry[] = [
     title: "Elected Vice President, Korean Institute of Navigation and Port Research",
     detail:
       "Serves as Vice President of Korea's principal academic society for navigation and port research, and as editor (Chair, Education Policy Committee) of the Korean Society of Marine Environment & Safety.",
+  },
+  {
+    date: "2017",
+    category: "Media",
+    title: "Featured on the job-introduction program \"Today's Job\" — VTS Officer episode",
+    detail:
+      "Appeared on worktv's career-introduction series \"Today's Job\" to introduce the vessel traffic service (VTS) operator profession to the public.",
   },
 ];
 

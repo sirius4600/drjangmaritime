@@ -35,6 +35,8 @@ export const experience: ExperienceEntry[] = [
     period: "2006.01 - 2009.01",
     role: "Team Lead, Strategic Planning / Innovation Planning",
     org: "Korea Institute of Maritime and Fisheries Technology",
+    detail:
+      "Planned and led the project to relocate and rebuild KIMFT's main headquarters from Nam-gu to Yeongdo-gu, Busan.",
   },
   {
     period: "2001.06 - present",
@@ -116,6 +118,11 @@ export const currentAffiliations: AffiliationEntry[] = [
     role: "Committee Member",
     org: "Busan Metropolitan City Maritime Education Council",
     period: "2022.03 - present",
+  },
+  {
+    role: "Committee Member",
+    org: "Maritime Safety Education Advisory Group, Ministry of Oceans and Fisheries",
+    period: "2022.12 - present",
   },
   {
     role: "Evaluation Committee Member, IRIS Cross-Ministry National R&D Programs",
