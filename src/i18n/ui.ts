@@ -77,6 +77,13 @@ export interface UiDictionary {
     subtext: string;
     cta: string;
   };
+  experience: {
+    heading: string;
+    body: string;
+    careerLabel: string;
+    educationLabel: string;
+    affiliationsLabel: string;
+  };
   trustEvidence: {
     heading: string;
     advisorLine: string;
@@ -190,6 +197,13 @@ const ko: UiDictionary = {
     subtext: "연구, 안전, AI, 데이터, 교육, 국제협력.",
     cta: "협업 제안하기",
   },
+  experience: {
+    heading: "30년의 경력",
+    body: "한국해양수산연수원에서의 경력과 학력, 현재 맡고 있는 정부·학회 위원 활동입니다.",
+    careerLabel: "경력",
+    educationLabel: "학력",
+    affiliationsLabel: "현재 위원·자문 활동",
+  },
   trustEvidence: {
     heading: "형용사가 아니라 증거를 보여드립니다",
     advisorLine: "2005년부터 IMO 자문위원, 2011년부터 IALA 자문위원으로 활동하고 있습니다.",
@@ -302,6 +316,13 @@ const en: UiDictionary = {
     heading: "Have a maritime challenge?",
     subtext: "Research. Safety. AI. Data. Training. International cooperation.",
     cta: "Work with Dr. Jang",
+  },
+  experience: {
+    heading: "Three Decades of Experience",
+    body: "Career history and education at KIMFT, and current government and academic committee roles.",
+    careerLabel: "Career",
+    educationLabel: "Education",
+    affiliationsLabel: "Current Committee & Advisory Roles",
   },
   trustEvidence: {
     heading: "Show evidence, not adjectives",

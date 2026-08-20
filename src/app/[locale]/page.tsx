@@ -10,6 +10,7 @@ import { News } from "@/components/News";
 import { Expertise } from "@/components/Expertise";
 import { OceanBridge } from "@/components/OceanBridge";
 import { ForOrganizations } from "@/components/ForOrganizations";
+import { Experience } from "@/components/Experience";
 import { TrustEvidence } from "@/components/TrustEvidence";
 import { Publications } from "@/components/Publications";
 import { Contact } from "@/components/Contact";
@@ -41,6 +42,7 @@ export default async function Home({
         <Expertise locale={locale} />
         <OceanBridge locale={locale} />
         <ForOrganizations locale={locale} />
+        <Experience locale={locale} />
         <TrustEvidence locale={locale} />
         <Publications locale={locale} />
         <Contact locale={locale} />
