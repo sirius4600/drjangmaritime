@@ -31,6 +31,7 @@ jobs:
         run: npm ci
 
       - name: Research today's maritime trends
+        id: research
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ANTHROPIC_MODEL: ${{ vars.ANTHROPIC_MODEL }}
@@ -46,16 +47,19 @@ jobs:
           fi
 
       - name: Type-check and lint
+        id: lint
         if: steps.changes.outputs.changed == 'true'
         run: |
           npm run lint
           npx tsc --noEmit
 
       - name: Build (Cloudflare/OpenNext)
+        id: build
         if: steps.changes.outputs.changed == 'true'
         run: npm run cf:build
 
       - name: Commit and push new trend cards
+        id: commit
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "drjangmaritime-bot"
@@ -65,8 +69,80 @@ jobs:
           git push
 
       - name: Deploy to Cloudflare Workers
+        id: deploy
         if: steps.changes.outputs.changed == 'true'
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: npm run cf:deploy
+
+      - name: Build email summary
+        id: summary
+        if: always()
+        env:
+          RESEARCH_OUTCOME: ${{ steps.research.outcome }}
+          LINT_OUTCOME: ${{ steps.lint.outcome }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          COMMIT_OUTCOME: ${{ steps.commit.outcome }}
+          DEPLOY_OUTCOME: ${{ steps.deploy.outcome }}
+          CHANGED: ${{ steps.changes.outputs.changed }}
+          ITEM_COUNT: ${{ steps.research.outputs.item_count }}
+          ITEM_TITLES: ${{ steps.research.outputs.item_titles }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        # Values above are passed as env vars (not interpolated into the script text) so that
+        # LLM-sourced article titles can never be parsed as shell syntax. Keep it that way —
+        # do NOT switch any of this back to inline ${{ }} substitution inside `run:`.
+        run: |
+          if [ "$RESEARCH_OUTCOME" = "failure" ]; then
+            SUBJECT="[Dr.Jang Maritime] Daily update FAILED - $(date -u +%Y-%m-%d)"
+            BODY="The daily maritime-trends research step failed today, so nothing was checked for new content.
+
+Run log: $RUN_URL"
+          elif [ "$LINT_OUTCOME" = "failure" ] || [ "$BUILD_OUTCOME" = "failure" ]; then
+            SUBJECT="[Dr.Jang Maritime] New items found but lint/build FAILED - $(date -u +%Y-%m-%d)"
+            BODY="New items were researched today, but the type-check/lint or build step failed, so nothing was committed or deployed.
+
+$ITEM_TITLES
+
+Run log: $RUN_URL"
+          elif [ "$COMMIT_OUTCOME" = "failure" ] || [ "$DEPLOY_OUTCOME" = "failure" ]; then
+            SUBJECT="[Dr.Jang Maritime] New items found but commit/deploy FAILED - $(date -u +%Y-%m-%d)"
+            BODY="New items were researched and passed lint/build today, but committing or deploying failed.
+
+$ITEM_TITLES
+
+Run log: $RUN_URL"
+          elif [ "$CHANGED" = "true" ]; then
+            SUBJECT="[Dr.Jang Maritime] ${ITEM_COUNT} new item(s) published - $(date -u +%Y-%m-%d)"
+            BODY="New maritime-trend items were found and published to drjangmaritime.com today:
+
+$ITEM_TITLES
+
+Site: https://drjangmaritime.com
+Run log: $RUN_URL"
+          else
+            SUBJECT="[Dr.Jang Maritime] No new maritime news today - $(date -u +%Y-%m-%d)"
+            BODY="The daily research job ran successfully but found nothing genuinely new and well-sourced to publish today. No action needed.
+
+Run log: $RUN_URL"
+          fi
+
+          echo "subject=$SUBJECT" >> "$GITHUB_OUTPUT"
+          {
+            echo "body<<EOF_BODY_DELIM"
+            echo "$BODY"
+            echo "EOF_BODY_DELIM"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Email daily result
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.GMAIL_USERNAME }}
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: ${{ steps.summary.outputs.subject }}
+          to: sirius4600@gmail.com
+          from: Dr. Jang Maritime Bot <${{ secrets.GMAIL_USERNAME }}>
+          body: ${{ steps.summary.outputs.body }}

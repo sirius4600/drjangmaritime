@@ -29,15 +29,57 @@ const EN_PATH = path.join(ROOT, "src/content/en/news.ts");
 const KO_PATH = path.join(ROOT, "src/content/ko/news.ts");
 
 const CATEGORIES = {
-  imo: "IMO (International Maritime Organization) policy/regulatory news",
-  iala: "IALA (aids to navigation, VTS, e-Navigation standards body) news",
-  safety: "General maritime safety regulation, incidents, SOLAS/MSC decisions, inspections",
-  mass: "Maritime Autonomous Surface Ships / autonomous shipping",
-  cyber: "Maritime cybersecurity",
-  green: "Green shipping, decarbonization, alternative fuels",
-  enav: "e-Navigation, VDES, digital navigation infrastructure",
-  seafarer: "Seafarer workforce, welfare, training, MLC, STCW",
+  imo: {
+    desc: "IMO (International Maritime Organization) policy/regulatory news",
+    sources: ["imo.org", "unctad.org"],
+  },
+  iala: {
+    desc: "IALA (aids to navigation, VTS, e-Navigation standards body) news",
+    sources: ["iala.int", "iala-aism.org"],
+  },
+  safety: {
+    desc: "General maritime safety regulation, incidents, SOLAS/MSC decisions, inspections",
+    sources: [
+      "safety4sea.com",
+      "gcaptain.com",
+      "lloydslist.com",
+      "gov.uk/maib (UK Marine Accident Investigation Branch reports)",
+      "emsa.europa.eu (EU Maritime Safety Agency)",
+      "uscg.mil",
+    ],
+  },
+  mass: {
+    desc: "Maritime Autonomous Surface Ships / autonomous shipping",
+    sources: ["oneseaecosystem.net", "marinelink.com", "dnv.com", "rivieramm.com"],
+  },
+  cyber: {
+    desc: "Maritime cybersecurity",
+    sources: ["safety4sea.com", "dnv.com", "imo.org"],
+  },
+  green: {
+    desc: "Green shipping, decarbonization, alternative fuels",
+    sources: ["globalmaritimeforum.org", "spglobal.com", "tradewindsnews.com", "splash247.com"],
+  },
+  enav: {
+    desc: "e-Navigation, VDES, digital navigation infrastructure",
+    sources: ["vdes-alliance.org", "iala.int", "iho.int"],
+  },
+  seafarer: {
+    desc: "Seafarer workforce, welfare, training, MLC, STCW",
+    sources: ["itfseafarers.org", "nautilusint.org", "missiontoseafarers.org", "ics-shipping.org"],
+  },
 };
+
+function setOutput(name, value) {
+  const outputPath = process.env.GITHUB_OUTPUT;
+  if (!outputPath) return;
+  if (value.includes("\n")) {
+    const delimiter = `EOF_${Math.random().toString(36).slice(2)}`;
+    fs.appendFileSync(outputPath, `${name}<<${delimiter}\n${value}\n${delimiter}\n`);
+  } else {
+    fs.appendFileSync(outputPath, `${name}=${value}\n`);
+  }
+}
 
 function readExisting(filePath) {
   const text = fs.readFileSync(filePath, "utf8");
@@ -65,15 +107,15 @@ function kstDateString() {
 
 function buildPrompt({ existingIds, existingUrls, dateStr }) {
   const categoryList = Object.entries(CATEGORIES)
-    .map(([key, desc]) => `- "${key}": ${desc}`)
+    .map(([key, { desc, sources }]) => `- "${key}": ${desc}\n  Good sources for this category: ${sources.join(", ")}`)
     .join("\n");
 
   return `You are researching real, current maritime-industry news for a curated "Global Maritime Trends" card feed on a professional maritime-safety researcher's homepage (drjangmaritime.com). Use the web_search tool to find genuine, verifiable, recent (roughly last 1-2 weeks) developments.
 
-Categories (use exactly these keys):
+Categories (use exactly these keys), each with the sources best suited to it — search those first, but comparable reputable maritime/trade press is fine too:
 ${categoryList}
 
-Good sources: imo.org, iala.int, dnv.com, gcaptain.com, safety4sea.com, bimco.org, ics-shipping.org, lloydslist.com, splash247.com, tradewindsnews.com, P&I club sites (westpandi.com, britanniapandi.com, etc.), vdes-alliance.org, and comparable reputable maritime/trade press.
+General reputable maritime/trade press usable for any category: maritime-executive.com, seatrade-maritime.com, rivieramm.com, hellenicshippingnews.com, bimco.org, tradewindsnews.com, splash247.com, lloydslist.com, and P&I club sites (westpandi.com, britanniapandi.com, etc.). Prefer official/primary sources (regulators, standards bodies, accident-investigation agencies) over secondary press when both cover the same story.
 
 Hard rules:
 - Never invent a fact, figure, date, or quote. Every claim in an item must trace back to a page you actually fetched via web_search this run.
@@ -176,16 +218,18 @@ async function main() {
 
   if (newItems.length === 0) {
     console.log("No new maritime-trend items today — nothing to publish.");
+    setOutput("item_count", "0");
+    setOutput("item_titles", "");
     return;
   }
 
   insertItems(EN_PATH, newItems.map((it) => serializeEntry(it, "en")).join(""));
   insertItems(KO_PATH, newItems.map((it) => serializeEntry(it, "ko")).join(""));
 
-  console.log(
-    `Added ${newItems.length} item(s):\n` +
-      newItems.map((it) => `- [${it.category}] ${it.en.title}`).join("\n"),
-  );
+  const summary = newItems.map((it) => `- [${it.category}] ${it.en.title}\n  ${it.sourceUrl}`).join("\n");
+  console.log(`Added ${newItems.length} item(s):\n${summary}`);
+  setOutput("item_count", String(newItems.length));
+  setOutput("item_titles", summary);
 }
 
 main().catch((err) => {
