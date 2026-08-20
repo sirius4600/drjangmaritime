@@ -3,6 +3,7 @@ export interface ImpactEntry {
   category: string;
   title: string;
   detail: string;
+  images?: string[];
 }
 
 // Dated, verifiable milestones drawn directly from the CV and ministry
@@ -15,6 +16,11 @@ export const impactTimeline: ImpactEntry[] = [
     title: "IMO–Korea Global Onboard Training Programme for Asia-Pacific Officers",
     detail:
       "Delivering the Global Onboard Training Programme annually at KIMFT since 2022 — a joint technical-cooperation initiative with IMO, Korea's Ministry of Oceans and Fisheries, and Busan Metropolitan City for Asia-Pacific maritime officers.",
+    images: [
+      "/images/evidence/gobt-group-2022.jpg",
+      "/images/evidence/gobt-certificate-2022.jpg",
+      "/images/evidence/gobt-plaque-2022.jpg",
+    ],
   },
   {
     date: "2025.12",
@@ -50,6 +56,7 @@ export const impactTimeline: ImpactEntry[] = [
     title: "Featured on the job-introduction program \"Today's Job\" — VTS Officer episode",
     detail:
       "Appeared on worktv's career-introduction series \"Today's Job\" to introduce the vessel traffic service (VTS) operator profession to the public.",
+    images: ["/images/evidence/worktv-broadcast-2017.jpg"],
   },
 ];
 

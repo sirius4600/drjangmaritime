@@ -32,6 +32,7 @@ export const experience: ExperienceEntry[] = [
     org: "한국해양수산연수원",
     detail:
       "한국해양수산연수원 본원을 부산 남구에서 영도구로 이전·신축하는 사업을 기획하고 주도적으로 추진했습니다.",
+    images: ["/images/evidence/kimft-opening-2011.jpg"],
   },
   {
     period: "2001.06 - 현재",
@@ -111,6 +112,10 @@ export const currentAffiliations: AffiliationEntry[] = [
     role: "위원",
     org: "해양수산안전 교육자문단, 해양수산부",
     period: "2022.12 - 현재",
+    images: [
+      "/images/evidence/mof-advisory-appointment-2022-01.jpg",
+      "/images/evidence/mof-advisory-appointment-2022-02.jpg",
+    ],
   },
   {
     role: "평가위원, IRIS 범부처 국가연구개발과제",

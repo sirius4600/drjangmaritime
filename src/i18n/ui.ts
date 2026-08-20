@@ -84,6 +84,10 @@ export interface UiDictionary {
     educationLabel: string;
     affiliationsLabel: string;
   };
+  evidencePhotos: {
+    viewLabel: string;
+    closeLabel: string;
+  };
   trustEvidence: {
     heading: string;
     advisorLine: string;
@@ -204,6 +208,10 @@ const ko: UiDictionary = {
     educationLabel: "학력",
     affiliationsLabel: "현재 위원·자문 활동",
   },
+  evidencePhotos: {
+    viewLabel: "사진 확대",
+    closeLabel: "닫기",
+  },
   trustEvidence: {
     heading: "형용사가 아니라 증거를 보여드립니다",
     advisorLine: "2005년부터 IMO 자문위원, 2011년부터 IALA 자문위원으로 활동하고 있습니다.",
@@ -323,6 +331,10 @@ const en: UiDictionary = {
     careerLabel: "Career",
     educationLabel: "Education",
     affiliationsLabel: "Current Committee & Advisory Roles",
+  },
+  evidencePhotos: {
+    viewLabel: "Enlarge photo",
+    closeLabel: "Close",
   },
   trustEvidence: {
     heading: "Show evidence, not adjectives",

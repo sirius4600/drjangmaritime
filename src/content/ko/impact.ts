@@ -7,6 +7,11 @@ export const impactTimeline: ImpactEntry[] = [
     title: "IMO·해수부 공동 아시아태평양 해기사 훈련프로그램(GOBT)",
     detail:
       "국제해사기구(IMO)와 해양수산부·부산광역시의 공동기술협력으로 아시아태평양 지역 해기사를 대상으로 한 'Global Onboard Training Programme'을 한국해양수산연수원(KIMFT)에서 2022년부터 매년 진행하고 있습니다.",
+    images: [
+      "/images/evidence/gobt-group-2022.jpg",
+      "/images/evidence/gobt-certificate-2022.jpg",
+      "/images/evidence/gobt-plaque-2022.jpg",
+    ],
   },
   {
     date: "2025.12",
@@ -42,6 +47,7 @@ export const impactTimeline: ImpactEntry[] = [
     title: "직업소개 프로그램 '오늘의 직업' 출연 — 해상교통관제사 편",
     detail:
       "worktv의 직업체험·소개 프로그램 '오늘의 직업'에 출연해 해상교통관제사(VTS 관제사)라는 직업을 소개했습니다.",
+    images: ["/images/evidence/worktv-broadcast-2017.jpg"],
   },
 ];
 

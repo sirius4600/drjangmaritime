@@ -2,6 +2,7 @@ import { getContent } from "@/content";
 import type { Locale } from "@/i18n/config";
 import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
+import { EvidencePhotos } from "./EvidencePhotos";
 
 export function ImpactSection({ locale }: { locale: Locale }) {
   const ui = getUiDictionary(locale);
@@ -34,6 +35,13 @@ export function ImpactSection({ locale }: { locale: Locale }) {
                   <p className="mt-1.5 text-[13.5px] leading-relaxed text-ink-soft">
                     {entry.detail}
                   </p>
+                  {entry.images && entry.images.length > 0 && (
+                    <EvidencePhotos
+                      images={entry.images}
+                      alt={entry.title}
+                      locale={locale}
+                    />
+                  )}
                 </li>
               ))}
             </ol>

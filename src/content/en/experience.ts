@@ -3,6 +3,7 @@ export interface ExperienceEntry {
   role: string;
   org: string;
   detail?: string;
+  images?: string[];
 }
 
 export const experience: ExperienceEntry[] = [
@@ -37,6 +38,7 @@ export const experience: ExperienceEntry[] = [
     org: "Korea Institute of Maritime and Fisheries Technology",
     detail:
       "Planned and led the project to relocate and rebuild KIMFT's main headquarters from Nam-gu to Yeongdo-gu, Busan.",
+    images: ["/images/evidence/kimft-opening-2011.jpg"],
   },
   {
     period: "2001.06 - present",
@@ -75,6 +77,7 @@ export interface AffiliationEntry {
   role: string;
   org: string;
   period: string;
+  images?: string[];
 }
 
 // Only roles explicitly marked "현재 / 현" (current) in the source CV.
@@ -123,6 +126,10 @@ export const currentAffiliations: AffiliationEntry[] = [
     role: "Committee Member",
     org: "Maritime Safety Education Advisory Group, Ministry of Oceans and Fisheries",
     period: "2022.12 - present",
+    images: [
+      "/images/evidence/mof-advisory-appointment-2022-01.jpg",
+      "/images/evidence/mof-advisory-appointment-2022-02.jpg",
+    ],
   },
   {
     role: "Evaluation Committee Member, IRIS Cross-Ministry National R&D Programs",
