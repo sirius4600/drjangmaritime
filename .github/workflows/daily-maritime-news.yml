@@ -95,36 +95,19 @@ jobs:
         run: |
           if [ "$RESEARCH_OUTCOME" = "failure" ]; then
             SUBJECT="[Dr.Jang Maritime] Daily update FAILED - $(date -u +%Y-%m-%d)"
-            BODY="The daily maritime-trends research step failed today, so nothing was checked for new content.
-
-Run log: $RUN_URL"
+            BODY=$(printf 'The daily maritime-trends research step failed today, so nothing was checked for new content.\n\nRun log: %s\n' "$RUN_URL")
           elif [ "$LINT_OUTCOME" = "failure" ] || [ "$BUILD_OUTCOME" = "failure" ]; then
             SUBJECT="[Dr.Jang Maritime] New items found but lint/build FAILED - $(date -u +%Y-%m-%d)"
-            BODY="New items were researched today, but the type-check/lint or build step failed, so nothing was committed or deployed.
-
-$ITEM_TITLES
-
-Run log: $RUN_URL"
+            BODY=$(printf 'New items were researched today, but the type-check/lint or build step failed, so nothing was committed or deployed.\n\n%s\n\nRun log: %s\n' "$ITEM_TITLES" "$RUN_URL")
           elif [ "$COMMIT_OUTCOME" = "failure" ] || [ "$DEPLOY_OUTCOME" = "failure" ]; then
             SUBJECT="[Dr.Jang Maritime] New items found but commit/deploy FAILED - $(date -u +%Y-%m-%d)"
-            BODY="New items were researched and passed lint/build today, but committing or deploying failed.
-
-$ITEM_TITLES
-
-Run log: $RUN_URL"
+            BODY=$(printf 'New items were researched and passed lint/build today, but committing or deploying failed.\n\n%s\n\nRun log: %s\n' "$ITEM_TITLES" "$RUN_URL")
           elif [ "$CHANGED" = "true" ]; then
             SUBJECT="[Dr.Jang Maritime] ${ITEM_COUNT} new item(s) published - $(date -u +%Y-%m-%d)"
-            BODY="New maritime-trend items were found and published to drjangmaritime.com today:
-
-$ITEM_TITLES
-
-Site: https://drjangmaritime.com
-Run log: $RUN_URL"
+            BODY=$(printf 'New maritime-trend items were found and published to drjangmaritime.com today:\n\n%s\n\nSite: https://drjangmaritime.com\nRun log: %s\n' "$ITEM_TITLES" "$RUN_URL")
           else
             SUBJECT="[Dr.Jang Maritime] No new maritime news today - $(date -u +%Y-%m-%d)"
-            BODY="The daily research job ran successfully but found nothing genuinely new and well-sourced to publish today. No action needed.
-
-Run log: $RUN_URL"
+            BODY=$(printf 'The daily research job ran successfully but found nothing genuinely new and well-sourced to publish today. No action needed.\n\nRun log: %s\n' "$RUN_URL")
           fi
 
           echo "subject=$SUBJECT" >> "$GITHUB_OUTPUT"
