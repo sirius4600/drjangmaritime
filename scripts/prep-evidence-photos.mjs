@@ -18,6 +18,18 @@ const jobs = [
     "2022_mof_safety_advisory_appointment_02.jpg",
     "mof-advisory-appointment-2022-02.jpg",
   ],
+  [
+    "2026_passenger_ship_vr_training_lecture_jang_unkyu.jpg",
+    "passenger-ship-vr-lecture-2026.jpg",
+  ],
+  [
+    "2026_passenger_ship_vr_evacuation_training_trainee.jpg",
+    "passenger-ship-vr-training-2026.jpg",
+  ],
+  [
+    "2026_passenger_ship_inclination_trainer_kimft.jpg",
+    "passenger-ship-incline-trainer-2026.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {

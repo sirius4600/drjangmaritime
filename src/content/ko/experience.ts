@@ -40,6 +40,11 @@ export const experience: ExperienceEntry[] = [
     org: "한국해양수산연수원",
     detail:
       "2001년부터 여객선 교육과정, 2005년부터 선박교통관제사(VTS) 국제자격인증교육과정 책임교수를 맡고 있습니다.",
+    images: [
+      "/images/evidence/passenger-ship-vr-lecture-2026.jpg",
+      "/images/evidence/passenger-ship-vr-training-2026.jpg",
+      "/images/evidence/passenger-ship-incline-trainer-2026.jpg",
+    ],
   },
   {
     period: "1994.03 - 2001.05",

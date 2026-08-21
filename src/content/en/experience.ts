@@ -46,6 +46,11 @@ export const experience: ExperienceEntry[] = [
     org: "Korea Institute of Maritime and Fisheries Technology",
     detail:
       "Responsible professor for passenger-ship safety and VTS international certification training since 2001 and 2005 respectively.",
+    images: [
+      "/images/evidence/passenger-ship-vr-lecture-2026.jpg",
+      "/images/evidence/passenger-ship-vr-training-2026.jpg",
+      "/images/evidence/passenger-ship-incline-trainer-2026.jpg",
+    ],
   },
   {
     period: "1994.03 - 2001.05",
