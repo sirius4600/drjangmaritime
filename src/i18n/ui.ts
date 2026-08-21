@@ -88,6 +88,10 @@ export interface UiDictionary {
     viewLabel: string;
     closeLabel: string;
   };
+  evidenceVideo: {
+    playLabel: string;
+    closeLabel: string;
+  };
   trustEvidence: {
     heading: string;
     advisorLine: string;
@@ -212,6 +216,10 @@ const ko: UiDictionary = {
     viewLabel: "사진 확대",
     closeLabel: "닫기",
   },
+  evidenceVideo: {
+    playLabel: "동영상 재생",
+    closeLabel: "닫기",
+  },
   trustEvidence: {
     heading: "형용사가 아니라 증거를 보여드립니다",
     advisorLine: "2005년부터 IMO 자문위원, 2011년부터 IALA 자문위원으로 활동하고 있습니다.",
@@ -334,6 +342,10 @@ const en: UiDictionary = {
   },
   evidencePhotos: {
     viewLabel: "Enlarge photo",
+    closeLabel: "Close",
+  },
+  evidenceVideo: {
+    playLabel: "Play video",
     closeLabel: "Close",
   },
   trustEvidence: {

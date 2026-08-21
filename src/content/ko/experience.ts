@@ -45,6 +45,10 @@ export const experience: ExperienceEntry[] = [
       "/images/evidence/passenger-ship-vr-training-2026.jpg",
       "/images/evidence/passenger-ship-incline-trainer-2026.jpg",
     ],
+    video: {
+      src: "/videos/evidence/passenger-ship-vr-training-2026.mp4",
+      poster: "/images/evidence/passenger-ship-vr-training-2026-poster.jpg",
+    },
   },
   {
     period: "1994.03 - 2001.05",
