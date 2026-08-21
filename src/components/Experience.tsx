@@ -3,7 +3,7 @@ import type { Locale } from "@/i18n/config";
 import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 import { EvidencePhotos } from "./EvidencePhotos";
-import { EvidenceVideo } from "./EvidenceVideo";
+import { EvidenceGallery } from "./EvidenceGallery";
 
 export function Experience({ locale }: { locale: Locale }) {
   const ui = getUiDictionary(locale);
@@ -40,17 +40,11 @@ export function Experience({ locale }: { locale: Locale }) {
                       {entry.detail}
                     </p>
                   )}
-                  {entry.images && entry.images.length > 0 && (
-                    <EvidencePhotos
-                      images={entry.images}
-                      alt={entry.role}
-                      locale={locale}
-                    />
-                  )}
-                  {entry.video && (
-                    <EvidenceVideo
-                      src={entry.video.src}
-                      poster={entry.video.poster}
+                  {((entry.images && entry.images.length > 0) ||
+                    entry.video) && (
+                    <EvidenceGallery
+                      images={entry.images ?? []}
+                      video={entry.video}
                       alt={entry.role}
                       locale={locale}
                     />
