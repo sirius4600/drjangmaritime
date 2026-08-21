@@ -117,15 +117,6 @@ jobs:
             echo "EOF_BODY_DELIM"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Debug secret presence (temporary)
-        if: always()
-        env:
-          U: ${{ secrets.GMAIL_USERNAME }}
-          P: ${{ secrets.GMAIL_APP_PASSWORD }}
-        run: |
-          echo "GMAIL_USERNAME length: ${#U}"
-          echo "GMAIL_APP_PASSWORD length: ${#P}"
-
       - name: Email daily result
         if: always()
         uses: dawidd6/action-send-mail@v3
