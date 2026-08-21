@@ -23,13 +23,16 @@ export function Contact({ locale }: { locale: Locale }) {
 
           <div className="mt-8 flex flex-wrap gap-2.5">
             {contactPathways.map((pathway) => (
-              <span
+              <a
                 key={pathway.title}
+                href={`mailto:${profile.email}?subject=${encodeURIComponent(
+                  `[${pathway.title}]`,
+                )}`}
                 title={pathway.description}
-                className="rounded-full border border-line/70 px-4 py-2 text-[13px] font-medium text-ink-soft"
+                className="rounded-full border border-line/70 px-4 py-2 text-[13px] font-medium text-ink-soft transition hover:border-accent-strong hover:text-ink focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-strong"
               >
                 {pathway.title}
-              </span>
+              </a>
             ))}
           </div>
         </div>
