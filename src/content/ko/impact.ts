@@ -42,6 +42,14 @@ export const impactTimeline: ImpactEntry[] = [
       "국내 대표 항해항만 연구 학회인 한국항해항만학회 부회장, 해양환경안전학회 편집위원(교육정책분과위원장)을 맡고 있습니다.",
   },
   {
+    date: "2016",
+    category: "국제협력",
+    title: "IALA 사무총장 예방 — 한국대표단",
+    detail:
+      "국제항로표지기구(IALA) 사무총장과 한국대표단이 함께한 자리. 2011년부터 이어온 IALA 자문위원 활동의 연장선입니다.",
+    images: ["/images/evidence/iala-secretary-general-korea-delegation-2016.jpg"],
+  },
+  {
     date: "2017",
     category: "미디어",
     title: "직업소개 프로그램 '오늘의 직업' 출연 — 해상교통관제사 편",

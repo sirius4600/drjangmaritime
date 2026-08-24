@@ -51,6 +51,14 @@ export const impactTimeline: ImpactEntry[] = [
       "Serves as Vice President of Korea's principal academic society for navigation and port research, and as editor (Chair, Education Policy Committee) of the Korean Society of Marine Environment & Safety.",
   },
   {
+    date: "2016",
+    category: "International Cooperation",
+    title: "Courtesy Meeting with the IALA Secretary-General — Korean Delegation",
+    detail:
+      "Met with the IALA Secretary-General alongside the Korean delegation, part of his ongoing role as an IALA advisor since 2011.",
+    images: ["/images/evidence/iala-secretary-general-korea-delegation-2016.jpg"],
+  },
+  {
     date: "2017",
     category: "Media",
     title: "Featured on the job-introduction program \"Today's Job\" — VTS Officer episode",

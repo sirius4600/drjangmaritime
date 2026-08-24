@@ -30,6 +30,10 @@ const jobs = [
     "2026_passenger_ship_inclination_trainer_kimft.jpg",
     "passenger-ship-incline-trainer-2026.jpg",
   ],
+  [
+    "2016_iala_secretary_general_korea_delegation.jpg",
+    "iala-secretary-general-korea-delegation-2016.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {
