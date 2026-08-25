@@ -4,14 +4,14 @@ import { getUiDictionary, type UiDictionary } from "@/i18n/ui";
 import type { ResearchProject } from "@/content/en/research";
 import { Container } from "./Container";
 
-function ChevronIcon() {
+function ChevronIcon({ className = "text-ink-soft" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 24 24"
-      className="h-4 w-4 shrink-0 text-ink-soft transition-transform duration-200 group-open:rotate-180"
+      className={`h-5 w-5 shrink-0 transition-transform duration-200 group-open:rotate-180 ${className}`}
       fill="none"
       stroke="currentColor"
-      strokeWidth={2}
+      strokeWidth={2.5}
       strokeLinecap="round"
       strokeLinejoin="round"
     >
@@ -147,14 +147,14 @@ export function Research({ locale }: { locale: Locale }) {
         </div>
 
         <details className="group mt-14">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 border-t border-line/70 pt-4 [&::-webkit-details-marker]:hidden">
-            <h3 className="text-[13px] font-semibold uppercase tracking-wide text-ink-soft">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl bg-accent-soft px-5 py-4 transition hover:brightness-95 [&::-webkit-details-marker]:hidden">
+            <h3 className="text-[17px] font-semibold text-accent-strong md:text-[19px]">
               {ui.research.fullListHeading}
-              <span className="ml-2 font-mono normal-case text-ink-soft">
+              <span className="ml-2 font-mono text-[14px] font-normal">
                 ({researchProjects.length})
               </span>
             </h3>
-            <ChevronIcon />
+            <ChevronIcon className="text-accent-strong" />
           </summary>
           <div className="mt-4 border-t border-line/70">
             {researchProjects.map((project) => (
