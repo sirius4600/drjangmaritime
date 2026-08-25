@@ -69,6 +69,12 @@ export const presentations: {
     year: "2019",
     role: "발표자",
   },
+  {
+    title: "자율운항선박과 선원의 변화",
+    venue: "제2차 자율운항선박(MASS) 도입 기술·정책 컨퍼런스",
+    year: "2019",
+    role: "발표자",
+  },
 ];
 
 export const patents = [

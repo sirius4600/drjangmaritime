@@ -75,6 +75,13 @@ export const presentations: {
     year: "2019",
     role: "Ponente",
   },
+  {
+    title: "Buques Autónomos y el Cambio en el Papel de la Gente de Mar",
+    venue:
+      "2.ª Conferencia de Tecnología y Política para la Introducción de Buques Autónomos (MASS)",
+    year: "2019",
+    role: "Ponente",
+  },
 ];
 
 export const patents = [

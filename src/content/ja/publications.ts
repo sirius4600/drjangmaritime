@@ -69,6 +69,12 @@ export const presentations: {
     year: "2019",
     role: "発表者",
   },
+  {
+    title: "自律運航船と船員の変化",
+    venue: "第2回 自律運航船（MASS）導入技術・政策カンファレンス",
+    year: "2019",
+    role: "発表者",
+  },
 ];
 
 export const patents = [

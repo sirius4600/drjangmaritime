@@ -74,6 +74,12 @@ export const presentations: {
     year: "2019",
     role: "Speaker",
   },
+  {
+    title: "Autonomous Ships and the Changing Role of Seafarers",
+    venue: "2nd MASS Introduction Technology & Policy Conference",
+    year: "2019",
+    role: "Speaker",
+  },
 ];
 
 export const patents = [
