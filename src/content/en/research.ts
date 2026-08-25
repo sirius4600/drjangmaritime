@@ -6,6 +6,10 @@ export interface ResearchProject {
   period: string;
   status: "Completed" | "Ongoing";
   theme: "MASS & AI" | "VTS" | "Safety Systems" | "Policy";
+  /** Additional themes this project also belongs to, for cases where its
+   * subject matter genuinely spans categories. The project then appears in
+   * more than one theme's filtered list — duplication is intentional. */
+  secondaryThemes?: Array<ResearchProject["theme"]>;
   flagship?: boolean;
   /** True national R&D (technology development) projects only — not every
    * commissioned study/white paper qualifies. Confirmed per-project by the
@@ -26,6 +30,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2026.08 - 2032.12",
     status: "Ongoing",
     theme: "MASS & AI",
+    secondaryThemes: ["Safety Systems"],
     flagship: true,
     isRnd: true,
   },
@@ -82,6 +87,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2020",
     status: "Completed",
     theme: "VTS",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "bigdata-safety-forecast",
@@ -92,6 +98,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2019",
     status: "Completed",
     theme: "Safety Systems",
+    secondaryThemes: ["VTS"],
     isRnd: true,
   },
   {
@@ -102,6 +109,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2019",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "public-vessel-management",
@@ -130,6 +138,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2017 - 2019",
     status: "Completed",
     theme: "MASS & AI",
+    secondaryThemes: ["VTS"],
     flagship: true,
     isRnd: true,
   },
@@ -141,6 +150,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2017",
     status: "Completed",
     theme: "Safety Systems",
+    secondaryThemes: ["Policy"],
   },
   {
     id: "seafarer-welfare-survey",
@@ -159,6 +169,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2016 - 2020",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "accident-prevention",
@@ -246,6 +257,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2012",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "somalia-piracy-imo-response",
@@ -256,6 +268,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2011",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "imo-strategic-agenda-2010",
@@ -293,6 +306,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2009 - 2011",
     status: "Completed",
     theme: "Safety Systems",
+    secondaryThemes: ["Policy"],
   },
   {
     id: "global-safety-training-program",
@@ -361,23 +375,33 @@ export const researchProjects: ResearchProject[] = [
   },
 ];
 
-export const researchThemes = [
+export interface ResearchTheme {
+  key: ResearchProject["theme"];
+  name: string;
+  description: string;
+}
+
+export const researchThemes: ResearchTheme[] = [
   {
+    key: "MASS & AI",
     name: "Autonomous Ships & MASS",
     description:
       "AI navigation control, collision-avoidance evaluation and human-element research for autonomous surface ships.",
   },
   {
+    key: "VTS",
     name: "VTS & Maritime AI",
     description:
       "Operator competency, AI-based English assessment, and next-generation traffic-management platforms.",
   },
   {
+    key: "Safety Systems",
     name: "Maritime Safety Systems",
     description:
       "Accident-prevention frameworks and quantitative safety indices built on national accident and traffic data.",
   },
   {
+    key: "Policy",
     name: "IMO & Maritime Policy",
     description:
       "Regulatory readiness and international coordination for emerging maritime technologies.",

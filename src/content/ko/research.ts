@@ -1,4 +1,4 @@
-import type { ResearchProject } from "../en/research";
+import type { ResearchProject, ResearchTheme } from "../en/research";
 
 export const researchProjects: ResearchProject[] = [
   {
@@ -10,6 +10,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2026.08 - 2032.12",
     status: "Ongoing",
     theme: "MASS & AI",
+    secondaryThemes: ["Safety Systems"],
     flagship: true,
     isRnd: true,
   },
@@ -64,6 +65,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2020",
     status: "Completed",
     theme: "VTS",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "bigdata-safety-forecast",
@@ -73,6 +75,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2019",
     status: "Completed",
     theme: "Safety Systems",
+    secondaryThemes: ["VTS"],
     isRnd: true,
   },
   {
@@ -83,6 +86,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2019",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "public-vessel-management",
@@ -110,6 +114,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2017 - 2019",
     status: "Completed",
     theme: "MASS & AI",
+    secondaryThemes: ["VTS"],
     flagship: true,
     isRnd: true,
   },
@@ -121,6 +126,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2017",
     status: "Completed",
     theme: "Safety Systems",
+    secondaryThemes: ["Policy"],
   },
   {
     id: "seafarer-welfare-survey",
@@ -139,6 +145,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2016 - 2020",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "accident-prevention",
@@ -222,6 +229,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2012",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "somalia-piracy-imo-response",
@@ -231,6 +239,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2011",
     status: "Completed",
     theme: "Policy",
+    secondaryThemes: ["Safety Systems"],
   },
   {
     id: "imo-strategic-agenda-2010",
@@ -267,6 +276,7 @@ export const researchProjects: ResearchProject[] = [
     period: "2009 - 2011",
     status: "Completed",
     theme: "Safety Systems",
+    secondaryThemes: ["Policy"],
   },
   {
     id: "global-safety-training-program",
@@ -333,23 +343,27 @@ export const researchProjects: ResearchProject[] = [
   },
 ];
 
-export const researchThemes = [
+export const researchThemes: ResearchTheme[] = [
   {
+    key: "MASS & AI",
     name: "자율운항선박 · MASS",
     description:
       "자율운항선박의 AI 항법제어, 충돌회피 능력평가, Human Element 연구.",
   },
   {
+    key: "VTS",
     name: "VTS · 해양 AI",
     description:
       "관제사 직무역량, AI 기반 영어능력평가, 차세대 해상교통관제 플랫폼 연구.",
   },
   {
+    key: "Safety Systems",
     name: "해양안전시스템",
     description:
       "국가 사고·교통 데이터를 기반으로 한 사고예방체계와 정량적 안전지수 개발.",
   },
   {
+    key: "Policy",
     name: "IMO · 해사정책",
     description: "신기술 도입에 대비한 규제 대응방안과 국제협력 연구.",
   },
