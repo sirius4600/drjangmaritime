@@ -34,6 +34,10 @@ const jobs = [
     "2016_iala_secretary_general_korea_delegation.jpg",
     "iala-secretary-general-korea-delegation-2016.jpg",
   ],
+  [
+    "2026_skandi_connector_bridge_captain.jpg",
+    "skandi-connector-bridge-2026.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {

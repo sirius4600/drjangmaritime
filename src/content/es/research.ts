@@ -2,6 +2,17 @@ import type { ResearchProject } from "../en/research";
 
 export const researchProjects: ResearchProject[] = [
   {
+    id: "mass-ai-verification-2026",
+    title:
+      "Desarrollo de Tecnología de Verificación, Certificación y Demostración para Buques Totalmente Autónomos con IA",
+    funder: "Ministerio de Océanos y Pesca",
+    role: "Co-Researcher",
+    period: "2026.08 - 2032.12",
+    status: "Ongoing",
+    theme: "MASS & AI",
+    flagship: true,
+  },
+  {
     id: "safety-culture-program",
     title:
       "Investigación sobre la Construcción de un Sistema de Cultura de Educación en Seguridad para Navieras y Centros de Trabajo",

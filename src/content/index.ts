@@ -51,6 +51,11 @@ import { newsItems as newsItemsKo } from "./ko/news";
 import { newsItems as newsItemsJa } from "./ja/news";
 import { newsItems as newsItemsEs } from "./es/news";
 
+import { dailyLogEntries as dailyLogEntriesEn } from "./en/dailyLog";
+import { dailyLogEntries as dailyLogEntriesKo } from "./ko/dailyLog";
+import { dailyLogEntries as dailyLogEntriesJa } from "./ja/dailyLog";
+import { dailyLogEntries as dailyLogEntriesEs } from "./es/dailyLog";
+
 import {
   expertiseAreas as expertiseAreasEn,
   toolsAndData as toolsAndDataEn,
@@ -97,6 +102,7 @@ const bundles = {
     impactTimeline: impactTimelineKo,
     impactPillars: impactPillarsKo,
     newsItems: newsItemsKo,
+    dailyLogEntries: dailyLogEntriesKo,
     expertiseAreas: expertiseAreasKo,
     toolsAndData: toolsAndDataKo,
     organizationServices: organizationServicesKo,
@@ -119,6 +125,7 @@ const bundles = {
     impactTimeline: impactTimelineEn,
     impactPillars: impactPillarsEn,
     newsItems: newsItemsEn,
+    dailyLogEntries: dailyLogEntriesEn,
     expertiseAreas: expertiseAreasEn,
     toolsAndData: toolsAndDataEn,
     organizationServices: organizationServicesEn,
@@ -141,6 +148,7 @@ const bundles = {
     impactTimeline: impactTimelineJa,
     impactPillars: impactPillarsJa,
     newsItems: newsItemsJa,
+    dailyLogEntries: dailyLogEntriesJa,
     expertiseAreas: expertiseAreasJa,
     toolsAndData: toolsAndDataJa,
     organizationServices: organizationServicesJa,
@@ -163,6 +171,7 @@ const bundles = {
     impactTimeline: impactTimelineEs,
     impactPillars: impactPillarsEs,
     newsItems: newsItemsEs,
+    dailyLogEntries: dailyLogEntriesEs,
     expertiseAreas: expertiseAreasEs,
     toolsAndData: toolsAndDataEs,
     organizationServices: organizationServicesEs,

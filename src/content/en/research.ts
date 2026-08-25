@@ -13,6 +13,17 @@ export interface ResearchProject {
 // record of 50+ studies. Full list available on request.
 export const researchProjects: ResearchProject[] = [
   {
+    id: "mass-ai-verification-2026",
+    title:
+      "Verification, Certification and Demonstration Technology Development for Fully Autonomous AI Ships",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2026.08 - 2032.12",
+    status: "Ongoing",
+    theme: "MASS & AI",
+    flagship: true,
+  },
+  {
     id: "safety-culture-program",
     title:
       "Research on Building a Safety Education Culture System for Shipping Companies and Workplaces",

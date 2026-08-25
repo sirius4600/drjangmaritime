@@ -23,5 +23,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ),
     },
   }));
-  return [...home, ...news];
+  const log = locales.map((locale) => ({
+    url: `${base}/${locale}/log`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: locale === "ko" ? 0.7 : 0.6,
+    alternates: {
+      languages: Object.fromEntries(
+        locales.map((l) => [l, `${base}/${l}/log`]),
+      ),
+    },
+  }));
+  return [...home, ...news, ...log];
 }

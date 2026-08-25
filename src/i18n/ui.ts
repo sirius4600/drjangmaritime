@@ -9,6 +9,7 @@ export interface UiDictionary {
     intelligence: string;
     research: string;
     news: string;
+    dailyLog: string;
     tools: string;
     oceanBridge: string;
     publications: string;
@@ -31,6 +32,11 @@ export interface UiDictionary {
   impact: {
     heading: string;
     subtext: string;
+  };
+  dailyLog: {
+    heading: string;
+    subtext: string;
+    viewAll: string;
   };
   news: {
     heading: string;
@@ -123,6 +129,7 @@ const ko: UiDictionary = {
     intelligence: "Maritime Intelligence",
     research: "연구",
     news: "글로벌 동향",
+    dailyLog: "Daily Log",
     tools: "도구·데이터",
     oceanBridge: "Ocean Bridge",
     publications: "저서·논문",
@@ -159,6 +166,12 @@ const ko: UiDictionary = {
   impact: {
     heading: "최근 활동",
     subtext: "",
+  },
+  dailyLog: {
+    heading: "장박사의 Daily Log",
+    subtext:
+      "공식 이력이 아닌, 현장에서 만난 사람들과 순간들에 대한 개인적인 기록입니다.",
+    viewAll: "전체 글 보기",
   },
   news: {
     heading: "글로벌 해양 동향",
@@ -251,6 +264,7 @@ const en: UiDictionary = {
     intelligence: "Maritime Intelligence",
     research: "Research",
     news: "Global Trends",
+    dailyLog: "Daily Log",
     tools: "Tools & Data",
     oceanBridge: "Ocean Bridge",
     publications: "Publications",
@@ -287,6 +301,12 @@ const en: UiDictionary = {
   impact: {
     heading: "Recent milestones",
     subtext: "",
+  },
+  dailyLog: {
+    heading: "Dr. Jang's Daily Log",
+    subtext:
+      "Not a formal record — personal notes on the people and moments encountered along the way.",
+    viewAll: "View all entries",
   },
   news: {
     heading: "Global Maritime Trends",
@@ -379,6 +399,7 @@ const ja: UiDictionary = {
     intelligence: "Maritime Intelligence",
     research: "研究",
     news: "グローバル動向",
+    dailyLog: "Daily Log",
     tools: "ツール・データ",
     oceanBridge: "Ocean Bridge",
     publications: "著書・論文",
@@ -415,6 +436,12 @@ const ja: UiDictionary = {
   impact: {
     heading: "最近の活動",
     subtext: "",
+  },
+  dailyLog: {
+    heading: "チャン博士のDaily Log",
+    subtext:
+      "正式な経歴ではなく、現場で出会った人々や瞬間についての個人的な記録です。",
+    viewAll: "すべて見る",
   },
   news: {
     heading: "グローバル海事動向",
@@ -507,6 +534,7 @@ const es: UiDictionary = {
     intelligence: "Maritime Intelligence",
     research: "Investigación",
     news: "Tendencias Globales",
+    dailyLog: "Daily Log",
     tools: "Herramientas y Datos",
     oceanBridge: "Ocean Bridge",
     publications: "Publicaciones",
@@ -543,6 +571,12 @@ const es: UiDictionary = {
   impact: {
     heading: "Hitos recientes",
     subtext: "",
+  },
+  dailyLog: {
+    heading: "Daily Log del Dr. Jang",
+    subtext:
+      "No es un registro oficial, sino notas personales sobre las personas y los momentos vividos en el camino.",
+    viewAll: "Ver todas las entradas",
   },
   news: {
     heading: "Tendencias Marítimas Globales",

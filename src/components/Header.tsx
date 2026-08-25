@@ -9,6 +9,7 @@ export function Header({ locale }: { locale: Locale }) {
     { label: ui.nav.intelligence, href: `/${locale}#intelligence` },
     { label: ui.nav.research, href: `/${locale}#research` },
     { label: ui.nav.news, href: `/${locale}/news` },
+    { label: ui.nav.dailyLog, href: `/${locale}/log` },
     { label: ui.nav.tools, href: `/${locale}#tools` },
     { label: ui.nav.oceanBridge, href: `/${locale}#ocean-bridge` },
     { label: ui.nav.publications, href: `/${locale}#publications` },

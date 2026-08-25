@@ -29,6 +29,8 @@ export async function generateMetadata({
       languages: {
         ko: "https://drjangmaritime.com/ko/news",
         en: "https://drjangmaritime.com/en/news",
+        ja: "https://drjangmaritime.com/ja/news",
+        es: "https://drjangmaritime.com/es/news",
       },
     },
   };

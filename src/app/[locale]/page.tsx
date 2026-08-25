@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WhyThisSite } from "@/components/WhyThisSite";
 import { ImpactSection } from "@/components/ImpactSection";
+import { DailyLogSection } from "@/components/DailyLogSection";
 import { ToolsAndData } from "@/components/ToolsAndData";
 import { DrUKModel } from "@/components/DrUKModel";
 import { Research } from "@/components/Research";
@@ -35,6 +36,7 @@ export default async function Home({
         <ProofStrip locale={locale} />
         <WhyThisSite locale={locale} />
         <ImpactSection locale={locale} />
+        <DailyLogSection locale={locale} />
         <ToolsAndData locale={locale} />
         <DrUKModel locale={locale} />
         <Research locale={locale} />
