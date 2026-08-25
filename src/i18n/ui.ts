@@ -369,7 +369,263 @@ const en: UiDictionary = {
   },
 };
 
-const dictionaries: Record<Locale, UiDictionary> = { ko, en };
+const ja: UiDictionary = {
+  meta: {
+    title: "チャン・ウンギュ | Maritime Intelligence",
+    description:
+      "海洋の研究、技術、そして人をつなぐ。チャン・ウンギュ教授は30年にわたる海上安全・VTS・IMO政策の経験を、AI・データ技術と組み合わせ、海洋リスクインテリジェンス・プラットフォームを構築しています。",
+  },
+  nav: {
+    intelligence: "Maritime Intelligence",
+    research: "研究",
+    news: "グローバル動向",
+    tools: "ツール・データ",
+    oceanBridge: "Ocean Bridge",
+    publications: "著書・論文",
+    about: "プロフィール",
+    workWithHim: "協業のご相談",
+    homeAriaLabel: "チャン・ウンギュ、Maritime Intelligence、ホームへ",
+  },
+  hero: {
+    eyebrow: "海上安全・AI研究",
+    headline: "海を理解し、その未来をつくる。",
+    subtext:
+      "30年にわたる海上安全・VTS・IMOでの経験を土台に、いま海洋リスクインテリジェンスのためのAI・データツールを構築しています。",
+    primaryCta: "Maritime Intelligenceを見る",
+    secondaryCta: "協業のご相談",
+  },
+  whyThisSite: {
+    heading: "一線を画す海洋プラットフォーム",
+    body: "海事分野の情報の多くは、規則、報告書、学術論文、点在するデータベースの中に断片化しています。本プラットフォームは、研究、安全情報、技術動向、専門的な知見を一箇所に集約します。",
+    pillars: [
+      {
+        title: "知識 (Knowledge)",
+        description: "研究、規則、動向、実務に役立つ海事分野の知見。",
+      },
+      {
+        title: "インテリジェンス (Intelligence)",
+        description: "データ、分析、リスク評価、新技術。",
+      },
+      {
+        title: "つながり (Connection)",
+        description: "人、キャリア、研究、国際協力。",
+      },
+    ],
+  },
+  impact: {
+    heading: "最近の活動",
+    subtext: "",
+  },
+  news: {
+    heading: "グローバル海事動向",
+    body: "IMO、IALAをはじめとする国際機関と業界の最新情報を、海上安全、自律運航船、サイバーセキュリティ、環境対応船、e-Navigation分野を中心に厳選してお届けします。各カードは出典元のリンクに接続されています。",
+    readMore: "出典を見る",
+    viewAll: "すべての動向を見る",
+    filterAll: "すべて",
+    pagination: { prev: "前へ", next: "次へ" },
+    categories: {
+      imo: "IMO",
+      iala: "IALA",
+      safety: "海上安全",
+      mass: "自律運航船",
+      cyber: "サイバーセキュリティ",
+      green: "環境対応船",
+      enav: "e-Navigation",
+      seafarer: "船員",
+    },
+  },
+  tools: {
+    heading: "海洋リスクを、違う視点で見る",
+    body: "本プラットフォームの次の段階は、事故記録、交通パターン、環境要因を実際に活用できる海洋リスクインテリジェンスへと変えるデータとツールです。以下は完成した商用システムではなく、構想段階および開発中のコンセプトです。",
+  },
+  drUkModel: {
+    heading: "Dr. UK Model",
+    subheading: "海洋リスクインテリジェンスへの新しいアプローチ",
+    body: "海難事故データ、船舶交通、環境・空間要因を組み合わせ、より良い海上安全の意思決定を支援する開発中のフレームワークです。",
+    stages: ["データ", "分析", "リスク", "インテリジェンス", "意思決定"],
+  },
+  research: {
+    heading: "海上運航の未来を研究する",
+    body: "2010年以降、自律運航船、VTS、海上安全システムにまたがる50件以上の国家研究開発・政府研究事業を遂行してきました。",
+    status: { ongoing: "進行中", completed: "完了" },
+  },
+  expertise: {
+    heading: "専門分野",
+  },
+  oceanBridge: {
+    heading: "海事従事者の次の一歩を支える",
+    body: "海事従事者のキャリアは下船とともに終わるものではなく、進化し続けます。Ocean Bridgeは、その転換のための知識とメンタリングのトラックです。",
+  },
+  organizations: {
+    heading: "海事分野で課題をお持ちですか？",
+    subtext: "研究、安全、AI、データ、教育、国際協力。",
+    cta: "協業のご相談",
+  },
+  experience: {
+    heading: "30年のキャリア",
+    body: "韓国海洋水産研修院での経歴と学歴、現在の政府・学会委員としての活動です。",
+    careerLabel: "経歴",
+    educationLabel: "学歴",
+    affiliationsLabel: "現在の委員・アドバイザー活動",
+  },
+  evidencePhotos: {
+    viewLabel: "写真を拡大",
+    closeLabel: "閉じる",
+  },
+  evidenceVideo: {
+    playLabel: "動画を再生",
+    closeLabel: "閉じる",
+  },
+  trustEvidence: {
+    heading: "形容詞ではなく、証拠をお見せします",
+    advisorLine: "2005年よりIMO顧問委員、2011年よりIALA顧問委員を務めています。",
+  },
+  publications: {
+    heading: "実務に活かせる知識",
+    body: "30年にわたる海上安全・VTS研究から生まれた著書、論文、特許です。",
+    groups: { books: "著書", papers: "論文", patents: "特許" },
+  },
+  contact: {
+    heading: "共に何を築けるでしょうか？",
+    body: "キャリア相談、研究協力、プロジェクト、講演のご依頼、その他どのようなことでも構いません。お気軽にご相談ください。",
+    directContact: "直接のご連絡先",
+    emailCta: "メールを送る",
+  },
+  footer: {
+    tagline: "海洋の研究、技術、そして人をつなぐ。",
+    rights: "All rights reserved.",
+  },
+};
+
+const es: UiDictionary = {
+  meta: {
+    title: "Dr. Unkyu Jang | Maritime Intelligence",
+    description:
+      "Conectando la investigación marítima, la tecnología y las personas. El Dr. Unkyu Jang combina tres décadas de experiencia en seguridad marítima, VTS y políticas de la OMI con tecnologías emergentes de IA y datos para construir una plataforma de inteligencia de riesgo marítimo.",
+  },
+  nav: {
+    intelligence: "Maritime Intelligence",
+    research: "Investigación",
+    news: "Tendencias Globales",
+    tools: "Herramientas y Datos",
+    oceanBridge: "Ocean Bridge",
+    publications: "Publicaciones",
+    about: "Perfil",
+    workWithHim: "Colaborar con el Dr. Jang",
+    homeAriaLabel: "Dr. Unkyu Jang, Maritime Intelligence, ir al inicio",
+  },
+  hero: {
+    eyebrow: "Seguridad Marítima · Investigación en IA",
+    headline: "Entendiendo el mundo marítimo. Construyendo su futuro.",
+    subtext:
+      "Tres décadas de experiencia en seguridad marítima, VTS y la OMI, ahora dedicadas a construir las herramientas de IA y datos para la inteligencia de riesgo marítimo.",
+    primaryCta: "Explorar Maritime Intelligence",
+    secondaryCta: "Colaborar con el Dr. Jang",
+  },
+  whyThisSite: {
+    heading: "Una plataforma marítima diferente",
+    body: "La mayor parte de la información marítima está dispersa entre normativas, informes, artículos académicos y bases de datos fragmentadas. Esta plataforma reúne investigación, información de seguridad, tendencias tecnológicas y conocimiento profesional en un solo lugar.",
+    pillars: [
+      {
+        title: "Conocimiento",
+        description: "Investigación, normativa, tendencias y conocimiento marítimo aplicado.",
+      },
+      {
+        title: "Inteligencia",
+        description: "Datos, análisis, evaluación de riesgos y tecnologías emergentes.",
+      },
+      {
+        title: "Conexión",
+        description: "Personas, carreras, investigación y cooperación internacional.",
+      },
+    ],
+  },
+  impact: {
+    heading: "Hitos recientes",
+    subtext: "",
+  },
+  news: {
+    heading: "Tendencias Marítimas Globales",
+    body: "Actualizaciones seleccionadas de la OMI, la IALA y el sector marítimo en general, sobre seguridad marítima, buques autónomos, ciberseguridad, transporte marítimo sostenible y e-Navigation. Cada tarjeta enlaza con su fuente original.",
+    readMore: "Ver fuente",
+    viewAll: "Ver todas las tendencias",
+    filterAll: "Todas",
+    pagination: { prev: "Anterior", next: "Siguiente" },
+    categories: {
+      imo: "OMI",
+      iala: "IALA",
+      safety: "Seguridad Marítima",
+      mass: "Buques Autónomos",
+      cyber: "Ciberseguridad",
+      green: "Transporte Sostenible",
+      enav: "e-Navigation",
+      seafarer: "Gente de Mar",
+    },
+  },
+  tools: {
+    heading: "Ver el riesgo marítimo de otra manera",
+    body: "La siguiente etapa de esta plataforma: datos y herramientas que convierten los registros de accidentes, los patrones de tráfico y los factores ambientales en inteligencia de riesgo marítimo aplicable. Lo que se muestra aquí son conceptos y trabajos en curso, no sistemas comerciales terminados.",
+  },
+  drUkModel: {
+    heading: "Dr. UK Model",
+    subheading: "Un nuevo enfoque para la inteligencia de riesgo marítimo",
+    body: "Un marco en desarrollo que combina datos de accidentes marítimos, tráfico de buques y factores ambientales y espaciales para respaldar mejores decisiones de seguridad marítima.",
+    stages: ["Datos", "Análisis", "Riesgo", "Inteligencia", "Decisión"],
+  },
+  research: {
+    heading: "Investigando el futuro de las operaciones marítimas",
+    body: "Más de cincuenta estudios de I+D nacionales y encargados por el gobierno desde 2010, sobre buques autónomos, VTS y sistemas de seguridad marítima.",
+    status: { ongoing: "En curso", completed: "Completado" },
+  },
+  expertise: {
+    heading: "Áreas de especialización",
+  },
+  oceanBridge: {
+    heading: "Acompañando el siguiente paso de la gente de mar",
+    body: "La carrera de un marino no termina al bajar del buque. Evoluciona. Ocean Bridge es un programa de conocimiento y mentoría para esa transición.",
+  },
+  organizations: {
+    heading: "¿Tiene un desafío marítimo?",
+    subtext: "Investigación. Seguridad. IA. Datos. Formación. Cooperación internacional.",
+    cta: "Colaborar con el Dr. Jang",
+  },
+  experience: {
+    heading: "Tres Décadas de Experiencia",
+    body: "Trayectoria profesional y formación académica en el KIMFT, además de sus actuales funciones en comités gubernamentales y académicos.",
+    careerLabel: "Trayectoria",
+    educationLabel: "Formación",
+    affiliationsLabel: "Comités y Funciones Consultivas Actuales",
+  },
+  evidencePhotos: {
+    viewLabel: "Ampliar foto",
+    closeLabel: "Cerrar",
+  },
+  evidenceVideo: {
+    playLabel: "Reproducir video",
+    closeLabel: "Cerrar",
+  },
+  trustEvidence: {
+    heading: "Evidencia, no adjetivos",
+    advisorLine: "Asesor de la OMI desde 2005 y de la IALA desde 2011.",
+  },
+  publications: {
+    heading: "Conocimiento aplicable",
+    body: "Libros, artículos y patentes derivados de tres décadas de investigación en seguridad marítima y VTS.",
+    groups: { books: "Libros", papers: "Artículos", patents: "Patentes" },
+  },
+  contact: {
+    heading: "¿Qué podemos construir juntos?",
+    body: "Asesoría profesional, colaboración en investigación, un proyecto, una ponencia para su evento, o cualquier otra cosa. Empiece por lo que mejor se ajuste.",
+    directContact: "Contacto directo",
+    emailCta: "Enviar correo al Dr. Jang",
+  },
+  footer: {
+    tagline: "Conectando la investigación marítima, la tecnología y las personas.",
+    rights: "All rights reserved.",
+  },
+};
+
+const dictionaries: Record<Locale, UiDictionary> = { ko, en, ja, es };
 
 export function getUiDictionary(locale: Locale): UiDictionary {
   return dictionaries[locale];

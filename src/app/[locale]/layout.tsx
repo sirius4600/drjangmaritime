@@ -54,6 +54,8 @@ export async function generateMetadata({
       languages: {
         ko: `${siteUrl}/ko`,
         en: `${siteUrl}/en`,
+        ja: `${siteUrl}/ja`,
+        es: `${siteUrl}/es`,
       },
     },
     openGraph: {
@@ -62,7 +64,7 @@ export async function generateMetadata({
       url: `${siteUrl}/${locale}`,
       siteName: ui.meta.title,
       images: ["/images/unkyu-jang-profile.jpg"],
-      locale: locale === "ko" ? "ko_KR" : "en_US",
+      locale: { ko: "ko_KR", en: "en_US", ja: "ja_JP", es: "es_ES" }[locale],
       type: "website",
     },
     twitter: {
@@ -93,7 +95,11 @@ export default async function LocaleLayout({
       lang={rawLocale}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-paper text-ink break-keep">
+      <body
+        className={`min-h-full flex flex-col font-sans bg-paper text-ink${
+          rawLocale === "ko" ? " break-keep" : ""
+        }`}
+      >
         {children}
       </body>
     </html>
