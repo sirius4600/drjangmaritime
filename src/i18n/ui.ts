@@ -69,6 +69,7 @@ export interface UiDictionary {
   research: {
     heading: string;
     body: string;
+    fullListHeading: string;
     status: { ongoing: string; completed: string };
   };
   expertise: {
@@ -209,6 +210,7 @@ const ko: UiDictionary = {
   research: {
     heading: "해양 운항의 미래를 연구합니다",
     body: "2010년 이후 자율운항선박, VTS, 해양안전시스템을 아우르는 50건 이상의 국가 R&D 및 정부 연구용역을 수행했습니다.",
+    fullListHeading: "연도별 연구 실적 전체 보기",
     status: { ongoing: "진행 중", completed: "완료" },
   },
   expertise: {
@@ -349,6 +351,7 @@ const en: UiDictionary = {
   research: {
     heading: "Researching the future of maritime operations",
     body: "Fifty-plus national R&D and government-commissioned studies since 2010, spanning autonomous ships, VTS and maritime safety systems.",
+    fullListHeading: "Full Research Record by Year",
     status: { ongoing: "Ongoing", completed: "Completed" },
   },
   expertise: {
@@ -489,6 +492,7 @@ const ja: UiDictionary = {
   research: {
     heading: "海上運航の未来を研究する",
     body: "2010年以降、自律運航船、VTS、海上安全システムにまたがる50件以上の国家研究開発・政府研究事業を遂行してきました。",
+    fullListHeading: "年度別研究実績 全体を見る",
     status: { ongoing: "進行中", completed: "完了" },
   },
   expertise: {
@@ -629,6 +633,7 @@ const es: UiDictionary = {
   research: {
     heading: "Investigando el futuro de las operaciones marítimas",
     body: "Más de cincuenta estudios de I+D nacionales y encargados por el gobierno desde 2010, sobre buques autónomos, VTS y sistemas de seguridad marítima.",
+    fullListHeading: "Registro Completo de Investigación por Año",
     status: { ongoing: "En curso", completed: "Completado" },
   },
   expertise: {

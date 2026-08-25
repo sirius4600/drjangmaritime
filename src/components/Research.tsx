@@ -71,6 +71,44 @@ export function Research({ locale }: { locale: Locale }) {
             </div>
           ))}
         </div>
+
+        <div className="mt-14">
+          <h3 className="text-[13px] font-semibold uppercase tracking-wide text-ink-soft">
+            {ui.research.fullListHeading}
+          </h3>
+          <div className="mt-4 border-t border-line/70">
+            {researchProjects.map((project) => (
+              <div
+                key={project.id}
+                className="grid grid-cols-1 gap-1 border-b border-line/70 py-3 md:grid-cols-[7rem_1fr_auto] md:items-baseline md:gap-4"
+              >
+                <span className="font-mono text-[11.5px] text-ink-soft">
+                  {project.period}
+                </span>
+                <p className="text-[13px] leading-snug text-ink">
+                  {project.isRnd && (
+                    <span className="mr-1.5 font-mono text-[10px] font-semibold text-accent-strong">
+                      R&D
+                    </span>
+                  )}
+                  {project.title}
+                  <span className="text-ink-soft"> — {project.funder} · {project.role}</span>
+                </p>
+                <span
+                  className={`justify-self-start text-[10px] font-semibold uppercase tracking-wide md:justify-self-end ${
+                    project.status === "Ongoing"
+                      ? "text-accent-strong"
+                      : "text-ink-soft"
+                  }`}
+                >
+                  {project.status === "Ongoing"
+                    ? ui.research.status.ongoing
+                    : ui.research.status.completed}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
       </Container>
     </section>
   );

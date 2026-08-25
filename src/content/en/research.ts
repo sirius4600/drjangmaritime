@@ -13,8 +13,9 @@ export interface ResearchProject {
   isRnd?: boolean;
 }
 
-// National R&D and government-commissioned research, selected from a
-// record of 50+ studies. Full list available on request.
+// Full record of national R&D and government-commissioned research since
+// 2002, drawn directly from the CV. A small number of minor commissioned
+// studies are omitted for brevity.
 export const researchProjects: ResearchProject[] = [
   {
     id: "mass-ai-verification-2026",
@@ -83,6 +84,45 @@ export const researchProjects: ResearchProject[] = [
     theme: "VTS",
   },
   {
+    id: "bigdata-safety-forecast",
+    title:
+      "Development of Maritime Traffic Information Big Data and Safety Forecasting System Technology",
+    funder: "KRISO",
+    role: "Advisor",
+    period: "2019",
+    status: "Completed",
+    theme: "Safety Systems",
+    isRnd: true,
+  },
+  {
+    id: "enav-policy-platform",
+    title: "Research on e-Navigation Policy Platform Development and Response",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Principal Researcher",
+    period: "2019",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "public-vessel-management",
+    title:
+      "Feasibility Analysis for Public Vessel Management Support and Related Policy Development",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2019",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "seafarer-legal-framework",
+    title: "Study on Reforming the Legal Framework for Seafarers",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Advisor",
+    period: "2018",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
     id: "mass-ai-navigation",
     title: "Source Technology Development of AI System for Autonomous Ship Navigation Control",
     funder: "KEIT",
@@ -103,6 +143,15 @@ export const researchProjects: ResearchProject[] = [
     theme: "Safety Systems",
   },
   {
+    id: "seafarer-welfare-survey",
+    title: "Nationwide Survey of Seafarers' Welfare Facility Operations",
+    funder: "Korea Seafarer's Welfare & Employment Center",
+    role: "Co-Researcher",
+    period: "2016",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
     id: "imo-safety-management",
     title: "Development of IMO Next-Generation Maritime Safety Management System Technology",
     funder: "KIMST",
@@ -121,6 +170,16 @@ export const researchProjects: ResearchProject[] = [
     theme: "Safety Systems",
   },
   {
+    id: "jeju-maritime-school-feasibility",
+    title:
+      "Feasibility Study for Establishing a National Maritime High School to Develop Maritime Human Resources",
+    funder: "Jeju Special Self-Governing Province Office of Education",
+    role: "Principal Researcher",
+    period: "2015",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
     id: "vts-job-analysis",
     title: "VTS Operator Job Analysis and Human-Factors Management Study",
     funder: "Ministry of Public Safety and Security",
@@ -128,6 +187,34 @@ export const researchProjects: ResearchProject[] = [
     period: "2015",
     status: "Completed",
     theme: "VTS",
+  },
+  {
+    id: "busan-vts-improvement",
+    title: "Basic Survey and Design Service for Improving the Busan Regional VTS System",
+    funder: "Ministry of Public Safety and Security",
+    role: "Co-Researcher",
+    period: "2014",
+    status: "Completed",
+    theme: "VTS",
+  },
+  {
+    id: "vts-distress-simulator",
+    title:
+      "Development of Supplementary Systems for VTS and Distress-Response Training Simulators",
+    funder: "KIMST",
+    role: "Principal Researcher",
+    period: "2013",
+    status: "Completed",
+    theme: "VTS",
+  },
+  {
+    id: "imo-strategic-agenda-2012",
+    title: "IMO Strategic Agenda Research",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Principal Researcher",
+    period: "2012 - 2013",
+    status: "Completed",
+    theme: "Policy",
   },
   {
     id: "vts-white-paper",
@@ -140,11 +227,135 @@ export const researchProjects: ResearchProject[] = [
     flagship: true,
   },
   {
+    id: "maritime-communication-smart-service",
+    title:
+      "Research on Securing Ship Communication Improvement and Maritime Smart Service Technology",
+    funder: "KIMST",
+    role: "Co-Researcher",
+    period: "2012",
+    status: "Completed",
+    theme: "VTS",
+    isRnd: true,
+  },
+  {
+    id: "piracy-industry-resilience",
+    title:
+      "Research on Strengthening Shipping Industry Capacity and International Cooperation to Prevent Piracy Damage",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2012",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "somalia-piracy-imo-response",
+    title:
+      "Research on Strengthening IMO's Role and International Coordination in Response to Somali Piracy",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2011",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "imo-strategic-agenda-2010",
+    title: "IMO Strategic Agenda Research",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2010 - 2011",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "ship-management-globalization",
+    title: "Research on Advancing and Globalizing the Ship Management Industry",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2010",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
     id: "vts-qualification-system",
     title: "Study on the Introduction of a VTS Operator Qualification & Evaluation System",
     funder: "Ministry of Oceans and Fisheries",
     role: "Principal Researcher",
     period: "2010",
+    status: "Completed",
+    theme: "VTS",
+  },
+  {
+    id: "developing-countries-safety-cooperation",
+    title:
+      "Cooperative Project Research on Building Maritime Safety Systems in Developing Countries",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2009 - 2011",
+    status: "Completed",
+    theme: "Safety Systems",
+  },
+  {
+    id: "global-safety-training-program",
+    title:
+      "Planning Research on a Global Maritime Safety Education Program and Training Infrastructure",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2009",
+    status: "Completed",
+    theme: "Safety Systems",
+  },
+  {
+    id: "safety-technical-cooperation",
+    title: "Research on Activating Maritime Safety Technical Cooperation",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2008",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "imo-agenda-analysis",
+    title: "Research Service on IMO Meeting Agenda Analysis and Development",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2006",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "imo-leading-group-program",
+    title: "Research Service for Advancing Korea into the IMO Leading Group Program",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2005",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "imo-mas-audit-response",
+    title:
+      "Research Service on Responding to the Introduction of the IMO Member State Audit Scheme (MAS)",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2005",
+    status: "Completed",
+    theme: "Policy",
+  },
+  {
+    id: "ptms-network-design",
+    title: "PTMS Nationwide Network Installation Plan and Design Service",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2004",
+    status: "Completed",
+    theme: "VTS",
+  },
+  {
+    id: "ecdis-auto-tracking-system",
+    title: "Development of an Automatic Ship-Tracking Device Using Electronic Navigational Charts",
+    funder: "Ministry of Oceans and Fisheries",
+    role: "Co-Researcher",
+    period: "2002",
     status: "Completed",
     theme: "VTS",
   },
