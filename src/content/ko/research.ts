@@ -3,7 +3,8 @@ import type { ResearchProject } from "../en/research";
 export const researchProjects: ResearchProject[] = [
   {
     id: "mass-ai-verification-2026",
-    title: "AI 완전자율운항선박 검인증 및 실증기술개발",
+    title:
+      "AI 완전자율운항선박 기술개발 사업 - AI 완전자율운항선박 검인증 및 실증기술개발",
     funder: "해양수산부",
     role: "Co-Researcher",
     period: "2026.08 - 2032.12",

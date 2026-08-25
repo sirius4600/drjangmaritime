@@ -15,7 +15,7 @@ export const researchProjects: ResearchProject[] = [
   {
     id: "mass-ai-verification-2026",
     title:
-      "Verification, Certification and Demonstration Technology Development for Fully Autonomous AI Ships",
+      "National R&D \"AI Fully Autonomous Ship Technology Development Project\" - Verification, Certification and Demonstration Technology Development for AI Fully Autonomous Ships",
     funder: "Ministry of Oceans and Fisheries",
     role: "Co-Researcher",
     period: "2026.08 - 2032.12",
