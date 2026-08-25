@@ -11,6 +11,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Ongoing",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "safety-culture-program",
@@ -31,6 +32,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "mass-phase2",
@@ -41,6 +43,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "vts-cloud-platform",
@@ -51,6 +54,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "VTS",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "vts-english-assessment",
@@ -70,6 +74,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "safety-index",

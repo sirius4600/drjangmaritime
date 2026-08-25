@@ -7,6 +7,10 @@ export interface ResearchProject {
   status: "Completed" | "Ongoing";
   theme: "MASS & AI" | "VTS" | "Safety Systems" | "Policy";
   flagship?: boolean;
+  /** True national R&D (technology development) projects only — not every
+   * commissioned study/white paper qualifies. Confirmed per-project by the
+   * user; never infer this from the title alone. */
+  isRnd?: boolean;
 }
 
 // National R&D and government-commissioned research, selected from a
@@ -22,6 +26,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Ongoing",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "safety-culture-program",
@@ -44,6 +49,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "mass-phase2",
@@ -54,6 +60,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "vts-cloud-platform",
@@ -64,6 +71,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "VTS",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "vts-english-assessment",
@@ -83,6 +91,7 @@ export const researchProjects: ResearchProject[] = [
     status: "Completed",
     theme: "MASS & AI",
     flagship: true,
+    isRnd: true,
   },
   {
     id: "safety-index",

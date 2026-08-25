@@ -41,9 +41,11 @@ export function Research({ locale }: { locale: Locale }) {
             >
               <div>
                 <h3 className="text-[14.5px] font-medium leading-snug text-ink">
-                  <span className="mr-1.5 font-mono text-[11px] font-semibold tracking-wide text-accent-strong">
-                    R&D
-                  </span>
+                  {project.isRnd && (
+                    <span className="mr-1.5 font-mono text-[11px] font-semibold tracking-wide text-accent-strong">
+                      R&D
+                    </span>
+                  )}
                   {project.title}
                 </h3>
                 <p className="mt-1 text-[12.5px] text-ink-soft">
