@@ -68,6 +68,13 @@ export const presentations: {
     year: "2023",
     role: "Ponente",
   },
+  {
+    title:
+      "Oportunidades y Crisis para la Industria Coreana de Gestión de Buques",
+    venue: "Conferencia KOMARINE 2019",
+    year: "2019",
+    role: "Ponente",
+  },
 ];
 
 export const patents = [

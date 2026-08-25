@@ -63,6 +63,12 @@ export const presentations: {
     year: "2023",
     role: "발표자",
   },
+  {
+    title: "한국선박관리산업의 기회와 위기",
+    venue: "2019 코마린 컨퍼런스(KOMARINE)",
+    year: "2019",
+    role: "발표자",
+  },
 ];
 
 export const patents = [

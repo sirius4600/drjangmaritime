@@ -63,6 +63,12 @@ export const presentations: {
     year: "2023",
     role: "発表者",
   },
+  {
+    title: "韓国船舶管理産業の機会と危機",
+    venue: "2019 KOMARINEカンファレンス",
+    year: "2019",
+    role: "発表者",
+  },
 ];
 
 export const patents = [

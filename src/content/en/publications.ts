@@ -68,6 +68,12 @@ export const presentations: {
     year: "2023",
     role: "Speaker",
   },
+  {
+    title: "Opportunities and Crises for the Korean Ship Management Industry",
+    venue: "2019 KOMARINE Conference",
+    year: "2019",
+    role: "Speaker",
+  },
 ];
 
 export const patents = [
