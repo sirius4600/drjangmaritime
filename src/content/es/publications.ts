@@ -13,12 +13,25 @@ export const books = [
   },
 ];
 
-export const papers = [
+export const papers: {
+  title: string;
+  venue: string;
+  year: string;
+  summary?: string;
+}[] = [
   {
     title:
       "Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness",
     venue: "MDPI Applied Sciences",
     year: "2025",
+  },
+  {
+    title:
+      "Development a Collision Accident Evaluation Indicator for an e-Navigation Service",
+    venue: "Journal of the Korean Society of Marine Environment & Safety",
+    year: "2021",
+    summary:
+      "Desarrolla un indicador de evaluación cuantitativo para los servicios de e-Navigation mediante el análisis de causa raíz (RCA) y el análisis de árbol de fallos (FTA) para identificar las causas fundamentales de los accidentes de colisión marítima.",
   },
   {
     title:
@@ -38,6 +51,16 @@ export const papers = [
     year: "2016",
   },
 ];
+
+// Ponencias en congresos y conferencias por invitación. Queda vacío hasta
+// que el usuario confirme los elementos (título, congreso/institución, año
+// y, opcionalmente, el rol — ponente invitado, presentación oral, etc.).
+export const presentations: {
+  title: string;
+  venue: string;
+  year: string;
+  role?: string;
+}[] = [];
 
 export const patents = [
   {

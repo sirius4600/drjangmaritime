@@ -105,7 +105,12 @@ export interface UiDictionary {
   publications: {
     heading: string;
     body: string;
-    groups: { books: string; papers: string; patents: string };
+    groups: {
+      books: string;
+      papers: string;
+      presentations: string;
+      patents: string;
+    };
   };
   contact: {
     heading: string;
@@ -240,7 +245,12 @@ const ko: UiDictionary = {
   publications: {
     heading: "실제로 쓸 수 있는 지식",
     body: "30년간의 해양안전·VTS 연구에서 나온 저서, 논문, 특허입니다.",
-    groups: { books: "저서", papers: "논문", patents: "특허" },
+    groups: {
+      books: "저서",
+      papers: "논문",
+      presentations: "발표·강연",
+      patents: "특허",
+    },
   },
   contact: {
     heading: "함께 무엇을 만들 수 있을까요?",
@@ -375,7 +385,12 @@ const en: UiDictionary = {
   publications: {
     heading: "Knowledge you can use",
     body: "Books, papers and patents from three decades of maritime safety and VTS research.",
-    groups: { books: "Books", papers: "Papers", patents: "Patents" },
+    groups: {
+      books: "Books",
+      papers: "Papers",
+      presentations: "Presentations & Talks",
+      patents: "Patents",
+    },
   },
   contact: {
     heading: "What can we build together?",
@@ -510,7 +525,12 @@ const ja: UiDictionary = {
   publications: {
     heading: "実務に活かせる知識",
     body: "30年にわたる海上安全・VTS研究から生まれた著書、論文、特許です。",
-    groups: { books: "著書", papers: "論文", patents: "特許" },
+    groups: {
+      books: "著書",
+      papers: "論文",
+      presentations: "発表・講演",
+      patents: "特許",
+    },
   },
   contact: {
     heading: "共に何を築けるでしょうか？",
@@ -645,7 +665,12 @@ const es: UiDictionary = {
   publications: {
     heading: "Conocimiento aplicable",
     body: "Libros, artículos y patentes derivados de tres décadas de investigación en seguridad marítima y VTS.",
-    groups: { books: "Libros", papers: "Artículos", patents: "Patentes" },
+    groups: {
+      books: "Libros",
+      papers: "Artículos",
+      presentations: "Presentaciones y Conferencias",
+      patents: "Patentes",
+    },
   },
   contact: {
     heading: "¿Qué podemos construir juntos?",

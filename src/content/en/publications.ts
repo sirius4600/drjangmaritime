@@ -13,12 +13,25 @@ export const books = [
   },
 ];
 
-export const papers = [
+export const papers: {
+  title: string;
+  venue: string;
+  year: string;
+  summary?: string;
+}[] = [
   {
     title:
       "Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness",
     venue: "MDPI Applied Sciences",
     year: "2025",
+  },
+  {
+    title:
+      "Development a Collision Accident Evaluation Indicator for an e-Navigation Service",
+    venue: "Journal of the Korean Society of Marine Environment & Safety",
+    year: "2021",
+    summary:
+      "Develops a quantitative evaluation indicator for e-Navigation services by using root cause analysis (RCA) and fault tree analysis (FTA) to identify the root causes of maritime collision accidents.",
   },
   {
     title:
@@ -38,6 +51,16 @@ export const papers = [
     year: "2016",
   },
 ];
+
+// Conference/invited talks and speaking engagements. Empty until specific
+// entries (title, venue/organization, year, and optionally role — e.g.
+// invited speaker vs. oral presentation) are confirmed by the user.
+export const presentations: {
+  title: string;
+  venue: string;
+  year: string;
+  role?: string;
+}[] = [];
 
 export const patents = [
   {

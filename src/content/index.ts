@@ -31,10 +31,30 @@ import { researchProjects as researchProjectsKo, researchThemes as researchTheme
 import { researchProjects as researchProjectsJa, researchThemes as researchThemesJa } from "./ja/research";
 import { researchProjects as researchProjectsEs, researchThemes as researchThemesEs } from "./es/research";
 
-import { books as booksEn, papers as papersEn, patents as patentsEn } from "./en/publications";
-import { books as booksKo, papers as papersKo, patents as patentsKo } from "./ko/publications";
-import { books as booksJa, papers as papersJa, patents as patentsJa } from "./ja/publications";
-import { books as booksEs, papers as papersEs, patents as patentsEs } from "./es/publications";
+import {
+  books as booksEn,
+  papers as papersEn,
+  presentations as presentationsEn,
+  patents as patentsEn,
+} from "./en/publications";
+import {
+  books as booksKo,
+  papers as papersKo,
+  presentations as presentationsKo,
+  patents as patentsKo,
+} from "./ko/publications";
+import {
+  books as booksJa,
+  papers as papersJa,
+  presentations as presentationsJa,
+  patents as patentsJa,
+} from "./ja/publications";
+import {
+  books as booksEs,
+  papers as papersEs,
+  presentations as presentationsEs,
+  patents as patentsEs,
+} from "./es/publications";
 
 import { awards as awardsEn, proofStats as proofStatsEn } from "./en/awards";
 import { awards as awardsKo, proofStats as proofStatsKo } from "./ko/awards";
@@ -96,6 +116,7 @@ const bundles = {
     researchThemes: researchThemesKo,
     books: booksKo,
     papers: papersKo,
+    presentations: presentationsKo,
     patents: patentsKo,
     awards: awardsKo,
     proofStats: proofStatsKo,
@@ -119,6 +140,7 @@ const bundles = {
     researchThemes: researchThemesEn,
     books: booksEn,
     papers: papersEn,
+    presentations: presentationsEn,
     patents: patentsEn,
     awards: awardsEn,
     proofStats: proofStatsEn,
@@ -142,6 +164,7 @@ const bundles = {
     researchThemes: researchThemesJa,
     books: booksJa,
     papers: papersJa,
+    presentations: presentationsJa,
     patents: patentsJa,
     awards: awardsJa,
     proofStats: proofStatsJa,
@@ -165,6 +188,7 @@ const bundles = {
     researchThemes: researchThemesEs,
     books: booksEs,
     papers: papersEs,
+    presentations: presentationsEs,
     patents: patentsEs,
     awards: awardsEs,
     proofStats: proofStatsEs,

@@ -13,12 +13,24 @@ export const books = [
   },
 ];
 
-export const papers = [
+export const papers: {
+  title: string;
+  venue: string;
+  year: string;
+  summary?: string;
+}[] = [
   {
     title:
       "Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness",
     venue: "MDPI Applied Sciences",
     year: "2025",
+  },
+  {
+    title: "e-Navigation 서비스를 위한 충돌사고 평가지표 개발",
+    venue: "해양환경안전학회지",
+    year: "2021",
+    summary:
+      "IMO가 추진하는 e-Navigation의 개발성과를 평가하기 위해, RCA와 FTA 기법으로 해상 충돌사고의 근본원인을 도출하고 이를 정량화한 평가지표를 개발했다.",
   },
   {
     title: "선박교통관제센터-선박 간 실제 통신데이터 기반 선박안전교육 챗봇 프레임워크 개발",
@@ -36,6 +48,15 @@ export const papers = [
     year: "2016",
   },
 ];
+
+// 학술대회·초청강연 발표 실적. 사용자가 항목(제목, 학회/기관명, 연도, 역할 —
+// 초청강연/구두발표 등)을 확정해주기 전까지는 비워둡니다.
+export const presentations: {
+  title: string;
+  venue: string;
+  year: string;
+  role?: string;
+}[] = [];
 
 export const patents = [
   {
