@@ -60,7 +60,15 @@ export const presentations: {
   venue: string;
   year: string;
   role?: string;
-}[] = [];
+}[] = [
+  {
+    title:
+      "Response Strategies for the Decline and Aging of Korean Seafarers Amid Rising Reliance on Foreign Crew",
+    venue: "38th Maritime Accident Prevention Seminar",
+    year: "2023",
+    role: "Speaker",
+  },
+];
 
 export const patents = [
   {

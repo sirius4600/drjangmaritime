@@ -60,7 +60,15 @@ export const presentations: {
   venue: string;
   year: string;
   role?: string;
-}[] = [];
+}[] = [
+  {
+    title:
+      "Estrategias de Respuesta ante la Disminución y el Envejecimiento de la Gente de Mar Coreana y el Aumento de la Contratación de Tripulación Extranjera",
+    venue: "38.º Seminario de Prevención de Accidentes Marítimos",
+    year: "2023",
+    role: "Ponente",
+  },
+];
 
 export const patents = [
   {

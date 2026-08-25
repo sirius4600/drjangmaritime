@@ -56,7 +56,14 @@ export const presentations: {
   venue: string;
   year: string;
   role?: string;
-}[] = [];
+}[] = [
+  {
+    title: "한국인 선원 감소·고령화에 따른 외국인 선원 고용 확대 대응방안",
+    venue: "제38차 해양사고방지 세미나",
+    year: "2023",
+    role: "발표자",
+  },
+];
 
 export const patents = [
   {
