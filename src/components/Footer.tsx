@@ -16,6 +16,10 @@ export function Footer({ locale }: { locale: Locale }) {
     { label: ui.nav.publications, href: `/${locale}#publications` },
     { label: ui.nav.about, href: `/${locale}#about` },
     { label: ui.contact.heading, href: `/${locale}#contact` },
+    {
+      label: locale === "ko" ? "VTS 자료실" : "VTS Library",
+      href: "https://drjangvts.com",
+    },
   ];
 
   return (
@@ -38,6 +42,8 @@ export function Footer({ locale }: { locale: Locale }) {
             <a
               key={item.href}
               href={item.href}
+              target={item.href.startsWith("http") ? "_blank" : undefined}
+              rel={item.href.startsWith("http") ? "noopener" : undefined}
               className="transition-colors hover:text-paper-on-navy"
             >
               {item.label}

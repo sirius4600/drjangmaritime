@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import { VtsLibraryBanner } from "@/components/VtsLibraryBanner";
 import { Hero } from "@/components/Hero";
 import { ProofStrip } from "@/components/ProofStrip";
 import { WhyThisSite } from "@/components/WhyThisSite";
@@ -31,6 +32,7 @@ export default async function Home({
   return (
     <>
       <Header locale={locale} />
+      <VtsLibraryBanner locale={locale} />
       <main className="flex-1">
         <Hero locale={locale} />
         <ProofStrip locale={locale} />
