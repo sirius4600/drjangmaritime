@@ -67,12 +67,6 @@ export const presentations: {
     role: "Speaker",
   },
   {
-    title: "Maritime Accident Prevention Seminar — Invited Talk",
-    venue: "Korean Maritime Safety Tribunal",
-    year: "2023.11",
-    role: "Speaker",
-  },
-  {
     title: "Guest Lecture at Korea Maritime and Ocean University",
     venue: "Korea Maritime and Ocean University",
     year: "2021.08",
@@ -109,23 +103,11 @@ export const presentations: {
     role: "Guest Lecture",
   },
   {
-    title: "Korea Ship Management Forum — Keynote",
-    venue: "Korea Ship Management Forum",
-    year: "2019.11",
-    role: "Speaker",
-  },
-  {
     title:
       "The Fourth Industrial Revolution and the Future of Seafarers — Guest Lecture",
     venue: "Samsung Heavy Industries · Hyundai Heavy Industries",
     year: "2019-2020",
     role: "Guest Lecture",
-  },
-  {
-    title: "2nd MASS Introduction Conference — Presentation",
-    venue: "Grand Hotel, Busan",
-    year: "2019.09",
-    role: "Speaker",
   },
   {
     title: "Maritime and Fisheries Outlook Conference — Keynote",

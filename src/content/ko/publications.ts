@@ -63,12 +63,6 @@ export const presentations: {
     role: "발표자",
   },
   {
-    title: "해양사고방지세미나 주제발표",
-    venue: "중앙해양안전심판원",
-    year: "2023.11",
-    role: "주제발표",
-  },
-  {
     title: "한국해양대학교 특강",
     venue: "한국해양대학교",
     year: "2021.08",
@@ -105,22 +99,10 @@ export const presentations: {
     role: "특강",
   },
   {
-    title: "한국선박관리포럼 주제발표",
-    venue: "한국선박관리포럼",
-    year: "2019.11",
-    role: "주제발표",
-  },
-  {
     title: "4차산업혁명과 선원의 미래 특강",
     venue: "삼성중공업 · 현대중공업",
     year: "2019-2020",
     role: "특강",
-  },
-  {
-    title: "제2회 자율운항선박도입 컨퍼런스 발표",
-    venue: "부산 그랜드호텔",
-    year: "2019.09",
-    role: "발표자",
   },
   {
     title: "해양수산전망대회 주제발표",
