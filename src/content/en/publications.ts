@@ -21,9 +21,62 @@ export const papers: {
 }[] = [
   {
     title:
+      "Development of a Performance Evaluation System for a Remotely Controllable Maritime Firefighting Vessel Using Ship Simulation",
+    venue: "Korean Institute of Navigation and Port Research (KINPR)",
+    year: "2026.05",
+  },
+  {
+    title:
       "Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness",
     venue: "MDPI Applied Sciences",
     year: "2025",
+  },
+  {
+    title:
+      "A Study on the Operational Structure Analysis of a Cloud-Based VTS Integrated Platform",
+    venue: "KINPR Spring Conference 2023",
+    year: "2023",
+  },
+  {
+    title:
+      "A Study on the Minimum Competency of Remote Operators for Navigation of Autonomous Ships",
+    venue: "KINPR Spring Conference 2023",
+    year: "2023",
+  },
+  {
+    title:
+      "A Study on the Development of Operator Training Methods for a Cloud-Based Vessel Traffic Service Platform",
+    venue: "Journal of the Korean Society of Marine Environment & Safety 29(7)",
+    year: "2023",
+  },
+  {
+    title:
+      "An Analysis of Situation Awareness Requirements for Remote Operators in Autonomous Ship Remote Operation",
+    venue: "KINPR Spring Conference 2022",
+    year: "2022",
+  },
+  {
+    title:
+      "A Basic Study on the Development of Familiarization Training for Autonomous Ships",
+    venue: "KINPR Spring Conference 2022",
+    year: "2022",
+  },
+  {
+    title:
+      "A Study on the Development of an Education and Training Program for Remote Operators",
+    venue: "KINPR Spring Conference 2022",
+    year: "2022",
+  },
+  {
+    title: "Development of the Guidelines on the VTS English Competency Test",
+    venue: "KINPR Spring Conference 2022",
+    year: "2022",
+  },
+  {
+    title:
+      "A Study on the Development of Standard Operating Procedures (SOP) for a Cloud-Based VTS Integrated Platform",
+    venue: "KINPR Spring Conference 2022",
+    year: "2022",
   },
   {
     title:
@@ -35,20 +88,197 @@ export const papers: {
   },
   {
     title:
+      "Quantitative Evaluation of the Collision-Avoidance Capability of Maritime Autonomous Surface Ships Using FMSS",
+    venue: "Journal of Navigation and Port Research 44(6)",
+    year: "2020",
+  },
+  {
+    title: "Development of a Competency Model for Novice VTS Operators",
+    venue: "KINPR Spring Conference 2018",
+    year: "2018",
+  },
+  {
+    title:
       "A Development of Chatbot Framework for Ship Safety Education Based on Actual Communication Data between Port Control Center and Ship",
     venue: "ICIC Express Letters, Part B: Applications, Vol. 9",
     year: "2018",
   },
   {
+    title:
+      "An Study on the Personality Trend of Deck Officers When Collision or Grounding Occurs",
+    venue: "KOSOMES Joint International Conference 2018",
+    year: "2018",
+  },
+  {
+    title:
+      "A Development of Training Manual Responding Passenger Overboard in Coastal Passenger Vessel",
+    venue: "KOSOMES Joint International Conference 2018",
+    year: "2018",
+  },
+  {
+    title:
+      "An Analysis of Maritime Accident Causal Factors Based on Deck Officers' Individual Characteristics",
+    venue: "KINPR Fall Conference 2018",
+    year: "2018",
+  },
+  {
+    title:
+      "A Development of Standard Practical Training Manual based on CBT for Coastal Cruises in the Republic of Korea",
+    venue: "KINPR Fall Conference 2018",
+    year: "2018",
+  },
+  {
+    title: "Common Phraseology and Procedures for VTS Communication",
+    venue: "KINPR Spring Conference 2017",
+    year: "2017",
+    summary: "Received the KINPR Best Presentation Award.",
+  },
+  {
     title: "VTS Simulator-Based Job Competency Analysis of VTS Operators",
-    venue: "Journal of the Korean Society of Marine Police Science",
+    venue: "Journal of the Korean Society of Marine Police Science 7(3)",
     year: "2017",
   },
   {
     title:
-      "Analysis of VTS Operators' Situation Awareness Based on Field Observation and Self-Report Methods",
-    venue: "Journal of Navigation and Port Research",
+      "A Base Research on the Personality and Aptitude Tests for Marine Officer",
+    venue: "KOSOMES Joint Conference 2017",
+    year: "2017",
+  },
+  {
+    title:
+      "The Development of Computer-based Training Programmes on Fire-fighting and Abandon-ship Drills for Coastal Passenger Ships",
+    venue: "KOSOMES Joint Conference 2017",
+    year: "2017",
+  },
+  {
+    title:
+      "A Study on the Development of Proactive Management System for Maritime Safety",
+    venue: "KOSOMES Joint Conference 2017",
+    year: "2017",
+  },
+  {
+    title: "Development of Standard e-Navigation Phrases",
+    venue: "KINPR Fall Conference 2017",
+    year: "2017",
+  },
+  {
+    title:
+      "A Review of Safe Passenger Evacuation Factors for the Development of a CBT Program for Coastal Passenger Ships",
+    venue: "KINPR Fall Conference 2017",
+    year: "2017",
+  },
+  {
+    title:
+      "Development of a Cognitive and Perceptual Assessment Tool for Deck Officers",
+    venue: "KINPR Fall Conference 2017",
+    year: "2017",
+  },
+  {
+    title:
+      "A Study on the Design of an Emergency Response Training Program for Coastal Vessels",
+    venue: "KINPR Spring Conference 2016",
     year: "2016",
+  },
+  {
+    title: "Results of a Cognitive Task Analysis of VTS Operators",
+    venue: "KINPR Spring Conference 2016",
+    year: "2016",
+  },
+  {
+    title:
+      "Optimal Layout of VTS Console Equipment Based on User Requirements Analysis",
+    venue: "KINPR Spring Conference 2016",
+    year: "2016",
+  },
+  {
+    title:
+      "A Study on the Development of a National Maritime Traffic Safety Program Based on System Safety Concepts",
+    venue: "KINPR Spring Conference 2016",
+    year: "2016",
+  },
+  {
+    title:
+      "An Ergonomic Evaluation of the Vessel Traffic Service Working Environment",
+    venue: "KINPR Spring Conference 2016",
+    year: "2016",
+  },
+  {
+    title:
+      "Analysis of VTS Operators' Situation Awareness Based on Field Observation and Self-Report Methods",
+    venue: "Journal of Navigation and Port Research 40(6)",
+    year: "2016",
+    summary: "Received the KINPR Best Paper Award.",
+  },
+  {
+    title:
+      "A Study on the Establishment of a Maritime English Training Center (METC)",
+    venue: "KINPR Spring Conference 2015",
+    year: "2015",
+  },
+  {
+    title:
+      "Development of a Maritime English Instructor Training Program and Future Directions",
+    venue: "KINPR Spring Conference 2014",
+    year: "2014",
+  },
+  {
+    title:
+      "A Study on the Effect of Ship Structure on Survival Rate — Reflections on the Sewol Ferry Disaster",
+    venue: "KINPR Spring Conference 2014",
+    year: "2014",
+  },
+  {
+    title: "Recent International Trends in VTS Operator Training",
+    venue: "KINPR Spring Conference 2012",
+    year: "2012",
+  },
+  {
+    title:
+      "Prospects for VTS Development Following e-Navigation Strategy Implementation",
+    venue: "KINPR Spring Conference 2011",
+    year: "2011",
+  },
+  {
+    title:
+      "The Study on the Survey for the User Preference on the Priority of Functions to be Implemented",
+    venue: "Korean Society of Marine Engineering, Spring Joint Conference 2011",
+    year: "2011",
+  },
+  {
+    title:
+      "Institutional Improvement Measures to Strengthen VTS Operator Competency",
+    venue: "KINPR Fall Conference 2010",
+    year: "2010",
+  },
+  {
+    title:
+      "Analysis of an Operator Survey for the Introduction of a VTS Operator Qualification and Assessment System",
+    venue: "KINPR Fall Conference 2010",
+    year: "2010",
+  },
+  {
+    title:
+      "A Study on the Development of Fishing Vessels Safety Technology in Aceh Province of Indonesia for Korea's ODA",
+    venue: "Journal of the Korean Society of Marine Environment & Safety 16(2)",
+    year: "2010",
+  },
+  {
+    title:
+      "A Study on the Optimal Width of the Main Span in the 2nd Bridge of Incheon (2) Economic Analysis on Port Operation according to Traffic Schemes in the Main Span",
+    venue: "Journal of Navigation and Port Research 29(1)",
+    year: "2005",
+  },
+  {
+    title:
+      "Prediction Method of the BOG for the Membrane Type LNGC in Middle East Route",
+    venue: "Journal of Navigation and Port Research 28(5)",
+    year: "2004",
+  },
+  {
+    title:
+      "A Study on the Optimal Width of the Main Span in the 2nd Bridge of Incheon (1) Evaluation on the Optimal Width of the Main Span according to Traffic Volume and Ship Maneuverability",
+    venue: "Journal of Navigation and Port Research 28(10)",
+    year: "2004",
   },
 ];
 
