@@ -75,6 +75,7 @@ export interface UiDictionary {
   };
   expertise: {
     heading: string;
+    imageAlt: string;
   };
   oceanBridge: {
     heading: string;
@@ -217,6 +218,7 @@ const ko: UiDictionary = {
   },
   expertise: {
     heading: "전문 분야",
+    imageAlt: "부산 VTS 관제센터와 MASS 자율운항선박",
   },
   oceanBridge: {
     heading: "해양인의 다음 걸음을 돕습니다",
@@ -359,6 +361,7 @@ const en: UiDictionary = {
   },
   expertise: {
     heading: "Areas of expertise",
+    imageAlt: "Busan VTS control tower and MASS autonomous vessels",
   },
   oceanBridge: {
     heading: "Helping maritime people navigate their next move",
@@ -501,6 +504,7 @@ const ja: UiDictionary = {
   },
   expertise: {
     heading: "専門分野",
+    imageAlt: "釜山VTS管制センターとMASS自律運航船",
   },
   oceanBridge: {
     heading: "海事従事者の次の一歩を支える",
@@ -643,6 +647,7 @@ const es: UiDictionary = {
   },
   expertise: {
     heading: "Áreas de especialización",
+    imageAlt: "Torre de control VTS de Busan y buques autónomos MASS",
   },
   oceanBridge: {
     heading: "Acompañando el siguiente paso de la gente de mar",

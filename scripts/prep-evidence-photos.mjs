@@ -38,6 +38,14 @@ const jobs = [
     "2026_skandi_connector_bridge_captain.jpg",
     "skandi-connector-bridge-2026.jpg",
   ],
+  [
+    "2026_busan_vts_mass_units_dusk.png",
+    "busan-vts-mass-units-dusk-2026.jpg",
+  ],
+  [
+    "2026_busan_vts_mass_unit_approach.png",
+    "busan-vts-mass-unit-approach-2026.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {
