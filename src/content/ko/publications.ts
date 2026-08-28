@@ -49,8 +49,7 @@ export const papers: {
   },
 ];
 
-// 학술대회·초청강연 발표 실적. 사용자가 항목(제목, 학회/기관명, 연도, 역할 —
-// 초청강연/구두발표 등)을 확정해주기 전까지는 비워둡니다.
+// 학술대회·초청강연 발표 실적.
 export const presentations: {
   title: string;
   venue: string;
@@ -64,6 +63,30 @@ export const presentations: {
     role: "발표자",
   },
   {
+    title: "해양사고방지세미나 주제발표",
+    venue: "중앙해양안전심판원",
+    year: "2023.11",
+    role: "주제발표",
+  },
+  {
+    title: "한국해양대학교 특강",
+    venue: "한국해양대학교",
+    year: "2021.08",
+    role: "특강",
+  },
+  {
+    title: "해양인명사고 50%줄이기 TF회의 주제발표",
+    venue: "해양수산부",
+    year: "2021.06",
+    role: "주제발표",
+  },
+  {
+    title: "온라인 한국선박관리포럼 패널토론",
+    venue: "한국선박관리포럼, BEXCO",
+    year: "2020.12",
+    role: "패널토론자",
+  },
+  {
     title: "한국선박관리산업의 기회와 위기",
     venue: "2019 코마린 컨퍼런스(KOMARINE)",
     year: "2019",
@@ -74,6 +97,132 @@ export const presentations: {
     venue: "제2차 자율운항선박(MASS) 도입 기술·정책 컨퍼런스",
     year: "2019",
     role: "발표자",
+  },
+  {
+    title: "VTS와 해양안전의 미래 특강",
+    venue: "한국해양대학교",
+    year: "2019.11",
+    role: "특강",
+  },
+  {
+    title: "한국선박관리포럼 주제발표",
+    venue: "한국선박관리포럼",
+    year: "2019.11",
+    role: "주제발표",
+  },
+  {
+    title: "4차산업혁명과 선원의 미래 특강",
+    venue: "삼성중공업 · 현대중공업",
+    year: "2019-2020",
+    role: "특강",
+  },
+  {
+    title: "제2회 자율운항선박도입 컨퍼런스 발표",
+    venue: "부산 그랜드호텔",
+    year: "2019.09",
+    role: "발표자",
+  },
+  {
+    title: "해양수산전망대회 주제발표",
+    venue: "해양수산전망대회 (KOEX, KMI 주관)",
+    year: "2018.01",
+    role: "주제발표",
+  },
+  {
+    title: "남해지방해양경비안전본부 특강",
+    venue: "남해지방해양경비안전본부",
+    year: "2016.12",
+    role: "특강",
+  },
+  {
+    title: "IALA 국제 VTS 심포지엄 2016 발표",
+    venue: "국제항로표지협회(IALA), 쿠알라룸푸르",
+    year: "2016.08",
+    role: "발표자",
+  },
+  {
+    title: "국제해양안전장비박람회 VTS 세미나 주제발표",
+    venue: "인천 송도 컨벤시아",
+    year: "2015.06",
+    role: "주제발표",
+  },
+  {
+    title: "한-노르웨이 해운협력회의 국제세미나 주제발표",
+    venue: "한-노르웨이 해운협력회의, 오슬로",
+    year: "2014.11",
+    role: "주제발표",
+  },
+  {
+    title: "영산대학교 특강",
+    venue: "영산대학교",
+    year: "2013.11",
+    role: "특강",
+  },
+  {
+    title: "남해지방해양경찰청 해양사고예방 특강",
+    venue: "남해지방해양경찰청",
+    year: "2013.07",
+    role: "특강",
+  },
+  {
+    title: "경운대학교 멘토 특강",
+    venue: "경운대학교",
+    year: "2012.11",
+    role: "특강",
+  },
+  {
+    title: "IMO Regional ITCP Seminar 주제발표",
+    venue: "IMO Regional ITCP Seminar, 서울",
+    year: "2012.11",
+    role: "주제발표",
+  },
+  {
+    title: "Digital Ship Korea 2012 주제발표",
+    venue: "국제 Digital Ship Korea 2012, 부산",
+    year: "2012.10",
+    role: "주제발표",
+  },
+  {
+    title: "IALA 국제 VTS 심포지엄 2012 발표",
+    venue: "국제항로표지협회(IALA), 이스탄불",
+    year: "2012.09",
+    role: "발표자",
+  },
+  {
+    title: "포항산업과학연구원(RIST) 특강",
+    venue: "포항산업과학연구원(RIST)",
+    year: "2012.03",
+    role: "특강",
+  },
+  {
+    title: "국립수산인력개발센터 출강",
+    venue: "국립수산인력개발센터",
+    year: "2012.03",
+    role: "출강",
+  },
+  {
+    title: "한-몽골 해운협력회의 국제세미나 주제발표",
+    venue: "한-몽골 도로교통부 해운협력회의",
+    year: "2012.03",
+    role: "주제발표",
+  },
+  {
+    title: "한국선박해양플랜트연구소 특강",
+    venue: "한국선박해양플랜트연구소",
+    year: "2012.02",
+    role: "특강",
+  },
+  {
+    title: "국토해양인재개발원 출강",
+    venue: "국토해양인재개발원",
+    year: "2010-2012",
+    role: "출강",
+  },
+  {
+    title: "삼성중공업(주) 특강",
+    venue: "삼성중공업(주)",
+    year: "2003.09",
+    role: "특강",
   },
 ];
 

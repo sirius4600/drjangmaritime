@@ -52,9 +52,7 @@ export const papers: {
   },
 ];
 
-// Conference/invited talks and speaking engagements. Empty until specific
-// entries (title, venue/organization, year, and optionally role — e.g.
-// invited speaker vs. oral presentation) are confirmed by the user.
+// Conference/invited talks and speaking engagements.
 export const presentations: {
   title: string;
   venue: string;
@@ -69,6 +67,30 @@ export const presentations: {
     role: "Speaker",
   },
   {
+    title: "Maritime Accident Prevention Seminar — Invited Talk",
+    venue: "Korean Maritime Safety Tribunal",
+    year: "2023.11",
+    role: "Speaker",
+  },
+  {
+    title: "Guest Lecture at Korea Maritime and Ocean University",
+    venue: "Korea Maritime and Ocean University",
+    year: "2021.08",
+    role: "Guest Lecture",
+  },
+  {
+    title: "Task Force on Halving Maritime Fatalities — Keynote",
+    venue: "Ministry of Oceans and Fisheries",
+    year: "2021.06",
+    role: "Speaker",
+  },
+  {
+    title: "Online Korea Ship Management Forum — Panel Discussion",
+    venue: "Korea Ship Management Forum, BEXCO",
+    year: "2020.12",
+    role: "Panelist",
+  },
+  {
     title: "Opportunities and Crises for the Korean Ship Management Industry",
     venue: "2019 KOMARINE Conference",
     year: "2019",
@@ -79,6 +101,140 @@ export const presentations: {
     venue: "2nd MASS Introduction Technology & Policy Conference",
     year: "2019",
     role: "Speaker",
+  },
+  {
+    title: "The Future of VTS and Maritime Safety — Guest Lecture",
+    venue: "Korea Maritime and Ocean University",
+    year: "2019.11",
+    role: "Guest Lecture",
+  },
+  {
+    title: "Korea Ship Management Forum — Keynote",
+    venue: "Korea Ship Management Forum",
+    year: "2019.11",
+    role: "Speaker",
+  },
+  {
+    title:
+      "The Fourth Industrial Revolution and the Future of Seafarers — Guest Lecture",
+    venue: "Samsung Heavy Industries · Hyundai Heavy Industries",
+    year: "2019-2020",
+    role: "Guest Lecture",
+  },
+  {
+    title: "2nd MASS Introduction Conference — Presentation",
+    venue: "Grand Hotel, Busan",
+    year: "2019.09",
+    role: "Speaker",
+  },
+  {
+    title: "Maritime and Fisheries Outlook Conference — Keynote",
+    venue: "KOEX (hosted by KMI)",
+    year: "2018.01",
+    role: "Speaker",
+  },
+  {
+    title: "Guest Lecture at Namhae Regional Coast Guard Headquarters",
+    venue: "Namhae Regional Coast Guard Headquarters",
+    year: "2016.12",
+    role: "Guest Lecture",
+  },
+  {
+    title: "IALA International VTS Symposium 2016 — Presentation",
+    venue: "IALA, Kuala Lumpur",
+    year: "2016.08",
+    role: "Speaker",
+  },
+  {
+    title:
+      "International Maritime Safety Equipment Fair — VTS Seminar Keynote",
+    venue: "Songdo Convensia, Incheon",
+    year: "2015.06",
+    role: "Speaker",
+  },
+  {
+    title: "Korea-Norway Maritime Cooperation International Seminar — Keynote",
+    venue: "Korea-Norway Maritime Cooperation Meeting, Oslo",
+    year: "2014.11",
+    role: "Speaker",
+  },
+  {
+    title: "Guest Lecture at Youngsan University",
+    venue: "Youngsan University",
+    year: "2013.11",
+    role: "Guest Lecture",
+  },
+  {
+    title: "Maritime Accident Prevention — Guest Lecture",
+    venue: "Namhae Regional Coast Guard",
+    year: "2013.07",
+    role: "Guest Lecture",
+  },
+  {
+    title: "Mentoring Guest Lecture at Kyungwoon University",
+    venue: "Kyungwoon University",
+    year: "2012.11",
+    role: "Guest Lecture",
+  },
+  {
+    title: "IMO Regional ITCP Seminar — Keynote",
+    venue: "IMO Regional ITCP Seminar, Seoul",
+    year: "2012.11",
+    role: "Speaker",
+  },
+  {
+    title: "Digital Ship Korea 2012 — Keynote",
+    venue: "Digital Ship Korea 2012, Busan",
+    year: "2012.10",
+    role: "Speaker",
+  },
+  {
+    title: "IALA International VTS Symposium 2012 — Presentation",
+    venue: "IALA, Istanbul",
+    year: "2012.09",
+    role: "Speaker",
+  },
+  {
+    title: "Guest Lecture at RIST",
+    venue: "Research Institute of Industrial Science & Technology (RIST)",
+    year: "2012.03",
+    role: "Guest Lecture",
+  },
+  {
+    title:
+      "Guest Lecture at the National Fisheries Human Resources Development Institute",
+    venue: "National Fisheries Human Resources Development Institute",
+    year: "2012.03",
+    role: "Guest Lecture",
+  },
+  {
+    title:
+      "Korea-Mongolia Maritime Cooperation International Seminar — Keynote",
+    venue:
+      "Korea-Mongolia Ministry of Land, Infrastructure and Transport Maritime Cooperation Meeting",
+    year: "2012.03",
+    role: "Speaker",
+  },
+  {
+    title:
+      "Guest Lecture at the Korea Research Institute of Ships & Ocean Engineering",
+    venue: "Korea Research Institute of Ships & Ocean Engineering",
+    year: "2012.02",
+    role: "Guest Lecture",
+  },
+  {
+    title:
+      "Guest Lecture at the Land, Infrastructure and Transport Human Resources Development Institute",
+    venue:
+      "Land, Infrastructure and Transport Human Resources Development Institute",
+    year: "2010-2012",
+    role: "Guest Lecture",
+  },
+  {
+    title: "Guest Lecture at Samsung Heavy Industries",
+    venue: "Samsung Heavy Industries",
+    year: "2003.09",
+    role: "Guest Lecture",
   },
 ];
 
