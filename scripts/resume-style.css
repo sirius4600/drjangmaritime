@@ -1,0 +1,427 @@
+:root {
+  --cyan: #0088b0;
+  --magenta: #d6006c;
+  --accent-700: #006184;
+  --ink: #201e1d;
+
+  --outer-bg: #eef1f1;
+  --outer-fg: #4b5555;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --outer-bg: #14181a;
+    --outer-fg: #9fb0b0;
+  }
+}
+:root[data-theme="dark"] {
+  --outer-bg: #14181a;
+  --outer-fg: #9fb0b0;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--outer-bg);
+  color: var(--outer-fg);
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+body {
+  padding: 48px 20px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ---- chrome (screen only) ---- */
+.toolbar {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.toolbar h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--outer-fg);
+  margin: 0;
+}
+.toolbar .hint {
+  width: 100%;
+  font-size: 12.5px;
+  color: var(--outer-fg);
+  opacity: 0.75;
+  margin: -4px 0 0;
+}
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--cyan);
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: none;
+}
+.print-btn:hover { background: color-mix(in srgb, var(--cyan) 85%, black); }
+.print-btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.print-btn svg { width: 15px; height: 15px; flex: none; }
+
+.tabs {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.ctrl { position: absolute; opacity: 0; pointer-events: none; }
+
+.tabs label {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--outer-fg);
+  background: color-mix(in srgb, var(--outer-fg) 8%, transparent);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.tabs label:hover { background: color-mix(in srgb, var(--cyan) 25%, transparent); }
+#tab-basic:checked ~ .tabs label[for="tab-basic"],
+#tab-extended:checked ~ .tabs label[for="tab-extended"],
+#tab-full:checked ~ .tabs label[for="tab-full"] {
+  background: var(--cyan);
+  color: #fff;
+}
+#tab-basic:focus-visible ~ .tabs label[for="tab-basic"],
+#tab-extended:focus-visible ~ .tabs label[for="tab-extended"],
+#tab-full:focus-visible ~ .tabs label[for="tab-full"] {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+.opts {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin: -8px 0 18px;
+  flex-wrap: wrap;
+}
+.opts label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--outer-fg);
+  cursor: pointer;
+  user-select: none;
+}
+.opts label::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1.4px solid color-mix(in srgb, var(--outer-fg) 55%, transparent);
+  background: transparent;
+}
+#show-dob:checked ~ .opts label[for="show-dob"],
+#show-phone:checked ~ .opts label[for="show-phone"],
+#show-email:checked ~ .opts label[for="show-email"] {
+  color: var(--cyan);
+  font-weight: 600;
+}
+#show-dob:checked ~ .opts label[for="show-dob"]::before,
+#show-phone:checked ~ .opts label[for="show-phone"]::before,
+#show-email:checked ~ .opts label[for="show-email"]::before {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+#show-dob:focus-visible ~ .opts label[for="show-dob"],
+#show-phone:focus-visible ~ .opts label[for="show-phone"],
+#show-email:focus-visible ~ .opts label[for="show-email"] {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+/* ---- the paper (fixed light world, both themes) ---- */
+.paper {
+  width: 100%;
+  max-width: 780px;
+  background: #fbfaf7;
+  color: #201e1d;
+  box-shadow: 0 1px 3px rgba(20, 20, 18, 0.08), 0 18px 48px rgba(20, 20, 18, 0.16);
+  border-radius: 3px;
+  padding: 56px 60px 64px;
+}
+
+.panel { display: none; }
+#tab-basic:checked ~ .paper .panel-basic,
+#tab-extended:checked ~ .paper .panel-extended,
+#tab-full:checked ~ .paper .panel-full {
+  display: block;
+}
+
+/* ---- masthead ---- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 22px;
+  margin-bottom: 30px;
+  border-bottom: 1.6px solid #201e1d;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand svg { width: 34px; height: 34px; flex: none; }
+.brand .name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #201e1d;
+  line-height: 1;
+}
+.brand .sub {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  color: var(--accent-700);
+  margin-top: 5px;
+}
+.brand .site {
+  display: block;
+  margin-top: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--cyan);
+  text-decoration: none;
+}
+.brand .site:hover { text-decoration: underline; }
+.masthead .right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.masthead .contact {
+  text-align: right;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #52504d;
+}
+.masthead .contact strong { color: #201e1d; font-weight: 600; }
+.masthead .photo { flex: none; }
+.masthead .photo img {
+  display: block;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid #e4e1d9;
+}
+
+/* ---- identity strip ----
+   Column WIDTH is fixed (flex-basis: 25%) regardless of what's toggled on —
+   optional fields (dob/phone/email) just wrap onto a new row. That keeps the
+   4 base cells' width (and text wrap) constant no matter what's checked.
+   Borders use the classic collapsing-negative-margin trick rather than
+   :first-child/:nth-child, since those can't detect "first in a rendered
+   row" once some siblings are display:none. */
+.identity {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+  border: 1px solid #e4e1d9;
+  border-radius: 4px;
+  background: #fbfaf7;
+  overflow: hidden;
+}
+.identity > div {
+  flex: 1 1 25%;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-left: 1px solid #e4e1d9;
+  border-top: 1px solid #e4e1d9;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+.identity .k {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+  margin-bottom: 4px;
+}
+.identity .v { font-size: 13px; color: #201e1d; font-weight: 500; }
+.identity .dob,
+.identity .phone,
+.identity .email-field { display: none; }
+.identity input.dob-input {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #201e1d;
+  border: none;
+  border-bottom: 1px solid #b8b4a8;
+  background: transparent;
+  padding: 2px 0;
+  width: 100%;
+}
+.identity input.dob-input:focus { outline: none; border-bottom-color: var(--cyan); }
+#show-dob:checked ~ .paper .identity .dob { display: block; }
+#show-phone:checked ~ .paper .identity .phone { display: block; }
+#show-email:checked ~ .paper .identity .email-field { display: block; }
+@media (max-width: 640px) {
+  .identity > div { flex-basis: 50%; }
+}
+
+/* ---- sections ---- */
+h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #201e1d;
+  margin: 34px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--cyan);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+h2::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--magenta);
+  display: inline-block;
+  margin-right: 2px;
+}
+section.block:first-of-type h2 { margin-top: 0; }
+
+ul.plain { list-style: none; margin: 0; padding: 0; }
+ul.plain li {
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 5px 0;
+  border-bottom: 1px solid #efece3;
+  display: flex;
+  gap: 10px;
+}
+ul.plain li:last-child { border-bottom: none; }
+ul.plain li .period {
+  flex: none;
+  width: 128px;
+  color: var(--accent-700);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}
+ul.plain li .desc { color: #2b2925; }
+ul.plain li .desc .org { color: #726f68; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.3px;
+  margin-bottom: 4px;
+}
+caption { display: none; }
+thead th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+  padding: 0 10px 6px 0;
+  border-bottom: 1.4px solid #201e1d;
+  font-weight: 600;
+}
+tbody td {
+  padding: 6px 10px 6px 0;
+  border-bottom: 1px solid #efece3;
+  vertical-align: top;
+  color: #2b2925;
+}
+tbody tr:last-child td { border-bottom: none; }
+td.period, th.period { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--accent-700); width: 1%; }
+td.note { color: #8b8880; font-size: 11.6px; }
+.table-wrap { overflow-x: auto; }
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--magenta) 12%, transparent);
+  color: var(--magenta);
+  margin-left: 6px;
+}
+
+p.lead {
+  font-size: 12.5px;
+  color: #726f68;
+  margin: -4px 0 16px;
+}
+
+/* ---- footer sign-off ---- */
+.signoff {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1.6px solid #201e1d;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  font-size: 13px;
+}
+.signoff .field { display: flex; align-items: baseline; gap: 10px; }
+.signoff label { color: #726f68; white-space: nowrap; }
+.signoff input {
+  font-family: inherit;
+  font-size: 13px;
+  border: none;
+  border-bottom: 1px solid #b8b4a8;
+  background: transparent;
+  padding: 2px 4px;
+  width: 150px;
+  color: #201e1d;
+}
+.signoff input:focus { outline: none; border-bottom-color: var(--cyan); }
+
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar, .tabs, .hint, .opts { display: none !important; }
+  .paper { box-shadow: none; border-radius: 0; max-width: none; padding: 0; }
+  .panel { display: none !important; }
+  #tab-basic:checked ~ .paper .panel-basic,
+  #tab-extended:checked ~ .paper .panel-extended,
+  #tab-full:checked ~ .paper .panel-full { display: block !important; }
+  @page { size: A4; margin: 16mm 15mm; }
+  h2 { break-after: avoid; }
+  tr, li { break-inside: avoid; }
+}
+
+@media (max-width: 640px) {
+  .paper { padding: 32px 22px 40px; }
+  .masthead { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .masthead .contact { text-align: left; }
+}

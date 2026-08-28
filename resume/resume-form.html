@@ -8,433 +8,433 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <style>
-  :root {
-    --cyan: #0088b0;
-    --magenta: #d6006c;
-    --accent-700: #006184;
-    --ink: #201e1d;
+:root {
+  --cyan: #0088b0;
+  --magenta: #d6006c;
+  --accent-700: #006184;
+  --ink: #201e1d;
 
-    --outer-bg: #eef1f1;
-    --outer-fg: #4b5555;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --outer-bg: #14181a;
-      --outer-fg: #9fb0b0;
-    }
-  }
-  :root[data-theme="dark"] {
+  --outer-bg: #eef1f1;
+  --outer-fg: #4b5555;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
     --outer-bg: #14181a;
     --outer-fg: #9fb0b0;
   }
+}
+:root[data-theme="dark"] {
+  --outer-bg: #14181a;
+  --outer-fg: #9fb0b0;
+}
 
-  * { box-sizing: border-box; }
-  html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--outer-bg);
-    color: var(--outer-fg);
-    font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
-  }
-  body {
-    padding: 48px 20px 96px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--outer-bg);
+  color: var(--outer-fg);
+  font-family: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+body {
+  padding: 48px 20px 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
 
-  /* ---- chrome (screen only) ---- */
-  .toolbar {
-    width: 100%;
-    max-width: 780px;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    margin: 0 0 20px;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-  .toolbar h1 {
-    font-family: "Source Serif 4", Georgia, serif;
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.02em;
-    color: var(--outer-fg);
-    margin: 0;
-  }
-  .toolbar .hint {
-    width: 100%;
-    font-size: 12.5px;
-    color: var(--outer-fg);
-    opacity: 0.75;
-    margin: -4px 0 0;
-  }
-  .print-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 8px;
-    background: var(--cyan);
-    color: #fff;
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    flex: none;
-  }
-  .print-btn:hover { background: color-mix(in srgb, var(--cyan) 85%, black); }
-  .print-btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
-  .print-btn svg { width: 15px; height: 15px; flex: none; }
+/* ---- chrome (screen only) ---- */
+.toolbar {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0 0 20px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.toolbar h1 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--outer-fg);
+  margin: 0;
+}
+.toolbar .hint {
+  width: 100%;
+  font-size: 12.5px;
+  color: var(--outer-fg);
+  opacity: 0.75;
+  margin: -4px 0 0;
+}
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: var(--cyan);
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex: none;
+}
+.print-btn:hover { background: color-mix(in srgb, var(--cyan) 85%, black); }
+.print-btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+.print-btn svg { width: 15px; height: 15px; flex: none; }
 
-  .tabs {
-    width: 100%;
-    max-width: 780px;
-    display: flex;
-    gap: 6px;
-    margin-bottom: 18px;
-  }
-  .ctrl { position: absolute; opacity: 0; pointer-events: none; }
+.tabs {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.ctrl { position: absolute; opacity: 0; pointer-events: none; }
 
-  .tabs label {
-    flex: 1;
-    text-align: center;
-    padding: 10px 12px;
-    border-radius: 8px;
-    font-size: 13.5px;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    color: var(--outer-fg);
-    background: color-mix(in srgb, var(--outer-fg) 8%, transparent);
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.15s ease, color 0.15s ease;
-  }
-  .tabs label:hover { background: color-mix(in srgb, var(--cyan) 25%, transparent); }
-  #tab-basic:checked ~ .tabs label[for="tab-basic"],
-  #tab-extended:checked ~ .tabs label[for="tab-extended"],
-  #tab-full:checked ~ .tabs label[for="tab-full"] {
-    background: var(--cyan);
-    color: #fff;
-  }
-  #tab-basic:focus-visible ~ .tabs label[for="tab-basic"],
-  #tab-extended:focus-visible ~ .tabs label[for="tab-extended"],
-  #tab-full:focus-visible ~ .tabs label[for="tab-full"] {
-    outline: 2px solid var(--cyan);
-    outline-offset: 2px;
-  }
+.tabs label {
+  flex: 1;
+  text-align: center;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--outer-fg);
+  background: color-mix(in srgb, var(--outer-fg) 8%, transparent);
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.tabs label:hover { background: color-mix(in srgb, var(--cyan) 25%, transparent); }
+#tab-basic:checked ~ .tabs label[for="tab-basic"],
+#tab-extended:checked ~ .tabs label[for="tab-extended"],
+#tab-full:checked ~ .tabs label[for="tab-full"] {
+  background: var(--cyan);
+  color: #fff;
+}
+#tab-basic:focus-visible ~ .tabs label[for="tab-basic"],
+#tab-extended:focus-visible ~ .tabs label[for="tab-extended"],
+#tab-full:focus-visible ~ .tabs label[for="tab-full"] {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
 
-  .opts {
-    width: 100%;
-    max-width: 780px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 18px;
-    margin: -8px 0 18px;
-    flex-wrap: wrap;
-  }
-  .opts label {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 12.5px;
-    color: var(--outer-fg);
-    cursor: pointer;
-    user-select: none;
-  }
-  .opts label::before {
-    content: "";
-    width: 13px;
-    height: 13px;
-    border-radius: 3px;
-    border: 1.4px solid color-mix(in srgb, var(--outer-fg) 55%, transparent);
-    background: transparent;
-  }
-  #show-dob:checked ~ .opts label[for="show-dob"],
-  #show-phone:checked ~ .opts label[for="show-phone"],
-  #show-email:checked ~ .opts label[for="show-email"] {
-    color: var(--cyan);
-    font-weight: 600;
-  }
-  #show-dob:checked ~ .opts label[for="show-dob"]::before,
-  #show-phone:checked ~ .opts label[for="show-phone"]::before,
-  #show-email:checked ~ .opts label[for="show-email"]::before {
-    background: var(--cyan);
-    border-color: var(--cyan);
-  }
-  #show-dob:focus-visible ~ .opts label[for="show-dob"],
-  #show-phone:focus-visible ~ .opts label[for="show-phone"],
-  #show-email:focus-visible ~ .opts label[for="show-email"] {
-    outline: 2px solid var(--cyan);
-    outline-offset: 2px;
-  }
+.opts {
+  width: 100%;
+  max-width: 780px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+  margin: -8px 0 18px;
+  flex-wrap: wrap;
+}
+.opts label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: var(--outer-fg);
+  cursor: pointer;
+  user-select: none;
+}
+.opts label::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  border: 1.4px solid color-mix(in srgb, var(--outer-fg) 55%, transparent);
+  background: transparent;
+}
+#show-dob:checked ~ .opts label[for="show-dob"],
+#show-phone:checked ~ .opts label[for="show-phone"],
+#show-email:checked ~ .opts label[for="show-email"] {
+  color: var(--cyan);
+  font-weight: 600;
+}
+#show-dob:checked ~ .opts label[for="show-dob"]::before,
+#show-phone:checked ~ .opts label[for="show-phone"]::before,
+#show-email:checked ~ .opts label[for="show-email"]::before {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+#show-dob:focus-visible ~ .opts label[for="show-dob"],
+#show-phone:focus-visible ~ .opts label[for="show-phone"],
+#show-email:focus-visible ~ .opts label[for="show-email"] {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
 
-  /* ---- the paper (fixed light world, both themes) ---- */
-  .paper {
-    width: 100%;
-    max-width: 780px;
-    background: #fbfaf7;
-    color: #201e1d;
-    box-shadow: 0 1px 3px rgba(20, 20, 18, 0.08), 0 18px 48px rgba(20, 20, 18, 0.16);
-    border-radius: 3px;
-    padding: 56px 60px 64px;
-  }
+/* ---- the paper (fixed light world, both themes) ---- */
+.paper {
+  width: 100%;
+  max-width: 780px;
+  background: #fbfaf7;
+  color: #201e1d;
+  box-shadow: 0 1px 3px rgba(20, 20, 18, 0.08), 0 18px 48px rgba(20, 20, 18, 0.16);
+  border-radius: 3px;
+  padding: 56px 60px 64px;
+}
 
-  .panel { display: none; }
+.panel { display: none; }
+#tab-basic:checked ~ .paper .panel-basic,
+#tab-extended:checked ~ .paper .panel-extended,
+#tab-full:checked ~ .paper .panel-full {
+  display: block;
+}
+
+/* ---- masthead ---- */
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 22px;
+  margin-bottom: 30px;
+  border-bottom: 1.6px solid #201e1d;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand svg { width: 34px; height: 34px; flex: none; }
+.brand .name {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 25px;
+  color: #201e1d;
+  line-height: 1;
+}
+.brand .sub {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  color: var(--accent-700);
+  margin-top: 5px;
+}
+.brand .site {
+  display: block;
+  margin-top: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--cyan);
+  text-decoration: none;
+}
+.brand .site:hover { text-decoration: underline; }
+.masthead .right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.masthead .contact {
+  text-align: right;
+  font-size: 12.5px;
+  line-height: 1.65;
+  color: #52504d;
+}
+.masthead .contact strong { color: #201e1d; font-weight: 600; }
+.masthead .photo { flex: none; }
+.masthead .photo img {
+  display: block;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1px solid #e4e1d9;
+}
+
+/* ---- identity strip ----
+   Column WIDTH is fixed (flex-basis: 25%) regardless of what's toggled on —
+   optional fields (dob/phone/email) just wrap onto a new row. That keeps the
+   4 base cells' width (and text wrap) constant no matter what's checked.
+   Borders use the classic collapsing-negative-margin trick rather than
+   :first-child/:nth-child, since those can't detect "first in a rendered
+   row" once some siblings are display:none. */
+.identity {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+  border: 1px solid #e4e1d9;
+  border-radius: 4px;
+  background: #fbfaf7;
+  overflow: hidden;
+}
+.identity > div {
+  flex: 1 1 25%;
+  min-width: 150px;
+  padding: 12px 16px;
+  border-left: 1px solid #e4e1d9;
+  border-top: 1px solid #e4e1d9;
+  margin-left: -1px;
+  margin-top: -1px;
+}
+.identity .k {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+  margin-bottom: 4px;
+}
+.identity .v { font-size: 13px; color: #201e1d; font-weight: 500; }
+.identity .dob,
+.identity .phone,
+.identity .email-field { display: none; }
+.identity input.dob-input {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #201e1d;
+  border: none;
+  border-bottom: 1px solid #b8b4a8;
+  background: transparent;
+  padding: 2px 0;
+  width: 100%;
+}
+.identity input.dob-input:focus { outline: none; border-bottom-color: var(--cyan); }
+#show-dob:checked ~ .paper .identity .dob { display: block; }
+#show-phone:checked ~ .paper .identity .phone { display: block; }
+#show-email:checked ~ .paper .identity .email-field { display: block; }
+@media (max-width: 640px) {
+  .identity > div { flex-basis: 50%; }
+}
+
+/* ---- sections ---- */
+h2 {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #201e1d;
+  margin: 34px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--cyan);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+h2::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--magenta);
+  display: inline-block;
+  margin-right: 2px;
+}
+section.block:first-of-type h2 { margin-top: 0; }
+
+ul.plain { list-style: none; margin: 0; padding: 0; }
+ul.plain li {
+  font-size: 13px;
+  line-height: 1.6;
+  padding: 5px 0;
+  border-bottom: 1px solid #efece3;
+  display: flex;
+  gap: 10px;
+}
+ul.plain li:last-child { border-bottom: none; }
+ul.plain li .period {
+  flex: none;
+  width: 128px;
+  color: var(--accent-700);
+  font-variant-numeric: tabular-nums;
+  font-size: 12px;
+}
+ul.plain li .desc { color: #2b2925; }
+ul.plain li .desc .org { color: #726f68; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.3px;
+  margin-bottom: 4px;
+}
+caption { display: none; }
+thead th {
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-700);
+  padding: 0 10px 6px 0;
+  border-bottom: 1.4px solid #201e1d;
+  font-weight: 600;
+}
+tbody td {
+  padding: 6px 10px 6px 0;
+  border-bottom: 1px solid #efece3;
+  vertical-align: top;
+  color: #2b2925;
+}
+tbody tr:last-child td { border-bottom: none; }
+td.period, th.period { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--accent-700); width: 1%; }
+td.note { color: #8b8880; font-size: 11.6px; }
+.table-wrap { overflow-x: auto; }
+
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 7px;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--magenta) 12%, transparent);
+  color: var(--magenta);
+  margin-left: 6px;
+}
+
+p.lead {
+  font-size: 12.5px;
+  color: #726f68;
+  margin: -4px 0 16px;
+}
+
+/* ---- footer sign-off ---- */
+.signoff {
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1.6px solid #201e1d;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  font-size: 13px;
+}
+.signoff .field { display: flex; align-items: baseline; gap: 10px; }
+.signoff label { color: #726f68; white-space: nowrap; }
+.signoff input {
+  font-family: inherit;
+  font-size: 13px;
+  border: none;
+  border-bottom: 1px solid #b8b4a8;
+  background: transparent;
+  padding: 2px 4px;
+  width: 150px;
+  color: #201e1d;
+}
+.signoff input:focus { outline: none; border-bottom-color: var(--cyan); }
+
+@media print {
+  html, body { background: #fff; padding: 0; }
+  .toolbar, .tabs, .hint, .opts { display: none !important; }
+  .paper { box-shadow: none; border-radius: 0; max-width: none; padding: 0; }
+  .panel { display: none !important; }
   #tab-basic:checked ~ .paper .panel-basic,
   #tab-extended:checked ~ .paper .panel-extended,
-  #tab-full:checked ~ .paper .panel-full {
-    display: block;
-  }
+  #tab-full:checked ~ .paper .panel-full { display: block !important; }
+  @page { size: A4; margin: 16mm 15mm; }
+  h2 { break-after: avoid; }
+  tr, li { break-inside: avoid; }
+}
 
-  /* ---- masthead ---- */
-  .masthead {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    padding-bottom: 22px;
-    margin-bottom: 30px;
-    border-bottom: 1.6px solid #201e1d;
-  }
-  .brand { display: flex; align-items: center; gap: 12px; }
-  .brand svg { width: 34px; height: 34px; flex: none; }
-  .brand .name {
-    font-family: "Source Serif 4", Georgia, serif;
-    font-weight: 600;
-    font-size: 25px;
-    color: #201e1d;
-    line-height: 1;
-  }
-  .brand .sub {
-    font-family: "Source Sans 3", sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.34em;
-    color: var(--accent-700);
-    margin-top: 5px;
-  }
-  .brand .site {
-    display: block;
-    margin-top: 7px;
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--cyan);
-    text-decoration: none;
-  }
-  .brand .site:hover { text-decoration: underline; }
-  .masthead .right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-  }
-  .masthead .contact {
-    text-align: right;
-    font-size: 12.5px;
-    line-height: 1.65;
-    color: #52504d;
-  }
-  .masthead .contact strong { color: #201e1d; font-weight: 600; }
-  .masthead .photo { flex: none; }
-  .masthead .photo img {
-    display: block;
-    width: 74px;
-    height: 74px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: top center;
-    border: 1px solid #e4e1d9;
-  }
-
-  /* ---- identity strip ----
-     Column WIDTH is fixed (flex-basis: 25%) regardless of what's toggled on —
-     optional fields (dob/phone/email) just wrap onto a new row. That keeps the
-     4 base cells' width (and text wrap) constant no matter what's checked.
-     Borders use the classic collapsing-negative-margin trick rather than
-     :first-child/:nth-child, since those can't detect "first in a rendered
-     row" once some siblings are display:none. */
-  .identity {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 34px;
-    border: 1px solid #e4e1d9;
-    border-radius: 4px;
-    background: #fbfaf7;
-    overflow: hidden;
-  }
-  .identity > div {
-    flex: 1 1 25%;
-    min-width: 150px;
-    padding: 12px 16px;
-    border-left: 1px solid #e4e1d9;
-    border-top: 1px solid #e4e1d9;
-    margin-left: -1px;
-    margin-top: -1px;
-  }
-  .identity .k {
-    display: block;
-    font-size: 10px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--accent-700);
-    margin-bottom: 4px;
-  }
-  .identity .v { font-size: 13px; color: #201e1d; font-weight: 500; }
-  .identity .dob,
-  .identity .phone,
-  .identity .email-field { display: none; }
-  .identity input.dob-input {
-    font-family: inherit;
-    font-size: 13px;
-    font-weight: 500;
-    color: #201e1d;
-    border: none;
-    border-bottom: 1px solid #b8b4a8;
-    background: transparent;
-    padding: 2px 0;
-    width: 100%;
-  }
-  .identity input.dob-input:focus { outline: none; border-bottom-color: var(--cyan); }
-  #show-dob:checked ~ .paper .identity .dob { display: block; }
-  #show-phone:checked ~ .paper .identity .phone { display: block; }
-  #show-email:checked ~ .paper .identity .email-field { display: block; }
-  @media (max-width: 640px) {
-    .identity > div { flex-basis: 50%; }
-  }
-
-  /* ---- sections ---- */
-  h2 {
-    font-family: "Source Serif 4", Georgia, serif;
-    font-weight: 600;
-    font-size: 16px;
-    color: #201e1d;
-    margin: 34px 0 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--cyan);
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-  }
-  h2::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--magenta);
-    display: inline-block;
-    margin-right: 2px;
-  }
-  section.block:first-of-type h2 { margin-top: 0; }
-
-  ul.plain { list-style: none; margin: 0; padding: 0; }
-  ul.plain li {
-    font-size: 13px;
-    line-height: 1.6;
-    padding: 5px 0;
-    border-bottom: 1px solid #efece3;
-    display: flex;
-    gap: 10px;
-  }
-  ul.plain li:last-child { border-bottom: none; }
-  ul.plain li .period {
-    flex: none;
-    width: 128px;
-    color: var(--accent-700);
-    font-variant-numeric: tabular-nums;
-    font-size: 12px;
-  }
-  ul.plain li .desc { color: #2b2925; }
-  ul.plain li .desc .org { color: #726f68; }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12.3px;
-    margin-bottom: 4px;
-  }
-  caption { display: none; }
-  thead th {
-    text-align: left;
-    font-size: 10px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--accent-700);
-    padding: 0 10px 6px 0;
-    border-bottom: 1.4px solid #201e1d;
-    font-weight: 600;
-  }
-  tbody td {
-    padding: 6px 10px 6px 0;
-    border-bottom: 1px solid #efece3;
-    vertical-align: top;
-    color: #2b2925;
-  }
-  tbody tr:last-child td { border-bottom: none; }
-  td.period, th.period { white-space: nowrap; font-variant-numeric: tabular-nums; color: var(--accent-700); width: 1%; }
-  td.note { color: #8b8880; font-size: 11.6px; }
-  .table-wrap { overflow-x: auto; }
-
-  .badge {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    padding: 1px 7px;
-    border-radius: 20px;
-    background: color-mix(in srgb, var(--magenta) 12%, transparent);
-    color: var(--magenta);
-    margin-left: 6px;
-  }
-
-  p.lead {
-    font-size: 12.5px;
-    color: #726f68;
-    margin: -4px 0 16px;
-  }
-
-  /* ---- footer sign-off ---- */
-  .signoff {
-    margin-top: 44px;
-    padding-top: 22px;
-    border-top: 1.6px solid #201e1d;
-    display: flex;
-    justify-content: flex-end;
-    gap: 40px;
-    font-size: 13px;
-  }
-  .signoff .field { display: flex; align-items: baseline; gap: 10px; }
-  .signoff label { color: #726f68; white-space: nowrap; }
-  .signoff input {
-    font-family: inherit;
-    font-size: 13px;
-    border: none;
-    border-bottom: 1px solid #b8b4a8;
-    background: transparent;
-    padding: 2px 4px;
-    width: 150px;
-    color: #201e1d;
-  }
-  .signoff input:focus { outline: none; border-bottom-color: var(--cyan); }
-
-  @media print {
-    html, body { background: #fff; padding: 0; }
-    .toolbar, .tabs, .hint, .opts { display: none !important; }
-    .paper { box-shadow: none; border-radius: 0; max-width: none; padding: 0; }
-    .panel { display: none !important; }
-    #tab-basic:checked ~ .paper .panel-basic,
-    #tab-extended:checked ~ .paper .panel-extended,
-    #tab-full:checked ~ .paper .panel-full { display: block !important; }
-    @page { size: A4; margin: 16mm 15mm; }
-    h2 { break-after: avoid; }
-    tr, li { break-inside: avoid; }
-  }
-
-  @media (max-width: 640px) {
-    .paper { padding: 32px 22px 40px; }
-    .masthead { flex-direction: column; align-items: flex-start; gap: 12px; }
-    .masthead .contact { text-align: left; }
-  }
+@media (max-width: 640px) {
+  .paper { padding: 32px 22px 40px; }
+  .masthead { flex-direction: column; align-items: flex-start; gap: 12px; }
+  .masthead .contact { text-align: left; }
+}
 </style>
 </head>
 <body>
@@ -450,8 +450,6 @@
     <span class="hint">현재 선택된 버전만 저장/인쇄됩니다 · 대화상자의 "대상(프린터)"을 "PDF로 저장"으로 바꾸면 파일로 저장돼요</span>
   </div>
 
-  <!-- controls live at body level (not nested in nav/.opts) so the
-       ~ .paper sibling-selectors below can reach the paper at all -->
   <input class="ctrl" type="radio" name="tier" id="tab-basic" checked />
   <input class="ctrl" type="radio" name="tier" id="tab-extended" />
   <input class="ctrl" type="radio" name="tier" id="tab-full" />
@@ -495,11 +493,7 @@
       </div>
     </header>
 
-    <!-- ============================================================ -->
-    <!-- BASIC -->
-    <!-- ============================================================ -->
     <div class="panel panel-basic">
-
       <div class="identity">
         <div><span class="k">소속</span><span class="v">한국해양수산연수원</span></div>
         <div><span class="k">직위</span><span class="v">교수</span></div>
@@ -516,7 +510,7 @@
           <li><span class="period">2023.12 - 현재</span><span class="desc">(사)한국해양안전진흥협회 <span class="org">— 대표</span></span></li>
           <li><span class="period">2026.01 - 현재</span><span class="desc">한국항해항만학회 <span class="org">— 부회장</span></span></li>
           <li><span class="period">2023.12 - 현재</span><span class="desc">해양수산부 해사안전정책과 <span class="org">— 고문 · 위원, IMO 전문가 위원회</span></span></li>
-          <li><span class="period">2021.03 - 현재</span><span class="desc">해양수산부(해운해사항만분과) <span class="org">— 위원, 규제혁신위원회</span></span></li>
+          <li><span class="period">2021.03 - 현재</span><span class="desc">해양수산부 (해운해사항만 분과) <span class="org">— 위원, 규제혁신위원회</span></span></li>
           <li><span class="period">2021.06 - 현재</span><span class="desc">해양환경안전학회 <span class="org">— 교육정책분과위원장 · 편집위원</span></span></li>
         </ul>
       </section>
@@ -531,9 +525,9 @@
       <section class="block">
         <h2>주요 경력</h2>
         <ul class="plain">
-          <li><span class="period">2001.06 - 현재</span><span class="desc">한국해양수산연수원 <span class="org">— 교수 (VTS·여객선 국제자격인증교육과정 책임교수)</span></span></li>
+          <li><span class="period">2001.06 - 현재</span><span class="desc">한국해양수산연수원 <span class="org">— 교수 (여객선, VTS 교육과정 책임교수)</span></span></li>
           <li><span class="period">2020.09 - 2022.12</span><span class="desc">한국해양수산연수원 <span class="org">— 교육본부장</span></span></li>
-          <li><span class="period">2024.07 - 2025.06</span><span class="desc">미국 미주리주립대학교 <span class="org">— 방문연구원</span></span></li>
+          <li><span class="period">2024.07 - 2025.06</span><span class="desc">미국 미주리주립대학교(University of Missouri) <span class="org">— 방문연구원</span></span></li>
           <li><span class="period">1994.03 - 2001.05</span><span class="desc">한진해운 <span class="org">— 항해사 · 선주감독관 (국내 최초 LNG 운반선 인수)</span></span></li>
         </ul>
       </section>
@@ -541,47 +535,42 @@
       <section class="block">
         <h2>대표 연구실적</h2>
         <ul class="plain">
-          <li><span class="period">2026-2032</span><span class="desc">AI 완전자율운항선박 검인증 및 실증기술개발 <span class="org">— 해양수산부</span></span></li>
-          <li><span class="period">2023 - 2026</span><span class="desc">[R&amp;D] 자율운항 선박 원격제어 해상 소방 시스템 개발 <span class="org">— KIET, 책임연구원</span></span></li>
-          <li><span class="period">2022 - 2025</span><span class="desc">[R&amp;D] 자율운항선박 기술개발연구 2단계(해운 7세부) <span class="org">— KIMST-KMI, 책임연구원</span></span></li>
-          <li><span class="period">2021 - 2023</span><span class="desc">[R&amp;D] 클라우드 기반 차세대 VTS 통합 플랫폼 개발 <span class="org">— KIMST</span></span></li>
-          <li><span class="period">2017 - 2019</span><span class="desc">[R&amp;D] 자율운항선박 운항관제 인공지능 시스템원천기술개발 <span class="org">— KEIT, 책임연구원</span></span></li>
-          <li><span class="period">2012</span><span class="desc">선박교통관제(VTS) 백서 발간 연구 <span class="org">— 해양수산부, 책임연구원</span></span></li>
+          <li><span class="period">2026 - 2032</span><span class="desc">[R&amp;D] AI 완전자율운항선박 기술개발 사업 - AI 완전자율운항선박 검인증 및 실증기술개발 <span class="org">— 해양수산부, Co-Researcher</span></span></li>
+          <li><span class="period">2026</span><span class="desc">선사와 사업장 안전 교육문화 활성화 체계마련 연구 <span class="org">— 해양수산부, Co-Researcher</span></span></li>
+          <li><span class="period">2023 - 2026</span><span class="desc">[R&amp;D] 자율운항 선박 기술을 적용한 원격제어가 가능한 해상 소방 시스템 개발 <span class="org">— KIET, Principal Researcher</span></span></li>
+          <li><span class="period">2022 - 2025</span><span class="desc">[R&amp;D] 자율운항선박 기술개발연구 2단계 (해운 7세부) <span class="org">— KIMST-KMI, Principal Researcher</span></span></li>
+          <li><span class="period">2021 - 2023</span><span class="desc">[R&amp;D] 클라우드 기반 차세대 VTS 통합 플랫폼 개발 <span class="org">— KIMST, Co-Researcher</span></span></li>
+          <li><span class="period">2017 - 2019</span><span class="desc">[R&amp;D] 자율운항선박을 위한 운항관제 인공지능 시스템원천기술개발 <span class="org">— KEIT, Principal Researcher</span></span></li>
+          <li><span class="period">2012</span><span class="desc">선박교통관제(VTS) 백서 발간 연구 <span class="org">— 해양수산부, Principal Researcher</span></span></li>
         </ul>
       </section>
 
       <section class="block">
         <h2>저서</h2>
         <ul class="plain">
-          <li><span class="period">2012</span><span class="desc">선박교통관제 백서(1993-2012): VTS 20년사</span></li>
+          <li><span class="period">2012</span><span class="desc">선박교통관제 백서 (1993 - 2012): VTS 20년사</span></li>
           <li><span class="period">2015</span><span class="desc">Traffic Management</span></li>
-          <li><span class="period">2016</span><span class="desc">2016 IALA VTS Manual, 해상교통관제매뉴얼(영한대역)</span></li>
+          <li><span class="period">2016</span><span class="desc">2016 IALA VTS Manual, 해상교통관제매뉴얼 (영한대역)</span></li>
         </ul>
       </section>
 
       <section class="block">
         <h2>수상</h2>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th class="period">연도</th><th>수상명</th></tr></thead>
-            <tbody>
-              <tr><td class="period">2018</td><td>한국항해항만학회 우수활동상 · 우수발표상</td></tr>
-              <tr><td class="period">2018</td><td>해양경찰청장 감사장</td></tr>
-              <tr><td class="period">2017</td><td>한국항해항만학회 우수논문상</td></tr>
-              <tr><td class="period">2016</td><td>국민안전처 장관 표창</td></tr>
-              <tr><td class="period">2009</td><td>국토해양부 장관 표창</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="table-wrap"><table>
+          <thead><tr><th class="period">연도</th><th>수상명</th></tr></thead>
+          <tbody>
+            <tr><td class="period">2018</td><td>해양경찰청장 감사장</td></tr>
+            <tr><td class="period">2018</td><td>우수활동상 · 우수발표상</td></tr>
+            <tr><td class="period">2017</td><td>우수논문상</td></tr>
+            <tr><td class="period">2016</td><td>국민안전처 장관 표창</td></tr>
+            <tr><td class="period">2009</td><td>국토해양부 장관 표창</td></tr>
+          </tbody>
+        </table></div>
       </section>
 
     </div>
 
-    <!-- ============================================================ -->
-    <!-- EXTENDED -->
-    <!-- ============================================================ -->
     <div class="panel panel-extended">
-
       <div class="identity">
         <div><span class="k">소속</span><span class="v">한국해양수산연수원</span></div>
         <div><span class="k">직위</span><span class="v">교수</span></div>
@@ -609,14 +598,14 @@
         <div class="table-wrap"><table>
           <thead><tr><th class="period">기간</th><th>기관</th><th>역할</th></tr></thead>
           <tbody>
-            <tr><td class="period">2024.07-2025.06</td><td>미국 미주리주립대학교</td><td>방문연구원</td></tr>
-            <tr><td class="period">2020.09-2022.12</td><td>한국해양수산연수원</td><td>교육본부장</td></tr>
-            <tr><td class="period">2014.08-2015.12</td><td>한국해양수산연수원</td><td>기획조정실장</td></tr>
-            <tr><td class="period">2013.02-2014.07</td><td>한국해양수산연수원</td><td>신성장교육처장 · 해양플랜트인력개발센터장</td></tr>
-            <tr><td class="period">2010.01-2013.01</td><td>한국해양수산연수원</td><td>교육개발팀장 · 양성교육팀장 (현 오션폴리텍팀)</td></tr>
-            <tr><td class="period">2006.01-2009.01</td><td>한국해양수산연수원 (본원 이전·신축 기획·주도)</td><td>전략기획팀장 · 기획혁신팀장</td></tr>
-            <tr><td class="period">2001.06-현재</td><td>한국해양수산연수원</td><td>교수 (여객선, VTS 교육과정 책임교수)</td></tr>
-            <tr><td class="period">1994.03-2001.05</td><td>한진해운</td><td>항해사 · 선주감독관 (국내 최초 LNG 운반선 인수)</td></tr>
+            <tr><td class="period">2024.07 - 2025.06</td><td>미국 미주리주립대학교(University of Missouri)</td><td>방문연구원</td></tr>
+            <tr><td class="period">2020.09 - 2022.12</td><td>한국해양수산연수원</td><td>교육본부장</td></tr>
+            <tr><td class="period">2014.08 - 2015.12</td><td>한국해양수산연수원</td><td>기획조정실장</td></tr>
+            <tr><td class="period">2013.02 - 2014.07</td><td>한국해양수산연수원</td><td>신성장교육처장 · 해양플랜트인력개발센터장</td></tr>
+            <tr><td class="period">2010.01 - 2013.01</td><td>한국해양수산연수원</td><td>교육개발팀장 · 양성교육팀장 (현 오션폴리텍팀)</td></tr>
+            <tr><td class="period">2006.01 - 2009.01</td><td>한국해양수산연수원</td><td>전략기획팀장 · 기획혁신팀장 (본원 이전·신축 기획·주도)</td></tr>
+            <tr><td class="period">2001.06 - 현재</td><td>한국해양수산연수원</td><td>교수 (여객선, VTS 교육과정 책임교수)</td></tr>
+            <tr><td class="period">1994.03 - 2001.05</td><td>한진해운</td><td>항해사 · 선주감독관 (국내 최초 LNG 운반선 인수)</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -626,24 +615,23 @@
         <div class="table-wrap"><table>
           <thead><tr><th class="period">기간</th><th>기관</th><th>역할</th></tr></thead>
           <tbody>
-            <tr><td class="period">2023.12-현재</td><td>(사)한국해양안전진흥협회</td><td>대표</td></tr>
-            <tr><td class="period">2026.01-현재</td><td>한국항해항만학회</td><td>부회장</td></tr>
-            <tr><td class="period">2023.12-현재</td><td>해양수산부 해사안전정책과</td><td>고문 · 위원, IMO 전문가 위원회</td></tr>
-            <tr><td class="period">2021.03-현재</td><td>해양수산부(해운해사항만분과)</td><td>위원, 규제혁신위원회</td></tr>
-            <tr><td class="period">2021.06-현재</td><td>해양환경안전학회</td><td>교육정책분과위원장 · 편집위원</td></tr>
-            <tr><td class="period">2017-현재</td><td>산업기술혁신평가단, 산업통상자원부</td><td>평가위원</td></tr>
-            <tr><td class="period">2018.03-현재</td><td>남해지방해양경찰청</td><td>정책자문위원</td></tr>
-            <tr><td class="period">2022.03-현재</td><td>부산광역시 해양교육협의회</td><td>위원</td></tr>
-            <tr><td class="period">2022.12-현재</td><td>해양수산안전 교육자문단, 해양수산부</td><td>위원</td></tr>
-            <tr><td class="period">2024-현재</td><td>국가과학기술지식정보서비스</td><td>평가위원, IRIS 범부처 국가연구개발과제</td></tr>
-            <tr><td class="period">2025.10-현재</td><td>해양수산부</td><td>위원, 북극항로 운항인력 양성 선박조종시뮬레이터 도입사업</td></tr>
+            <tr><td class="period">2023.12 - 현재</td><td>(사)한국해양안전진흥협회</td><td>대표</td></tr>
+            <tr><td class="period">2026.01 - 현재</td><td>한국항해항만학회</td><td>부회장</td></tr>
+            <tr><td class="period">2023.12 - 현재</td><td>해양수산부 해사안전정책과</td><td>고문 · 위원, IMO 전문가 위원회</td></tr>
+            <tr><td class="period">2021.03 - 현재</td><td>해양수산부 (해운해사항만 분과)</td><td>위원, 규제혁신위원회</td></tr>
+            <tr><td class="period">2021.06 - 현재</td><td>해양환경안전학회</td><td>교육정책분과위원장 · 편집위원</td></tr>
+            <tr><td class="period">2017 - 현재</td><td>산업기술혁신평가단, 산업통상자원부</td><td>평가위원</td></tr>
+            <tr><td class="period">2018.03 - 현재</td><td>남해지방해양경찰청</td><td>정책자문위원</td></tr>
+            <tr><td class="period">2022.03 - 현재</td><td>부산광역시 해양교육협의회</td><td>위원</td></tr>
+            <tr><td class="period">2022.12 - 현재</td><td>해양수산안전 교육자문단, 해양수산부</td><td>위원</td></tr>
+            <tr><td class="period">2024 - 현재</td><td>국가과학기술지식정보서비스</td><td>평가위원, IRIS 범부처 국가연구개발과제</td></tr>
+            <tr><td class="period">2025.10 - 현재</td><td>해양수산부</td><td>위원, 북극항로 운항인력 양성 선박조종시뮬레이터 도입사업</td></tr>
           </tbody>
         </table></div>
       </section>
 
       <section class="block">
         <h2>위원회 · 자문 · 심사위원 활동 이력 (연대순)</h2>
-        <p class="lead">종료된 위촉 이력. 진행 중인 직위는 위 &ldquo;현재 주요 직위&rdquo; 참고.</p>
         <div class="table-wrap"><table>
           <thead><tr><th class="period">기간</th><th>기관</th><th>역할</th></tr></thead>
           <tbody>
@@ -662,7 +650,7 @@
             <tr><td class="period">2012</td><td>한-몽골 해운협력회의</td><td>정부 자문 (몽골 해기인력 양성)</td></tr>
             <tr><td class="period">2013</td><td>남해지방해양경찰청</td><td>준사고분석 전담팀 전문위원</td></tr>
             <tr><td class="period">2013</td><td>해양수산부</td><td>VTS 국산화 기술개발 자문위원</td></tr>
-            <tr><td class="period">2013</td><td>해양수산부</td><td>해양플랜트산업육성전략 TF 민간전문가(인력양성)</td></tr>
+            <tr><td class="period">2013</td><td>해양수산부</td><td>해양플랜트산업육성전략 TF 민간전문가/인력양성</td></tr>
             <tr><td class="period">2013</td><td>한-러시아 해운회담</td><td>정부자문 (북극해항로 개척 및 인력양성)</td></tr>
             <tr><td class="period">2013~</td><td>한국관제협회</td><td>이사</td></tr>
             <tr><td class="period">2014</td><td>한-노르웨이 해운협력회의</td><td>정부 자문 (해기협력)</td></tr>
@@ -684,7 +672,7 @@
             <tr><td class="period">2019</td><td>해양경찰청</td><td>일반직 직원채용 면접전형 위원</td></tr>
             <tr><td class="period">2019</td><td>해양경찰청</td><td>IALA 제46차 VTS위원회 및 커뮤니케이션 워크숍 국내 개최 자문위원</td></tr>
             <tr><td class="period">2019</td><td>중앙해양안전심판원</td><td>대학생 해양사고 모의 심판 경연대회 평가위원</td></tr>
-            <tr><td class="period">2019~2021</td><td>해양수산부</td><td>규제혁신위원회 위원 (해운해사항만분과)</td></tr>
+            <tr><td class="period">2019~2021</td><td>해양수산부</td><td>규제혁신위원회 위원 (해운해사항만 분과)</td></tr>
             <tr><td class="period">2019~2023.11</td><td>(사)한국인적안전진흥협회</td><td>사무국장</td></tr>
             <tr><td class="period">2019~2021.06</td><td>해양환경안전학회</td><td>감사</td></tr>
             <tr><td class="period">2021.04~2023.04</td><td>해양수산부</td><td>규제심사위원회 위원 (해운해사항만분과)</td></tr>
@@ -700,38 +688,38 @@
       </section>
 
       <section class="block">
-        <h2>연구실적 <span class="badge">34건</span></h2>
+        <h2>연구실적 <span class="badge">35건</span></h2>
         <div class="table-wrap"><table>
           <thead><tr><th class="period">연도</th><th>제목</th><th>발주처</th><th>역할</th></tr></thead>
           <tbody>
-            <tr><td class="period">2026-2032</td><td>AI 완전자율운항선박 검인증 및 실증기술개발</td><td>해양수산부</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2026 - 2032</td><td>[R&amp;D] AI 완전자율운항선박 기술개발 사업 - AI 완전자율운항선박 검인증 및 실증기술개발</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2026</td><td>선사와 사업장 안전 교육문화 활성화 체계마련 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2023-2026</td><td>[R&amp;D] 자율운항 선박 원격제어 해상 소방 시스템 개발</td><td>KIET</td><td>책임연구원</td></tr>
-            <tr><td class="period">2022-2025</td><td>[R&amp;D] 자율운항선박 기술개발연구 2단계(해운 7세부)</td><td>KIMST-KMI</td><td>책임연구원</td></tr>
-            <tr><td class="period">2021-2023</td><td>[R&amp;D] 클라우드 기반 차세대 VTS 통합 플랫폼 개발</td><td>KIMST</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2020</td><td>선박교통관제사 관제영어능력 평가 연구</td><td>해양경찰청</td><td>책임연구원</td></tr>
-            <tr><td class="period">2019</td><td>[R&amp;D] 해상교통정보 빅데이터 구축 및 안전예보 시스템 기술 개발</td><td>KRISO</td><td>자문위원</td></tr>
-            <tr><td class="period">2019</td><td>e-Navigation 정책플랫폼 구축 조사대응 연구</td><td>해양수산부</td><td>책임연구원</td></tr>
+            <tr><td class="period">2023 - 2026</td><td>[R&amp;D] 자율운항 선박 기술을 적용한 원격제어가 가능한 해상 소방 시스템 개발</td><td>KIET</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2022 - 2025</td><td>[R&amp;D] 자율운항선박 기술개발연구 2단계 (해운 7세부)</td><td>KIMST-KMI</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2021 - 2023</td><td>[R&amp;D] 클라우드 기반 차세대 VTS 통합 플랫폼 개발</td><td>KIMST</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2020</td><td>선박교통관제사 관제영어능력 평가 연구</td><td>해양경찰청</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2019</td><td>[R&amp;D] 해상교통정보 빅데이터 구축 및 안전예보 시스템 기술 개발</td><td>KRISO</td><td>Advisor</td></tr>
+            <tr><td class="period">2019</td><td>e-Navigation 정책플랫폼 구축 조사대응 연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2019</td><td>관공선 관리 운영 지원타당성 분석 및 관련제도 마련 정책연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2018</td><td>선원분야 법률체계 개편방안 연구</td><td>해양수산부</td><td>자문위원</td></tr>
-            <tr><td class="period">2017-2019</td><td>[R&amp;D] 자율운항선박 운항관제 인공지능 시스템원천기술개발</td><td>KEIT</td><td>책임연구원</td></tr>
-            <tr><td class="period">2017</td><td>선제적, 정량적 해사안전지수개발 기획연구</td><td>KIMST</td><td>책임연구원</td></tr>
+            <tr><td class="period">2018</td><td>선원분야 법률체계 개편방안 연구</td><td>해양수산부</td><td>Advisor</td></tr>
+            <tr><td class="period">2017 - 2019</td><td>[R&amp;D] 자율운항선박을 위한 운항관제 인공지능 시스템원천기술개발</td><td>KEIT</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2017</td><td>선제적, 정량적 해사안전지수개발 기획연구</td><td>KIMST</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2016</td><td>전국 선원복지시설 운영실태 조사</td><td>한국선원복지고용센터</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2016-2020</td><td>IMO 차세대 해양안전 종합관리 체계 기술개발 연구</td><td>KIMST</td><td>책임연구원</td></tr>
-            <tr><td class="period">2015-2019</td><td>해양안전사고 예방시스템 기반연구</td><td>KIMST</td><td>책임연구원</td></tr>
-            <tr><td class="period">2015</td><td>해사인력육성에 따른 국립해사고 설립검토 연구</td><td>제주도교육청</td><td>책임연구원</td></tr>
-            <tr><td class="period">2015</td><td>해상교통관제사 직무분석 및 인적요인 관리방안 연구</td><td>국민안전처</td><td>책임연구원</td></tr>
+            <tr><td class="period">2016 - 2020</td><td>IMO 차세대 해양안전 종합관리 체계 기술개발 연구</td><td>KIMST</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2015 - 2019</td><td>해양안전사고 예방시스템 기반연구</td><td>KIMST</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2015</td><td>해사인력육성에 따른 국립해사고 설립검토 연구</td><td>제주도교육청</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2015</td><td>해상교통관제사 직무분석 및 인적요인 관리방안 연구</td><td>국민안전처</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2014</td><td>부산권해역 해상교통관제 체계개선 기본조사 설계용역</td><td>국민안전처</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2013</td><td>해상교통관제 및 조난훈련시뮬레이터 부가시스템 개발</td><td>KIMST</td><td>책임연구원</td></tr>
-            <tr><td class="period">2012-2013</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>책임연구원</td></tr>
-            <tr><td class="period">2012</td><td>선박교통관제(VTS) 백서 발간 연구</td><td>해양수산부</td><td>책임연구원</td></tr>
+            <tr><td class="period">2013</td><td>해상교통관제 및 조난훈련시뮬레이터 부가시스템 개발</td><td>KIMST</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2012 - 2013</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2012</td><td>선박교통관제(VTS) 백서 발간 연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2012</td><td>[R&amp;D] 선박통신개선처리 및 해상스마트서비스 기술 확보를 위한 연구</td><td>KIMST</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2012</td><td>해적피해예방을 위한 해운업계 역량강화 및 국제협력 제고방안 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2011</td><td>소말리아 해적대응을 위한 IMO의 기능 및 국제공조 강화방안 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2010-2011</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2010 - 2011</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2010</td><td>선박관리업 선진화 및 글로벌화 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2010</td><td>해상교통관제사 자격제도 및 평가제도 도입연구</td><td>해양수산부</td><td>책임연구원</td></tr>
-            <tr><td class="period">2009-2011</td><td>개발도상국 해사안전시스템 구축 협력사업 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2010</td><td>해상교통관제사 자격제도 및 평가제도 도입연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2009 - 2011</td><td>개발도상국 해사안전시스템 구축 협력사업 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2009</td><td>글로벌 해양안전교육 프로그램 및 훈련기반 구축 기획연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2008</td><td>해사안전 기술협력 활성화 방안 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2006</td><td>IMO 회의 의제분석/의제개발 연구용역</td><td>해양수산부</td><td>Co-Researcher</td></tr>
@@ -746,9 +734,9 @@
       <section class="block">
         <h2>저서</h2>
         <ul class="plain">
-          <li><span class="period">2012</span><span class="desc">선박교통관제 백서(1993-2012): VTS 20년사</span></li>
+          <li><span class="period">2012</span><span class="desc">선박교통관제 백서 (1993 - 2012): VTS 20년사</span></li>
           <li><span class="period">2015</span><span class="desc">Traffic Management</span></li>
-          <li><span class="period">2016</span><span class="desc">2016 IALA VTS Manual, 해상교통관제매뉴얼(영한대역)</span></li>
+          <li><span class="period">2016</span><span class="desc">2016 IALA VTS Manual, 해상교통관제매뉴얼 (영한대역)</span></li>
         </ul>
       </section>
 
@@ -764,42 +752,42 @@
         <h2>대표 논문</h2>
         <p class="lead">전체 44건은 Full Version 탭 참고.</p>
         <ul class="plain">
-          <li><span class="period">2016</span><span class="desc">현장관찰법과 자기보고법에 기초한 VTS 관제사의 상황인식 분석, 한국항해항만학회지 40(6) <span class="org">— 우수논문상 수상</span></span></li>
-          <li><span class="period">2017</span><span class="desc">Common Phraseology and Procedures for VTS Communication, 한국항해항만학회 2017년도 춘계학술대회 <span class="org">— 우수발표상 수상</span></span></li>
+          <li><span class="period">2016</span><span class="desc">현장관찰법과 자기보고법에 기초한 VTS 관제사의 상황인식 분석, 한국항해항만학회지 40(6) <span class="org">— 한국항해항만학회 우수논문상 수상.</span></span></li>
+          <li><span class="period">2017</span><span class="desc">Common Phraseology and Procedures for VTS Communication, 한국항해항만학회 2017년도 춘계학술대회 <span class="org">— 한국항해항만학회 우수발표상 수상.</span></span></li>
           <li><span class="period">2025</span><span class="desc">Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness, MDPI Applied Sciences</span></li>
         </ul>
       </section>
 
       <section class="block">
-        <h2>외부강연 · 초청발표 <span class="badge">26건</span></h2>
+        <h2>외부강연 · 초청발표 <span class="badge">25건</span></h2>
         <div class="table-wrap"><table>
           <thead><tr><th class="period">연도</th><th>제목</th><th>장소 · 주최</th></tr></thead>
           <tbody>
-            <tr><td class="period">2003.09</td><td>삼성중공업(주) 특강</td><td>삼성중공업(주)</td></tr>
-            <tr><td class="period">2010-2012</td><td>국토해양인재개발원 출강</td><td>국토해양인재개발원</td></tr>
-            <tr><td class="period">2012.02</td><td>한국선박해양플랜트연구소 특강</td><td>한국선박해양플랜트연구소</td></tr>
-            <tr><td class="period">2012.03</td><td>한-몽골 해운협력회의 국제세미나 주제발표</td><td>한-몽골 도로교통부 해운협력회의</td></tr>
-            <tr><td class="period">2012.03</td><td>국립수산인력개발센터 출강</td><td>국립수산인력개발센터</td></tr>
-            <tr><td class="period">2012.03</td><td>포항산업과학연구원(RIST) 특강</td><td>포항산업과학연구원(RIST)</td></tr>
-            <tr><td class="period">2012.09</td><td>IALA 국제 VTS 심포지엄 2012 발표</td><td>국제항로표지협회(IALA), 이스탄불</td></tr>
-            <tr><td class="period">2012.10</td><td>Digital Ship Korea 2012 주제발표</td><td>국제 Digital Ship Korea 2012, 부산</td></tr>
-            <tr><td class="period">2012.11</td><td>IMO Regional ITCP Seminar 주제발표</td><td>IMO Regional ITCP Seminar, 서울</td></tr>
-            <tr><td class="period">2012.11</td><td>경운대학교 멘토 특강</td><td>경운대학교</td></tr>
-            <tr><td class="period">2013.07</td><td>남해지방해양경찰청 해양사고예방 특강</td><td>남해지방해양경찰청</td></tr>
-            <tr><td class="period">2013.11</td><td>영산대학교 특강</td><td>영산대학교</td></tr>
-            <tr><td class="period">2014.11</td><td>한-노르웨이 해운협력회의 국제세미나 주제발표</td><td>한-노르웨이 해운협력회의, 오슬로</td></tr>
-            <tr><td class="period">2015.06</td><td>국제해양안전장비박람회 VTS 세미나 주제발표</td><td>인천 송도 컨벤시아</td></tr>
-            <tr><td class="period">2016.08</td><td>IALA 국제 VTS 심포지엄 2016 발표</td><td>국제항로표지협회(IALA), 쿠알라룸푸르</td></tr>
-            <tr><td class="period">2016.12</td><td>남해지방해양경비안전본부 특강</td><td>남해지방해양경비안전본부</td></tr>
-            <tr><td class="period">2018.01</td><td>해양수산전망대회 주제발표</td><td>KOEX, KMI 주관</td></tr>
+            <tr><td class="period">2023</td><td>한국인 선원 감소·고령화에 따른 외국인 선원 고용 확대 대응방안</td><td>제38차 해양사고방지 세미나</td></tr>
+            <tr><td class="period">2021.08</td><td>한국해양대학교 특강</td><td>한국해양대학교</td></tr>
+            <tr><td class="period">2021.06</td><td>해양인명사고 50%줄이기 TF회의 주제발표</td><td>해양수산부</td></tr>
+            <tr><td class="period">2020.12</td><td>온라인 한국선박관리포럼 패널토론</td><td>한국선박관리포럼, BEXCO</td></tr>
             <tr><td class="period">2019</td><td>한국선박관리산업의 기회와 위기</td><td>2019 코마린 컨퍼런스(KOMARINE)</td></tr>
             <tr><td class="period">2019</td><td>자율운항선박과 선원의 변화</td><td>제2차 자율운항선박(MASS) 도입 기술·정책 컨퍼런스</td></tr>
             <tr><td class="period">2019.11</td><td>VTS와 해양안전의 미래 특강</td><td>한국해양대학교</td></tr>
             <tr><td class="period">2019-2020</td><td>4차산업혁명과 선원의 미래 특강</td><td>삼성중공업 · 현대중공업</td></tr>
-            <tr><td class="period">2020.12</td><td>온라인 한국선박관리포럼 패널토론</td><td>한국선박관리포럼, BEXCO</td></tr>
-            <tr><td class="period">2021.06</td><td>해양인명사고 50%줄이기 TF회의 주제발표</td><td>해양수산부</td></tr>
-            <tr><td class="period">2021.08</td><td>한국해양대학교 특강</td><td>한국해양대학교</td></tr>
-            <tr><td class="period">2023</td><td>한국인 선원 감소·고령화에 따른 외국인 선원 고용 확대 대응방안</td><td>제38차 해양사고방지 세미나</td></tr>
+            <tr><td class="period">2018.01</td><td>해양수산전망대회 주제발표</td><td>해양수산전망대회 (KOEX, KMI 주관)</td></tr>
+            <tr><td class="period">2016.12</td><td>남해지방해양경비안전본부 특강</td><td>남해지방해양경비안전본부</td></tr>
+            <tr><td class="period">2016.08</td><td>IALA 국제 VTS 심포지엄 2016 발표</td><td>국제항로표지협회(IALA), 쿠알라룸푸르</td></tr>
+            <tr><td class="period">2015.06</td><td>국제해양안전장비박람회 VTS 세미나 주제발표</td><td>인천 송도 컨벤시아</td></tr>
+            <tr><td class="period">2014.11</td><td>한-노르웨이 해운협력회의 국제세미나 주제발표</td><td>한-노르웨이 해운협력회의, 오슬로</td></tr>
+            <tr><td class="period">2013.11</td><td>영산대학교 특강</td><td>영산대학교</td></tr>
+            <tr><td class="period">2013.07</td><td>남해지방해양경찰청 해양사고예방 특강</td><td>남해지방해양경찰청</td></tr>
+            <tr><td class="period">2012.11</td><td>경운대학교 멘토 특강</td><td>경운대학교</td></tr>
+            <tr><td class="period">2012.11</td><td>IMO Regional ITCP Seminar 주제발표</td><td>IMO Regional ITCP Seminar, 서울</td></tr>
+            <tr><td class="period">2012.10</td><td>Digital Ship Korea 2012 주제발표</td><td>국제 Digital Ship Korea 2012, 부산</td></tr>
+            <tr><td class="period">2012.09</td><td>IALA 국제 VTS 심포지엄 2012 발표</td><td>국제항로표지협회(IALA), 이스탄불</td></tr>
+            <tr><td class="period">2012.03</td><td>포항산업과학연구원(RIST) 특강</td><td>포항산업과학연구원(RIST)</td></tr>
+            <tr><td class="period">2012.03</td><td>국립수산인력개발센터 출강</td><td>국립수산인력개발센터</td></tr>
+            <tr><td class="period">2012.03</td><td>한-몽골 해운협력회의 국제세미나 주제발표</td><td>한-몽골 도로교통부 해운협력회의</td></tr>
+            <tr><td class="period">2012.02</td><td>한국선박해양플랜트연구소 특강</td><td>한국선박해양플랜트연구소</td></tr>
+            <tr><td class="period">2010-2012</td><td>국토해양인재개발원 출강</td><td>국토해양인재개발원</td></tr>
+            <tr><td class="period">2003.09</td><td>삼성중공업(주) 특강</td><td>삼성중공업(주)</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -809,9 +797,9 @@
         <div class="table-wrap"><table>
           <thead><tr><th class="period">연도</th><th>수상명</th><th>비고</th></tr></thead>
           <tbody>
-            <tr><td class="period">2018</td><td>한국항해항만학회 우수활동상 · 우수발표상</td><td class="note"></td></tr>
             <tr><td class="period">2018</td><td>해양경찰청장 감사장</td><td class="note"></td></tr>
-            <tr><td class="period">2017</td><td>한국항해항만학회 우수논문상</td><td class="note"></td></tr>
+            <tr><td class="period">2018</td><td>우수활동상 · 우수발표상</td><td class="note">한국항해항만학회</td></tr>
+            <tr><td class="period">2017</td><td>우수논문상</td><td class="note">한국항해항만학회</td></tr>
             <tr><td class="period">2016</td><td>국민안전처 장관 표창</td><td class="note">해양경찰 업무 발전 기여</td></tr>
             <tr><td class="period">2009</td><td>국토해양부 장관 표창</td><td class="note"></td></tr>
           </tbody>
@@ -820,11 +808,7 @@
 
     </div>
 
-    <!-- ============================================================ -->
-    <!-- FULL -->
-    <!-- ============================================================ -->
     <div class="panel panel-full">
-
       <div class="identity">
         <div><span class="k">소속</span><span class="v">한국해양수산연수원</span></div>
         <div><span class="k">직위</span><span class="v">교수</span></div>
@@ -834,8 +818,6 @@
         <div class="phone"><span class="k">전화번호</span><input type="text" class="dob-input" placeholder="010-0000-0000" /></div>
         <div class="email-field"><span class="k">이메일</span><span class="v">sirius4600@gmail.com</span></div>
       </div>
-
-      <p class="lead">확장식 전체 내용에 논문 44건(학술대회 발표문 포함) 전체가 더해진 최대 버전입니다.</p>
 
       <section class="block">
         <h2>학력</h2>
@@ -854,14 +836,14 @@
         <div class="table-wrap"><table>
           <thead><tr><th class="period">기간</th><th>기관</th><th>역할</th></tr></thead>
           <tbody>
-            <tr><td class="period">2024.07-2025.06</td><td>미국 미주리주립대학교</td><td>방문연구원</td></tr>
-            <tr><td class="period">2020.09-2022.12</td><td>한국해양수산연수원</td><td>교육본부장</td></tr>
-            <tr><td class="period">2014.08-2015.12</td><td>한국해양수산연수원</td><td>기획조정실장</td></tr>
-            <tr><td class="period">2013.02-2014.07</td><td>한국해양수산연수원</td><td>신성장교육처장 · 해양플랜트인력개발센터장</td></tr>
-            <tr><td class="period">2010.01-2013.01</td><td>한국해양수산연수원</td><td>교육개발팀장 · 양성교육팀장 (현 오션폴리텍팀)</td></tr>
-            <tr><td class="period">2006.01-2009.01</td><td>한국해양수산연수원 (본원 이전·신축 기획·주도)</td><td>전략기획팀장 · 기획혁신팀장</td></tr>
-            <tr><td class="period">2001.06-현재</td><td>한국해양수산연수원</td><td>교수 (여객선, VTS 교육과정 책임교수)</td></tr>
-            <tr><td class="period">1994.03-2001.05</td><td>한진해운</td><td>항해사 · 선주감독관 (국내 최초 LNG 운반선 인수)</td></tr>
+            <tr><td class="period">2024.07 - 2025.06</td><td>미국 미주리주립대학교(University of Missouri)</td><td>방문연구원</td></tr>
+            <tr><td class="period">2020.09 - 2022.12</td><td>한국해양수산연수원</td><td>교육본부장</td></tr>
+            <tr><td class="period">2014.08 - 2015.12</td><td>한국해양수산연수원</td><td>기획조정실장</td></tr>
+            <tr><td class="period">2013.02 - 2014.07</td><td>한국해양수산연수원</td><td>신성장교육처장 · 해양플랜트인력개발센터장</td></tr>
+            <tr><td class="period">2010.01 - 2013.01</td><td>한국해양수산연수원</td><td>교육개발팀장 · 양성교육팀장 (현 오션폴리텍팀)</td></tr>
+            <tr><td class="period">2006.01 - 2009.01</td><td>한국해양수산연수원</td><td>전략기획팀장 · 기획혁신팀장 (본원 이전·신축 기획·주도)</td></tr>
+            <tr><td class="period">2001.06 - 현재</td><td>한국해양수산연수원</td><td>교수 (여객선, VTS 교육과정 책임교수)</td></tr>
+            <tr><td class="period">1994.03 - 2001.05</td><td>한진해운</td><td>항해사 · 선주감독관 (국내 최초 LNG 운반선 인수)</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -871,17 +853,17 @@
         <div class="table-wrap"><table>
           <thead><tr><th class="period">기간</th><th>기관</th><th>역할</th></tr></thead>
           <tbody>
-            <tr><td class="period">2023.12-현재</td><td>(사)한국해양안전진흥협회</td><td>대표</td></tr>
-            <tr><td class="period">2026.01-현재</td><td>한국항해항만학회</td><td>부회장</td></tr>
-            <tr><td class="period">2023.12-현재</td><td>해양수산부 해사안전정책과</td><td>고문 · 위원, IMO 전문가 위원회</td></tr>
-            <tr><td class="period">2021.03-현재</td><td>해양수산부(해운해사항만분과)</td><td>위원, 규제혁신위원회</td></tr>
-            <tr><td class="period">2021.06-현재</td><td>해양환경안전학회</td><td>교육정책분과위원장 · 편집위원</td></tr>
-            <tr><td class="period">2017-현재</td><td>산업기술혁신평가단, 산업통상자원부</td><td>평가위원</td></tr>
-            <tr><td class="period">2018.03-현재</td><td>남해지방해양경찰청</td><td>정책자문위원</td></tr>
-            <tr><td class="period">2022.03-현재</td><td>부산광역시 해양교육협의회</td><td>위원</td></tr>
-            <tr><td class="period">2022.12-현재</td><td>해양수산안전 교육자문단, 해양수산부</td><td>위원</td></tr>
-            <tr><td class="period">2024-현재</td><td>국가과학기술지식정보서비스</td><td>평가위원, IRIS 범부처 국가연구개발과제</td></tr>
-            <tr><td class="period">2025.10-현재</td><td>해양수산부</td><td>위원, 북극항로 운항인력 양성 선박조종시뮬레이터 도입사업</td></tr>
+            <tr><td class="period">2023.12 - 현재</td><td>(사)한국해양안전진흥협회</td><td>대표</td></tr>
+            <tr><td class="period">2026.01 - 현재</td><td>한국항해항만학회</td><td>부회장</td></tr>
+            <tr><td class="period">2023.12 - 현재</td><td>해양수산부 해사안전정책과</td><td>고문 · 위원, IMO 전문가 위원회</td></tr>
+            <tr><td class="period">2021.03 - 현재</td><td>해양수산부 (해운해사항만 분과)</td><td>위원, 규제혁신위원회</td></tr>
+            <tr><td class="period">2021.06 - 현재</td><td>해양환경안전학회</td><td>교육정책분과위원장 · 편집위원</td></tr>
+            <tr><td class="period">2017 - 현재</td><td>산업기술혁신평가단, 산업통상자원부</td><td>평가위원</td></tr>
+            <tr><td class="period">2018.03 - 현재</td><td>남해지방해양경찰청</td><td>정책자문위원</td></tr>
+            <tr><td class="period">2022.03 - 현재</td><td>부산광역시 해양교육협의회</td><td>위원</td></tr>
+            <tr><td class="period">2022.12 - 현재</td><td>해양수산안전 교육자문단, 해양수산부</td><td>위원</td></tr>
+            <tr><td class="period">2024 - 현재</td><td>국가과학기술지식정보서비스</td><td>평가위원, IRIS 범부처 국가연구개발과제</td></tr>
+            <tr><td class="period">2025.10 - 현재</td><td>해양수산부</td><td>위원, 북극항로 운항인력 양성 선박조종시뮬레이터 도입사업</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -906,7 +888,7 @@
             <tr><td class="period">2012</td><td>한-몽골 해운협력회의</td><td>정부 자문 (몽골 해기인력 양성)</td></tr>
             <tr><td class="period">2013</td><td>남해지방해양경찰청</td><td>준사고분석 전담팀 전문위원</td></tr>
             <tr><td class="period">2013</td><td>해양수산부</td><td>VTS 국산화 기술개발 자문위원</td></tr>
-            <tr><td class="period">2013</td><td>해양수산부</td><td>해양플랜트산업육성전략 TF 민간전문가(인력양성)</td></tr>
+            <tr><td class="period">2013</td><td>해양수산부</td><td>해양플랜트산업육성전략 TF 민간전문가/인력양성</td></tr>
             <tr><td class="period">2013</td><td>한-러시아 해운회담</td><td>정부자문 (북극해항로 개척 및 인력양성)</td></tr>
             <tr><td class="period">2013~</td><td>한국관제협회</td><td>이사</td></tr>
             <tr><td class="period">2014</td><td>한-노르웨이 해운협력회의</td><td>정부 자문 (해기협력)</td></tr>
@@ -928,7 +910,7 @@
             <tr><td class="period">2019</td><td>해양경찰청</td><td>일반직 직원채용 면접전형 위원</td></tr>
             <tr><td class="period">2019</td><td>해양경찰청</td><td>IALA 제46차 VTS위원회 및 커뮤니케이션 워크숍 국내 개최 자문위원</td></tr>
             <tr><td class="period">2019</td><td>중앙해양안전심판원</td><td>대학생 해양사고 모의 심판 경연대회 평가위원</td></tr>
-            <tr><td class="period">2019~2021</td><td>해양수산부</td><td>규제혁신위원회 위원 (해운해사항만분과)</td></tr>
+            <tr><td class="period">2019~2021</td><td>해양수산부</td><td>규제혁신위원회 위원 (해운해사항만 분과)</td></tr>
             <tr><td class="period">2019~2023.11</td><td>(사)한국인적안전진흥협회</td><td>사무국장</td></tr>
             <tr><td class="period">2019~2021.06</td><td>해양환경안전학회</td><td>감사</td></tr>
             <tr><td class="period">2021.04~2023.04</td><td>해양수산부</td><td>규제심사위원회 위원 (해운해사항만분과)</td></tr>
@@ -944,38 +926,38 @@
       </section>
 
       <section class="block">
-        <h2>연구실적 <span class="badge">34건</span></h2>
+        <h2>연구실적 <span class="badge">35건</span></h2>
         <div class="table-wrap"><table>
           <thead><tr><th class="period">연도</th><th>제목</th><th>발주처</th><th>역할</th></tr></thead>
           <tbody>
-            <tr><td class="period">2026-2032</td><td>AI 완전자율운항선박 검인증 및 실증기술개발</td><td>해양수산부</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2026 - 2032</td><td>[R&amp;D] AI 완전자율운항선박 기술개발 사업 - AI 완전자율운항선박 검인증 및 실증기술개발</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2026</td><td>선사와 사업장 안전 교육문화 활성화 체계마련 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2023-2026</td><td>[R&amp;D] 자율운항 선박 원격제어 해상 소방 시스템 개발</td><td>KIET</td><td>책임연구원</td></tr>
-            <tr><td class="period">2022-2025</td><td>[R&amp;D] 자율운항선박 기술개발연구 2단계(해운 7세부)</td><td>KIMST-KMI</td><td>책임연구원</td></tr>
-            <tr><td class="period">2021-2023</td><td>[R&amp;D] 클라우드 기반 차세대 VTS 통합 플랫폼 개발</td><td>KIMST</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2020</td><td>선박교통관제사 관제영어능력 평가 연구</td><td>해양경찰청</td><td>책임연구원</td></tr>
-            <tr><td class="period">2019</td><td>[R&amp;D] 해상교통정보 빅데이터 구축 및 안전예보 시스템 기술 개발</td><td>KRISO</td><td>자문위원</td></tr>
-            <tr><td class="period">2019</td><td>e-Navigation 정책플랫폼 구축 조사대응 연구</td><td>해양수산부</td><td>책임연구원</td></tr>
+            <tr><td class="period">2023 - 2026</td><td>[R&amp;D] 자율운항 선박 기술을 적용한 원격제어가 가능한 해상 소방 시스템 개발</td><td>KIET</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2022 - 2025</td><td>[R&amp;D] 자율운항선박 기술개발연구 2단계 (해운 7세부)</td><td>KIMST-KMI</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2021 - 2023</td><td>[R&amp;D] 클라우드 기반 차세대 VTS 통합 플랫폼 개발</td><td>KIMST</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2020</td><td>선박교통관제사 관제영어능력 평가 연구</td><td>해양경찰청</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2019</td><td>[R&amp;D] 해상교통정보 빅데이터 구축 및 안전예보 시스템 기술 개발</td><td>KRISO</td><td>Advisor</td></tr>
+            <tr><td class="period">2019</td><td>e-Navigation 정책플랫폼 구축 조사대응 연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2019</td><td>관공선 관리 운영 지원타당성 분석 및 관련제도 마련 정책연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2018</td><td>선원분야 법률체계 개편방안 연구</td><td>해양수산부</td><td>자문위원</td></tr>
-            <tr><td class="period">2017-2019</td><td>[R&amp;D] 자율운항선박 운항관제 인공지능 시스템원천기술개발</td><td>KEIT</td><td>책임연구원</td></tr>
-            <tr><td class="period">2017</td><td>선제적, 정량적 해사안전지수개발 기획연구</td><td>KIMST</td><td>책임연구원</td></tr>
+            <tr><td class="period">2018</td><td>선원분야 법률체계 개편방안 연구</td><td>해양수산부</td><td>Advisor</td></tr>
+            <tr><td class="period">2017 - 2019</td><td>[R&amp;D] 자율운항선박을 위한 운항관제 인공지능 시스템원천기술개발</td><td>KEIT</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2017</td><td>선제적, 정량적 해사안전지수개발 기획연구</td><td>KIMST</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2016</td><td>전국 선원복지시설 운영실태 조사</td><td>한국선원복지고용센터</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2016-2020</td><td>IMO 차세대 해양안전 종합관리 체계 기술개발 연구</td><td>KIMST</td><td>책임연구원</td></tr>
-            <tr><td class="period">2015-2019</td><td>해양안전사고 예방시스템 기반연구</td><td>KIMST</td><td>책임연구원</td></tr>
-            <tr><td class="period">2015</td><td>해사인력육성에 따른 국립해사고 설립검토 연구</td><td>제주도교육청</td><td>책임연구원</td></tr>
-            <tr><td class="period">2015</td><td>해상교통관제사 직무분석 및 인적요인 관리방안 연구</td><td>국민안전처</td><td>책임연구원</td></tr>
+            <tr><td class="period">2016 - 2020</td><td>IMO 차세대 해양안전 종합관리 체계 기술개발 연구</td><td>KIMST</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2015 - 2019</td><td>해양안전사고 예방시스템 기반연구</td><td>KIMST</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2015</td><td>해사인력육성에 따른 국립해사고 설립검토 연구</td><td>제주도교육청</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2015</td><td>해상교통관제사 직무분석 및 인적요인 관리방안 연구</td><td>국민안전처</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2014</td><td>부산권해역 해상교통관제 체계개선 기본조사 설계용역</td><td>국민안전처</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2013</td><td>해상교통관제 및 조난훈련시뮬레이터 부가시스템 개발</td><td>KIMST</td><td>책임연구원</td></tr>
-            <tr><td class="period">2012-2013</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>책임연구원</td></tr>
-            <tr><td class="period">2012</td><td>선박교통관제(VTS) 백서 발간 연구</td><td>해양수산부</td><td>책임연구원</td></tr>
+            <tr><td class="period">2013</td><td>해상교통관제 및 조난훈련시뮬레이터 부가시스템 개발</td><td>KIMST</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2012 - 2013</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2012</td><td>선박교통관제(VTS) 백서 발간 연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
             <tr><td class="period">2012</td><td>[R&amp;D] 선박통신개선처리 및 해상스마트서비스 기술 확보를 위한 연구</td><td>KIMST</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2012</td><td>해적피해예방을 위한 해운업계 역량강화 및 국제협력 제고방안 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2011</td><td>소말리아 해적대응을 위한 IMO의 기능 및 국제공조 강화방안 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2010-2011</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2010 - 2011</td><td>IMO 전략과제 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2010</td><td>선박관리업 선진화 및 글로벌화 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
-            <tr><td class="period">2010</td><td>해상교통관제사 자격제도 및 평가제도 도입연구</td><td>해양수산부</td><td>책임연구원</td></tr>
-            <tr><td class="period">2009-2011</td><td>개발도상국 해사안전시스템 구축 협력사업 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
+            <tr><td class="period">2010</td><td>해상교통관제사 자격제도 및 평가제도 도입연구</td><td>해양수산부</td><td>Principal Researcher</td></tr>
+            <tr><td class="period">2009 - 2011</td><td>개발도상국 해사안전시스템 구축 협력사업 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2009</td><td>글로벌 해양안전교육 프로그램 및 훈련기반 구축 기획연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2008</td><td>해사안전 기술협력 활성화 방안 연구</td><td>해양수산부</td><td>Co-Researcher</td></tr>
             <tr><td class="period">2006</td><td>IMO 회의 의제분석/의제개발 연구용역</td><td>해양수산부</td><td>Co-Researcher</td></tr>
@@ -990,9 +972,9 @@
       <section class="block">
         <h2>저서</h2>
         <ul class="plain">
-          <li><span class="period">2012</span><span class="desc">선박교통관제 백서(1993-2012): VTS 20년사</span></li>
+          <li><span class="period">2012</span><span class="desc">선박교통관제 백서 (1993 - 2012): VTS 20년사</span></li>
           <li><span class="period">2015</span><span class="desc">Traffic Management</span></li>
-          <li><span class="period">2016</span><span class="desc">2016 IALA VTS Manual, 해상교통관제매뉴얼(영한대역)</span></li>
+          <li><span class="period">2016</span><span class="desc">2016 IALA VTS Manual, 해상교통관제매뉴얼 (영한대역)</span></li>
         </ul>
       </section>
 
@@ -1010,7 +992,7 @@
           <thead><tr><th class="period">연도</th><th>제목</th><th>게재처</th><th>비고</th></tr></thead>
           <tbody>
             <tr><td class="period">2026.05</td><td>선박 시뮬레이션을 사용한 원격제어가 가능한 해상소방정의 성능평가 체계 구축연구</td><td>한국항해항만학회</td><td class="note"></td></tr>
-            <tr><td class="period">2025.10</td><td>Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness</td><td>MDPI Applied Sciences</td><td class="note">공저</td></tr>
+            <tr><td class="period">2025</td><td>Risk Management Challenges in Maritime Autonomous Surface Ships (MASSs): Training and Regulatory Readiness</td><td>MDPI Applied Sciences</td><td class="note"></td></tr>
             <tr><td class="period">2023</td><td>클라우드 VTS 통합플랫폼 운영구조 분석에 관한 연구</td><td>한국항해항만학회 2023년도 춘계학술대회</td><td class="note"></td></tr>
             <tr><td class="period">2023</td><td>자율운항선박 항해를 위한 원격운항자 최저역량에 관한 연구</td><td>한국항해항만학회 2023년도 춘계학술대회</td><td class="note"></td></tr>
             <tr><td class="period">2023</td><td>클라우드 기반 차세대 VTS 통합플랫폼 도입에 따른 교육과정 개발에 관한 연구</td><td>해양환경안전학회지 29(7)</td><td class="note"></td></tr>
@@ -1019,10 +1001,10 @@
             <tr><td class="period">2022</td><td>원격운항자의 교육훈련 프로그램 개발에 관한 연구</td><td>한국항해항만학회 2022년도 춘계학술대회</td><td class="note"></td></tr>
             <tr><td class="period">2022</td><td>Development of the Guidelines on the VTS English Competency Test</td><td>한국항해항만학회 2022년도 춘계학술대회</td><td class="note"></td></tr>
             <tr><td class="period">2022</td><td>클라우드 VTS 통합플랫폼 표준운영절차서(SOP) 개발에 관한 연구</td><td>한국항해항만학회 2022년도 춘계학술대회</td><td class="note"></td></tr>
-            <tr><td class="period">2021</td><td>e-Navigation 서비스를 위한 충돌사고 평가지표 개발</td><td>해양환경안전학회지</td><td class="note">RCA·FTA 기법으로 충돌사고 근본원인을 도출·정량화</td></tr>
+            <tr><td class="period">2021</td><td>e-Navigation 서비스를 위한 충돌사고 평가지표 개발</td><td>해양환경안전학회지</td><td class="note">IMO가 추진하는 e-Navigation의 개발성과를 평가하기 위해, RCA와 FTA 기법으로 해상 충돌사고의 근본원인을 도출하고 이를 정량화한 평가지표를 개발했다.</td></tr>
             <tr><td class="period">2020</td><td>FMSS를 이용한 자율운항선박 충돌회피능력 정량화 평가 기법에 관한 연구</td><td>한국항해항만학회지 44(6)</td><td class="note"></td></tr>
             <tr><td class="period">2018</td><td>신임 해상교통관제사의 역량모델 개발</td><td>한국항해항만학회 2018년도 춘계학술대회</td><td class="note"></td></tr>
-            <tr><td class="period">2018</td><td>선박교통관제센터-선박 간 실제 통신데이터 기반 선박안전교육 챗봇 프레임워크 개발</td><td>ICIC Express Letters, Part B, Vol.9</td><td class="note"></td></tr>
+            <tr><td class="period">2018</td><td>선박교통관제센터-선박 간 실제 통신데이터 기반 선박안전교육 챗봇 프레임워크 개발</td><td>ICIC Express Letters, Part B: Applications, Vol. 9</td><td class="note"></td></tr>
             <tr><td class="period">2018</td><td>충돌 및 좌초사고 발생 시 항해사의 성격경향에 관한 연구</td><td>해양환경안전학회 2018년도 공동국제학술발표회</td><td class="note"></td></tr>
             <tr><td class="period">2018</td><td>연안여객선 익수사고 발생 시 대응 훈련 매뉴얼 개발</td><td>해양환경안전학회 2018년도 공동국제학술발표회</td><td class="note"></td></tr>
             <tr><td class="period">2018</td><td>항해사 개인특성에 근거한 해양사고 유발요인 분석</td><td>한국항해항만학회 2018년도 추계학술대회</td><td class="note"></td></tr>
@@ -1050,43 +1032,43 @@
             <tr><td class="period">2010</td><td>해상교통관제사의 역량강화를 위한 제도개선 방안 연구</td><td>한국항해항만학회 2010년도 추계학술대회</td><td class="note"></td></tr>
             <tr><td class="period">2010</td><td>해상교통관제사 자격제도 및 평가제도 도입을 위한 관제사 설문조사 분석</td><td>한국항해항만학회 2010년도 추계학술대회</td><td class="note"></td></tr>
             <tr><td class="period">2010</td><td>한국의 공적원조를 위한 인도네시아 아체 지역의 어선 안전기술의 개발에 관한 연구</td><td>해양환경안전학회지 16(2)</td><td class="note"></td></tr>
-            <tr><td class="period">2005</td><td>인천항 제2연륙교 적정 주경간 폭 결정에 관한 연구(2)</td><td>한국항해항만학회지 29(1)</td><td class="note"></td></tr>
+            <tr><td class="period">2005</td><td>인천항 제2연륙교 적정 주경간 폭 결정에 관한 연구(2) — 주경간의 통항방식에 따른 항만운영의 경제성 분석</td><td>한국항해항만학회지 29(1)</td><td class="note"></td></tr>
             <tr><td class="period">2004</td><td>중동항로 취항 멤브레인형 LNGC의 BOG 예측에 관한 연구</td><td>한국항해항만학회지 28(5)</td><td class="note"></td></tr>
-            <tr><td class="period">2004</td><td>인천항 제2연륙교 적정 주경간 폭 결정에 관한 연구(1)</td><td>한국항해항만학회지 28(10)</td><td class="note"></td></tr>
+            <tr><td class="period">2004</td><td>인천항 제2연륙교 적정 주경간 폭 결정에 관한 연구(1) — 교통량 및 선박 조종성 측면에서의 소요 교각폭 산정</td><td>한국항해항만학회지 28(10)</td><td class="note"></td></tr>
           </tbody>
         </table></div>
       </section>
 
       <section class="block">
-        <h2>외부강연 · 초청발표 <span class="badge">26건</span></h2>
+        <h2>외부강연 · 초청발표 <span class="badge">25건</span></h2>
         <div class="table-wrap"><table>
           <thead><tr><th class="period">연도</th><th>제목</th><th>장소 · 주최</th></tr></thead>
           <tbody>
-            <tr><td class="period">2003.09</td><td>삼성중공업(주) 특강</td><td>삼성중공업(주)</td></tr>
-            <tr><td class="period">2010-2012</td><td>국토해양인재개발원 출강</td><td>국토해양인재개발원</td></tr>
-            <tr><td class="period">2012.02</td><td>한국선박해양플랜트연구소 특강</td><td>한국선박해양플랜트연구소</td></tr>
-            <tr><td class="period">2012.03</td><td>한-몽골 해운협력회의 국제세미나 주제발표</td><td>한-몽골 도로교통부 해운협력회의</td></tr>
-            <tr><td class="period">2012.03</td><td>국립수산인력개발센터 출강</td><td>국립수산인력개발센터</td></tr>
-            <tr><td class="period">2012.03</td><td>포항산업과학연구원(RIST) 특강</td><td>포항산업과학연구원(RIST)</td></tr>
-            <tr><td class="period">2012.09</td><td>IALA 국제 VTS 심포지엄 2012 발표</td><td>국제항로표지협회(IALA), 이스탄불</td></tr>
-            <tr><td class="period">2012.10</td><td>Digital Ship Korea 2012 주제발표</td><td>국제 Digital Ship Korea 2012, 부산</td></tr>
-            <tr><td class="period">2012.11</td><td>IMO Regional ITCP Seminar 주제발표</td><td>IMO Regional ITCP Seminar, 서울</td></tr>
-            <tr><td class="period">2012.11</td><td>경운대학교 멘토 특강</td><td>경운대학교</td></tr>
-            <tr><td class="period">2013.07</td><td>남해지방해양경찰청 해양사고예방 특강</td><td>남해지방해양경찰청</td></tr>
-            <tr><td class="period">2013.11</td><td>영산대학교 특강</td><td>영산대학교</td></tr>
-            <tr><td class="period">2014.11</td><td>한-노르웨이 해운협력회의 국제세미나 주제발표</td><td>한-노르웨이 해운협력회의, 오슬로</td></tr>
-            <tr><td class="period">2015.06</td><td>국제해양안전장비박람회 VTS 세미나 주제발표</td><td>인천 송도 컨벤시아</td></tr>
-            <tr><td class="period">2016.08</td><td>IALA 국제 VTS 심포지엄 2016 발표</td><td>국제항로표지협회(IALA), 쿠알라룸푸르</td></tr>
-            <tr><td class="period">2016.12</td><td>남해지방해양경비안전본부 특강</td><td>남해지방해양경비안전본부</td></tr>
-            <tr><td class="period">2018.01</td><td>해양수산전망대회 주제발표</td><td>KOEX, KMI 주관</td></tr>
+            <tr><td class="period">2023</td><td>한국인 선원 감소·고령화에 따른 외국인 선원 고용 확대 대응방안</td><td>제38차 해양사고방지 세미나</td></tr>
+            <tr><td class="period">2021.08</td><td>한국해양대학교 특강</td><td>한국해양대학교</td></tr>
+            <tr><td class="period">2021.06</td><td>해양인명사고 50%줄이기 TF회의 주제발표</td><td>해양수산부</td></tr>
+            <tr><td class="period">2020.12</td><td>온라인 한국선박관리포럼 패널토론</td><td>한국선박관리포럼, BEXCO</td></tr>
             <tr><td class="period">2019</td><td>한국선박관리산업의 기회와 위기</td><td>2019 코마린 컨퍼런스(KOMARINE)</td></tr>
             <tr><td class="period">2019</td><td>자율운항선박과 선원의 변화</td><td>제2차 자율운항선박(MASS) 도입 기술·정책 컨퍼런스</td></tr>
             <tr><td class="period">2019.11</td><td>VTS와 해양안전의 미래 특강</td><td>한국해양대학교</td></tr>
             <tr><td class="period">2019-2020</td><td>4차산업혁명과 선원의 미래 특강</td><td>삼성중공업 · 현대중공업</td></tr>
-            <tr><td class="period">2020.12</td><td>온라인 한국선박관리포럼 패널토론</td><td>한국선박관리포럼, BEXCO</td></tr>
-            <tr><td class="period">2021.06</td><td>해양인명사고 50%줄이기 TF회의 주제발표</td><td>해양수산부</td></tr>
-            <tr><td class="period">2021.08</td><td>한국해양대학교 특강</td><td>한국해양대학교</td></tr>
-            <tr><td class="period">2023</td><td>한국인 선원 감소·고령화에 따른 외국인 선원 고용 확대 대응방안</td><td>제38차 해양사고방지 세미나</td></tr>
+            <tr><td class="period">2018.01</td><td>해양수산전망대회 주제발표</td><td>해양수산전망대회 (KOEX, KMI 주관)</td></tr>
+            <tr><td class="period">2016.12</td><td>남해지방해양경비안전본부 특강</td><td>남해지방해양경비안전본부</td></tr>
+            <tr><td class="period">2016.08</td><td>IALA 국제 VTS 심포지엄 2016 발표</td><td>국제항로표지협회(IALA), 쿠알라룸푸르</td></tr>
+            <tr><td class="period">2015.06</td><td>국제해양안전장비박람회 VTS 세미나 주제발표</td><td>인천 송도 컨벤시아</td></tr>
+            <tr><td class="period">2014.11</td><td>한-노르웨이 해운협력회의 국제세미나 주제발표</td><td>한-노르웨이 해운협력회의, 오슬로</td></tr>
+            <tr><td class="period">2013.11</td><td>영산대학교 특강</td><td>영산대학교</td></tr>
+            <tr><td class="period">2013.07</td><td>남해지방해양경찰청 해양사고예방 특강</td><td>남해지방해양경찰청</td></tr>
+            <tr><td class="period">2012.11</td><td>경운대학교 멘토 특강</td><td>경운대학교</td></tr>
+            <tr><td class="period">2012.11</td><td>IMO Regional ITCP Seminar 주제발표</td><td>IMO Regional ITCP Seminar, 서울</td></tr>
+            <tr><td class="period">2012.10</td><td>Digital Ship Korea 2012 주제발표</td><td>국제 Digital Ship Korea 2012, 부산</td></tr>
+            <tr><td class="period">2012.09</td><td>IALA 국제 VTS 심포지엄 2012 발표</td><td>국제항로표지협회(IALA), 이스탄불</td></tr>
+            <tr><td class="period">2012.03</td><td>포항산업과학연구원(RIST) 특강</td><td>포항산업과학연구원(RIST)</td></tr>
+            <tr><td class="period">2012.03</td><td>국립수산인력개발센터 출강</td><td>국립수산인력개발센터</td></tr>
+            <tr><td class="period">2012.03</td><td>한-몽골 해운협력회의 국제세미나 주제발표</td><td>한-몽골 도로교통부 해운협력회의</td></tr>
+            <tr><td class="period">2012.02</td><td>한국선박해양플랜트연구소 특강</td><td>한국선박해양플랜트연구소</td></tr>
+            <tr><td class="period">2010-2012</td><td>국토해양인재개발원 출강</td><td>국토해양인재개발원</td></tr>
+            <tr><td class="period">2003.09</td><td>삼성중공업(주) 특강</td><td>삼성중공업(주)</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -1096,9 +1078,9 @@
         <div class="table-wrap"><table>
           <thead><tr><th class="period">연도</th><th>수상명</th><th>비고</th></tr></thead>
           <tbody>
-            <tr><td class="period">2018</td><td>한국항해항만학회 우수활동상 · 우수발표상</td><td class="note"></td></tr>
             <tr><td class="period">2018</td><td>해양경찰청장 감사장</td><td class="note"></td></tr>
-            <tr><td class="period">2017</td><td>한국항해항만학회 우수논문상</td><td class="note"></td></tr>
+            <tr><td class="period">2018</td><td>우수활동상 · 우수발표상</td><td class="note">한국항해항만학회</td></tr>
+            <tr><td class="period">2017</td><td>우수논문상</td><td class="note">한국항해항만학회</td></tr>
             <tr><td class="period">2016</td><td>국민안전처 장관 표창</td><td class="note">해양경찰 업무 발전 기여</td></tr>
             <tr><td class="period">2009</td><td>국토해양부 장관 표창</td><td class="note"></td></tr>
           </tbody>
