@@ -441,7 +441,7 @@ p.lead {
 
   <div class="toolbar">
     <h1>장은규 이력서 — 기본양식 · 확장식 · Full Version</h1>
-    <button type="button" class="print-btn" onclick="window.print()">
+    <button type="button" class="print-btn" onclick="confirmAndPrint()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M6 9V2h12v7" /><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><path d="M6 14h12v8H6z" />
       </svg>
@@ -1101,6 +1101,22 @@ p.lead {
     </footer>
 
   </div>
+
+  <script>
+    (function () {
+      var dateInput = document.getElementById("date");
+      if (dateInput && !dateInput.value) {
+        var d = new Date();
+        var pad = function (n) { return String(n).padStart(2, "0"); };
+        dateInput.value = d.getFullYear() + ". " + pad(d.getMonth() + 1) + ". " + pad(d.getDate()) + ".";
+      }
+    })();
+    function confirmAndPrint() {
+      if (window.confirm("생년월일, 제출기관 입력 확인하셨습니까?")) {
+        window.print();
+      }
+    }
+  </script>
 
 </body>
 </html>
