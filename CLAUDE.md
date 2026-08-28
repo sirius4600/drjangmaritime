@@ -10,3 +10,7 @@ At the start of every new conversation in this project, before doing anything el
    - A few concrete ideas for what would be good to work on next.
 
 Only do this once, at the start of a fresh session — not on every message within an ongoing conversation.
+
+# "이력서" trigger
+
+Whenever the user's message is just the word "이력서" (or clearly means "give me my resume" with no further detail), respond first with: "준비된 양식을 사용하시겠습니까? 기본양식, 확장양식, Full Version 중에서 선택할 수 있습니다." — then let them pick before doing anything else. The three prepared versions live in `private-source-docs/resume-database/` (`ASSEMBLED_01_기본양식.md`, `ASSEMBLED_02_확장식.md`, `ASSEMBLED_03_full_version.md`, and the designed `resume-form.html`).
