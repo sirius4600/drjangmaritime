@@ -20,7 +20,7 @@ export const identity = {
 
 // Fixed wording the user asked to keep as-is, overriding education.ts.
 export const education = [
-  { period: "1990-1994", school: "국립한국해양대학교", degree: "해사수송과학과 공학사" },
+  { period: "1990-1994", school: "국립한국해양대학교", degree: "공학사 해사수송과학과" },
   { period: "2002-2004", school: "국립한국해양대학교", degree: "공학석사 (해사안전환경 전공)" },
   { period: "2018", school: "국립한국해양대학교", degree: "공학박사 (해사안전환경 전공)" },
 ];
