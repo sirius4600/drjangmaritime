@@ -324,8 +324,8 @@ export const researchProjects: ResearchProject[] = [
     theme: "Policy",
   },
   {
-    id: "ptms-network-design",
-    title: "PTMS 전국종합망 설치계획 및 설계용역",
+    id: "ecdis-auto-tracking-system",
+    title: "전자해도 이용 선박자동추적장치 개발연구",
     funder: "해양수산부",
     role: "Co-Researcher",
     period: "2004",
@@ -333,8 +333,8 @@ export const researchProjects: ResearchProject[] = [
     theme: "VTS",
   },
   {
-    id: "ecdis-auto-tracking-system",
-    title: "전자해도 이용 선박자동추적장치 개발연구",
+    id: "ptms-network-design",
+    title: "PTMS 전국종합망 설치계획 및 설계용역",
     funder: "해양수산부",
     role: "Co-Researcher",
     period: "2002",

@@ -356,8 +356,8 @@ export const researchProjects: ResearchProject[] = [
     theme: "Policy",
   },
   {
-    id: "ptms-network-design",
-    title: "PTMS Nationwide Network Installation Plan and Design Service",
+    id: "ecdis-auto-tracking-system",
+    title: "Development of an Automatic Ship-Tracking Device Using Electronic Navigational Charts",
     funder: "Ministry of Oceans and Fisheries",
     role: "Co-Researcher",
     period: "2004",
@@ -365,8 +365,8 @@ export const researchProjects: ResearchProject[] = [
     theme: "VTS",
   },
   {
-    id: "ecdis-auto-tracking-system",
-    title: "Development of an Automatic Ship-Tracking Device Using Electronic Navigational Charts",
+    id: "ptms-network-design",
+    title: "PTMS Nationwide Network Installation Plan and Design Service",
     funder: "Ministry of Oceans and Fisheries",
     role: "Co-Researcher",
     period: "2002",
