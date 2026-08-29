@@ -373,13 +373,17 @@ body {
 #show-dob:checked ~ .paper .identity .dob { display: block; }
 #show-phone:checked ~ .paper .identity .phone { display: block; }
 #show-email:checked ~ .paper .identity .email-field { display: block; }
-/* 기본양식(1p) always shows dob/phone/email — it's meant to be a directly
-   submittable document, so these shouldn't depend on remembering to tick the
-   show-dob/phone/email checkboxes (which stay checkbox-gated for every other
-   tier, unchanged). */
+/* 기본양식(1p)/(2p) always show dob/phone/email — they're meant to be
+   directly submittable documents, so these shouldn't depend on remembering
+   to tick the show-dob/phone/email checkboxes (확장식/Full Version keep the
+   checkbox-gated behavior, unchanged). Extended to 2p 2026-08-30 per
+   explicit request to align 2p with 1p's rules. */
 #tab-basic1p:checked ~ .paper .identity .dob,
 #tab-basic1p:checked ~ .paper .identity .phone,
-#tab-basic1p:checked ~ .paper .identity .email-field { display: block; }
+#tab-basic1p:checked ~ .paper .identity .email-field,
+#tab-basic:checked ~ .paper .identity .dob,
+#tab-basic:checked ~ .paper .identity .phone,
+#tab-basic:checked ~ .paper .identity .email-field { display: block; }
 @media (max-width: 640px) {
   .identity > div { flex-basis: 50%; }
 }
@@ -473,33 +477,41 @@ p.lead {
   margin: -4px 0 16px;
 }
 
-/* 기본양식(1p) is deliberately denser than every other tier — the whole
-   point of this tier is a hand-guaranteed 1 printed page (see basicTier1p in
-   resume-supplement.mjs), so tightening spacing is the right lever once the
-   curated content itself is already minimal, rather than cutting further.
-   Scoped narrowly (via the panel's own class, or `#tab-basic1p:checked ~
-   .paper` for the shared masthead/signoff) so no other tier's spacing
-   changes. */
-#tab-basic1p:checked ~ .paper .masthead { margin-bottom: 14px; }
-#tab-basic1p:checked ~ .paper .signoff { margin-top: 20px; padding-top: 14px; }
-.panel-basic1p .identity { margin-bottom: 20px; }
+/* 기본양식(1p) and (2p) are deliberately denser than 확장식/Full Version — 1p's
+   whole point is a hand-guaranteed 1 printed page (see basicTier1p in
+   resume-supplement.mjs), and 2p adopted the same visual density 2026-08-30
+   per explicit request to align 2p with 1p's rules (2p had grown to 3 pages
+   in en/es once it picked up 1p's full education timeline + org-prefixed
+   awards; tightening spacing recovered the 2-page budget without cutting
+   its extra content). Scoped via each panel's own class, or
+   `#tab-basic1p:checked ~ .paper`/`#tab-basic:checked ~ .paper` for the
+   shared masthead/signoff, so 확장식/Full Version spacing never changes. */
+#tab-basic1p:checked ~ .paper .masthead,
+#tab-basic:checked ~ .paper .masthead { margin-bottom: 14px; }
+#tab-basic1p:checked ~ .paper .signoff,
+#tab-basic:checked ~ .paper .signoff { margin-top: 20px; padding-top: 14px; }
+.panel-basic1p .identity,
+.panel-basic .identity { margin-bottom: 20px; }
 /* 2 columns instead of the usual 4 — long en/ja/es org/license strings wrap
    to 2-3 lines at a 25%-width column, which was the single biggest source of
    1p overflow in those locales (ko fits fine at 4 columns; en/es did not). */
-.panel-basic1p .identity > div { flex-basis: 50%; padding: 6px 14px; }
-.panel-basic1p .identity .k { margin-bottom: 1px; }
-.panel-basic1p .identity .v { font-size: 12px; line-height: 1.3; }
-.panel-basic1p h2 { margin: 14px 0 7px; padding-bottom: 4px; font-size: 15px; }
+.panel-basic1p .identity > div,
+.panel-basic .identity > div { flex-basis: 50%; padding: 6px 14px; }
+.panel-basic1p .identity .k,
+.panel-basic .identity .k { margin-bottom: 1px; }
+.panel-basic1p .identity .v,
+.panel-basic .identity .v { font-size: 12px; line-height: 1.3; }
+.panel-basic1p h2,
+.panel-basic h2 { margin: 14px 0 7px; padding-bottom: 4px; font-size: 15px; }
 /* Slightly smaller + tighter line-height than the shared default — this
    matters most for en/es, where career text is long enough to wrap to 2
-   lines per row; shaving per-line height there recovers real space. Eased
-   back toward the shared default 2026-08-30 after dropping the 연구실적
-   section freed up a healthy buffer (100px+ on every locale) — see the
-   measurement note in [[drjangmaritime-resume-system]] before tightening
-   further. */
-.panel-basic1p ul.plain li { padding: 3px 0; font-size: 12.3px; line-height: 1.45; }
-.panel-basic1p table { margin-bottom: 0; font-size: 11.6px; }
-.panel-basic1p tbody td { padding: 4px 10px 4px 0; }
+   lines per row; shaving per-line height there recovers real space. */
+.panel-basic1p ul.plain li,
+.panel-basic ul.plain li { padding: 3px 0; font-size: 12.3px; line-height: 1.45; }
+.panel-basic1p table,
+.panel-basic table { margin-bottom: 0; font-size: 11.6px; }
+.panel-basic1p tbody td,
+.panel-basic tbody td { padding: 4px 10px 4px 0; }
 
 /* ---- footer sign-off ---- */
 .signoff {

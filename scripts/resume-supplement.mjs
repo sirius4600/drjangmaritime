@@ -328,10 +328,13 @@ export const experienceDetailOverrides = {
 export const basicTier = {
   // First N entries of currentAffiliations, in the order experience.ts already lists them.
   currentAffiliationsCount: 5,
-  // 0-based indices into experience.ts's `experience` array, in this display
-  // order: [교수/Professor, 교육본부장/Director-Education HQ, 방문연구원/Visiting
-  // Researcher, 항해사 · 선주감독관/Deck Officer].
-  experienceIndices: [6, 1, 0, 7],
+  // 0-based indices into experience.ts's `experience` array, display order:
+  // [교수/Professor (current, no end date — ranks first), 방문연구원/Visiting
+  // Researcher (2024-2025), 교육본부장/Director-Education HQ (2020-2022),
+  // 항해사 · 선주감독관/Deck Officer (1994-2001, oldest)] — recency-ordered to
+  // match basicTier1p's convention (see [[maritime-resume-recency-default]]),
+  // applied here 2026-08-30 per explicit request to bring 2p in line with 1p.
+  experienceIndices: [6, 0, 1, 7],
   // research.ts entries with flagship:true are used automatically — no list needed here.
   // 0-based indices into publications.ts's `papers` array (index-aligned
   // across locales — paper titles are kept in their original published

@@ -131,7 +131,9 @@ function buildLocaleData(locale) {
   const basicPaperRows = supplement.basicTier.representativePaperIndices.map((i) => paperRows[i]);
 
   const basic1pCareerRows = supplement.basicTier1p.experienceIndices.map((i) => careerRows[i]);
-  const basic1pAwardRows = awardRowsDesc.map((a) => ({
+  // Shared by 기본양식(1p) and (2p) — both show every award, org-prefixed per
+  // basicTier1pAwardOrgIndices (see resume-supplement.mjs).
+  const awardRowsWithOrgPrefix = awardRowsDesc.map((a) => ({
     ...a,
     orgPrefix: supplement.basicTier1pAwardOrgIndices.includes(a.origIndex) ? a.reason : null,
   }));
@@ -139,7 +141,7 @@ function buildLocaleData(locale) {
   return {
     careerRows, currentRoleRows, researchRows, awardRowsDesc, presentationRows, paperRows,
     basicCurrentRoleRows, basicCareerRows, basicResearchRows, basicPaperRows,
-    basic1pCareerRows, basic1pAwardRows,
+    basic1pCareerRows, awardRowsWithOrgPrefix,
   };
 }
 
@@ -261,30 +263,37 @@ ${plainList(data.basic1pCareerRows, orgRoleLi)}
 
       <section class="block">
         <h2>${esc(t.section.awards)}</h2>
-${plainList(data.basic1pAwardRows, (a) => `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`)}
+${plainList(data.awardRowsWithOrgPrefix, (a) => `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`)}
       </section>
 
     </div>`;
 }
 
+// 기본양식(2p) — "약간 확장된 버전" of 기본양식(1p): same section-ordering and
+// formatting conventions as 1p (학력/경력 first, 수상 last, full 고등학교~박사
+// education timeline, recency-ordered career, awards as a `ul.plain` list
+// with awarding-org prefixed — see basicTier1p in resume-supplement.mjs and
+// [[drjangmaritime-resume-system]]), aligned 2026-08-30 per explicit request
+// to bring 2p in line with 1p's rules. 2p's *extra* content over 1p — 현재
+// 주요 직위, 대표 연구실적, 저서 — sits between 주요 경력 and 수상.
 function panelBasic(locale, data, phoneValue) {
   const t = ui[locale];
   return `    <div class="panel panel-basic lang-${locale}">
 ${identityBlock(locale, phoneValue)}
 
       <section class="block">
-        <h2>${esc(t.section.currentRoles)}</h2>
-${plainList(data.basicCurrentRoleRows, orgRoleLi)}
-      </section>
-
-      <section class="block">
         <h2>${esc(t.section.education)}</h2>
-${plainList(supplement.education[locale].slice(-1), (r) => `<span class="period">${esc(r.period)}</span><span class="desc">${esc(r.school)} ${esc(r.degree)}</span>`)}
+${plainList(supplement.basicTier1pEducation[locale], (r) => `<span class="period">${esc(r.period)}</span><span class="desc">${esc(r.school)}${r.degree ? ` ${esc(r.degree)}` : ""}</span>`)}
       </section>
 
       <section class="block">
         <h2>${esc(t.section.careerHighlights)}</h2>
 ${plainList(data.basicCareerRows, orgRoleLi)}
+      </section>
+
+      <section class="block">
+        <h2>${esc(t.section.currentRoles)}</h2>
+${plainList(data.basicCurrentRoleRows, orgRoleLi)}
       </section>
 
       <section class="block">
@@ -299,7 +308,7 @@ ${booksList(locale)}
 
       <section class="block">
         <h2>${esc(t.section.awards)}</h2>
-${awardsTable(data.awardRowsDesc, false, t)}
+${plainList(data.awardRowsWithOrgPrefix, (a) => `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`)}
       </section>
 
     </div>`;
