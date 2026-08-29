@@ -18,8 +18,6 @@ export const ui = {
       education: ["기간", "학교", "학위"],
       papers: ["연도", "제목", "게재처", "비고"],
       presentations: ["연도", "제목", "장소 · 주최"],
-      awards: ["연도", "수상명"],
-      awardsWithNote: ["연도", "수상명", "비고"],
     },
     section: {
       currentRoles: "현재 주요 직위",
@@ -51,8 +49,6 @@ export const ui = {
       education: ["Period", "Institution", "Degree"],
       papers: ["Year", "Title", "Venue", "Note"],
       presentations: ["Year", "Title", "Venue · Host"],
-      awards: ["Year", "Award"],
-      awardsWithNote: ["Year", "Award", "Note"],
     },
     section: {
       currentRoles: "Current Key Positions",
@@ -84,8 +80,6 @@ export const ui = {
       education: ["期間", "学校", "学位"],
       papers: ["年度", "タイトル", "掲載誌", "備考"],
       presentations: ["年度", "タイトル", "場所・主催"],
-      awards: ["年度", "受賞名"],
-      awardsWithNote: ["年度", "受賞名", "備考"],
     },
     section: {
       currentRoles: "現在の主要職位",
@@ -117,8 +111,6 @@ export const ui = {
       education: ["Periodo", "Institución", "Titulación"],
       papers: ["Año", "Título", "Publicación", "Nota"],
       presentations: ["Año", "Título", "Lugar · Organizador"],
-      awards: ["Año", "Premio"],
-      awardsWithNote: ["Año", "Premio", "Nota"],
     },
     section: {
       currentRoles: "Cargos Actuales Principales",

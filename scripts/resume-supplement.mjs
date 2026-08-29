@@ -54,23 +54,32 @@ export const identity = {
 };
 
 // Fixed wording the user asked to keep as-is, overriding education.ts.
+// 거제고등학교 row added 2026-08-30 (same fact as basicTier1pEducation's high
+// school row, added here too so 확장식/Full Version's fuller 학력 table and
+// the ASSEMBLED_*.md docs also show it — those consumers read this array
+// directly). Unlike basicTier1pEducation's compact 1p/2p style, this array
+// keeps its own fuller convention (degree spelled out, "졸업" not omitted).
 export const education = {
   ko: [
+    { period: "1990", school: "거제고등학교", degree: "졸업" },
     { period: "1990-1994", school: "국립한국해양대학교", degree: "공학사 해사수송과학과" },
     { period: "2002-2004", school: "국립한국해양대학교", degree: "공학석사 (해사안전환경 전공)" },
     { period: "2018", school: "국립한국해양대학교", degree: "공학박사 (해사안전환경 전공)" },
   ],
   en: [
+    { period: "1990", school: "Geoje High School", degree: "Graduated" },
     { period: "1990 - 1994", school: "Korea Maritime and Ocean University", degree: "B.Eng., Maritime Transportation Science" },
     { period: "2002 - 2004", school: "Korea Maritime and Ocean University", degree: "M.Eng., Maritime Safety & Environment" },
     { period: "2018", school: "Korea Maritime and Ocean University", degree: "Ph.D., Maritime Safety & Environment" },
   ],
   ja: [
+    { period: "1990", school: "巨済高等学校", degree: "卒業" },
     { period: "1990 - 1994", school: "韓国海洋大学校", degree: "工学士、海事輸送科学" },
     { period: "2002 - 2004", school: "韓国海洋大学校", degree: "工学修士（海事安全環境専攻）" },
     { period: "2018", school: "韓国海洋大学校", degree: "工学博士（海事安全環境専攻）" },
   ],
   es: [
+    { period: "1990", school: "Escuela Secundaria Geoje", degree: "Graduado" },
     { period: "1990 - 1994", school: "Universidad Marítima y Oceánica de Corea", degree: "Ingeniería, Ciencias del Transporte Marítimo" },
     { period: "2002 - 2004", school: "Universidad Marítima y Oceánica de Corea", degree: "Máster en Ingeniería, Seguridad y Medio Ambiente Marítimo" },
     { period: "2018", school: "Universidad Marítima y Oceánica de Corea", degree: "Doctorado en Ingeniería, Seguridad y Medio Ambiente Marítimo" },
@@ -313,6 +322,34 @@ export const experienceDetailOverrides = {
     es: "Recepción del primer buque metanero (LNG) de Corea",
   },
 };
+
+// Full-history 경력 order for 확장식/Full Version's comprehensive career
+// table (all 8 experience.ts entries, not a curated subset) — recency-first
+// (ongoing/현재 entry first, then descending by end date), same convention as
+// basicTier/basicTier1p's experienceIndices, applied 2026-08-30 per explicit
+// request to bring 확장식/Full Version in line with 1p/2p's rules too. See
+// [[maritime-resume-recency-default]]. 0-based indices into experience.ts's
+// raw array: [교수(현재)/Professor, 방문연구원(2024-25)/Visiting Researcher,
+// 교육본부장(2020-22)/Director-Education HQ, 기획조정실장(2014-15)/Director of
+// Planning & Coordination, 신성장교육처장(2013-14)/Director of New Growth
+// Education, 교육개발팀장(2010-13)/Education Development Team Lead,
+// 전략기획팀장(2006-09)/Strategic Planning Team Lead, 항해사(1994-2001,
+// oldest)/Deck Officer].
+export const fullCareerOrder = [6, 0, 1, 2, 3, 4, 5, 7];
+
+// Full 현재 주요 직위 order for 확장식/Full Version's comprehensive table (all
+// 11 currentAffiliations entries) — every entry is ongoing ("현재"), so
+// "recency" here means descending by START date (ties broken by original
+// array order), applied 2026-08-30 per explicit request. 0-based indices
+// into experience.ts's raw `currentAffiliations` array, by start date desc:
+// [1: 부회장/한국항해항만학회 (2026.01), 10: 위원·북극항로/해양수산부 (2025.10),
+// 9: 평가위원·IRIS/국가과학기술지식정보서비스 (2024), 0: 대표/한국해양안전진흥협회
+// (2023.12), 2: 고문·위원/해양수산부 해사안전정책과 (2023.12, tie with 0 broken
+// by original order), 8: 위원/해양수산안전 교육자문단 (2022.12), 7: 위원/부산
+// 해양교육협의회 (2022.03), 4: 교육정책분과위원장/해양환경안전학회 (2021.06),
+// 3: 위원·규제혁신위원회/해양수산부 (2021.03), 6: 정책자문위원/남해지방해양경찰청
+// (2018.03), 5: 평가위원/산업기술혁신평가단 (2017, oldest)].
+export const fullCurrentRolesOrder = [1, 10, 9, 0, 2, 8, 7, 4, 3, 6, 5];
 
 // 기본양식 (basic tier) curation — small hand-picked subsets so the 1-page
 // summary doesn't just grow forever as research.ts/experience.ts grow.

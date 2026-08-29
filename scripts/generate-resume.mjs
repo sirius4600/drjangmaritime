@@ -131,6 +131,13 @@ function buildLocaleData(locale) {
   const basicPaperRows = supplement.basicTier.representativePaperIndices.map((i) => paperRows[i]);
 
   const basic1pCareerRows = supplement.basicTier1p.experienceIndices.map((i) => careerRows[i]);
+  // Full career history, recency-ordered — used by 확장식/Full Version's
+  // comprehensive 경력 table/markdown (not the curated basic/basic1p lists
+  // above, which use their own experienceIndices).
+  const careerRowsFull = supplement.fullCareerOrder.map((i) => careerRows[i]);
+  // Same for 현재 주요 직위's full table — recency-ordered by start date
+  // (every entry is ongoing, so there's no end date to sort by).
+  const currentRoleRowsFull = supplement.fullCurrentRolesOrder.map((i) => currentRoleRows[i]);
   // Shared by 기본양식(1p) and (2p) — both show every award, org-prefixed per
   // basicTier1pAwardOrgIndices (see resume-supplement.mjs).
   const awardRowsWithOrgPrefix = awardRowsDesc.map((a) => ({
@@ -141,7 +148,7 @@ function buildLocaleData(locale) {
   return {
     careerRows, currentRoleRows, researchRows, awardRowsDesc, presentationRows, paperRows,
     basicCurrentRoleRows, basicCareerRows, basicResearchRows, basicPaperRows,
-    basic1pCareerRows, awardRowsWithOrgPrefix,
+    basic1pCareerRows, awardRowsWithOrgPrefix, careerRowsFull, currentRoleRowsFull,
   };
 }
 
@@ -194,12 +201,9 @@ function presentationsTable(rows, t) {
   return table(t.tableHeaders.presentations, rows, (p) => `<td class="period">${esc(p.year)}</td><td>${esc(p.title)}</td><td>${esc(p.venue)}</td>`);
 }
 
-function awardsTable(awardRowsDesc, withNote, t) {
-  const headers = withNote ? t.tableHeaders.awardsWithNote : t.tableHeaders.awards;
-  return table(headers, awardRowsDesc, (a) =>
-    withNote
-      ? `<td class="period">${esc(a.year)}</td><td>${esc(a.title)}</td><td class="note">${esc(a.reason ?? "")}</td>`
-      : `<td class="period">${esc(a.year)}</td><td>${esc(a.title)}</td>`);
+function awardsList(awardRowsWithOrgPrefix) {
+  return plainList(awardRowsWithOrgPrefix, (a) =>
+    `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`);
 }
 
 function representativePapersList(basicPaperRows) {
@@ -263,7 +267,7 @@ ${plainList(data.basic1pCareerRows, orgRoleLi)}
 
       <section class="block">
         <h2>${esc(t.section.awards)}</h2>
-${plainList(data.awardRowsWithOrgPrefix, (a) => `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`)}
+${awardsList(data.awardRowsWithOrgPrefix)}
       </section>
 
     </div>`;
@@ -308,7 +312,7 @@ ${booksList(locale)}
 
       <section class="block">
         <h2>${esc(t.section.awards)}</h2>
-${plainList(data.awardRowsWithOrgPrefix, (a) => `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`)}
+${awardsList(data.awardRowsWithOrgPrefix)}
       </section>
 
     </div>`;
@@ -329,12 +333,12 @@ ${educationTable(locale, t)}
 
       <section class="block section-career">
         <h2>${esc(t.section.career)}</h2>
-${careerTable(data.careerRows, t)}
+${careerTable(data.careerRowsFull, t)}
       </section>
 
       <section class="block section-current">
         <h2>${esc(t.section.currentRoles)}</h2>
-${careerTable(data.currentRoleRows, t)}
+${careerTable(data.currentRoleRowsFull, t)}
       </section>
 
       <section class="block section-committee">
@@ -366,7 +370,7 @@ ${presentationsTable(data.presentationRows, t)}
 
       <section class="block section-awards">
         <h2>${esc(t.section.awards)}</h2>
-${awardsTable(data.awardRowsDesc, true, t)}
+${awardsList(data.awardRowsWithOrgPrefix)}
       </section>`;
 }
 
@@ -609,15 +613,15 @@ function mdTable(headers, rows, renderRow) {
 
 function buildMasterDbSections(data) {
   const eduTable = mdTable(["기간", "학교", "학위"], supplement.education.ko, (r) => `| ${r.period} | ${r.school} | ${r.degree} |`);
-  const careerTableMd = mdTable(["기간", "기관", "역할"], data.careerRows, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
-  const currentTableMd = mdTable(["기간", "기관", "역할"], data.currentRoleRows, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
+  const careerTableMd = mdTable(["기간", "기관", "역할"], data.careerRowsFull, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
+  const currentTableMd = mdTable(["기간", "기관", "역할"], data.currentRoleRowsFull, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
   const committeeTableMd = mdTable(["기간", "기관", "역할"], supplement.committeeHistory.ko, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
   const researchTableMd = mdTable(["연도", "제목", "발주처", "역할", "★"], data.researchRows, (r) => `| ${r.period} | ${r.title} | ${r.funder} | ${r.role} | ${r.flagship ? "★" : ""} |`);
   const booksMd = booksKo.map((b) => `- ${b.year}: ${b.title}`).join("\n");
   const patentsMd = patentsKo.map((p) => `- (${p.status}, ${p.year}) ${p.title}`).join("\n");
   const papersMd = mdTable(["연도", "제목", "게재처", "비고"], data.paperRows, (p) => `| ${p.year} | ${p.title} | ${p.venue} | ${p.summary ?? ""} |`);
   const presentationsMd = mdTable(["연도", "제목", "장소 · 주최"], data.presentationRows, (p) => `| ${p.year} | ${p.title} | ${p.venue} |`);
-  const awardsMd = mdTable(["연도", "수상명", "비고"], data.awardRowsDesc, (a) => `| ${a.year} | ${a.title} | ${a.reason ?? ""} |`);
+  const awardsMd = data.awardRowsWithOrgPrefix.map((a) => `- ${a.year}: ${a.orgPrefix ? `${a.orgPrefix} ` : ""}${a.title}`).join("\n");
   return { eduTable, careerTableMd, currentTableMd, committeeTableMd, researchTableMd, booksMd, patentsMd, papersMd, presentationsMd, awardsMd };
 }
 
