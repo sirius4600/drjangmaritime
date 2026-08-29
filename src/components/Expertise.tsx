@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { getContent } from "@/content";
 import type { Locale } from "@/i18n/config";
 import { getUiDictionary } from "@/i18n/ui";
@@ -11,26 +10,7 @@ export function Expertise({ locale }: { locale: Locale }) {
   return (
     <section className="py-20 md:py-28">
       <Container>
-        <div className="grid grid-cols-1 gap-2 overflow-hidden rounded-2xl border border-line/70 sm:grid-cols-2">
-          <Image
-            src="/images/evidence/busan-vts-mass-units-dusk-2026.jpg"
-            alt={ui.expertise.imageAlt}
-            width={1600}
-            height={1200}
-            sizes="(min-width: 640px) 50vw, 100vw"
-            className="aspect-[4/3] w-full object-cover"
-          />
-          <Image
-            src="/images/evidence/busan-vts-mass-unit-approach-2026.jpg"
-            alt={ui.expertise.imageAlt}
-            width={1600}
-            height={1200}
-            sizes="(min-width: 640px) 50vw, 100vw"
-            className="aspect-[4/3] w-full object-cover"
-          />
-        </div>
-
-        <h2 className="mt-10 text-2xl md:text-3xl font-semibold tracking-tight text-ink">
+        <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-ink">
           {ui.expertise.heading}
         </h2>
 
