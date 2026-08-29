@@ -3115,11 +3115,16 @@ p.lead {
       updateTitle();
     })();
     function printResume() {
-      // Not gated behind window.confirm() on purpose — a sandboxed iframe
-      // (e.g. this page embedded in a Claude Artifact viewer) can silently
-      // no-op confirm()/alert(), which made the button do nothing at all.
-      // The reminder now lives in the toolbar hint text instead.
-      window.print();
+      // window.confirm() is silently no-op'd inside a sandboxed iframe (e.g.
+      // this page embedded in a Claude Artifact viewer), which made the
+      // button do nothing at all when it gated window.print() unconditionally.
+      // This page is served as a real top-level route now (not iframed), so
+      // the reminder is safe to bring back — but keep the iframe check in
+      // case this HTML ever ends up embedded again.
+      var inIframe = window.self !== window.top;
+      if (inIframe || window.confirm("생년월일, 전화번호, 제출기관 입력을 확인하셨습니까?")) {
+        window.print();
+      }
     }
   </script>
 
