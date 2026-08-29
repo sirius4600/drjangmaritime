@@ -120,7 +120,8 @@ function buildLocaleData(locale) {
     flagship: !!r.flagship,
   }));
 
-  const awardRowsDesc = sortByYearDesc(c.awards, "year");
+  const awardsWithOrigIndex = c.awards.map((a, i) => ({ ...a, origIndex: i }));
+  const awardRowsDesc = sortByYearDesc(awardsWithOrigIndex, "year");
   const presentationRows = c.presentations; // already newest-first in publications.ts
   const paperRows = c.papers; // already newest-first in publications.ts
 
@@ -129,7 +130,17 @@ function buildLocaleData(locale) {
   const basicResearchRows = researchRows.filter((r) => r.flagship);
   const basicPaperRows = supplement.basicTier.representativePaperIndices.map((i) => paperRows[i]);
 
-  return { careerRows, currentRoleRows, researchRows, awardRowsDesc, presentationRows, paperRows, basicCurrentRoleRows, basicCareerRows, basicResearchRows, basicPaperRows };
+  const basic1pCareerRows = supplement.basicTier1p.experienceIndices.map((i) => careerRows[i]);
+  const basic1pAwardRows = awardRowsDesc.map((a) => ({
+    ...a,
+    orgPrefix: supplement.basicTier1pAwardOrgIndices.includes(a.origIndex) ? a.reason : null,
+  }));
+
+  return {
+    careerRows, currentRoleRows, researchRows, awardRowsDesc, presentationRows, paperRows,
+    basicCurrentRoleRows, basicCareerRows, basicResearchRows, basicPaperRows,
+    basic1pCareerRows, basic1pAwardRows,
+  };
 }
 
 // ---------------------------------------------------------------- HTML render helpers
@@ -219,6 +230,41 @@ function identityBlock(locale, phoneValue) {
         <div class="phone"><span class="k">${esc(t.identityLabels.phone)}</span>${phoneMarkup}</div>
         <div class="email-field"><span class="k">${esc(t.identityLabels.email)}</span><span class="v">${esc(id.email)}</span></div>
       </div>`;
+}
+
+// 기본양식 (1p) — a hard-capped, guaranteed-1-page panel. Structurally a
+// leaner sibling of panelBasic (2p): same identity block, but a fixed
+// 3-section order (학력 - 주요 경력 - 수상, per explicit user request
+// 2026-08-30 — 현재 주요 직위 dropped and 수상 shows every award, not a curated
+// subset) with no 저서 (books) and no 연구실적 (research) section, and its own
+// education list (basicTier1pEducation — 고등학교 included, single completion
+// years) rather than basicTier's. 수상 renders as the same `ul.plain`
+// period/desc list as every other section here (not a table like
+// basicTier(2p)/확장식/Full Version use) — a deliberate 1p-only look so all
+// sections share one visual column style. Don't add sections/rows here
+// without re-measuring page height — that's the entire point of this tier
+// existing separately from panelBasic.
+function panelBasic1p(locale, data, phoneValue) {
+  const t = ui[locale];
+  return `    <div class="panel panel-basic1p lang-${locale}">
+${identityBlock(locale, phoneValue)}
+
+      <section class="block">
+        <h2>${esc(t.section.education)}</h2>
+${plainList(supplement.basicTier1pEducation[locale], (r) => `<span class="period">${esc(r.period)}</span><span class="desc">${esc(r.school)}${r.degree ? ` ${esc(r.degree)}` : ""}</span>`)}
+      </section>
+
+      <section class="block">
+        <h2>${esc(t.section.careerHighlights)}</h2>
+${plainList(data.basic1pCareerRows, orgRoleLi)}
+      </section>
+
+      <section class="block">
+        <h2>${esc(t.section.awards)}</h2>
+${plainList(data.basic1pAwardRows, (a) => `<span class="period">${esc(a.year)}</span><span class="desc">${a.orgPrefix ? `${esc(a.orgPrefix)} ` : ""}${esc(a.title)}</span>`)}
+      </section>
+
+    </div>`;
 }
 
 function panelBasic(locale, data, phoneValue) {
@@ -385,7 +431,7 @@ async function buildHtml(phoneValue) {
 
   const allPanels = locales.map((locale) => {
     const data = localeData[locale];
-    return [panelBasic(locale, data, phoneValue), panelExtended(locale, data, phoneValue), panelFull(locale, data, phoneValue)].join("\n\n");
+    return [panelBasic1p(locale, data, phoneValue), panelBasic(locale, data, phoneValue), panelExtended(locale, data, phoneValue), panelFull(locale, data, phoneValue)].join("\n\n");
   }).join("\n\n");
 
   const langRadios = locales.map((l, i) => `  <input class="ctrl" type="radio" name="lang" id="lang-${l}"${i === 0 ? " checked" : ""} />`).join("\n");
@@ -425,7 +471,7 @@ ${CSS}</style>
 <body>
 
   <div class="toolbar">
-    <h1>장은규 이력서 — 한국어 · English · 日本語 · Español · 기본양식 · 확장식 · Full Version</h1>
+    <h1>장은규 이력서 — 한국어 · English · 日本語 · Español · 기본양식(1p/2p) · 확장식 · Full Version</h1>
     <button type="button" class="print-btn" onclick="printResume()">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <path d="M6 9V2h12v7" /><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" /><path d="M6 14h12v8H6z" />
@@ -435,7 +481,8 @@ ${CSS}</style>
     <span class="hint">언어와 버전을 선택하고, 생년월일·제출기관 입력을 확인한 뒤 저장/인쇄하세요 · 현재 선택된 조합만 저장/인쇄됩니다 · 대화상자의 "대상(프린터)"을 "PDF로 저장"으로 바꾸면 파일로 저장돼요 · 버튼이 안 눌리면 브라우저 자체 메뉴의 인쇄(Ctrl+P 또는 공유 → 인쇄)를 사용하세요</span>
   </div>
 
-  <input class="ctrl" type="radio" name="tier" id="tab-basic" checked />
+  <input class="ctrl" type="radio" name="tier" id="tab-basic1p" checked />
+  <input class="ctrl" type="radio" name="tier" id="tab-basic" />
   <input class="ctrl" type="radio" name="tier" id="tab-extended" />
   <input class="ctrl" type="radio" name="tier" id="tab-full" />
 ${langRadios}
@@ -449,7 +496,8 @@ ${langTabs}
   </nav>
 
   <nav class="tabs">
-    <label for="tab-basic">기본양식</label>
+    <label for="tab-basic1p">기본양식(1p)</label>
+    <label for="tab-basic">기본양식(2p)</label>
     <label for="tab-extended">확장식</label>
     <label for="tab-full">Full Version</label>
   </nav>
@@ -512,7 +560,7 @@ ${locales.map(signoffVariant).join("\n")}
       // keep it in English (regardless of the selected display language) and
       // stamp the selected tier + today's date so saved files sort and
       // identify themselves without being renamed by hand.
-      var tierLabels = { "tab-basic": "Basic", "tab-extended": "Extended", "tab-full": "Full-Version" };
+      var tierLabels = { "tab-basic1p": "Basic-1p", "tab-basic": "Basic-2p", "tab-extended": "Extended", "tab-full": "Full-Version" };
       var dateStr = d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
       function updateTitle() {
         var checked = document.querySelector('input[name="tier"]:checked');

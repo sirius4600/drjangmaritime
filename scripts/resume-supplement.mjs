@@ -319,6 +319,12 @@ export const experienceDetailOverrides = {
 // Review occasionally; everything else in the resume needs zero maintenance.
 // Indices (not text matches) so the same picks apply identically across all
 // 4 locales' index-aligned content arrays.
+//
+// This is now the "기본양식 (2p)" tier specifically — it renders to 2 pages
+// as-is (measured 2026-08-30). See basicTier1p below for the stricter,
+// guaranteed-1-page curation. Do not add rows here without re-measuring
+// (scripts/print-resume.mjs or a manual print preview) — 2p has ~360px of
+// headroom left in its second page as of this date, per [[drjangmaritime-resume-system]].
 export const basicTier = {
   // First N entries of currentAffiliations, in the order experience.ts already lists them.
   currentAffiliationsCount: 5,
@@ -334,3 +340,74 @@ export const basicTier = {
   // Common Phraseology..., Risk Management Challenges...].
   representativePaperIndices: [31, 18, 1],
 };
+
+// 기본양식 (1p) — the strictest curation, formalized 2026-08-30 to always
+// render to exactly 1 A4 page (re-measure via the method in
+// [[drjangmaritime-resume-system]] after any content change). Unlike
+// `basicTier`, this is a fixed, deliberately small picks list that should
+// almost never grow — the whole point is a hand-guaranteed 1-pager, not
+// something that silently overflows as research.ts/experience.ts grow.
+//
+// Section order (fixed by explicit user request 2026-08-30, revised same day
+// to drop 현재 주요 직위 and show every award): 학력 - 주요 경력 - 수상 (all of
+// it, not a curated subset). No 저서 (books), no 연구실적 (research), and no
+// 현재 주요 직위 section at all here — 저서/연구실적 cut for space (basicTier(2p)
+// adds them back); 현재 주요 직위 cut by explicit request since this tier's
+// 주요 경력 already carries the current role.
+export const basicTier1p = {
+  // 0-based indices into experience.ts, display order: [교수/Professor
+  // (current, no end date — ranks first), 방문연구원/Visiting Researcher
+  // (2024-2025), 교육본부장/Director-Education HQ (2020-2022), 항해사 ·
+  // 선주감독관/Deck Officer (1994-2001, oldest)] — most-recent-first, per
+  // explicit user request 2026-08-30. Same picks as basicTier(2p), just a
+  // different display order (2p keeps its own hand-picked order).
+  experienceIndices: [6, 0, 1, 7],
+};
+
+// 기본양식(1p)-only education list — explicit user request 2026-08-30 to show
+// 고등학교 → 학사 → 석사 → 박사 as single completion years (not the attendance
+// ranges `education` above shows), including 거제고등학교 which isn't tracked
+// anywhere else on the site. 석사/박사 carry the "(해사안전환경 전공)"/major
+// suffix (same wording as `education` above) per explicit user request
+// 2026-08-30. Scoped to 1p only: 확장식/Full Version keep using the
+// range-style `education` array. High-school row's `degree` is intentionally
+// "" (school name alone, no "졸업"/"Graduated" suffix) per explicit user
+// request 2026-08-30 — the render function in generate-resume.mjs only
+// appends a space + degree when degree is non-empty, so this doesn't leave a
+// trailing space.
+export const basicTier1pEducation = {
+  ko: [
+    { period: "1990", school: "거제고등학교", degree: "" },
+    { period: "1994", school: "국립한국해양대학교", degree: "공학사 해사수송과학과" },
+    { period: "2004", school: "국립한국해양대학교", degree: "공학석사 (해사안전환경 전공)" },
+    { period: "2018", school: "국립한국해양대학교", degree: "공학박사 (해사안전환경 전공)" },
+  ],
+  en: [
+    { period: "1990", school: "Geoje High School", degree: "" },
+    { period: "1994", school: "Korea Maritime and Ocean University", degree: "B.Eng., Maritime Transportation Science" },
+    { period: "2004", school: "Korea Maritime and Ocean University", degree: "M.Eng., Maritime Safety & Environment" },
+    { period: "2018", school: "Korea Maritime and Ocean University", degree: "Ph.D., Maritime Safety & Environment" },
+  ],
+  ja: [
+    { period: "1990", school: "巨済高等学校", degree: "" },
+    { period: "1994", school: "韓国海洋大学校", degree: "工学士、海事輸送科学" },
+    { period: "2004", school: "韓国海洋大学校", degree: "工学修士（海事安全環境専攻）" },
+    { period: "2018", school: "韓国海洋大学校", degree: "工学博士（海事安全環境専攻）" },
+  ],
+  es: [
+    { period: "1990", school: "Escuela Secundaria Geoje", degree: "" },
+    { period: "1994", school: "Universidad Marítima y Oceánica de Corea", degree: "Ingeniería, Ciencias del Transporte Marítimo" },
+    { period: "2004", school: "Universidad Marítima y Oceánica de Corea", degree: "Máster en Ingeniería, Seguridad y Medio Ambiente Marítimo" },
+    { period: "2018", school: "Universidad Marítima y Oceánica de Corea", degree: "Doctorado en Ingeniería, Seguridad y Medio Ambiente Marítimo" },
+  ],
+};
+
+// 기본양식(1p)-only: which awards.ts entries should show their `reason`
+// field as an "{org} {title}" prefix in the 1p 수상 list. awards.ts's
+// `reason` field is overloaded — sometimes the awarding org (index 3 and 4,
+// both 한국항해항만학회/KINPR), sometimes a justification clause (index 0,
+// "해양경찰 업무 발전 기여") — so it can't be blindly prepended everywhere; the
+// other 3 awards already have the org built into their title (e.g. "국민안전처
+// 장관 표창"). 0-based indices into awards.ts's raw array (stable pre-sort,
+// index-aligned across locales), per explicit user request 2026-08-30.
+export const basicTier1pAwardOrgIndices = [3, 4];

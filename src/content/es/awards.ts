@@ -22,6 +22,10 @@ export const awards = [
     title: "Premio a la Excelencia en Investigación",
     reason: "Instituto Coreano de Investigación en Navegación y Puertos",
   },
+  {
+    year: "2009",
+    title: "Mención del Presidente del Instituto Coreano de Tecnología Marítima y Pesquera (KIMFT)",
+  },
 ];
 
 export const proofStats = [

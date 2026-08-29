@@ -24,6 +24,10 @@ export const awards = [
     title: "우수논문상",
     reason: "한국항해항만학회",
   },
+  {
+    year: "2009",
+    title: "한국해양수산연수원장 표창",
+  },
 ];
 
 export const proofStats = [

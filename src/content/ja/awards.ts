@@ -22,6 +22,10 @@ export const awards = [
     title: "優秀論文賞",
     reason: "韓国航海港湾学会",
   },
+  {
+    year: "2009",
+    title: "韓国海洋水産研修院長表彰",
+  },
 ];
 
 export const proofStats = [

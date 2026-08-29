@@ -25,6 +25,10 @@ export const awards = [
     title: "Excellence in Research Paper Award",
     reason: "Korean Institute of Navigation and Port Research",
   },
+  {
+    year: "2009",
+    title: "Commendation, President of the Korea Institute of Maritime and Fisheries Technology (KIMFT)",
+  },
 ];
 
 export const proofStats = [

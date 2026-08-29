@@ -105,6 +105,7 @@ body {
 }
 .tabs label:hover { background: color-mix(in srgb, var(--cyan) 25%, transparent); }
 .lang-tabs label { flex: none; padding: 8px 18px; font-size: 12.5px; }
+#tab-basic1p:checked ~ .tabs label[for="tab-basic1p"],
 #tab-basic:checked ~ .tabs label[for="tab-basic"],
 #tab-extended:checked ~ .tabs label[for="tab-extended"],
 #tab-full:checked ~ .tabs label[for="tab-full"],
@@ -115,6 +116,7 @@ body {
   background: var(--cyan);
   color: #fff;
 }
+#tab-basic1p:focus-visible ~ .tabs label[for="tab-basic1p"],
 #tab-basic:focus-visible ~ .tabs label[for="tab-basic"],
 #tab-extended:focus-visible ~ .tabs label[for="tab-extended"],
 #tab-full:focus-visible ~ .tabs label[for="tab-full"],
@@ -228,6 +230,10 @@ body {
 }
 
 .panel { display: none; }
+#tab-basic1p:checked ~ #lang-ko:checked ~ .paper .panel-basic1p.lang-ko,
+#tab-basic1p:checked ~ #lang-en:checked ~ .paper .panel-basic1p.lang-en,
+#tab-basic1p:checked ~ #lang-ja:checked ~ .paper .panel-basic1p.lang-ja,
+#tab-basic1p:checked ~ #lang-es:checked ~ .paper .panel-basic1p.lang-es,
 #tab-basic:checked ~ #lang-ko:checked ~ .paper .panel-basic.lang-ko,
 #tab-basic:checked ~ #lang-en:checked ~ .paper .panel-basic.lang-en,
 #tab-basic:checked ~ #lang-ja:checked ~ .paper .panel-basic.lang-ja,
@@ -367,6 +373,13 @@ body {
 #show-dob:checked ~ .paper .identity .dob { display: block; }
 #show-phone:checked ~ .paper .identity .phone { display: block; }
 #show-email:checked ~ .paper .identity .email-field { display: block; }
+/* 기본양식(1p) always shows dob/phone/email — it's meant to be a directly
+   submittable document, so these shouldn't depend on remembering to tick the
+   show-dob/phone/email checkboxes (which stay checkbox-gated for every other
+   tier, unchanged). */
+#tab-basic1p:checked ~ .paper .identity .dob,
+#tab-basic1p:checked ~ .paper .identity .phone,
+#tab-basic1p:checked ~ .paper .identity .email-field { display: block; }
 @media (max-width: 640px) {
   .identity > div { flex-basis: 50%; }
 }
@@ -460,6 +473,34 @@ p.lead {
   margin: -4px 0 16px;
 }
 
+/* 기본양식(1p) is deliberately denser than every other tier — the whole
+   point of this tier is a hand-guaranteed 1 printed page (see basicTier1p in
+   resume-supplement.mjs), so tightening spacing is the right lever once the
+   curated content itself is already minimal, rather than cutting further.
+   Scoped narrowly (via the panel's own class, or `#tab-basic1p:checked ~
+   .paper` for the shared masthead/signoff) so no other tier's spacing
+   changes. */
+#tab-basic1p:checked ~ .paper .masthead { margin-bottom: 14px; }
+#tab-basic1p:checked ~ .paper .signoff { margin-top: 20px; padding-top: 14px; }
+.panel-basic1p .identity { margin-bottom: 20px; }
+/* 2 columns instead of the usual 4 — long en/ja/es org/license strings wrap
+   to 2-3 lines at a 25%-width column, which was the single biggest source of
+   1p overflow in those locales (ko fits fine at 4 columns; en/es did not). */
+.panel-basic1p .identity > div { flex-basis: 50%; padding: 6px 14px; }
+.panel-basic1p .identity .k { margin-bottom: 1px; }
+.panel-basic1p .identity .v { font-size: 12px; line-height: 1.3; }
+.panel-basic1p h2 { margin: 14px 0 7px; padding-bottom: 4px; font-size: 15px; }
+/* Slightly smaller + tighter line-height than the shared default — this
+   matters most for en/es, where career text is long enough to wrap to 2
+   lines per row; shaving per-line height there recovers real space. Eased
+   back toward the shared default 2026-08-30 after dropping the 연구실적
+   section freed up a healthy buffer (100px+ on every locale) — see the
+   measurement note in [[drjangmaritime-resume-system]] before tightening
+   further. */
+.panel-basic1p ul.plain li { padding: 3px 0; font-size: 12.3px; line-height: 1.45; }
+.panel-basic1p table { margin-bottom: 0; font-size: 11.6px; }
+.panel-basic1p tbody td { padding: 4px 10px 4px 0; }
+
 /* ---- footer sign-off ---- */
 .signoff {
   margin-top: 44px;
@@ -492,6 +533,10 @@ p.lead {
   /* screen-only navigational hint ("see the Full Version tab for all N
      papers") — irrelevant, even confusing, on a printed/PDF document */
   p.lead { display: none !important; }
+  #tab-basic1p:checked ~ #lang-ko:checked ~ .paper .panel-basic1p.lang-ko,
+  #tab-basic1p:checked ~ #lang-en:checked ~ .paper .panel-basic1p.lang-en,
+  #tab-basic1p:checked ~ #lang-ja:checked ~ .paper .panel-basic1p.lang-ja,
+  #tab-basic1p:checked ~ #lang-es:checked ~ .paper .panel-basic1p.lang-es,
   #tab-basic:checked ~ #lang-ko:checked ~ .paper .panel-basic.lang-ko,
   #tab-basic:checked ~ #lang-en:checked ~ .paper .panel-basic.lang-en,
   #tab-basic:checked ~ #lang-ja:checked ~ .paper .panel-basic.lang-ja,
