@@ -86,6 +86,7 @@ body {
   gap: 6px;
   margin-bottom: 18px;
 }
+.lang-tabs { margin-bottom: 10px; }
 .ctrl { position: absolute; opacity: 0; pointer-events: none; }
 
 .tabs label {
@@ -103,15 +104,24 @@ body {
   transition: background 0.15s ease, color 0.15s ease;
 }
 .tabs label:hover { background: color-mix(in srgb, var(--cyan) 25%, transparent); }
+.lang-tabs label { flex: none; padding: 8px 18px; font-size: 12.5px; }
 #tab-basic:checked ~ .tabs label[for="tab-basic"],
 #tab-extended:checked ~ .tabs label[for="tab-extended"],
-#tab-full:checked ~ .tabs label[for="tab-full"] {
+#tab-full:checked ~ .tabs label[for="tab-full"],
+#lang-ko:checked ~ .tabs label[for="lang-ko"],
+#lang-en:checked ~ .tabs label[for="lang-en"],
+#lang-ja:checked ~ .tabs label[for="lang-ja"],
+#lang-es:checked ~ .tabs label[for="lang-es"] {
   background: var(--cyan);
   color: #fff;
 }
 #tab-basic:focus-visible ~ .tabs label[for="tab-basic"],
 #tab-extended:focus-visible ~ .tabs label[for="tab-extended"],
-#tab-full:focus-visible ~ .tabs label[for="tab-full"] {
+#tab-full:focus-visible ~ .tabs label[for="tab-full"],
+#lang-ko:focus-visible ~ .tabs label[for="lang-ko"],
+#lang-en:focus-visible ~ .tabs label[for="lang-en"],
+#lang-ja:focus-visible ~ .tabs label[for="lang-ja"],
+#lang-es:focus-visible ~ .tabs label[for="lang-es"] {
   outline: 2px solid var(--cyan);
   outline-offset: 2px;
 }
@@ -161,6 +171,51 @@ body {
   outline-offset: 2px;
 }
 
+/* 확장식(Extended)-only per-section show/hide toggles. The row itself is
+   only shown while the extended tier tab is active; the hide rules target
+   `.panel-extended` specifically so Basic/Full are unaffected by the same
+   `.section-X` classes on their (differently-curated) content. */
+.section-opts { display: none; }
+#tab-extended:checked ~ .section-opts { display: flex; }
+#sec-education:checked ~ .section-opts label[for="sec-education"],
+#sec-career:checked ~ .section-opts label[for="sec-career"],
+#sec-current:checked ~ .section-opts label[for="sec-current"],
+#sec-committee:checked ~ .section-opts label[for="sec-committee"],
+#sec-research:checked ~ .section-opts label[for="sec-research"],
+#sec-books:checked ~ .section-opts label[for="sec-books"],
+#sec-patents:checked ~ .section-opts label[for="sec-patents"],
+#sec-papers:checked ~ .section-opts label[for="sec-papers"],
+#sec-talks:checked ~ .section-opts label[for="sec-talks"],
+#sec-awards:checked ~ .section-opts label[for="sec-awards"] {
+  color: var(--cyan);
+  font-weight: 600;
+}
+#sec-education:checked ~ .section-opts label[for="sec-education"]::before,
+#sec-career:checked ~ .section-opts label[for="sec-career"]::before,
+#sec-current:checked ~ .section-opts label[for="sec-current"]::before,
+#sec-committee:checked ~ .section-opts label[for="sec-committee"]::before,
+#sec-research:checked ~ .section-opts label[for="sec-research"]::before,
+#sec-books:checked ~ .section-opts label[for="sec-books"]::before,
+#sec-patents:checked ~ .section-opts label[for="sec-patents"]::before,
+#sec-papers:checked ~ .section-opts label[for="sec-papers"]::before,
+#sec-talks:checked ~ .section-opts label[for="sec-talks"]::before,
+#sec-awards:checked ~ .section-opts label[for="sec-awards"]::before {
+  background: var(--cyan);
+  border-color: var(--cyan);
+}
+#sec-education:not(:checked) ~ .paper .panel-extended .section-education,
+#sec-career:not(:checked) ~ .paper .panel-extended .section-career,
+#sec-current:not(:checked) ~ .paper .panel-extended .section-current,
+#sec-committee:not(:checked) ~ .paper .panel-extended .section-committee,
+#sec-research:not(:checked) ~ .paper .panel-extended .section-research,
+#sec-books:not(:checked) ~ .paper .panel-extended .section-books,
+#sec-patents:not(:checked) ~ .paper .panel-extended .section-patents,
+#sec-papers:not(:checked) ~ .paper .panel-extended .section-papers,
+#sec-talks:not(:checked) ~ .paper .panel-extended .section-talks,
+#sec-awards:not(:checked) ~ .paper .panel-extended .section-awards {
+  display: none;
+}
+
 /* ---- the paper (fixed light world, both themes) ---- */
 .paper {
   width: 100%;
@@ -173,11 +228,33 @@ body {
 }
 
 .panel { display: none; }
-#tab-basic:checked ~ .paper .panel-basic,
-#tab-extended:checked ~ .paper .panel-extended,
-#tab-full:checked ~ .paper .panel-full {
+#tab-basic:checked ~ #lang-ko:checked ~ .paper .panel-basic.lang-ko,
+#tab-basic:checked ~ #lang-en:checked ~ .paper .panel-basic.lang-en,
+#tab-basic:checked ~ #lang-ja:checked ~ .paper .panel-basic.lang-ja,
+#tab-basic:checked ~ #lang-es:checked ~ .paper .panel-basic.lang-es,
+#tab-extended:checked ~ #lang-ko:checked ~ .paper .panel-extended.lang-ko,
+#tab-extended:checked ~ #lang-en:checked ~ .paper .panel-extended.lang-en,
+#tab-extended:checked ~ #lang-ja:checked ~ .paper .panel-extended.lang-ja,
+#tab-extended:checked ~ #lang-es:checked ~ .paper .panel-extended.lang-es,
+#tab-full:checked ~ #lang-ko:checked ~ .paper .panel-full.lang-ko,
+#tab-full:checked ~ #lang-en:checked ~ .paper .panel-full.lang-en,
+#tab-full:checked ~ #lang-ja:checked ~ .paper .panel-full.lang-ja,
+#tab-full:checked ~ #lang-es:checked ~ .paper .panel-full.lang-es {
   display: block;
 }
+
+/* masthead contact block + footer sign-off also vary by language only
+   (shared across all 3 tiers), independent of which tier tab is active. */
+.contact, .signoff-variant { display: none; }
+#lang-ko:checked ~ .paper .contact.lang-ko { display: block; }
+#lang-en:checked ~ .paper .contact.lang-en { display: block; }
+#lang-ja:checked ~ .paper .contact.lang-ja { display: block; }
+#lang-es:checked ~ .paper .contact.lang-es { display: block; }
+#lang-ko:checked ~ .paper .signoff-variant.lang-ko { display: flex; }
+#lang-en:checked ~ .paper .signoff-variant.lang-en { display: flex; }
+#lang-ja:checked ~ .paper .signoff-variant.lang-ja { display: flex; }
+#lang-es:checked ~ .paper .signoff-variant.lang-es { display: flex; }
+.signoff-variant { gap: 12px; }
 
 /* ---- masthead ---- */
 .masthead {
@@ -388,11 +465,11 @@ p.lead {
   margin-top: 44px;
   padding-top: 22px;
   border-top: 1.6px solid #201e1d;
-  display: flex;
-  justify-content: flex-end;
-  gap: 40px;
   font-size: 13px;
 }
+.signoff-variant { flex-direction: column; align-items: flex-end; }
+.signoff .certify { margin: 0; font-size: 13px; color: #201e1d; font-weight: 500; }
+.signoff .fields-row { display: flex; justify-content: flex-end; gap: 40px; }
 .signoff .field { display: flex; align-items: baseline; gap: 10px; }
 .signoff label { color: #726f68; white-space: nowrap; }
 .signoff input {
@@ -412,9 +489,30 @@ p.lead {
   .toolbar, .tabs, .hint, .opts { display: none !important; }
   .paper { box-shadow: none; border-radius: 0; max-width: none; padding: 0; }
   .panel { display: none !important; }
-  #tab-basic:checked ~ .paper .panel-basic,
-  #tab-extended:checked ~ .paper .panel-extended,
-  #tab-full:checked ~ .paper .panel-full { display: block !important; }
+  /* screen-only navigational hint ("see the Full Version tab for all N
+     papers") — irrelevant, even confusing, on a printed/PDF document */
+  p.lead { display: none !important; }
+  #tab-basic:checked ~ #lang-ko:checked ~ .paper .panel-basic.lang-ko,
+  #tab-basic:checked ~ #lang-en:checked ~ .paper .panel-basic.lang-en,
+  #tab-basic:checked ~ #lang-ja:checked ~ .paper .panel-basic.lang-ja,
+  #tab-basic:checked ~ #lang-es:checked ~ .paper .panel-basic.lang-es,
+  #tab-extended:checked ~ #lang-ko:checked ~ .paper .panel-extended.lang-ko,
+  #tab-extended:checked ~ #lang-en:checked ~ .paper .panel-extended.lang-en,
+  #tab-extended:checked ~ #lang-ja:checked ~ .paper .panel-extended.lang-ja,
+  #tab-extended:checked ~ #lang-es:checked ~ .paper .panel-extended.lang-es,
+  #tab-full:checked ~ #lang-ko:checked ~ .paper .panel-full.lang-ko,
+  #tab-full:checked ~ #lang-en:checked ~ .paper .panel-full.lang-en,
+  #tab-full:checked ~ #lang-ja:checked ~ .paper .panel-full.lang-ja,
+  #tab-full:checked ~ #lang-es:checked ~ .paper .panel-full.lang-es { display: block !important; }
+  .contact, .signoff-variant { display: none !important; }
+  #lang-ko:checked ~ .paper .contact.lang-ko { display: block !important; }
+  #lang-en:checked ~ .paper .contact.lang-en { display: block !important; }
+  #lang-ja:checked ~ .paper .contact.lang-ja { display: block !important; }
+  #lang-es:checked ~ .paper .contact.lang-es { display: block !important; }
+  #lang-ko:checked ~ .paper .signoff-variant.lang-ko { display: flex !important; }
+  #lang-en:checked ~ .paper .signoff-variant.lang-en { display: flex !important; }
+  #lang-ja:checked ~ .paper .signoff-variant.lang-ja { display: flex !important; }
+  #lang-es:checked ~ .paper .signoff-variant.lang-es { display: flex !important; }
   @page { size: A4; margin: 16mm 15mm; }
   h2 { break-after: avoid; }
   tr, li { break-inside: avoid; }

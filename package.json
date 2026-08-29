@@ -11,6 +11,7 @@
     "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "resume:generate": "tsx scripts/generate-resume.mjs",
+    "resume:print": "node scripts/print-resume.mjs",
     "resume:install-hook": "node -e \"require('fs').copyFileSync('scripts/git-hooks/pre-commit', '.git/hooks/pre-commit'); require('fs').chmodSync('.git/hooks/pre-commit', 0o755); console.log('resume pre-commit hook installed')\"",
     "prepare": "npm run resume:install-hook"
   },
@@ -29,6 +30,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.1",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^25.9.0",
     "sharp": "^0.35.3",
     "tailwindcss": "^4",
     "tsx": "^4.23.12",

@@ -4,12 +4,13 @@
 # .git/hooks/pre-commit by `npm run resume:install-hook` (also runs once via
 # the package.json "prepare" script after `npm install`).
 
-TRIGGER_FILES='src/content/ko/research.ts|src/content/ko/publications.ts|src/content/ko/awards.ts|src/content/ko/experience.ts|scripts/resume-supplement.mjs|scripts/generate-resume.mjs|scripts/resume-style.css'
+TRIGGER_FILES='src/content/(ko|en|ja|es)/(research|publications|awards|experience)\.ts|scripts/resume-supplement.mjs|scripts/resume-ui.mjs|scripts/generate-resume.mjs|scripts/resume-style.css'
 
 if git diff --cached --name-only | grep -qE "$TRIGGER_FILES"; then
   echo "resume source changed — regenerating resume-form.html / MASTER_DB assemblies..."
   npx tsx scripts/generate-resume.mjs || exit 1
   git add resume/resume-form.html
+  git add public/resume-*.html
   git add private-source-docs/resume-database/ASSEMBLED_01_기본양식.md \
           private-source-docs/resume-database/ASSEMBLED_02_확장식.md \
           private-source-docs/resume-database/ASSEMBLED_03_full_version.md 2>/dev/null

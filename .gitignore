@@ -50,3 +50,9 @@ next-env.d.ts
 
 # local credentials — never commit
 drjangmaritime-bot.txt
+
+# local double-click launcher (opens the private/phone-included resume copy) — machine-specific, not site content
+/이력서 출력.bat
+
+# generated resume PDFs (real phone number baked in) — never commit
+/*.pdf
