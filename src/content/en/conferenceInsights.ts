@@ -9,7 +9,7 @@ export interface ConferenceInsightEntry {
   speaker: string;
   affiliation: string;
   summary: string[];
-  implications: string[];
+  implications?: string[];
   pdfUrl?: string;
 }
 
@@ -62,10 +62,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Presents FuelEU Maritime's GHG-intensity reduction trajectory (roughly 89 to 63 gCO2e/MJ into the 2040s) alongside slow-steaming and route optimization as near-term compliance tools.",
       "Concludes that environmental regulation has moved 'from cost to competitiveness' — proactive transition and value-chain collaboration, not just compliance, will decide the industry's commercial winners.",
     ],
-    implications: [
-      "The growing overlap between region-specific carbon rules (EU ETS, FuelEU Maritime) and port-call/voyage planning is a concrete reason to fold regulatory-compliance literacy into IMO/IALA policy advisory work and officer training curricula.",
-      "The cost-mitigation tools discussed (pooling, banking, hedging) are increasingly relevant to ship's officers and shore-side operations staff, not just legal/chartering departments — a potential gap in current STCW-based training worth flagging.",
-    ],
     pdfUrl:
       "/documents/kormarine-2026/busan-k1-2-kim-jeongoh-eu-regulations.pdf",
   },
@@ -87,11 +83,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Proposes 'Interface Sovereignty': regardless of which fuel wins, Korea should secure four asset classes — real-ship operational data, port protocols (bunkering/SIMOPS), verification/MRV methodology, and IP/standard co-proposal rights — illustrated via the WinGD/HHI-EMD ammonia engine and Ulsan's world-first bunkering case.",
       "Flags an ammonia safety gap (ship-side rules exist via MSC 111 and IGC Code amendments, but port-side SIMOPS, separation distances and emergency-response data formats remain nationally discretionary) and a nuclear-ready port/flag interface gap, then proposes a 2026-2035 roadmap: measure, demonstrate, standardize, scale.",
     ],
-    implications: [
-      "The port-side gap in ammonia 'safety and smart bunkering' (SIMOPS, separation distances, emergency-response data formats left to national discretion) links directly to VTS/port-authority training curricula and to IMO/IALA advisory work on harmonizing port-side bunkering protocols.",
-      "The 'verifiability' pillar (real emissions data, WtW verification, digital fuel passport/GFI-MRV interoperability) parallels the standardized, auditable operational-data environment that autonomous-navigation and accident-prevention AI systems require — a natural link to Dr. Jang's own MASS research.",
-      "Korea's proposed data infrastructure (published hourly grid emission factors, an SRD observatory for major ports) is a concrete, exportable model for VTS-modernization data architecture.",
-    ],
     pdfUrl: "/documents/kormarine-2026/busan-k1-3-ahn-yongsung-beyond2030.pdf",
   },
   {
@@ -109,10 +100,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Traces ABS's nuclear classification history back to the NS Savannah (1961) and describes ABS's current optional 'Nuclear Ready' notation (Level 2D design review / Level 3 installation) for vessels designed for future nuclear retrofit, alongside AIPs already granted to HHI, Samsung Heavy Industries and KSOE for nuclear-related concepts (14K TEU containership, Suezmax tanker, LNGC, floating nuclear power plant/data center).",
       "Presents a concrete 70 MWe floating nuclear power plant concept (4x 17.5 MWe HTGR modules, 5-year fuel life) designed to supply cold-ironing shore power to up to 6 cruise ships simultaneously in port, plus a floating nuclear-powered data center concept.",
       "Surveys the global SMR landscape (127 designs tracked by the NEA), noting only water-cooled reactors sit at 'very high' commercial maturity while most SMR/microreactor designs remain at conceptual or component-demonstration stage.",
-    ],
-    implications: [
-      "A floating nuclear power plant supplying shore power to berthed cruise ships, or nuclear-ready/nuclear-powered commercial vessels calling at Korean ports, is squarely a port-state-control and VTS emergency-response planning question — the gap between an outdated 1981 IMO safety code and 2026 industry momentum is exactly what IMO/IALA policy advisory work should be tracking.",
-      "Even at Approval-in-Principle stage, nuclear-ready notations on large containerships and tankers argue for building nuclear-vessel awareness into officer and VTS operator training well before commercial deployment (2030s pilots, ~2045 commercial service per the deck's own Bureau Veritas reference).",
     ],
     pdfUrl: "/documents/kormarine-2026/busan-k1-4-jeon-hyunbuki-smr.pdf",
   },
@@ -132,10 +119,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "DNV's own 2050 clean-hydrogen forecast has been cut 45% since 2022, attributed to shrinking announced pipelines, few projects reaching final investment decision, stalled policy support, and faster-than-expected electrification of segments once assumed to need hydrogen.",
       "Names EU ETS (in force since 2024), FuelEU Maritime, and IMO's not-yet-adopted Net-Zero Framework (earliest effect 2028) as the mechanisms expected to close hydrogen's persistent cost gap, since supply-side cost declines alone won't get there.",
       "In the fuel competition, LNG remains the incumbent (~1,000 vessels on order); e-methanol is the 'early mover' (10-year track record, simple retrofit) but constrained by CO2-feedstock availability; ammonia is expected to become the long-term dominant fuel once toxicity/engine-readiness/safety-standard barriers resolve in the early-to-mid 2030s — with Korea, Japan and Singapore positioned as major Asia-Pacific import hubs fed largely by Australia.",
-    ],
-    implications: [
-      "DNV's own timeline — ammonia barriers (toxicity, engine readiness, safety standards) resolved in the early-to-mid 2030s — is a direct cue for when VTS operator and officer training curricula need to be ammonia-bunkering-and-emergency-response-ready, worth cross-referencing against the K1-3/K1-4 sessions' ammonia-safety-gap findings.",
-      "Korea's positioning as a major ammonia import/bunkering hub strengthens the case for prioritizing ammonia-specific safety and VTS protocols in national maritime training investment, ahead of the 'fuel-capable' ships already being ordered today.",
     ],
     pdfUrl: "/documents/kormarine-2026/busan-k2-1-son-changwoo-hydrogen.pdf",
   },
@@ -158,11 +141,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "The project has three sub-tasks: (1) supply & acquisition — installing data-collection platforms on a 30+ vessel fleet spanning commercial, passenger and coastal ships; (2) a tiered AI training-data storage platform aligned with international standards (IMO, ISO); (3) developing the Shadow AI model and DataOps/MLOps services, and publishing open training datasets to shipping companies, equipment makers, and academia.",
       'Also introduces a related follow-on program, "KASS 2nd Project: Fully Autonomous Ship Operations Technology Development," spanning port connectivity, end-to-end remote operation, remote-operation support, seamless communication and unmanned cargo handling, with planned international collaboration involving the Netherlands, Japan, the UK and Norway.',
     ],
-    implications: [
-      'Of all sessions at this conference, this one overlaps most directly with Dr. Jang\'s own research area (navigation AI and accident-prevention systems for autonomous ships). The "Shadow Mode" approach — extracting human-vs-AI decision divergences for retraining — is methodologically close to his own human-factors-based accident-prevention research.',
-      "The 2026-2029 national project's plan to publish open training datasets aligned with IMO/ISO standards is worth engaging with early, given his track record of taking a Korea-built VTS English-proficiency assessment framework to IALA international-standard status.",
-      "The open Sweden/US/Korea-vs-Norway/Japan data-sharing divide surfaced at the Nor-Shipping panel is a concrete early signal to watch in IMO policy-advisory work on future MASS data-governance standards.",
-    ],
     pdfUrl: "/documents/kormarine-2026/busan-k2-2-yim-geuntae-mass-ai-data.pdf",
   },
   {
@@ -182,10 +160,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Concludes with a practical scaling framework: don't chase full automation from day one — start with a narrow PoC, build a shared data backbone, then scale, while tracking concrete KPIs rather than treating AX adoption itself as the goal.",
       "Note: a substantial portion of the Korean-language text in the source PDF did not extract due to font-encoding issues; this summary is built from the numeric data and structural content that did extract correctly.",
     ],
-    implications: [
-      "The 'hardware as DNA, software as differentiator' framing and the virtual-real feedback loop are directly transferable to how navigation-AI and accident-prevention-system R&D could structure iterative model retraining and validation.",
-      "The jump from 92% to 98.5% consistency, achieved through disciplined phased data-backbone scaling rather than a single leap, is a useful case study for justifying phased AI adoption in maritime safety-training or VTS-modernization projects.",
-    ],
     pdfUrl: "/documents/kormarine-2026/busan-k2-3-jang-gyebong-ax-success.pdf",
   },
   {
@@ -204,11 +178,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Everllence's next-generation ME-GI engine raising injection pressure from 300 bar to 380 bar forces a redesign across the entire LNG fuel-supply chain — pumps, vaporizers, valves, piping",
       "Tightening Well-to-Wake lifecycle GHG regulation (FuelEU Maritime) makes methane slip the key variable eroding LNG's carbon advantage, pushing the industry toward Bio-LNG/e-LNG pathways to meet an 80% intensity-reduction target by 2050",
     ],
-    implications: [
-      "Fuel-transition regulation (FuelEU Maritime, IMO lifecycle GHG guidelines) increasingly needs to be reflected in bunkering and fuel-handling safety training curricula, not just fuel selection — officer training should update procedures for LNG and other alternative fuels",
-      "China's shift to turnkey FGSS-package supply is a structural competitiveness threat to Korea's marine-equipment sector, worth flagging in maritime industry policy advisory work",
-      "The 380-bar high-pressure standard signals coming retraining needs for crews on new fuel systems and safety procedures",
-    ],
     pdfUrl: "/documents/kormarine-2026/busan-k2-4-han-seungha-lng-pump.pdf",
   },
   {
@@ -226,10 +195,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "China holds 48% of 2020-2025 global shipbuilding output (CGT) versus Korea's 26% and Japan's 14%; as of July 2026, China holds 75% of new orders vs Korea's 17%, 67% of the orderbook vs Korea's 18%, and a projected 62% of 2027 deliveries vs Korea's 21% — the gap is widening",
       "Per OECD's MAGIC database, China's 2024 shipbuilding subsidies are estimated at 2.5% of revenue (over US$1.3B) versus an OECD average of 0.2%; subsidies to China's steel industry (a key input) reach 4.2% of revenue versus near-zero in OECD Asia-Pacific",
       "China's low-cost volume dominance is substantially subsidy-driven and its sustainability is questioned; Korea needs both its own competitiveness push (MOTIE's \"K-Shipbuilding Future Vision\": K-Shipyard Alliance, MASGA project, domestic workforce expansion) and a coordinated global fair-competition strategy",
-    ],
-    implications: [
-      "China's subsidy-driven volume expansion and shift to turnkey order packages pose a structural threat to Korea's entire shipbuilding ecosystem (design, equipment, workforce) — a trend worth tracking from a national maritime-policy advisory standpoint",
-      "Shifts in shipbuilding order volume and fleet composition connect to future demand for Korean-trained officers, making this competitiveness trend relevant input for maritime safety-training infrastructure planning",
     ],
     pdfUrl:
       "/documents/kormarine-2026/busan-k3-1-lee-eunchang-competitiveness.pdf",
@@ -251,10 +216,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Japan's private-cluster model (regional banks + private shipowners + JOLCO tax benefits) sustains a large fleet without fiscal burden; its strength is ultra-low-cost long-term stability and private-led equity, its weakness is exposure to rate hikes and FX shifts",
       'A "triple burden" of decarbonization, persistently high interest rates, and supply-chain realignment is creating chronic pressure on global ship finance; the speaker proposes "globalizing Korea\'s shipping accounting system" (e.g. introducing accelerated depreciation) to help Busan grow into a global maritime finance hub',
     ],
-    implications: [
-      "The diagnosis that Korea's policy-bank-dependent structure is strong in crises but weak at attracting steady private capital is useful macro context for forecasting future fleet investment and, in turn, demand for trained maritime officers",
-      'The speaker\'s proposed policy direction of growing Busan into a "global maritime finance hub" connects directly to the workforce-training mission of Busan-based maritime institutions — relevant material for policy advisory work',
-    ],
     pdfUrl:
       "/documents/kormarine-2026/busan-k3-2-han-jongkhil-ship-finance-kr-jp.pdf",
   },
@@ -274,10 +235,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Chinese leasing offers aggressive terms — 60-100% loan-to-value and 7-15 year tenors — far beyond conventional Western bank financing; this is a structural workaround for a regulatory constraint (Chinese banks are prohibited from directly extending bilateral mortgage loans to non-Chinese shipowners), not merely an institutional design choice",
       "This structure simultaneously sustains China's orderbook and capital base, but carries five risk pillars: geopolitical risk (USTR/tariff frameworks), residual value risk (cyclical downturns hitting cash flow and collateral together), ownership optics (legal title vs. actual operational control), moral hazard (aggressive LTVs encouraging marginal vessel orders), and refinancing/exit risk (structural rigidity, reliance on external capital)",
       "Core conclusion: China's massive leasing ecosystem was born of regulatory necessity, not institutional preference",
-    ],
-    implications: [
-      "Understanding China's finance-order flywheel clarifies that China's continued dominance in shipbuilding volume stems as much from financial-market structure as from price competitiveness — useful macro context for forecasting Korea's own fleet-renewal and newbuilding trends",
-      "Since shifts in newbuilding orders and fleet composition ultimately connect to demand for trained officers and safety training, financing-side developments outside the core safety domain are still worth tracking from a policy-advisory perspective",
     ],
     pdfUrl:
       "/documents/kormarine-2026/busan-k3-3-chung-yoongu-ship-finance-china.pdf",

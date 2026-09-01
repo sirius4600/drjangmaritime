@@ -119,7 +119,11 @@ export default async function ConferenceInsightsPage({
                     {entry.speaker} · {entry.affiliation}
                   </p>
 
-                  <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                  <div
+                    className={`mt-6 grid grid-cols-1 gap-8${
+                      entry.implications?.length ? " md:grid-cols-2" : ""
+                    }`}
+                  >
                     <div>
                       <h3 className="text-[13px] font-semibold uppercase tracking-wide text-accent-strong">
                         {ui.conferenceInsights.summaryLabel}
@@ -133,19 +137,21 @@ export default async function ConferenceInsightsPage({
                         ))}
                       </ul>
                     </div>
-                    <div>
-                      <h3 className="text-[13px] font-semibold uppercase tracking-wide text-accent-strong">
-                        {ui.conferenceInsights.implicationsLabel}
-                      </h3>
-                      <ul className="mt-3 space-y-2 text-[14.5px] leading-relaxed text-ink-soft">
-                        {entry.implications.map((line, i) => (
-                          <li key={i} className="flex gap-2">
-                            <span aria-hidden="true">·</span>
-                            <span>{line}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {entry.implications && entry.implications.length > 0 && (
+                      <div>
+                        <h3 className="text-[13px] font-semibold uppercase tracking-wide text-accent-strong">
+                          {ui.conferenceInsights.implicationsLabel}
+                        </h3>
+                        <ul className="mt-3 space-y-2 text-[14.5px] leading-relaxed text-ink-soft">
+                          {entry.implications.map((line, i) => (
+                            <li key={i} className="flex gap-2">
+                              <span aria-hidden="true">·</span>
+                              <span>{line}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
 
                   {entry.pdfUrl && (
