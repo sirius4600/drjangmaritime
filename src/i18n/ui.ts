@@ -10,6 +10,7 @@ export interface UiDictionary {
     research: string;
     news: string;
     dailyLog: string;
+    insights: string;
     tools: string;
     oceanBridge: string;
     publications: string;
@@ -37,6 +38,15 @@ export interface UiDictionary {
     heading: string;
     subtext: string;
     viewAll: string;
+  };
+  conferenceInsights: {
+    heading: string;
+    subtext: string;
+    viewAll: string;
+    overviewHeading: string;
+    summaryLabel: string;
+    implicationsLabel: string;
+    downloadLabel: string;
   };
   news: {
     heading: string;
@@ -138,6 +148,7 @@ const ko: UiDictionary = {
     research: "연구",
     news: "글로벌 동향",
     dailyLog: "Daily Log",
+    insights: "컨퍼런스 인사이트",
     tools: "도구·데이터",
     oceanBridge: "Ocean Bridge",
     publications: "저서·논문",
@@ -180,6 +191,16 @@ const ko: UiDictionary = {
     subtext:
       "공식 이력이 아닌, 현장에서 만난 사람들과 순간들에 대한 개인적인 기록입니다.",
     viewAll: "전체 글 보기",
+  },
+  conferenceInsights: {
+    heading: "컨퍼런스 인사이트",
+    subtext:
+      "장은규 교수가 직접 참가한 학술대회·컨퍼런스 발표를 요약하고 시사점을 정리합니다. 원본 발표자료도 함께 제공합니다.",
+    viewAll: "전체 보기",
+    overviewHeading: "종합 정리",
+    summaryLabel: "요약",
+    implicationsLabel: "시사점",
+    downloadLabel: "발표자료 원문 보기 (PDF)",
   },
   news: {
     heading: "글로벌 해양 동향",
@@ -246,7 +267,8 @@ const ko: UiDictionary = {
   },
   trustEvidence: {
     heading: "형용사가 아니라 증거를 보여드립니다",
-    advisorLine: "2005년부터 IMO 자문위원, 2011년부터 IALA 자문위원으로 활동하고 있습니다.",
+    advisorLine:
+      "2005년부터 IMO 자문위원, 2011년부터 IALA 자문위원으로 활동하고 있습니다.",
   },
   publications: {
     heading: "실제로 쓸 수 있는 지식",
@@ -281,6 +303,7 @@ const en: UiDictionary = {
     research: "Research",
     news: "Global Trends",
     dailyLog: "Daily Log",
+    insights: "Conference Insights",
     tools: "Tools & Data",
     oceanBridge: "Ocean Bridge",
     publications: "Publications",
@@ -302,7 +325,8 @@ const en: UiDictionary = {
     pillars: [
       {
         title: "Knowledge",
-        description: "Research, regulations, trends and practical maritime insight.",
+        description:
+          "Research, regulations, trends and practical maritime insight.",
       },
       {
         title: "Intelligence",
@@ -310,7 +334,8 @@ const en: UiDictionary = {
       },
       {
         title: "Connection",
-        description: "People, careers, research and international collaboration.",
+        description:
+          "People, careers, research and international collaboration.",
       },
     ],
   },
@@ -323,6 +348,16 @@ const en: UiDictionary = {
     subtext:
       "Not a formal record — personal notes on the people and moments encountered along the way.",
     viewAll: "View all entries",
+  },
+  conferenceInsights: {
+    heading: "Conference Insights",
+    subtext:
+      "Summaries and takeaways from conferences Dr. Jang has personally attended, alongside the original presentation files.",
+    viewAll: "View all",
+    overviewHeading: "Overall Synthesis",
+    summaryLabel: "Summary",
+    implicationsLabel: "Implications",
+    downloadLabel: "View original presentation (PDF)",
   },
   news: {
     heading: "Global Maritime Trends",
@@ -424,6 +459,7 @@ const ja: UiDictionary = {
     research: "研究",
     news: "グローバル動向",
     dailyLog: "Daily Log",
+    insights: "カンファレンス・インサイト",
     tools: "ツール・データ",
     oceanBridge: "Ocean Bridge",
     publications: "著書・論文",
@@ -466,6 +502,16 @@ const ja: UiDictionary = {
     subtext:
       "正式な経歴ではなく、現場で出会った人々や瞬間についての個人的な記録です。",
     viewAll: "すべて見る",
+  },
+  conferenceInsights: {
+    heading: "カンファレンス・インサイト",
+    subtext:
+      "チャン・ウンギュ教授が実際に参加したカンファレンスでの発表内容をまとめ、示唆点を整理しています。元の発表資料も併せて公開します。",
+    viewAll: "すべて見る",
+    overviewHeading: "総合まとめ",
+    summaryLabel: "要約",
+    implicationsLabel: "示唆点",
+    downloadLabel: "発表資料原本を見る (PDF)",
   },
   news: {
     heading: "グローバル海事動向",
@@ -532,7 +578,8 @@ const ja: UiDictionary = {
   },
   trustEvidence: {
     heading: "形容詞ではなく、証拠をお見せします",
-    advisorLine: "2005年よりIMO顧問委員、2011年よりIALA顧問委員を務めています。",
+    advisorLine:
+      "2005年よりIMO顧問委員、2011年よりIALA顧問委員を務めています。",
   },
   publications: {
     heading: "実務に活かせる知識",
@@ -567,6 +614,7 @@ const es: UiDictionary = {
     research: "Investigación",
     news: "Tendencias Globales",
     dailyLog: "Daily Log",
+    insights: "Insights de Conferencias",
     tools: "Herramientas y Datos",
     oceanBridge: "Ocean Bridge",
     publications: "Publicaciones",
@@ -588,15 +636,18 @@ const es: UiDictionary = {
     pillars: [
       {
         title: "Conocimiento",
-        description: "Investigación, normativa, tendencias y conocimiento marítimo aplicado.",
+        description:
+          "Investigación, normativa, tendencias y conocimiento marítimo aplicado.",
       },
       {
         title: "Inteligencia",
-        description: "Datos, análisis, evaluación de riesgos y tecnologías emergentes.",
+        description:
+          "Datos, análisis, evaluación de riesgos y tecnologías emergentes.",
       },
       {
         title: "Conexión",
-        description: "Personas, carreras, investigación y cooperación internacional.",
+        description:
+          "Personas, carreras, investigación y cooperación internacional.",
       },
     ],
   },
@@ -609,6 +660,16 @@ const es: UiDictionary = {
     subtext:
       "No es un registro oficial, sino notas personales sobre las personas y los momentos vividos en el camino.",
     viewAll: "Ver todas las entradas",
+  },
+  conferenceInsights: {
+    heading: "Insights de Conferencias",
+    subtext:
+      "Resúmenes y conclusiones de conferencias a las que el Dr. Jang ha asistido personalmente, junto con los archivos originales de las presentaciones.",
+    viewAll: "Ver todo",
+    overviewHeading: "Síntesis General",
+    summaryLabel: "Resumen",
+    implicationsLabel: "Implicaciones",
+    downloadLabel: "Ver presentación original (PDF)",
   },
   news: {
     heading: "Tendencias Marítimas Globales",
@@ -655,7 +716,8 @@ const es: UiDictionary = {
   },
   organizations: {
     heading: "¿Tiene un desafío marítimo?",
-    subtext: "Investigación. Seguridad. IA. Datos. Formación. Cooperación internacional.",
+    subtext:
+      "Investigación. Seguridad. IA. Datos. Formación. Cooperación internacional.",
     cta: "Colaborar con el Dr. Jang",
   },
   experience: {
@@ -694,7 +756,8 @@ const es: UiDictionary = {
     emailCta: "Enviar correo al Dr. Jang",
   },
   footer: {
-    tagline: "Conectando la investigación marítima, la tecnología y las personas.",
+    tagline:
+      "Conectando la investigación marítima, la tecnología y las personas.",
     rights: "All rights reserved.",
   },
 };

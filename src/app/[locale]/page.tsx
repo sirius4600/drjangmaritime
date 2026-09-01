@@ -8,6 +8,7 @@ import { DailyLogSection } from "@/components/DailyLogSection";
 import { ToolsAndData } from "@/components/ToolsAndData";
 import { DrUKModel } from "@/components/DrUKModel";
 import { Research } from "@/components/Research";
+import { ConferenceInsightsSection } from "@/components/ConferenceInsightsSection";
 import { News } from "@/components/News";
 import { Expertise } from "@/components/Expertise";
 import { OceanBridge } from "@/components/OceanBridge";
@@ -42,6 +43,7 @@ export default async function Home({
         <ToolsAndData locale={locale} />
         <DrUKModel locale={locale} />
         <Research locale={locale} />
+        <ConferenceInsightsSection locale={locale} />
         <News locale={locale} />
         <Expertise locale={locale} />
         <OceanBridge locale={locale} />

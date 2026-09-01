@@ -10,6 +10,7 @@ export function Header({ locale }: { locale: Locale }) {
     { label: ui.nav.research, href: `/${locale}#research` },
     { label: ui.nav.news, href: `/${locale}/news` },
     { label: ui.nav.dailyLog, href: `/${locale}/log` },
+    { label: ui.nav.insights, href: `/${locale}/insights` },
     { label: ui.nav.tools, href: `/${locale}#tools` },
     { label: ui.nav.oceanBridge, href: `/${locale}#ocean-bridge` },
     { label: ui.nav.publications, href: `/${locale}#publications` },
@@ -22,12 +23,25 @@ export function Header({ locale }: { locale: Locale }) {
         <div className="flex items-center gap-8">
           <a href={`/${locale}`} className="flex shrink-0 items-center gap-2">
             <svg viewBox="0 0 26 26" width="26" height="26" aria-hidden="true">
-              <circle cx="13" cy="13" r="7.5" fill="none" stroke="#0088b0" strokeWidth="1.6" />
-              <path d="M13 0.5 V8.5 M13 17.5 V25.5 M0.5 13 H8.5 M17.5 13 H25.5" stroke="#0088b0" strokeWidth="1.6" />
+              <circle
+                cx="13"
+                cy="13"
+                r="7.5"
+                fill="none"
+                stroke="#0088b0"
+                strokeWidth="1.6"
+              />
+              <path
+                d="M13 0.5 V8.5 M13 17.5 V25.5 M0.5 13 H8.5 M17.5 13 H25.5"
+                stroke="#0088b0"
+                strokeWidth="1.6"
+              />
               <circle cx="13" cy="13" r="2" fill="#d6006c" />
             </svg>
             <span className="hidden leading-tight sm:block">
-              <span className="block text-[14px] font-semibold text-ink">Dr. Jang</span>
+              <span className="block text-[14px] font-semibold text-ink">
+                Dr. Jang
+              </span>
               <span className="block text-[9px] font-semibold tracking-[0.28em] text-accent-strong">
                 MARITIME INTELLIGENCE
               </span>

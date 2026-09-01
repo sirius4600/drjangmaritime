@@ -1,9 +1,21 @@
 import type { Locale } from "@/i18n/config";
 
-import { profile as profileEn, contactChannels as contactChannelsEn } from "./en/profile";
-import { profile as profileKo, contactChannels as contactChannelsKo } from "./ko/profile";
-import { profile as profileJa, contactChannels as contactChannelsJa } from "./ja/profile";
-import { profile as profileEs, contactChannels as contactChannelsEs } from "./es/profile";
+import {
+  profile as profileEn,
+  contactChannels as contactChannelsEn,
+} from "./en/profile";
+import {
+  profile as profileKo,
+  contactChannels as contactChannelsKo,
+} from "./ko/profile";
+import {
+  profile as profileJa,
+  contactChannels as contactChannelsJa,
+} from "./ja/profile";
+import {
+  profile as profileEs,
+  contactChannels as contactChannelsEs,
+} from "./es/profile";
 
 import {
   experience as experienceEn,
@@ -26,10 +38,22 @@ import {
   currentAffiliations as currentAffiliationsEs,
 } from "./es/experience";
 
-import { researchProjects as researchProjectsEn, researchThemes as researchThemesEn } from "./en/research";
-import { researchProjects as researchProjectsKo, researchThemes as researchThemesKo } from "./ko/research";
-import { researchProjects as researchProjectsJa, researchThemes as researchThemesJa } from "./ja/research";
-import { researchProjects as researchProjectsEs, researchThemes as researchThemesEs } from "./es/research";
+import {
+  researchProjects as researchProjectsEn,
+  researchThemes as researchThemesEn,
+} from "./en/research";
+import {
+  researchProjects as researchProjectsKo,
+  researchThemes as researchThemesKo,
+} from "./ko/research";
+import {
+  researchProjects as researchProjectsJa,
+  researchThemes as researchThemesJa,
+} from "./ja/research";
+import {
+  researchProjects as researchProjectsEs,
+  researchThemes as researchThemesEs,
+} from "./es/research";
 
 import {
   books as booksEn,
@@ -61,10 +85,22 @@ import { awards as awardsKo, proofStats as proofStatsKo } from "./ko/awards";
 import { awards as awardsJa, proofStats as proofStatsJa } from "./ja/awards";
 import { awards as awardsEs, proofStats as proofStatsEs } from "./es/awards";
 
-import { impactTimeline as impactTimelineEn, impactPillars as impactPillarsEn } from "./en/impact";
-import { impactTimeline as impactTimelineKo, impactPillars as impactPillarsKo } from "./ko/impact";
-import { impactTimeline as impactTimelineJa, impactPillars as impactPillarsJa } from "./ja/impact";
-import { impactTimeline as impactTimelineEs, impactPillars as impactPillarsEs } from "./es/impact";
+import {
+  impactTimeline as impactTimelineEn,
+  impactPillars as impactPillarsEn,
+} from "./en/impact";
+import {
+  impactTimeline as impactTimelineKo,
+  impactPillars as impactPillarsKo,
+} from "./ko/impact";
+import {
+  impactTimeline as impactTimelineJa,
+  impactPillars as impactPillarsJa,
+} from "./ja/impact";
+import {
+  impactTimeline as impactTimelineEs,
+  impactPillars as impactPillarsEs,
+} from "./es/impact";
 
 import { newsItems as newsItemsEn } from "./en/news";
 import { newsItems as newsItemsKo } from "./ko/news";
@@ -75,6 +111,23 @@ import { dailyLogEntries as dailyLogEntriesEn } from "./en/dailyLog";
 import { dailyLogEntries as dailyLogEntriesKo } from "./ko/dailyLog";
 import { dailyLogEntries as dailyLogEntriesJa } from "./ja/dailyLog";
 import { dailyLogEntries as dailyLogEntriesEs } from "./es/dailyLog";
+
+import {
+  conferenceInsights as conferenceInsightsEn,
+  conferenceInsightsOverview as conferenceInsightsOverviewEn,
+} from "./en/conferenceInsights";
+import {
+  conferenceInsights as conferenceInsightsKo,
+  conferenceInsightsOverview as conferenceInsightsOverviewKo,
+} from "./ko/conferenceInsights";
+import {
+  conferenceInsights as conferenceInsightsJa,
+  conferenceInsightsOverview as conferenceInsightsOverviewJa,
+} from "./ja/conferenceInsights";
+import {
+  conferenceInsights as conferenceInsightsEs,
+  conferenceInsightsOverview as conferenceInsightsOverviewEs,
+} from "./es/conferenceInsights";
 
 import {
   expertiseAreas as expertiseAreasEn,
@@ -124,6 +177,8 @@ const bundles = {
     impactPillars: impactPillarsKo,
     newsItems: newsItemsKo,
     dailyLogEntries: dailyLogEntriesKo,
+    conferenceInsights: conferenceInsightsKo,
+    conferenceInsightsOverview: conferenceInsightsOverviewKo,
     expertiseAreas: expertiseAreasKo,
     toolsAndData: toolsAndDataKo,
     organizationServices: organizationServicesKo,
@@ -148,6 +203,8 @@ const bundles = {
     impactPillars: impactPillarsEn,
     newsItems: newsItemsEn,
     dailyLogEntries: dailyLogEntriesEn,
+    conferenceInsights: conferenceInsightsEn,
+    conferenceInsightsOverview: conferenceInsightsOverviewEn,
     expertiseAreas: expertiseAreasEn,
     toolsAndData: toolsAndDataEn,
     organizationServices: organizationServicesEn,
@@ -172,6 +229,8 @@ const bundles = {
     impactPillars: impactPillarsJa,
     newsItems: newsItemsJa,
     dailyLogEntries: dailyLogEntriesJa,
+    conferenceInsights: conferenceInsightsJa,
+    conferenceInsightsOverview: conferenceInsightsOverviewJa,
     expertiseAreas: expertiseAreasJa,
     toolsAndData: toolsAndDataJa,
     organizationServices: organizationServicesJa,
@@ -196,6 +255,8 @@ const bundles = {
     impactPillars: impactPillarsEs,
     newsItems: newsItemsEs,
     dailyLogEntries: dailyLogEntriesEs,
+    conferenceInsights: conferenceInsightsEs,
+    conferenceInsightsOverview: conferenceInsightsOverviewEs,
     expertiseAreas: expertiseAreasEs,
     toolsAndData: toolsAndDataEs,
     organizationServices: organizationServicesEs,
