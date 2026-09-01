@@ -16,7 +16,7 @@ export interface ConferenceInsightEntry {
 export interface ConferenceInsightOverview {
   title: string;
   summary: string[];
-  implications: string[];
+  implications?: string[];
 }
 
 // A cross-session synthesis written after reviewing all 15 presentations
@@ -30,12 +30,6 @@ export const conferenceInsightsOverview: ConferenceInsightOverview | null = {
     "In the fuel race, LNG remains the current incumbent (Han Seung-Ha), ammonia is positioned as the long-term winner once toxicity/engine-readiness/safety barriers clear in the early-to-mid 2030s (Son Chang-Woo), and nuclear propulsion remains stuck at an institutional-gap stage still governed by a single, outdated 1981 IMO safety standard (Jeon Hyun-Buki).",
     "AI/robotics transformation is underway across shipping operations (Han Sang-Tae), shipbuilding design and production (Ryu Yeong-Ung, Song Chang-Sub, Jang Gye-Bong), and marine-equipment subcontractors alike — yet for autonomous-ship navigation AI specifically (Yim Geun-Tae, KRISO), \"data scarcity\" remains the one point every industry expert agrees on, regardless of how they disagree on data sharing.",
     "On industrial competitiveness, three independent sessions (Lee Eunchang, Han Jong-Khil, Chung Yoon-Gu) converge on the same finding: China is widening its lead over Korea across orderbook share, delivery volume, and financing structure, underpinned by state subsidies estimated at 2.5% of revenue — more than ten times the OECD average.",
-  ],
-  implications: [
-    "Young-Chan Lee's call to treat alternative fuels, autonomy, and SMR propulsion as one converging competency gap rather than separate curricula turns out to be the conference's broader conclusion, not just one session's argument — a strong case for VTS and officer-training institutions to design integrated curricula rather than bolting new modules onto the existing structure.",
-    "The \"verifiable operational data\" bottleneck recurring across unrelated sessions is the single highest-priority overlap between IMO/IALA policy advisory work and Dr. Jang's own autonomous-navigation AI research. KRISO's 2026-2029 national R&D project (Busan K2-2) tackles this bottleneck directly and is worth engaging with early, before its data standards and governance model are locked in.",
-    "Because the port-side institutional gap for new fuels and technologies (SIMOPS, separation distances, emergency response, port-entry rules) showed up for ammonia, nuclear, and hydrogen derivatives alike rather than being fuel-specific, VTS and port-authority emergency-response procedures are better redesigned around this shared structural gap than fuel-by-fuel.",
-    "China's industrial-competitiveness pressure looks like it sits outside the safety-training domain, but shifts in orderbook volume and fleet composition feed directly into future demand for trained officers — worth tracking as a macro input for maritime-training policy, even from a safety-focused vantage point.",
   ],
 };
 

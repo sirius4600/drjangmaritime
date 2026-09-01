@@ -68,7 +68,13 @@ export default async function ConferenceInsightsPage({
                 <h2 className="mt-2 text-xl font-semibold leading-snug text-ink md:text-2xl">
                   {conferenceInsightsOverview.title}
                 </h2>
-                <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div
+                  className={`mt-6 grid grid-cols-1 gap-8${
+                    conferenceInsightsOverview.implications?.length
+                      ? " md:grid-cols-2"
+                      : ""
+                  }`}
+                >
                   <div>
                     <h3 className="text-[13px] font-semibold uppercase tracking-wide text-accent-strong">
                       {ui.conferenceInsights.summaryLabel}
@@ -82,21 +88,24 @@ export default async function ConferenceInsightsPage({
                       ))}
                     </ul>
                   </div>
-                  <div>
-                    <h3 className="text-[13px] font-semibold uppercase tracking-wide text-accent-strong">
-                      {ui.conferenceInsights.implicationsLabel}
-                    </h3>
-                    <ul className="mt-3 space-y-2 text-[14.5px] leading-relaxed text-ink-soft">
-                      {conferenceInsightsOverview.implications.map(
-                        (line, i) => (
-                          <li key={i} className="flex gap-2">
-                            <span aria-hidden="true">·</span>
-                            <span>{line}</span>
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
+                  {conferenceInsightsOverview.implications &&
+                    conferenceInsightsOverview.implications.length > 0 && (
+                      <div>
+                        <h3 className="text-[13px] font-semibold uppercase tracking-wide text-accent-strong">
+                          {ui.conferenceInsights.implicationsLabel}
+                        </h3>
+                        <ul className="mt-3 space-y-2 text-[14.5px] leading-relaxed text-ink-soft">
+                          {conferenceInsightsOverview.implications.map(
+                            (line, i) => (
+                              <li key={i} className="flex gap-2">
+                                <span aria-hidden="true">·</span>
+                                <span>{line}</span>
+                              </li>
+                            ),
+                          )}
+                        </ul>
+                      </div>
+                    )}
                 </div>
               </div>
             )}
