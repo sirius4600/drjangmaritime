@@ -229,11 +229,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "STCW 5차 개정(신설 V/5 규정 제안)으로 원자로 기초, 방사선방호, 원자로 운전·감시, 비상대응, 시뮬레이터 기반 자격인정 등 신규 역량표준이 필요하다고 제안.",
       "한국형 SMR 상선(1만5천~1만6천 TEU급) 승조원 구조를 제안 — 기존 항해사·기관사 체계에 원자로운전사(Reactor Officer)·방사선방호사(Radiation Protection Officer)를 추가하는 모델.",
     ],
-    implications: [
-      "VTS 및 해기사 교육기관 입장에서, 대체연료·자율운항·SMR을 각각 별개 커리큘럼이 아니라 '하나의 역량 격차'로 묶어 통합 교육과정을 설계할 필요가 있음을 시사.",
-      "시뮬레이터 훈련을 STCW상 '승선 경력(sea service)'으로 인정하자는 제안은, 국내 VTS관제사 국제자격 교육에서도 디지털트윈·시뮬레이터 활용 범위를 어디까지 공식 인정할지에 대한 선례가 될 수 있음.",
-      "SMR 승조원 자격체계 논의는 향후 원자력 추진 선박이 등장할 경우 VTS·항만당局의 특별관제·비상대응 절차에도 영향을 미칠 사안으로, 장기적으로 관제 교육과정에 반영을 검토할 만함.",
-    ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k1-2-lee-youngchan-workforce.pdf",
   },
@@ -253,11 +248,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "세계 선박 발주잔량에서 한국의 DWT 점유율은 2015년 대비 2025년 소폭 상승(약 16%대)했으나 중국의 점유율 확대가 두드러지는 구조적 변화를 데이터로 제시.",
       "미국의 대중 관세·USTR 조치(2026년 포함) 등 정책 변수가 조선 발주 및 선사의 선대 재편 결정에 실질적 영향을 미치고 있음을 강조.",
       "정책 제언으로 산업·정부·기업 각 주체별 대응 전략(선대 다변화, 공급망 리스크 관리, 정책 공조 등)을 다층적으로 제시.",
-    ],
-    implications: [
-      "항로 지정학 리스크(홍해·수에즈 우회 등)는 결국 특정 해역의 통항량·통항 패턴 변화로 이어지므로, VTS 운영·교육 관점에서 우회 항로 신설 해역의 관제 수요 변화를 주시할 필요.",
-      "선대 재편·발주 구조 변화는 향후 특정 연료·기술을 탑재한 신조선 유입 시점과도 맞물려, 해기사 교육과정 개편 타이밍을 정책 변수와 함께 검토할 근거가 됨.",
-      "국가 간 무역분쟁이 해운정책에 미치는 영향은 IMO/IALA 자문 활동에서도 국제 공조 논의의 배경 정보로 참고할 가치가 있음.",
     ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k1-4-yang-jongseo-geopolitical.pdf",
@@ -279,11 +269,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "HMM의 실제 사례로 아비커스(Avikus) HiNAS Control 4.0과의 MOU를 통한 Level 2 자율운항 실증, RPM 최적화로 약 4.2% 연료 절감을 달성했다고 소개.",
       "요턴(Jotun)의 HullSkater 선체청소로봇을 활용한 '항상 깨끗한 선체(always-clean hull)' 개념과 오손 예측·선제적 청소 사례를 공유.",
     ],
-    implications: [
-      "AIS·ECDIS 데이터 품질을 ISO/IEC 표준으로 관리해야 AI 신뢰도가 확보된다는 지적은, VTS 데이터 활용·자율운항 항법 AI 연구에서 데이터 거버넌스를 선결 과제로 삼아야 함을 시사.",
-      "HMM의 Level 2 자율운항 실증(HiNAS Control 4.0)은 상용 선사의 자율운항 도입 속도를 보여주는 실측 사례로, VTS-자율운항선박 간 상호작용 대비 훈련과정 설계에 참고할 만함.",
-      "규제(CII/EU ETS)-비용-운항이라는 3중 압력 구조는 해기사 교육과정에 탄소규제 대응 실무를 얼마나 비중 있게 반영해야 하는지에 대한 근거 자료로 활용 가능.",
-    ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k2-1-han-sangtae-ai-robotics.pdf",
   },
@@ -304,10 +289,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "지멘스(Siemens) NX(설계)·PLM·Digital Twin Composer 등을 활용한 디지털 스레드(Digital Thread) 구축 사례와 개방형 아키텍처(Open Architecture) PLM 전략을 소개.",
       "'Everyone AI → One Truth → Physical AI → AI Platform'이라는 4단계 로드맵으로 조선업 전반의 AI 전환 방향을 제시하며 발표를 마무리.",
     ],
-    implications: [
-      "조선 설계·생산의 '단일 신뢰 데이터' 개념은, 향후 자율운항선박의 설계 데이터가 실제 운항 AI 학습데이터와 어떻게 연결될 수 있는지에 대한 산업계 방향성을 보여줌.",
-      "Physical AI·디지털트윈 전환 로드맵은 조선소 생산 현장뿐 아니라, 향후 해기사·선박관리 교육에서 디지털트윈 기반 시뮬레이션 훈련의 표준화 필요성을 뒷받침하는 사례로 활용 가능.",
-    ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k2-3-ryu-yeongung-mbe-platform.pdf",
   },
@@ -327,10 +308,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "파이프 용접 자동화(DAEYEON) 사례에서 기존 수동/반자동 대비 생산성 2~3배 향상, 용접 스패터(spatter) 1/20 수준 감소, 작업환경(흄·분진) 개선 등 구체적 수치를 제시.",
       "YOLO 알고리즘 기반 용접 풀(weld pool)·비드(bead) 결함 예측 시스템과, 컴퓨터비전 기반 절단물 분류·도면매칭 결함방지 시스템(SUN-TECH)을 소개.",
       "HJ S&C의 협동로봇(Rainbow Robotics RB3-730ES) 기반 용접 시스템에서 용접 속도 19.7m/h를 달성하고, 그라인딩이 불필요한 고품질 비드를 확보했다고 발표.",
-    ],
-    implications: [
-      "협력사 단위의 로봇·AI 생산혁신은 대형 조선소 중심 담론을 넘어, 국내 조선 생태계 전반의 숙련인력 부족 문제에 대한 실질적 해법 사례로 참고할 가치가 있음.",
-      "YOLO·컴퓨터비전 기반 실시간 결함탐지 사례는, 해양안전 분야의 AI 이상탐지 연구(예: 관제 영상 기반 이상행동 탐지)에도 응용 가능한 방법론적 참고점을 제공.",
     ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k2-4-song-changsub-shipyard-ai.pdf",

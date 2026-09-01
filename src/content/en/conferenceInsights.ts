@@ -257,11 +257,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Proposes a new STCW Chapter V regulation (V/5) covering reactor fundamentals, radiation protection, control-room watchkeeping, emergency response, and simulator-based qualification for nuclear-ship crews.",
       "Proposes a crewing model for a Korean SMR containership (15,000–16,000 TEU class) that layers a Reactor Officer and Radiation Protection Officer onto the existing STCW deck/engine chain of command.",
     ],
-    implications: [
-      "For maritime training institutions, the talk suggests treating alternative fuels, autonomy, and SMR not as separate curricula but as one converging competency gap requiring integrated course design.",
-      "The proposal to formally recognize simulator training as STCW 'sea service' is directly relevant to how far VTS operator certification programs can lean on digital-twin/simulator training as officially credited experience.",
-      "The SMR crewing/licensing discussion is an early signal that VTS and port authorities will eventually need special-control and emergency-response procedures for nuclear-powered merchant traffic — worth tracking for future curriculum updates.",
-    ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k1-2-lee-youngchan-workforce.pdf",
   },
@@ -282,11 +277,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Presents order-book data showing Korea's global DWT market share edged up slightly from 2015 to 2025 (~16%+) while China's share expanded more structurally over the same period.",
       "Highlights that US tariff/USTR actions targeting China (including 2026 measures) are materially shaping newbuild ordering and fleet-restructuring decisions.",
       "Closes with layered policy recommendations for government, shipowners, and shipbuilders — fleet diversification, supply-chain risk management, and closer industry-government coordination.",
-    ],
-    implications: [
-      "Route-level geopolitical risk (Red Sea/Suez diversion) implies shifting traffic volumes and patterns in specific sea areas — relevant to anticipating VTS staffing and training needs along emerging detour routes.",
-      "Shifts in fleet composition and ordering patterns, driven by trade policy, will affect the timing of new-technology vessel arrivals — a useful input for sequencing officer/VTS training curriculum updates.",
-      "Useful macro context for IMO/IALA advisory work: trade-conflict dynamics increasingly shape maritime policy discussions beyond pure safety/technical regulation.",
     ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k1-4-yang-jongseo-geopolitical.pdf",
@@ -309,11 +299,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Cites HMM's own case: a partnership with Avikus's HiNAS Control 4.0 for Level-2 autonomous navigation trials and RPM optimization, achieving roughly 4.2% fuel savings.",
       "Describes Jotun's HullSkater hull-cleaning robot enabling an 'always-clean hull' approach — predictive fouling detection paired with proactive cleaning.",
     ],
-    implications: [
-      "The point that AIS/ECDIS data quality must meet formal ISO/IEC standards before AI can be trusted reinforces that data governance is a prerequisite for autonomous-navigation AI research, not an afterthought.",
-      "HMM's Level-2 autonomous navigation trial (HiNAS Control 4.0) is a concrete commercial data point on the pace of autonomy adoption — useful for designing VTS training on human-autonomy interaction.",
-      "The triple pressure (regulation/cost/operations) is a strong argument for weighting carbon-compliance practice more heavily in officer training curricula.",
-    ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k2-1-han-sangtae-ai-robotics.pdf",
   },
@@ -333,10 +318,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Traces the evolution of ship design methodology from J. Harvey Evans's 1959 MIT 'Design Spiral' concept toward front-loaded design and full 3D digital-twin methods.",
       "Describes building a Digital Thread using the Siemens portfolio (NX design, PLM, Digital Twin Composer) under an open-architecture PLM strategy.",
       "Closes with a four-stage AI roadmap for the shipbuilding enterprise: Everyone AI → One Truth → Physical AI → AI Platform.",
-    ],
-    implications: [
-      "The 'Authoritative Data'/Single-Source-of-Truth concept in shipbuilding hints at how design-stage digital data could eventually feed operational autonomous-navigation training datasets.",
-      "The Physical-AI/digital-twin roadmap supports the case for standardizing digital-twin-based simulation training in officer and ship-management education, beyond just shipyard production use.",
     ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k2-3-ryu-yeongung-mbe-platform.pdf",
@@ -358,10 +339,6 @@ export const conferenceInsights: ConferenceInsightEntry[] = [
       "Presents concrete pipe-welding automation results (DAEYEON): 2–3x productivity gains, welding spatter reduced to roughly 1/20, and significantly improved working-environment metrics (fumes, exposure).",
       "Describes a YOLO-based weld-pool/bead defect prediction system and a computer-vision-based cutting-piece sorting/defect-prevention system (SUN-TECH) that matches physical cut pieces against CAD drawings in real time.",
       "Reports a cobot welding system (HJ S&C, using Rainbow Robotics' RB3-730ES) achieving 19.7 m/h welding speed with bead quality high enough to eliminate post-weld grinding.",
-    ],
-    implications: [
-      "Robotics/AI-driven productivity gains at subcontractor scale are a concrete, verifiable case study for addressing Korea's shipbuilding skilled-labor shortage beyond the large-yard narrative.",
-      "The YOLO/computer-vision-based real-time defect-detection approach offers a transferable methodology for AI anomaly-detection research in maritime safety (e.g., video-based abnormal-behavior detection in VTS surveillance).",
     ],
     pdfUrl:
       "/documents/kormarine-2026/incheon-k2-4-song-changsub-shipyard-ai.pdf",
