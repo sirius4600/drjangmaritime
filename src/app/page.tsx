@@ -1,5 +1,5 @@
 import { cookies, headers } from "next/headers";
-import { redirect } from "next/navigation";
+import { permanentRedirect } from "next/navigation";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 
 // Language priority: 1) the visitor's own past choice (cookie), 2) browser
@@ -18,5 +18,7 @@ export default async function RootPage() {
     if (preferred && isLocale(preferred)) locale = preferred;
   }
 
-  redirect(`/${locale}`);
+  // 308 (not the default 307) so crawlers treat /{locale} as canonical
+  // instead of picking the bare root as the indexed URL.
+  permanentRedirect(`/${locale}`);
 }
