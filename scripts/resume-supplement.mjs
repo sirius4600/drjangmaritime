@@ -444,10 +444,11 @@ export const basicTier1pEducation = {
 
 // 기본양식(1p)-only: which awards.ts entries should show their `reason`
 // field as an "{org} {title}" prefix in the 1p 수상 list. awards.ts's
-// `reason` field is overloaded — sometimes the awarding org (index 3 and 4,
-// both 한국항해항만학회/KINPR), sometimes a justification clause (index 0,
+// `reason` field is overloaded — sometimes the awarding org (index 3, 4 and 8,
+// all 한국항해항만학회/KINPR; 8 split out of 3 on 2026-09-29 after checking
+// kinpr.or.kr's award lists), sometimes a justification clause (index 0,
 // "해양경찰 업무 발전 기여") — so it can't be blindly prepended everywhere; the
 // other 3 awards already have the org built into their title (e.g. "국민안전처
 // 장관 표창"). 0-based indices into awards.ts's raw array (stable pre-sort,
 // index-aligned across locales), per explicit user request 2026-08-30.
-export const basicTier1pAwardOrgIndices = [3, 4];
+export const basicTier1pAwardOrgIndices = [3, 4, 8];
