@@ -508,6 +508,9 @@ p.lead {
    lines per row; shaving per-line height there recovers real space. */
 .panel-basic1p ul.plain li,
 .panel-basic ul.plain li { padding: 3px 0; font-size: 12.3px; line-height: 1.45; }
+/* 1p only: 1px tighter per row, added 2026-09-29 when two new awards pushed
+   es to 2 pages. */
+.panel-basic1p ul.plain li { padding: 2px 0; }
 .panel-basic1p table,
 .panel-basic table { margin-bottom: 0; font-size: 11.6px; }
 .panel-basic1p tbody td,

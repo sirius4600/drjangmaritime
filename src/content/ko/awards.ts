@@ -28,6 +28,16 @@ export const awards = [
     year: "2009",
     title: "한국해양수산연수원장 표창",
   },
+  {
+    year: "2026",
+    title: "해양경찰청장 감사장",
+    reason: "해양경찰 발전 공헌 · 해양경찰의 날 (2026.9.10)",
+  },
+  {
+    year: "2021",
+    title: "한국해양경찰학회 우수논문상",
+    reason: "「해상교통관제사의 핵심역량모델 개발에 관한 연구」",
+  },
 ];
 
 export const proofStats = [

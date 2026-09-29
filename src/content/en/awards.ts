@@ -29,6 +29,16 @@ export const awards = [
     year: "2009",
     title: "Commendation, President of the Korea Institute of Maritime and Fisheries Technology (KIMFT)",
   },
+  {
+    year: "2026",
+    title: "Citation, Commissioner General of the Korea Coast Guard",
+    reason: "Contribution to the development of the Korea Coast Guard · Korea Coast Guard Day (Sep 10, 2026)",
+  },
+  {
+    year: "2021",
+    title: "Excellent Paper Award, Korean Association of Maritime Police Science",
+    reason: "“A Study on the Development of a Core Competency Model for VTS Operators”",
+  },
 ];
 
 export const proofStats = [

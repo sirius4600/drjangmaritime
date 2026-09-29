@@ -21,6 +21,18 @@ export const papers: {
 }[] = [
   {
     title:
+      "Authentic-Data-Based Approach to Prioritising VTS Operator Communication Training",
+    venue: "Journal of the Korean Society of Marine Environment & Safety 32(4)",
+    year: "2026.08",
+  },
+  {
+    title:
+      "Developing IALA C0103-4-Aligned VTS OJTI Training Materials from Authentic VHF Data: The Case of Ulsan Port",
+    venue: "Journal of the Korean Society of Marine Environment & Safety 32(4)",
+    year: "2026.08",
+  },
+  {
+    title:
       "Estudio de Construcción de un Sistema de Evaluación del Rendimiento para un Buque de Extinción de Incendios Marítimo Controlado a Distancia Mediante Simulación de Buques",
     venue: "Korean Institute of Navigation and Port Research (KINPR)",
     year: "2026.05",

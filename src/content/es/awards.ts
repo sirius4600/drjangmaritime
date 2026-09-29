@@ -26,6 +26,16 @@ export const awards = [
     year: "2009",
     title: "Mención del Presidente del Instituto Coreano de Tecnología Marítima y Pesquera (KIMFT)",
   },
+  {
+    year: "2026",
+    title: "Reconocimiento del Comisionado General de la Guardia Costera de Corea",
+    reason: "Contribución al desarrollo de la Guardia Costera de Corea · Día de la Guardia Costera de Corea (10 sep. 2026)",
+  },
+  {
+    year: "2021",
+    title: "Premio al Artículo Destacado, Asociación Coreana de Ciencia Policial Marítima",
+    reason: "«Estudio sobre el Desarrollo de un Modelo de Competencias Clave para Operadores VTS»",
+  },
 ];
 
 export const proofStats = [

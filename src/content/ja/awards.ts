@@ -26,6 +26,16 @@ export const awards = [
     year: "2009",
     title: "韓国海洋水産研修院長表彰",
   },
+  {
+    year: "2026",
+    title: "海洋警察庁長官感謝状",
+    reason: "海洋警察の発展への貢献 · 海洋警察の日 (2026.9.10)",
+  },
+  {
+    year: "2021",
+    title: "韓国海洋警察学会 優秀論文賞",
+    reason: "「海上交通管制官の核心力量モデル開発に関する研究」",
+  },
 ];
 
 export const proofStats = [
