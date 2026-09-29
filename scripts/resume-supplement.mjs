@@ -377,8 +377,8 @@ export const basicTier = {
   // across locales — paper titles are kept in their original published
   // language everywhere, so a title-text match wouldn't work per-locale
   // anyway), in this display order: [현장관찰법.../Analysis of VTS Operators',
-  // Common Phraseology..., Risk Management Challenges...].
-  representativePaperIndices: [34, 21, 3],
+  // Common Phraseology..., 핵심역량모델개발 (KSMPS 우수논문상), Risk Management Challenges...] (displayed newest-first regardless).
+  representativePaperIndices: [34, 21, 14, 3],
 };
 
 // 기본양식 (1p) — the strictest curation, formalized 2026-08-30 to always
