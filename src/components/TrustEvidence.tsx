@@ -7,6 +7,9 @@ import { Container } from "./Container";
 export function TrustEvidence({ locale }: { locale: Locale }) {
   const ui = getUiDictionary(locale);
   const { awards, profile } = getContent(locale);
+  // awards.ts keeps a stable raw order (the resume generator indexes into it),
+  // so sort newest-first here for display.
+  const sortedAwards = [...awards].sort((a, b) => Number(b.year) - Number(a.year));
 
   return (
     <section id="about" className="py-20 md:py-28">
@@ -53,9 +56,9 @@ export function TrustEvidence({ locale }: { locale: Locale }) {
           </p>
 
           <div className="mt-10 divide-y divide-line/70 border-t border-line/70">
-            {awards.map((award) => (
+            {sortedAwards.map((award) => (
               <div
-                key={award.title}
+                key={`${award.year}-${award.title}`}
                 className="grid grid-cols-[3.5rem_1fr] gap-4 py-4"
               >
                 <span className="font-mono text-[13px] text-ink-soft">
