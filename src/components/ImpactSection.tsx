@@ -4,9 +4,17 @@ import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
 import { EvidencePhotos } from "./EvidencePhotos";
 
+// "2025.12" -> 202512, "2016" -> 201600, "2022 - 현재" -> 202200 (ongoing
+// entries sort by their start date).
+function dateKey(date: string) {
+  const m = date.match(/(\d{4})(?:\.(\d{1,2}))?/);
+  return m ? Number(m[1]) * 100 + Number(m[2] ?? 0) : 0;
+}
+
 export function ImpactSection({ locale }: { locale: Locale }) {
   const ui = getUiDictionary(locale);
   const { impactTimeline, impactPillars } = getContent(locale);
+  const sortedTimeline = [...impactTimeline].sort((a, b) => dateKey(b.date) - dateKey(a.date));
 
   return (
     <section className="py-20 md:py-28">
@@ -23,7 +31,7 @@ export function ImpactSection({ locale }: { locale: Locale }) {
             )}
 
             <ol className="mt-10 space-y-8 border-l border-line/70 pl-6">
-              {impactTimeline.map((entry) => (
+              {sortedTimeline.map((entry) => (
                 <li key={entry.title} className="relative">
                   <span className="absolute -left-[27px] top-1.5 h-2 w-2 rounded-full bg-accent-strong" />
                   <p className="font-mono text-[12px] tracking-wide text-ink-soft">
