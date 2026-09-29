@@ -1,24 +1,18 @@
-import { cookies, headers } from "next/headers";
-import { permanentRedirect } from "next/navigation";
+import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { defaultLocale, isLocale, type Locale } from "@/i18n/config";
 
-// Language priority: 1) the visitor's own past choice (cookie), 2) browser
-// language, 3) default. We never guess by IP/geolocation.
+// Language priority: 1) the visitor's own past choice (cookie), 2) Korean
+// (the site default). Browser language is deliberately NOT consulted — the
+// site opens in Korean unless the visitor explicitly picked another language.
 export default async function RootPage() {
   const cookieStore = await cookies();
-  const headerList = await headers();
 
   let locale: Locale = defaultLocale;
   const cookieLocale = cookieStore.get("NEXT_LOCALE")?.value;
-  if (cookieLocale && isLocale(cookieLocale)) {
-    locale = cookieLocale;
-  } else {
-    const acceptLanguage = headerList.get("accept-language");
-    const preferred = acceptLanguage?.split(",")[0]?.split("-")[0];
-    if (preferred && isLocale(preferred)) locale = preferred;
-  }
+  if (cookieLocale && isLocale(cookieLocale)) locale = cookieLocale;
 
-  // 308 (not the default 307) so crawlers treat /{locale} as canonical
-  // instead of picking the bare root as the indexed URL.
-  permanentRedirect(`/${locale}`);
+  // Temporary redirect: the target depends on the cookie, so it must not be
+  // cached by browsers as a permanent /→/{locale} mapping.
+  redirect(`/${locale}`);
 }
