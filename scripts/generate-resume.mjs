@@ -52,6 +52,15 @@ const CONTENT = {
   ja: { researchProjects: researchJa, books: booksJa, papers: papersJa, presentations: presentationsJa, patents: patentsJa, awards: awardsJa, experience: experienceJa, currentAffiliations: currentAffiliationsJa },
   es: { researchProjects: researchEs, books: booksEs, papers: papersEs, presentations: presentationsEs, patents: patentsEs, awards: awardsEs, experience: experienceEs, currentAffiliations: currentAffiliationsEs },
 };
+// Every dated resume list is shown newest-first (education excepted). books,
+// patents and the committee history are stored oldest-first in their sources,
+// so order them here (stable within a year).
+for (const loc of Object.keys(CONTENT)) {
+  CONTENT[loc].books = sortByYearDesc(CONTENT[loc].books);
+  CONTENT[loc].patents = sortByYearDesc(CONTENT[loc].patents);
+  supplement.committeeHistory[loc] = sortByYearDesc(supplement.committeeHistory[loc], "period");
+}
+
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -128,7 +137,7 @@ function buildLocaleData(locale) {
   const basicCurrentRoleRows = currentRoleRows.slice(0, supplement.basicTier.currentAffiliationsCount);
   const basicCareerRows = supplement.basicTier.experienceIndices.map((i) => careerRows[i]);
   const basicResearchRows = researchRows.filter((r) => r.flagship);
-  const basicPaperRows = supplement.basicTier.representativePaperIndices.map((i) => paperRows[i]);
+  const basicPaperRows = sortByYearDesc(supplement.basicTier.representativePaperIndices.map((i) => paperRows[i]));
 
   const basic1pCareerRows = supplement.basicTier1p.experienceIndices.map((i) => careerRows[i]);
   // Full career history, recency-ordered — used by 확장식/Full Version's
@@ -614,8 +623,8 @@ function buildMasterDbSections(data) {
   const currentTableMd = mdTable(["기간", "기관", "역할"], data.currentRoleRowsFull, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
   const committeeTableMd = mdTable(["기간", "기관", "역할"], supplement.committeeHistory.ko, (r) => `| ${r.period} | ${r.org} | ${r.role} |`);
   const researchTableMd = mdTable(["연도", "제목", "발주처", "역할", "★"], data.researchRows, (r) => `| ${r.period} | ${r.title} | ${r.funder} | ${r.role} | ${r.flagship ? "★" : ""} |`);
-  const booksMd = booksKo.map((b) => `- ${b.year}: ${b.title}`).join("\n");
-  const patentsMd = patentsKo.map((p) => `- (${p.status}, ${p.year}) ${p.title}`).join("\n");
+  const booksMd = CONTENT.ko.books.map((b) => `- ${b.year}: ${b.title}`).join("\n");
+  const patentsMd = CONTENT.ko.patents.map((p) => `- (${p.status}, ${p.year}) ${p.title}`).join("\n");
   const papersMd = mdTable(["연도", "제목", "게재처", "비고"], data.paperRows, (p) => `| ${p.year} | ${p.title} | ${p.venue} | ${p.summary ?? ""} |`);
   const presentationsMd = mdTable(["연도", "제목", "장소 · 주최"], data.presentationRows, (p) => `| ${p.year} | ${p.title} | ${p.venue} |`);
   const awardsMd = data.awardRowsWithOrgPrefix.map((a) => `- ${a.year}: ${a.orgPrefix ? `${a.orgPrefix} ` : ""}${a.title}`).join("\n");
@@ -661,7 +670,7 @@ ${researchMd}
 
 ## 저서
 
-${booksKo.map((b) => `- ${b.title} (${b.year})`).join("\n")}
+${CONTENT.ko.books.map((b) => `- ${b.title} (${b.year})`).join("\n")}
 
 ## 수상
 
@@ -705,7 +714,7 @@ ${sections.careerTableMd}
 
 ${sections.currentTableMd}
 
-## 위원회 · 자문 · 심사위원 활동 이력 (연대순)
+## 위원회 · 자문 · 심사위원 활동 이력 (최신순)
 
 ${sections.committeeTableMd}
 
@@ -772,7 +781,7 @@ ${sections.careerTableMd}
 
 ${sections.currentTableMd}
 
-## 위원회 · 자문 · 심사위원 활동 이력 (연대순)
+## 위원회 · 자문 · 심사위원 활동 이력 (최신순)
 
 ${sections.committeeTableMd}
 
