@@ -34,7 +34,7 @@ export const awards = [
   {
     year: "2021",
     title: "Premio al Artículo Destacado, Asociación Coreana de Ciencia Policial Marítima",
-    reason: "«Estudio sobre el Desarrollo de un Modelo de Competencias Clave para Operadores VTS»",
+    reason: "«Estudio sobre el Desarrollo de un Modelo de Competencias Clave para Operadores VTS» · mejor artículo entre los publicados en dos años (2019–2020)",
   },
   {
     year: "2017",

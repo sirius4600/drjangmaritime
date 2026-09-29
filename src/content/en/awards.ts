@@ -37,7 +37,7 @@ export const awards = [
   {
     year: "2021",
     title: "Excellent Paper Award, Korean Association of Maritime Police Science",
-    reason: "“A Study on the Development of a Core Competency Model for VTS Operators”",
+    reason: "“A Study on the Development of a Core Competency Model for VTS Operators” · best paper among those published over two years (2019–2020)",
   },
   {
     year: "2017",
