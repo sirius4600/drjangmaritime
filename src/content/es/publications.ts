@@ -105,6 +105,12 @@ export const papers: {
     year: "2020",
   },
   {
+    title: "해상교통관제사의 핵심역량모델개발에 관한 연구",
+    venue: "Journal of the Korean Society of Marine Police Science 9(3)",
+    year: "2019",
+    summary: "Recibió el Premio al Artículo Sobresaliente de la Sociedad Coreana de Ciencias de la Policía Marítima.",
+  },
+  {
     title: "Desarrollo de un Modelo de Competencias para Operadores de VTS Noveles",
     venue: "Congreso de Primavera 2018 del KINPR",
     year: "2018",

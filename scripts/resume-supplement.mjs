@@ -378,7 +378,7 @@ export const basicTier = {
   // language everywhere, so a title-text match wouldn't work per-locale
   // anyway), in this display order: [현장관찰법.../Analysis of VTS Operators',
   // Common Phraseology..., Risk Management Challenges...].
-  representativePaperIndices: [33, 20, 3],
+  representativePaperIndices: [34, 21, 3],
 };
 
 // 기본양식 (1p) — the strictest curation, formalized 2026-08-30 to always
