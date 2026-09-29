@@ -7,7 +7,7 @@ export const researchProjects: ResearchProject[] = [
       "AI 완전자율운항선박 기술개발 사업 - AI 완전자율운항선박 검인증 및 실증기술개발",
     funder: "해양수산부",
     role: "Co-Researcher",
-    period: "2026.08 - 2032.12",
+    period: "2026.08 - 2032.07",
     status: "Ongoing",
     theme: "MASS & AI",
     secondaryThemes: ["Safety Systems"],

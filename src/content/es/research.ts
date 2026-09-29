@@ -7,7 +7,7 @@ export const researchProjects: ResearchProject[] = [
       "I+D Nacional «Proyecto de Desarrollo Tecnológico de Buques Totalmente Autónomos con IA» - Desarrollo de Tecnología de Verificación, Certificación y Demostración para Buques Totalmente Autónomos con IA",
     funder: "Ministerio de Océanos y Pesca",
     role: "Co-Researcher",
-    period: "2026.08 - 2032.12",
+    period: "2026.08 - 2032.07",
     status: "Ongoing",
     theme: "MASS & AI",
     secondaryThemes: ["Safety Systems"],
