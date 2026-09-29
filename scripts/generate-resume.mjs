@@ -439,6 +439,10 @@ async function buildHtml(phoneValue) {
     .jpeg({ quality: 82, mozjpeg: true })
     .toBuffer();
   const photoDataUri = `data:image/jpeg;base64,${photoBuf.toString("base64")}`;
+  // Official KIMFT logo (emblem + Korean wordmark, dark-ink version), from
+  // seaman.or.kr/resource/img/common/logo_b.png — the printed resume carries
+  // the institution's branding, not the site's compass-rose mark (2026-09-29).
+  const kimftLogoDataUri = `data:image/png;base64,${readFileSync(path.join(ROOT, "scripts/assets/kimft-logo.png")).toString("base64")}`;
 
   const localeData = Object.fromEntries(locales.map((l) => [l, buildLocaleData(l)]));
 
@@ -529,16 +533,9 @@ ${sectionLabels}
 
     <header class="masthead">
       <div class="brand">
-        <svg viewBox="0 0 26 26" aria-hidden="true">
-          <circle cx="13" cy="13" r="7.5" fill="none" stroke="#0088b0" stroke-width="1.6"></circle>
-          <path d="M13 0.5 V8.5 M13 17.5 V25.5 M0.5 13 H8.5 M17.5 13 H25.5" stroke="#0088b0" stroke-width="1.6"></path>
-          <circle cx="13" cy="13" r="2" fill="#d6006c"></circle>
-        </svg>
-        <div>
-          <div class="name">Dr. Jang</div>
-          <div class="sub">MARITIME INTELLIGENCE</div>
-          <a class="site" href="https://drjangmaritime.com" target="_blank" rel="noopener">drjangmaritime.com</a>
-        </div>
+        <img class="org-logo" src="${kimftLogoDataUri}" alt="${esc(supplement.identity.ko.org)}" />
+${locales.filter((l) => l !== "ko").map((l) => `        <div class="org-name lang-${l}">${esc(supplement.identity[l].org)}</div>`).join("\n")}
+        <a class="site" href="https://drjangmaritime.com" target="_blank" rel="noopener">drjangmaritime.com</a>
       </div>
       <div class="right">
 ${locales.map(contactVariant).join("\n")}

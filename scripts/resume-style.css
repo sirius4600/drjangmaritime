@@ -272,23 +272,22 @@ body {
   margin-bottom: 30px;
   border-bottom: 1.6px solid #201e1d;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand svg { width: 34px; height: 34px; flex: none; }
-.brand .name {
-  font-family: "Source Serif 4", Georgia, serif;
-  font-weight: 600;
-  font-size: 25px;
-  color: #201e1d;
-  line-height: 1;
-}
-.brand .sub {
-  font-family: "Source Sans 3", sans-serif;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.34em;
-  color: var(--accent-700);
+/* KIMFT logo (emblem + Korean wordmark). en/ja/es add the institution name
+   in that language under it; ko doesn't need one — the wordmark is it. */
+.brand { display: flex; flex-direction: column; align-items: flex-start; }
+.brand .org-logo { display: block; height: 32px; width: auto; }
+.brand .org-name {
+  display: none;
+  max-width: 34ch;
   margin-top: 5px;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #201e1d;
 }
+#lang-en:checked ~ .paper .org-name.lang-en,
+#lang-ja:checked ~ .paper .org-name.lang-ja,
+#lang-es:checked ~ .paper .org-name.lang-es { display: block; }
 .brand .site {
   display: block;
   margin-top: 7px;
