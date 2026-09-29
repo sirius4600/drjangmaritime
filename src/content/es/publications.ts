@@ -106,8 +106,8 @@ export const papers: {
   },
   {
     title: "해상교통관제사의 핵심역량모델개발에 관한 연구",
-    venue: "Journal of the Korean Society of Marine Police Science 9(3)",
-    year: "2019",
+    venue: "Journal of the Korean Society of Marine Police Science 9(3), pp.155-179",
+    year: "2019.08",
     summary: "Recibió el Premio al Artículo Sobresaliente de la Sociedad Coreana de Ciencias de la Policía Marítima.",
   },
   {
@@ -153,8 +153,8 @@ export const papers: {
   },
   {
     title: "Análisis de Competencias Laborales de Operadores de VTS Basado en Simulador",
-    venue: "Journal of the Korean Society of Marine Police Science 7(3)",
-    year: "2017",
+    venue: "Journal of the Korean Society of Marine Police Science 7(3), pp.139-158",
+    year: "2017.12",
   },
   {
     title:
