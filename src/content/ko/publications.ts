@@ -279,12 +279,14 @@ export const presentations: {
   venue: string;
   year: string;
   role?: string;
+  images?: string[];
 }[] = [
   {
     title: "한국인 선원 감소·고령화에 따른 외국인 선원 고용 확대 대응방안",
     venue: "제38차 해양사고방지 세미나",
     year: "2023",
     role: "발표자",
+    images: ["/images/evidence/marine-accident-prevention-seminar-2023.jpg"],
   },
   {
     title: "한국해양대학교 특강",

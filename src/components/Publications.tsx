@@ -2,6 +2,7 @@ import { getContent } from "@/content";
 import type { Locale } from "@/i18n/config";
 import { getUiDictionary } from "@/i18n/ui";
 import { Container } from "./Container";
+import { EvidencePhotos } from "./EvidencePhotos";
 
 export function Publications({ locale }: { locale: Locale }) {
   const ui = getUiDictionary(locale);
@@ -9,7 +10,7 @@ export function Publications({ locale }: { locale: Locale }) {
 
   const groups: {
     label: string;
-    items: { title: string; meta: string; summary?: string }[];
+    items: { title: string; meta: string; summary?: string; images?: string[] }[];
   }[] = [
     {
       label: ui.publications.groups.books,
@@ -28,6 +29,7 @@ export function Publications({ locale }: { locale: Locale }) {
       items: presentations.map((p) => ({
         title: p.title,
         meta: `${p.role ? `${p.role}, ` : ""}${p.venue}, ${p.year}`,
+        images: p.images,
       })),
     },
     {
@@ -66,6 +68,13 @@ export function Publications({ locale }: { locale: Locale }) {
                         <p className="mt-1.5 max-w-[60ch] text-[12.5px] leading-relaxed text-ink-soft">
                           {item.summary}
                         </p>
+                      )}
+                      {item.images && item.images.length > 0 && (
+                        <EvidencePhotos
+                          images={item.images}
+                          alt={item.title}
+                          locale={locale}
+                        />
                       )}
                     </div>
                     <p className="font-mono text-[12px] whitespace-nowrap text-ink-soft md:text-right">

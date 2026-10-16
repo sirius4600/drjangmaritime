@@ -2,6 +2,24 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "maritime-ax-seminar-2026-09",
+    date: "2026.09.09",
+    title: "AI基盤の海洋・水産デジタル・カーボンニュートラル転換および業務革新戦略セミナーに参加",
+    excerpt:
+      "釜山で開かれたMaritime AXセミナーに参加し、国民大学のチョン・グミン教授、アップステージのキム・ソンフン代表とともに海洋水産分野のAI転換について議論した。",
+    location: "釜山",
+    body: [
+      "9月9日、釜山で開かれた「AI基盤の海洋・水産デジタル・カーボンニュートラル転換および業務革新戦略セミナー（Maritime AX Seminar）」に参加した。韓国モビリティ学会、韓国海洋水産開発院（KMI）、アップステージ（Upstage）の共催、船舶海洋プラント研究所（KRISO）、韓国造船海洋機資材研究院（KOMERI）、韓国船級（KR）、韓国海洋交通安全公団（KOMSA）、防除試験研究院、釜山大学校、釜慶大学校の後援によるもので、「グリーン海運航路の拡大と韓国型モデル開発」課題の一環として開催された。",
+      "とりわけ今回の会議には、国民大学のチョン・グミン教授と、韓国を代表するAI企業アップステージのキム・ソンフン代表も参加し、議論に重みを添えた。蔚山港湾公社、韓国造船海洋機資材研究院、防除試験研究院など多くの機関の専門家も同席した。",
+      "LLM・AIを活用して膨大な規定や承認図面、試験成績書を体系的に資産化し、複数の書類を正確に照合することで、海洋水産行政のデジタル転換と実務者の意思決定を支える方策が紹介された。海洋安全と教育の現場でAIをどのように実質的に活用し、新たなR&D課題へとつなげていけるかを共に考える、意義深い時間だった。",
+    ],
+    images: [
+      "/images/evidence/maritime-ax-seminar-group-2026.jpg",
+      "/images/evidence/maritime-ax-seminar-presentation-2026.jpg",
+      "/images/evidence/maritime-ax-seminar-discussion-2026.jpg",
+    ],
+  },
+  {
     id: "skandi-connector-2026-08",
     date: "2026.08.25",
     title: "教え子、イ船長が乗り組む船、Skandi Connectorを訪ねて",

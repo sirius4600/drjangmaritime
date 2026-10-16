@@ -306,6 +306,7 @@ export const presentations: {
   venue: string;
   year: string;
   role?: string;
+  images?: string[];
 }[] = [
   {
     title:
@@ -313,6 +314,7 @@ export const presentations: {
     venue: "38th Maritime Accident Prevention Seminar",
     year: "2023",
     role: "Speaker",
+    images: ["/images/evidence/marine-accident-prevention-seminar-2023.jpg"],
   },
   {
     title: "Guest Lecture at Korea Maritime and Ocean University",

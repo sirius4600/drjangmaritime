@@ -306,6 +306,7 @@ export const presentations: {
   venue: string;
   year: string;
   role?: string;
+  images?: string[];
 }[] = [
   {
     title:
@@ -313,6 +314,7 @@ export const presentations: {
     venue: "38.º Seminario de Prevención de Accidentes Marítimos",
     year: "2023",
     role: "Ponente",
+    images: ["/images/evidence/marine-accident-prevention-seminar-2023.jpg"],
   },
   {
     title: "Conferencia Invitada en la Universidad Marítima y Oceánica de Corea",

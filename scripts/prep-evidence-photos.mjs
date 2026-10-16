@@ -46,6 +46,22 @@ const jobs = [
     "2026_busan_vts_mass_unit_approach.png",
     "busan-vts-mass-unit-approach-2026.jpg",
   ],
+  [
+    "2026_maritime_ax_seminar_upstage_presentation_busan.jpg",
+    "maritime-ax-seminar-presentation-2026.jpg",
+  ],
+  [
+    "2026_maritime_ax_seminar_group_photo_busan.jpg",
+    "maritime-ax-seminar-group-2026.jpg",
+  ],
+  [
+    "2026_maritime_ax_seminar_discussion_busan.jpg",
+    "maritime-ax-seminar-discussion-2026.jpg",
+  ],
+  [
+    "2023_38th_marine_accident_prevention_seminar_presentation.jpg",
+    "marine-accident-prevention-seminar-2023.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {
