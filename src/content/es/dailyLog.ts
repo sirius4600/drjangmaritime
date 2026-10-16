@@ -12,6 +12,14 @@ export const dailyLogEntries: DailyLogEntry[] = [
       "El 9 de septiembre asistí en Busan al \"Seminario sobre transformación digital y hacia la neutralidad de carbono basada en IA y estrategia de innovación del trabajo en el sector marítimo y pesquero\" (Maritime AX Seminar). Fue organizado conjuntamente por la Sociedad Coreana de Movilidad, el Instituto Marítimo de Corea (KMI) y Upstage, con el apoyo de KRISO, KOMERI, el Registro Coreano (KR), la Autoridad Coreana de Seguridad del Transporte Marítimo (KOMSA), el Instituto de Investigación de Respuesta a la Contaminación Marina, la Universidad Nacional de Pusan y la Universidad Nacional de Pukyong, en el marco del proyecto de ampliación de corredores marítimos verdes y desarrollo de un modelo coreano.",
       "La reunión cobró especial relevancia con la presencia del profesor Jung Gu-min de la Universidad Kookmin, presidente de la Sociedad Coreana de Movilidad, y de Sung Kim, CEO de Upstage, una de las empresas de IA más representativas de Corea. También participaron expertos de la Autoridad Portuaria de Ulsan, KOMERI, el Instituto de Investigación de Respuesta a la Contaminación Marina y otras instituciones.",
       "Se presentó cómo los LLM y la IA pueden convertir grandes volúmenes de normativa, planos aprobados e informes de ensayo en activos estructurados, y cotejar con precisión múltiples documentos, apoyando así la transformación digital de la administración marítima y las decisiones de los profesionales. Fue un tiempo valioso para reflexionar juntos sobre cómo aplicar la IA de forma práctica en la seguridad marítima y la formación, y cómo convertirlo en nuevos proyectos de I+D.",
+      "Posteriormente, en el seminario del 1 de octubre del Consejo Presidencial de Estrategia Nacional de IA sobre el debate de frenar el desarrollo de la IA, Sung Kim, CEO de Upstage, subrayó que, para hacer frente a las amenazas externas, Corea necesita su propia IA soberana, una IA \"de nuestro lado\".",
+    ],
+    links: [
+      {
+        label:
+          "Video del Consejo Presidencial de Estrategia Nacional de IA: \"Para detener a Terminator, necesitamos un Terminator de nuestro lado\" (CEO Sung Kim, en coreano)",
+        href: "https://www.youtube.com/watch?v=eEBVYAL63Pc",
+      },
     ],
     images: [
       "/images/evidence/maritime-ax-seminar-group-2026.jpg",

@@ -80,6 +80,22 @@ export default async function DailyLogPage({
                       <p key={i}>{paragraph}</p>
                     ))}
                   </div>
+                  {entry.links && entry.links.length > 0 && (
+                    <ul className="mt-4 max-w-2xl space-y-1.5 text-[14px]">
+                      {entry.links.map((link) => (
+                        <li key={link.href}>
+                          <a
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-accent-strong underline underline-offset-4 hover:opacity-80"
+                          >
+                            {link.label} ↗
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   {entry.images && entry.images.length > 0 && (
                     <EvidencePhotos
                       images={entry.images}
