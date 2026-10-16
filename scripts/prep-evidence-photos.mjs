@@ -62,6 +62,18 @@ const jobs = [
     "2023_38th_marine_accident_prevention_seminar_presentation.jpg",
     "marine-accident-prevention-seminar-2023.jpg",
   ],
+  [
+    "2012_murmansk_icebreaker_drydock_jang_unkyu.jpg",
+    "murmansk-icebreaker-drydock-2012.jpg",
+  ],
+  [
+    "2012_murmansk_nuclear_icebreaker_yamal.jpg",
+    "murmansk-nuclear-icebreaker-yamal-2012.jpg",
+  ],
+  [
+    "2012_murmansk_nsr_transit_conference.jpg",
+    "murmansk-nsr-transit-conference-2012.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {
