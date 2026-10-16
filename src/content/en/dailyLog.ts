@@ -16,11 +16,11 @@ export const dailyLogEntries: DailyLogEntry[] = [
     date: "2026.09.09",
     title: "Attending the Seminar on AI-Driven Digital and Carbon-Neutral Transformation in Maritime Affairs and Fisheries",
     excerpt:
-      "At the Maritime AX Seminar in Busan, I joined Professor Jung Gu-min of Kookmin University and Upstage CEO Sung Kim to discuss AI transformation in the maritime and fisheries sector.",
+      "At the Maritime AX Seminar in Busan, I joined Professor Jung Gu-min of Kookmin University, President of the Korean Society of Mobility, and Upstage CEO Sung Kim to discuss AI transformation in the maritime and fisheries sector.",
     location: "Busan",
     body: [
       "On September 9, I attended the \"Seminar on AI-Based Digital and Carbon-Neutral Transformation and Work-Innovation Strategy for Maritime Affairs and Fisheries\" (Maritime AX Seminar) in Busan. It was co-hosted by the Korean Society of Mobility, the Korea Maritime Institute (KMI) and Upstage, and supported by KRISO, KOMERI, the Korean Register (KR), the Korea Maritime Transportation Safety Authority (KOMSA), the Marine Pollution Response Research Institute, Pusan National University and Pukyong National University, as part of the project on expanding green shipping corridors and developing a Korean model.",
-      "The meeting carried extra weight thanks to the presence of Professor Jung Gu-min of Kookmin University and Sung Kim, CEO of Upstage, one of Korea's flagship AI companies. Experts from Ulsan Port Authority, KOMERI, the Marine Pollution Response Research Institute and other institutions also took part.",
+      "The meeting carried extra weight thanks to the presence of Professor Jung Gu-min of Kookmin University, President of the Korean Society of Mobility, and Sung Kim, CEO of Upstage, one of Korea's flagship AI companies. Experts from Ulsan Port Authority, KOMERI, the Marine Pollution Response Research Institute and other institutions also took part.",
       "The session introduced how LLMs and AI can turn large volumes of regulations, approved drawings and test reports into structured assets, and cross-check multiple documents accurately, supporting the digital transformation of maritime administration and the decisions of practitioners. It was a meaningful time to think together about how AI can be put to practical use in maritime safety and education, and how that can lead to new R&D projects.",
     ],
     images: [

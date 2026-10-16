@@ -6,11 +6,11 @@ export const dailyLogEntries: DailyLogEntry[] = [
     date: "2026.09.09",
     title: "Participación en el seminario sobre transformación digital y neutralidad de carbono impulsada por IA en el sector marítimo y pesquero",
     excerpt:
-      "En el Maritime AX Seminar de Busan, compartí la jornada con el profesor Jung Gu-min de la Universidad Kookmin y con Sung Kim, CEO de Upstage, para debatir la transformación con IA del sector marítimo y pesquero.",
+      "En el Maritime AX Seminar de Busan, compartí la jornada con el profesor Jung Gu-min de la Universidad Kookmin, presidente de la Sociedad Coreana de Movilidad, y con Sung Kim, CEO de Upstage, para debatir la transformación con IA del sector marítimo y pesquero.",
     location: "Busan",
     body: [
       "El 9 de septiembre asistí en Busan al \"Seminario sobre transformación digital y hacia la neutralidad de carbono basada en IA y estrategia de innovación del trabajo en el sector marítimo y pesquero\" (Maritime AX Seminar). Fue organizado conjuntamente por la Sociedad Coreana de Movilidad, el Instituto Marítimo de Corea (KMI) y Upstage, con el apoyo de KRISO, KOMERI, el Registro Coreano (KR), la Autoridad Coreana de Seguridad del Transporte Marítimo (KOMSA), el Instituto de Investigación de Respuesta a la Contaminación Marina, la Universidad Nacional de Pusan y la Universidad Nacional de Pukyong, en el marco del proyecto de ampliación de corredores marítimos verdes y desarrollo de un modelo coreano.",
-      "La reunión cobró especial relevancia con la presencia del profesor Jung Gu-min de la Universidad Kookmin y de Sung Kim, CEO de Upstage, una de las empresas de IA más representativas de Corea. También participaron expertos de la Autoridad Portuaria de Ulsan, KOMERI, el Instituto de Investigación de Respuesta a la Contaminación Marina y otras instituciones.",
+      "La reunión cobró especial relevancia con la presencia del profesor Jung Gu-min de la Universidad Kookmin, presidente de la Sociedad Coreana de Movilidad, y de Sung Kim, CEO de Upstage, una de las empresas de IA más representativas de Corea. También participaron expertos de la Autoridad Portuaria de Ulsan, KOMERI, el Instituto de Investigación de Respuesta a la Contaminación Marina y otras instituciones.",
       "Se presentó cómo los LLM y la IA pueden convertir grandes volúmenes de normativa, planos aprobados e informes de ensayo en activos estructurados, y cotejar con precisión múltiples documentos, apoyando así la transformación digital de la administración marítima y las decisiones de los profesionales. Fue un tiempo valioso para reflexionar juntos sobre cómo aplicar la IA de forma práctica en la seguridad marítima y la formación, y cómo convertirlo en nuevos proyectos de I+D.",
     ],
     images: [
