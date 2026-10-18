@@ -2,6 +2,59 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "ocean-bridge-ep02-hormuz-2026-10",
+    date: "2026.10.19",
+    title: "Ocean Bridge EP.02, Ormuz: no fue casualidad que pudiéramos comprar barato y vender con libertad",
+    excerpt:
+      "A partir del cierre del estrecho de Ormuz, el segundo vídeo de Ocean Bridge pregunta quién construyó y protegió las rutas marítimas libres que damos por sentadas, y quién debe pagar ahora su coste.",
+    body: [
+      "Desde que Estados Unidos e Israel atacaron Irán el 28 de febrero de 2026, el estrecho de Ormuz lleva más de siete meses prácticamente cerrado. Solo la semana pasada fueron atacados doce buques, y el petróleo ha subido a 110 dólares por barril. Las noticias dicen que el estrecho está cerrado porque Estados Unidos e Irán están en guerra. Es cierto, pero si solo lo vemos así se nos escapa lo más importante. En el segundo vídeo de mi canal de YouTube Ocean Bridge aproveché esta crisis para mirar sobre qué se han sostenido las rutas marítimas que damos por sentadas.",
+      "Los mayores portacontenedores, de 400 m de eslora y 24.000 contenedores, son más largos que el edificio 63 de Seúl tumbado. Un buque así cuesta cientos de millones de dólares, y los puertos que los reciben, miles de millones. Que las categorías de tamaño de los buques lleven nombres de canales y estrechos —Panamax, Suezmax, Malaccamax— muestra que se diseñaron desde el principio con la confianza de que esas rutas siempre estarían abiertas. Esa confianza descansa en tres promesas: el estándar de contenedores adoptado después de 1956, las normas de seguridad y navegación de la Organización Marítima Internacional (como el convenio SOLAS) y la Convención de las Naciones Unidas sobre el Derecho del Mar (CONVEMAR), según la cual el paso en tránsito por los estrechos internacionales no puede suspenderse (art. 44) ni puede cobrarse por el mero paso (art. 26).",
+      "Pero el mar no siempre fue así. Dinamarca cobró peaje a los barcos que entraban en el Báltico durante 428 años, de 1429 a 1857, y en el océano Índico del siglo XVI un barco sin salvoconducto portugués podía ser apresado. Frente a ello, el jurista neerlandés Grocio defendió en Mare Liberum (1609) que el mar no pertenece a nadie. La frontera entre marina y piratería también era difusa: Francis Drake, que saqueó galeones españoles, fue nombrado caballero por Isabel I en 1581, y el corso —buques armados privados con licencia del Estado— no se abolió oficialmente hasta la Declaración de París de 1856.",
+      "En el siglo XIX la Marina Real británica, y tras las dos guerras mundiales la Armada de Estados Unidos, protegieron la libertad de los mares. George Friedman (Los próximos 100 años) sitúa la base del poder estadounidense en una armada que controla todos los océanos; Niall Ferguson (Colossus) ve a Estados Unidos asumiendo el papel británico de sostener el libre comercio; Robert Kagan (The World America Made) sostiene que, porque la Armada estadounidense actuó como policía de los mares, hubo menos grandes guerras y pudo mantenerse una economía de mercado libre. Las reglas pueden acordarse, pero lo que de verdad detiene a quien las incumple no es el texto de un acuerdo, sino la fuerza. Curiosamente, Estados Unidos, que lideró este orden, nunca se adhirió a la CONVEMAR pero hizo cumplir sus normas de navegación con buques de guerra, mientras que Irán la firmó sin ratificarla.",
+      "La piratería no es cosa del pasado. Los ataques frente a Somalia llegaron a 217 en 2009 y 237 en 2011; en enero de 2011 la unidad Cheonghae de la Armada coreana rescató a los 21 tripulantes del Samho Jewelry en la Operación Amanecer del Golfo de Adén. Cuando una coalición de 47 países y las armadas nacionales sacaron realmente sus buques al mar, los ataques de piratas somalíes bajaron a 15 en 2013. Al contrario, tras la crisis financiera asiática, la piratería en el estrecho de Malaca pasó de 2 incidentes en 1999 a 75 al año siguiente. Cuando la economía se hunde y el orden se debilita, el mar vuelve a ser peligroso.",
+      "Ormuz lo muestra con más claridad que nada. En tiempos normales pasan por el estrecho unos 20 millones de barriles diarios, alrededor de una quinta parte del consumo mundial de petróleo (EIA de EE. UU.). Durante la guerra entre Irán e Irak en los años 80, unos 546 buques sufrieron daños y murieron unos 430 marinos. Lo que reabrió esas aguas fue la Operación Earnest Will de 1987, en la que petroleros kuwaitíes izaron la bandera estadounidense y fueron escoltados por la Armada de EE. UU. En The Jungle Grows Back, Kagan compara el orden liberal con un jardín que alguien debe cuidar sin descanso; si se abandona, la selva vuelve a crecer. Lo que vemos hoy en Ormuz es precisamente la selva que regresa.",
+      "No se trata solo de Ormuz. El estrecho de Malaca, por el que pasa el 29 % del petróleo transportado por mar, mide solo 2,7 km en su punto más estrecho. En el estrecho de Taiwán, por el que pasó casi la mitad de los portacontenedores del mundo en 2022, se declaran zonas de fuego real cada vez que el ejército chino realiza grandes maniobras. Durante la guerra entre Rusia y Ucrania de 2022, Turquía invocó la Convención de Montreux de 1936 para cerrar los estrechos a los buques de guerra de los beligerantes, y la Ruta Marítima del Norte, de la que hablamos en el EP.01, ya exige permiso ruso.",
+      "Corea transporta por mar el 99,7 % de su carga de exportación e importación. Poder importar materias primas baratas y vender libremente lo que fabricamos —nuestro rápido crecimiento— se sostuvo sobre estos mares. Pero este orden tiene un coste. En Bitcoin y la geopolítica del dólar, el profesor Oh Tae-min se pregunta quién paga el mantenimiento del orden comercial y financiero centrado en el dólar. Según las proyecciones de la Oficina de Presupuesto del Congreso, en 2024 los intereses que paga el Gobierno de EE. UU. por su deuda superaron por primera vez al gasto en defensa, y desde la revolución del esquisto Estados Unidos depende del crudo del golfo Pérsico solo para cerca del 2 % de su consumo de petróleo. Ian Bremmer llama a esto un mundo «G-Cero»: muchos países pueden romper el tablero, pero ninguno asume la responsabilidad de dirigirlo.",
+      "Por eso debemos prepararnos: diversificar el origen del petróleo y el gas, ampliar las reservas, desarrollar la capacidad de seguridad marítima para proteger nuestros propios buques, estrechar lazos con los países ribereños de los estrechos y preparar con antelación rutas alternativas como la Ruta Marítima del Norte. Lo que la crisis de Ormuz nos ha enviado no es una noticia de guerra, sino una factura: la de que el coste de las rutas marítimas que otros pagaban por nosotros ahora debemos compartirlo. El próximo vídeo tratará sobre los buques ecológicos y el futuro del transporte marítimo.",
+    ],
+    links: [
+      {
+        label: "▶ Vídeo en YouTube: Ocean Bridge EP.02, Ormuz (publicado el 19 oct 2026, en coreano)",
+        href: "https://youtu.be/I1Uf8CMn5H4",
+      },
+      {
+        label: "EIA de EE. UU.: unos 20 millones de barriles diarios por el estrecho de Ormuz, cerca del 20 % del consumo mundial (16 jun 2025, en inglés)",
+        href: "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+      },
+      {
+        label: "EIA: Puntos críticos del tránsito mundial de petróleo — Malaca, el 29 % del petróleo por mar (en inglés)",
+        href: "https://www.eia.gov/international/content/analysis/special_topics/world_oil_transit_chokepoints",
+      },
+      {
+        label: "CONVEMAR, Parte III (estrechos internacionales) — art. 38 paso en tránsito, art. 44 sin suspensión (en inglés)",
+        href: "https://www.un.org/depts/los/convention_agreements/texts/unclos/part3.htm",
+      },
+      {
+        label: "Lloyd's List: la guerra de los petroleros de los años 80 — unos 546 buques dañados y unos 430 marinos muertos (15 may 2019, en inglés)",
+        href: "https://lloydslist.com/LL1127507/Time-to-step-back-from-Tanker-War-Two",
+      },
+      {
+        label: "CRFB: en 2024 los intereses de la deuda de EE. UU. superan el gasto en defensa — proyecciones de la CBO (en inglés)",
+        href: "https://www.crfb.org/blogs/interest-costs-will-leapfrog-medicare-and-defense-year",
+      },
+      {
+        label: "Al Jazeera: EE. UU. e Irán reivindican el control del estrecho de Ormuz mientras siguen los ataques a buques (17 oct 2026, en inglés)",
+        href: "https://aljazeera.com/news-analysis/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+      },
+    ],
+    images: [
+      "/images/evidence/ocean-bridge-ep02-megaship-vs-63building.jpg",
+      "/images/evidence/ocean-bridge-ep02-unclos-article44.jpg",
+      "/images/evidence/ocean-bridge-ep02-earnest-will-1987.jpg",
+    ],
+  },
+  {
     id: "ocean-bridge-ep01-arctic-route-2026-10",
     date: "2026.10.17",
     title: "Ocean Bridge EP.01, la Ruta del Mar del Norte: cuatro grandes retos y la oportunidad de Busan",
@@ -19,6 +72,10 @@ export const dailyLogEntries: DailyLogEntry[] = [
       "Solo quien ve el problema con claridad y acepta sus límites puede crear la tecnología y la estrategia para superarlos. El próximo vídeo, \"Ormuz siempre estuvo bloqueado\", aborda la historia oculta y la geopolítica del transporte marítimo mundial sostenido por el poder naval de EE. UU.",
     ],
     links: [
+      {
+        label: "▶ Vídeo en YouTube: Ocean Bridge EP.01, la Ruta Marítima del Norte (publicado el 17 oct 2026, en coreano)",
+        href: "https://youtu.be/Sj3aEhzzbbQ",
+      },
       {
         label:
           "TASS: Las empresas prevén transportar carga por valor de 1,1 billones de dólares por la Ruta del Mar del Norte — ministro (10 de junio de 2024, en inglés)",

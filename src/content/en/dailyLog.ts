@@ -13,6 +13,59 @@ export interface DailyLogEntry {
 // verified professional milestones; this is the human-interest counterpart.
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "ocean-bridge-ep02-hormuz-2026-10",
+    date: "2026.10.19",
+    title: "Ocean Bridge EP.02, Hormuz: It Was No Accident That We Could Buy Cheap and Sell Freely",
+    excerpt:
+      "Taking the closure of the Strait of Hormuz as a starting point, the second Ocean Bridge video asks who built and guarded the free sea lanes we take for granted — and who must now pay for them.",
+    body: [
+      "Since the United States and Israel struck Iran on 28 February 2026, the Strait of Hormuz has been effectively closed for more than seven months. Twelve ships were attacked last week alone, and oil has climbed to $110 a barrel. The news says the strait is closed because the US and Iran are fighting. That is true, but seen only that way we miss something more important. In the second video on my YouTube channel Ocean Bridge, I used this crisis to look at what the sea lanes we take for granted have actually been standing on.",
+      "The largest container ships, 400 m long and carrying 24,000 containers, are longer than Seoul's 63 Building laid on its side. One such ship costs hundreds of millions of dollars, and the ports that receive them cost billions. That ship size classes are named after canals and straits — Panamax, Suezmax, Malaccamax — shows that ships were designed from the start on the belief that these routes would always be open. That belief rests on three promises: the container standard adopted after 1956, the safety and navigation rules of the International Maritime Organization (such as SOLAS), and the UN Convention on the Law of the Sea (UNCLOS), under which transit passage through international straits shall not be suspended (Art. 44) and no charge may be levied merely for passage (Art. 26).",
+      "But the sea was not always like this. Denmark charged tolls on ships entering the Baltic for 428 years, from 1429 to 1857, and in the 16th-century Indian Ocean a ship without a Portuguese pass could be seized. Against this, the Dutch jurist Grotius argued in Mare Liberum (1609) that the sea belongs to no one. The line between navy and pirate was blurred, too: Francis Drake, who plundered Spanish treasure ships, was knighted by Elizabeth I in 1581, and privateering — state-licensed private warships — was only formally abolished by the Declaration of Paris in 1856.",
+      "In the 19th century the Royal Navy, and after two world wars the U.S. Navy, guarded the freedom of the seas. George Friedman (The Next 100 Years) finds the basis of American power in a navy that controls all the world's oceans; Niall Ferguson (Colossus) sees the US taking over Britain's role of underpinning free trade; Robert Kagan (The World America Made) argues that because the U.S. Navy acted as the policeman of the seas, great-power wars became rarer and a free market economy could survive. Rules can be agreed, but what actually stops rule-breakers is not the text of an agreement but power. Interestingly, the US, which led this order, never joined UNCLOS yet upheld its navigation rules with warships, while Iran signed but never ratified it.",
+      "Piracy is not a thing of the past. Attacks off Somalia reached 217 in 2009 and 237 in 2011; in January 2011 the Korean Navy's Cheonghae Unit rescued all 21 crew of the hijacked Samho Jewelry in Operation Dawn of Gulf of Aden. When a 47-nation coalition and national navies actually put warships to sea, Somali pirate attacks fell to 15 in 2013. Conversely, after the Asian financial crisis, piracy in the Strait of Malacca jumped from 2 incidents in 1999 to 75 the following year. When economies collapse and order weakens, the sea becomes dangerous again.",
+      "Hormuz shows this most vividly. Normally about 20 million barrels a day — about a fifth of world oil consumption — pass through the strait (U.S. EIA). During the Iran–Iraq War in the 1980s, about 546 ships were damaged and about 430 seafarers were killed. What reopened these waters was Operation Earnest Will in 1987, in which Kuwaiti tankers were reflagged under the Stars and Stripes and escorted by the U.S. Navy. In The Jungle Grows Back, Kagan compares the liberal order to a garden that someone must tend constantly; let go, and the jungle grows back. What we are seeing in Hormuz now is the jungle returning.",
+      "This is not only about Hormuz. The Strait of Malacca, which carries 29% of seaborne oil, is only 2.7 km wide at its narrowest. In the Taiwan Strait, through which nearly half the world's container ships passed in 2022, live-fire zones are declared whenever China's military holds large exercises. During the 2022 Russia–Ukraine war, Türkiye invoked the 1936 Montreux Convention to close the straits to warships of belligerent states, and the Northern Sea Route covered in EP.01 already requires Russian permission.",
+      "Korea moves 99.7% of its export and import cargo by sea. Our ability to import raw materials cheaply and sell what we make freely — our rapid growth itself — stood on these seas. But this order has a cost. In Bitcoin and the Geopolitics of the Dollar, Professor Oh Tae-min asks who pays the cost of maintaining the dollar-centred trade and financial order. According to Congressional Budget Office projections, in 2024 the U.S. government's interest payments on its debt exceeded defence spending for the first time, and since the shale revolution the US depends on Persian Gulf crude for only about 2% of its oil consumption. Ian Bremmer calls this a \"G-Zero\" world: many countries can break the game, but none will take responsibility for leading it.",
+      "So we must prepare: diversify where we import oil and gas from, enlarge our reserves, build the maritime security capability to protect our own ships, deepen ties with the countries along the straits, and prepare alternative routes such as the Northern Sea Route in advance. What the Hormuz crisis has sent us is not war news but a bill — a bill saying that the cost of the sea lanes someone else used to pay for us, we must now share. The next video looks at green ships and the future of shipping.",
+    ],
+    links: [
+      {
+        label: "▶ YouTube video: Ocean Bridge EP.02, Hormuz (released 19 Oct 2026, in Korean)",
+        href: "https://youtu.be/I1Uf8CMn5H4",
+      },
+      {
+        label: "U.S. EIA: about 20 million barrels a day through the Strait of Hormuz, about 20% of world oil consumption (16 Jun 2025)",
+        href: "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+      },
+      {
+        label: "U.S. EIA: World oil transit chokepoints — the Strait of Malacca carries 29% of seaborne oil",
+        href: "https://www.eia.gov/international/content/analysis/special_topics/world_oil_transit_chokepoints",
+      },
+      {
+        label: "UNCLOS Part III (Straits used for international navigation) — Art. 38 transit passage, Art. 44 no suspension",
+        href: "https://www.un.org/depts/los/convention_agreements/texts/unclos/part3.htm",
+      },
+      {
+        label: "Lloyd's List: the 1980s Tanker War — about 546 ships damaged, about 430 seafarers killed (15 May 2019)",
+        href: "https://lloydslist.com/LL1127507/Time-to-step-back-from-Tanker-War-Two",
+      },
+      {
+        label: "CRFB: U.S. net interest costs overtake defense spending in 2024 — based on CBO projections",
+        href: "https://www.crfb.org/blogs/interest-costs-will-leapfrog-medicare-and-defense-year",
+      },
+      {
+        label: "Al Jazeera: US and Iran both claim control of the Strait of Hormuz amid attacks on vessels (17 Oct 2026)",
+        href: "https://aljazeera.com/news-analysis/2026/10/17/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels",
+      },
+    ],
+    images: [
+      "/images/evidence/ocean-bridge-ep02-megaship-vs-63building.jpg",
+      "/images/evidence/ocean-bridge-ep02-unclos-article44.jpg",
+      "/images/evidence/ocean-bridge-ep02-earnest-will-1987.jpg",
+    ],
+  },
+  {
     id: "ocean-bridge-ep01-arctic-route-2026-10",
     date: "2026.10.17",
     title: "Ocean Bridge EP.01, the Northern Sea Route: Four Hard Problems and Busan's Opportunity",
@@ -30,6 +83,10 @@ export const dailyLogEntries: DailyLogEntry[] = [
       "Only those who see the problem clearly and accept its limits can build the technology and strategy to overcome them. The next video, \"Hormuz Was Always Blocked,\" looks at the hidden history and geopolitics of global shipping as sustained by U.S. naval power.",
     ],
     links: [
+      {
+        label: "▶ YouTube video: Ocean Bridge EP.01, the Northern Sea Route (released 17 Oct 2026, in Korean)",
+        href: "https://youtu.be/Sj3aEhzzbbQ",
+      },
       {
         label:
           "TASS: Companies plan to transport cargo worth $1.1 trillion along Northern Sea Route — minister (June 10, 2024)",
