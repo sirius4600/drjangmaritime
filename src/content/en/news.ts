@@ -133,5 +133,32 @@ export const newsItems: NewsItem[] = [
     sourceUrl:
       "https://www.westpandi.com/news-and-resources/news/june-2025/amendments-to-the-maritime-labour-convention-adopt/",
   },
-  // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
+    {
+    id: "imo-marine-geoengineering-frameworks",
+    category: "imo",
+    title: "IMO adopts assessment frameworks for marine geoengineering research",
+    summary: "Meeting October 5–9, 2026, Parties to the London Convention and Protocol adopted new assessment frameworks for ocean fertilization, alkalinity enhancement, and biomass sinking. The frameworks help governments evaluate whether proposed marine geoengineering research is legitimate science and can proceed without unacceptable environmental risks, providing standardized screening, risk assessment, and decision-making processes.",
+    date: "2026.10.21",
+    source: "International Maritime Organization",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pages/default.aspx",
+  },
+  {
+    id: "first-commercial-green-ammonia-bunkering",
+    category: "green",
+    title: "World's first commercial ship-to-ship green ammonia bunkering completed",
+    summary: "On October 13, 2026, the world's first commercial ship-to-ship green ammonia bunkering was completed at Zhoushan Port, China, transferring 1,000 tons of green ammonia to a 210,000-DWT bulk carrier. Energy China says the operation demonstrates commercial deployment across the entire deep-sea shipping value chain—production, storage, transport, bunkering, and onboard use—offering a real-world model for scaling green marine fuels.",
+    date: "2026.10.21",
+    source: "Marine Log",
+    sourceUrl: "https://marinelog.com/news/energy-china-in-world-first-commercial-ship-to-ship-green-ammonia-bunkering",
+  },
+  {
+    id: "maritime-cyber-extortion-n0n",
+    category: "cyber",
+    title: "Cyber extortion group lists 38 maritime organizations with ransom deadline",
+    summary: "On October 12, 2026, cyber extortion group n0n listed 38 maritime and logistics organizations across 18 countries on its dark web leak site, with ransom demands ranging from $2.4 million to $14 million and a deadline of October 19, 2026. Targets include container terminals, shipping lines, port IT providers, and logistics companies. Cybersecurity firms warn the incident may trace to a common vendor breach affecting operational and commercial data.",
+    date: "2026.10.21",
+    source: "Safety4Sea",
+    sourceUrl: "https://safety4sea.com/cyber-extortion-group-targets-38-maritime-organizations/",
+  },
+// --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

@@ -99,5 +99,32 @@ export const newsItems: NewsItem[] = [
     sourceUrl:
       "https://www.westpandi.com/news-and-resources/news/june-2025/amendments-to-the-maritime-labour-convention-adopt/",
   },
-  // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
+    {
+    id: "imo-marine-geoengineering-frameworks",
+    category: "imo",
+    title: "IMO, 해양 지오엔지니어링 연구 평가 프레임워크 채택",
+    summary: "2026년 10월 5~9일 회의에서 런던협약 및 의정서 당사국들은 해양 비옥화, 알칼리도 강화, 바이오매스 침강에 대한 새로운 평가 프레임워크를 채택했다. 이 프레임워크는 각국 정부가 제안된 해양 지오엔지니어링 연구가 정당한 과학 연구인지, 허용 불가능한 환경 위험 없이 진행될 수 있는지 평가할 수 있도록 표준화된 선별, 위험 평가 및 의사 결정 절차를 제공한다.",
+    date: "2026.10.21",
+    source: "International Maritime Organization",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pages/default.aspx",
+  },
+  {
+    id: "first-commercial-green-ammonia-bunkering",
+    category: "green",
+    title: "세계 최초 상업용 선박 간 그린 암모니아 벙커링 완료",
+    summary: "2026년 10월 13일 중국 저우산항에서 세계 최초의 상업용 선박 간 그린 암모니아 벙커링이 완료되어 21만 DWT 벌크선에 1,000톤의 그린 암모니아를 공급했다. 에너지 차이나는 이번 작업이 생산, 저장, 운송, 벙커링, 선박 사용에 이르는 심해 운송 가치사슬 전체에 걸친 상업적 배치를 입증하며, 친환경 선박 연료 확대를 위한 실제 모델을 제시한다고 밝혔다.",
+    date: "2026.10.21",
+    source: "Marine Log",
+    sourceUrl: "https://marinelog.com/news/energy-china-in-world-first-commercial-ship-to-ship-green-ammonia-bunkering",
+  },
+  {
+    id: "maritime-cyber-extortion-n0n",
+    category: "cyber",
+    title: "사이버 갈취 그룹, 38개 해운 조직 대상 랜섬 요구",
+    summary: "2026년 10월 12일, 사이버 갈취 그룹 n0n이 18개국 38개 해운 및 물류 조직을 다크웹 유출 사이트에 등재하며 240만~1,400만 달러의 랜섬을 요구했고 마감일은 10월 19일이다. 대상에는 컨테이너 터미널, 해운선사, 항만 IT 공급업체, 물류회사가 포함된다. 사이버보안 전문가들은 이번 사건이 공통 벤더 침해로 인해 운영 및 상업 데이터가 노출된 것으로 추정한다고 경고한다.",
+    date: "2026.10.21",
+    source: "Safety4Sea",
+    sourceUrl: "https://safety4sea.com/cyber-extortion-group-targets-38-maritime-organizations/",
+  },
+// --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
