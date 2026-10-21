@@ -820,21 +820,30 @@ ${sections.awardsMd}
 
 // ---------------------------------------------------------------- run
 
-const koData = buildLocaleData("ko");
-const mdSections = buildMasterDbSections(koData);
-writeAssembledBasic(koData);
-writeAssembledExtended(koData, mdSections);
-writeAssembledFull(koData, mdSections);
+// private-source-docs/ is gitignored, so it doesn't exist on the CI runner —
+// there, only the public copies below are regenerated.
+const hasPrivateDir = existsSync(RESUME_DB_DIR);
+if (hasPrivateDir) {
+  const koData = buildLocaleData("ko");
+  const mdSections = buildMasterDbSections(koData);
+  writeAssembledBasic(koData);
+  writeAssembledExtended(koData, mdSections);
+  writeAssembledFull(koData, mdSections);
 
-const privateHtml = await buildHtml(privatePhone);
-writeFileSync(path.join(RESUME_DB_DIR, "resume-form.html"), privateHtml);
+  const privateHtml = await buildHtml(privatePhone);
+  writeFileSync(path.join(RESUME_DB_DIR, "resume-form.html"), privateHtml);
+}
 
 const publicHtml = await buildHtml("");
 writeFileSync(path.join(PUBLIC_DIR, "resume-form.html"), publicHtml);
 writeFileSync(path.join(SITE_PUBLIC_DIR, `${WEB_SLUG}.html`), publicHtml);
 
 console.log("Resume regenerated (ko/en/ja/es):");
-console.log(" -", path.join(RESUME_DB_DIR, "resume-form.html"), privatePhone ? "(with phone)" : "(no private phone found — blank)");
+if (hasPrivateDir) {
+  console.log(" -", path.join(RESUME_DB_DIR, "resume-form.html"), privatePhone ? "(with phone)" : "(no private phone found — blank)");
+} else {
+  console.log(" - (private-source-docs/resume-database not present — private copies skipped)");
+}
 console.log(" -", path.join(PUBLIC_DIR, "resume-form.html"), "(phone always blank)");
 console.log(" -", path.join(SITE_PUBLIC_DIR, `${WEB_SLUG}.html`), `(live at https://drjangmaritime.com/${WEB_SLUG}.html once deployed)`);
 console.log(" -", "ASSEMBLED_01/02/03.md (Korean only), MASTER_DB.md tables unchanged by this script — edit its prose by hand)");
