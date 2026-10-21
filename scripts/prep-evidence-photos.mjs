@@ -74,6 +74,18 @@ const jobs = [
     "2012_murmansk_nsr_transit_conference.jpg",
     "murmansk-nsr-transit-conference-2012.jpg",
   ],
+  [
+    "2025_kcg_best_vts_operator_competition_group_01.jpg",
+    "kcg-vts-competition-group-2025-01.jpg",
+  ],
+  [
+    "2025_kcg_best_vts_operator_competition_group_02.jpg",
+    "kcg-vts-competition-group-2025-02.jpg",
+  ],
+  [
+    "2025_kcg_best_vts_operator_competition_judge_seat.jpg",
+    "kcg-vts-competition-judge-seat-2025.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {

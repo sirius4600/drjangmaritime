@@ -146,4 +146,22 @@ export const dailyLogEntries: DailyLogEntry[] = [
     ],
     images: ["/images/evidence/skandi-connector-bridge-2026.jpg"],
   },
+  {
+    id: "kcg-best-vts-operator-competition-2025-11",
+    date: "2025.11.20",
+    title: "2025년도 최우수 선박교통관제사 선발 경진대회에 심사위원으로 참여하다",
+    excerpt:
+      "해양경찰청이 해양경찰교육원에서 연 '25년도 최우수 선박교통관제사 선발 경진대회'에 심사위원으로 참여했습니다.",
+    location: "해양경찰교육원",
+    body: [
+      "2025년 11월 20일, 해양경찰청이 주최하고 해양경찰교육원에서 열린 '25년도 최우수 선박교통관제사 선발 경진대회'에 심사위원으로 참여했습니다.",
+      "참가한 관제사들은 실제 관제센터와 같은 환경에서, 항만의 부두와 묘박지, 항로가 펼쳐진 관제 화면을 보며 주어진 상황에 대응하는 실력을 겨뤘습니다. 화면 너머의 선박 한 척 한 척을 안전하게 이끌기 위해 집중하는 모습에서, 우리 바다의 안전을 지키는 관제사들의 전문성과 책임감을 다시 한번 느꼈습니다.",
+      "VTS 교육과 연구에 오랫동안 몸담아 온 사람으로서, 현장의 관제사들이 서로의 실력을 확인하고 함께 성장하는 자리에 함께할 수 있어 무척 뜻깊었습니다. 수상한 관제사분들께 진심으로 축하를 전합니다.",
+    ],
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];

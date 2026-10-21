@@ -146,4 +146,22 @@ export const dailyLogEntries: DailyLogEntry[] = [
     ],
     images: ["/images/evidence/skandi-connector-bridge-2026.jpg"],
   },
+  {
+    id: "kcg-best-vts-operator-competition-2025-11",
+    date: "2025.11.20",
+    title: "2025年度 最優秀船舶交通管制官選抜競技大会に審査委員として参加",
+    excerpt:
+      "海洋警察庁が海洋警察教育院で開いた「2025年度 最優秀船舶交通管制官選抜競技大会」に審査委員として参加した。",
+    location: "海洋警察教育院",
+    body: [
+      "2025年11月20日、海洋警察庁が主催し海洋警察教育院で開かれた「2025年度 最優秀船舶交通管制官選抜競技大会」に審査委員として参加した。",
+      "参加した管制官たちは、実際の管制センターと同じ環境で、港の埠頭や錨地、航路が映し出された管制画面を見ながら、与えられた状況に対応する実力を競った。画面の向こうの一隻一隻を安全に導くために集中する姿に、韓国の海の安全を守る管制官たちの専門性と責任感を改めて感じた。",
+      "長年VTSの教育と研究に携わってきた者として、現場の管制官たちが互いの実力を確かめ、共に成長する場に立ち会えたことは本当に意義深かった。受賞された管制官の皆さんに心からお祝いを申し上げたい。",
+    ],
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];

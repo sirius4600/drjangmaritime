@@ -146,4 +146,22 @@ export const dailyLogEntries: DailyLogEntry[] = [
     ],
     images: ["/images/evidence/skandi-connector-bridge-2026.jpg"],
   },
+  {
+    id: "kcg-best-vts-operator-competition-2025-11",
+    date: "2025.11.20",
+    title: "Miembro del jurado en el Concurso al Mejor Operador VTS de 2025",
+    excerpt:
+      "Participé como miembro del jurado en el Concurso al Mejor Operador del Servicio de Tráfico Marítimo (VTS) de 2025 de la Guardia Costera de Corea, celebrado en la Academia de la Guardia Costera.",
+    location: "Academia de la Guardia Costera de Corea",
+    body: [
+      "El 20 de noviembre de 2025 participé como miembro del jurado en el Concurso al Mejor Operador del Servicio de Tráfico Marítimo (VTS) de 2025, organizado por la Guardia Costera de Corea y celebrado en su Academia.",
+      "Los operadores participantes compitieron en un entorno idéntico al de un centro VTS real, respondiendo a los escenarios planteados ante pantallas de tráfico que mostraban los muelles, fondeaderos y canales de un puerto. Al verlos concentrados en guiar con seguridad cada buque de la pantalla, volví a sentir la profesionalidad y el sentido de la responsabilidad de los operadores VTS que protegen nuestras aguas.",
+      "Como alguien que ha dedicado muchos años a la formación y la investigación en VTS, fue muy significativo formar parte de un encuentro en el que los operadores pudieron poner a prueba sus capacidades y crecer juntos. Mi más sincera enhorabuena a los operadores premiados.",
+    ],
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];

@@ -157,4 +157,22 @@ export const dailyLogEntries: DailyLogEntry[] = [
     ],
     images: ["/images/evidence/skandi-connector-bridge-2026.jpg"],
   },
+  {
+    id: "kcg-best-vts-operator-competition-2025-11",
+    date: "2025.11.20",
+    title: "Serving as a Judge at the 2025 Best VTS Operator Competition",
+    excerpt:
+      "I served as a judge at the Korea Coast Guard's 2025 Best Vessel Traffic Service Operator Competition, held at the Korea Coast Guard Academy.",
+    location: "Korea Coast Guard Academy",
+    body: [
+      "On November 20, 2025, I served as a judge at the 2025 Best Vessel Traffic Service (VTS) Operator Competition, hosted by the Korea Coast Guard and held at the Korea Coast Guard Academy.",
+      "The participating operators competed in an environment just like a real VTS centre, responding to given scenarios on traffic displays showing a port's berths, anchorages and fairways. Watching them concentrate on guiding every single vessel on the screen safely, I was reminded once again of the expertise and sense of responsibility of the VTS operators who keep our waters safe.",
+      "As someone who has spent many years in VTS education and research, it meant a great deal to be part of an occasion where front-line operators could test their skills and grow together. My sincere congratulations to the award-winning operators.",
+    ],
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];
