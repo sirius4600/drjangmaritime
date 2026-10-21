@@ -80,4 +80,16 @@ export const impactPillars = [
     description:
       "2001年から旅客船教育課程の責任教授、韓国初のLNG運搬船・ECDIS・ISPS教育課程の開発、50件以上の国家研究開発を遂行。",
   },
+  {
+    date: "2025.11",
+    category: "VTS",
+    title: "2025年度 最優秀船舶交通管制官選抜競技大会 審査委員",
+    detail:
+      "海洋警察庁が海洋警察教育院で開催した「2025年度 最優秀船舶交通管制官選抜競技大会」で審査委員を務め、管制官の管制能力を評価しました。",
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];

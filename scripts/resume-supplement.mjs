@@ -140,6 +140,7 @@ export const committeeHistory = {
     { period: "2021.06", org: "중앙해양안전심판원", role: "준 해양사고 사례공모전 심사위원장" },
     { period: "2023.10", org: "중앙해양안전심판원", role: "준 해양사고 사례공모전 심사위원" },
     { period: "2023.12~2024.04", org: "해양수산부 해사안전정책과", role: "IMO 전문가 위원회 고문" },
+    { period: "2025.11", org: "해양경찰청", role: "2025년도 최우수 선박교통관제사 선발 경진대회 심사위원" },
     { period: "2021.06~2025.12", org: "한국항해항만학회", role: "기획이사" },
   ],
   en: [
@@ -190,6 +191,7 @@ export const committeeHistory = {
     { period: "2021.06", org: "Korea Maritime Safety Tribunal", role: "Chair, Semi-Accident Case Competition Evaluation Committee" },
     { period: "2023.10", org: "Korea Maritime Safety Tribunal", role: "Evaluation Committee Member, Semi-Accident Case Competition" },
     { period: "2023.12~2024.04", org: "Ministry of Oceans and Fisheries, Maritime Safety Policy Division", role: "Advisor, IMO Expert Committee" },
+    { period: "2025.11", org: "Korea Coast Guard", role: "Judge, 2025 Best VTS Operator Competition" },
     { period: "2021.06~2025.12", org: "Korean Institute of Navigation and Port Research (KINPR)", role: "Planning Director" },
   ],
   ja: [
@@ -240,6 +242,7 @@ export const committeeHistory = {
     { period: "2021.06", org: "中央海洋安全審判院", role: "準海洋事故事例公募展審査委員長" },
     { period: "2023.10", org: "中央海洋安全審判院", role: "準海洋事故事例公募展審査委員" },
     { period: "2023.12~2024.04", org: "海洋水産部 海事安全政策課", role: "IMO専門家委員会顧問" },
+    { period: "2025.11", org: "海洋警察庁", role: "2025年度 最優秀船舶交通管制官選抜競技大会 審査委員" },
     { period: "2021.06~2025.12", org: "韓国航海港湾学会", role: "企画理事" },
   ],
   es: [
@@ -290,6 +293,7 @@ export const committeeHistory = {
     { period: "2021.06", org: "Tribunal Central de Seguridad Marítima de Corea", role: "Presidente del Comité de Evaluación, Concurso de Casos de Cuasi-Accidentes Marítimos" },
     { period: "2023.10", org: "Tribunal Central de Seguridad Marítima de Corea", role: "Miembro del Comité de Evaluación, Concurso de Casos de Cuasi-Accidentes Marítimos" },
     { period: "2023.12~2024.04", org: "Ministerio de Océanos y Pesca, División de Política de Seguridad Marítima", role: "Asesor, Comité de Expertos de la OMI" },
+    { period: "2025.11", org: "Guardia Costera de Corea", role: "Miembro del jurado, Concurso al Mejor Operador VTS de 2025" },
     { period: "2021.06~2025.12", org: "Instituto Coreano de Investigación en Navegación y Puertos (KINPR)", role: "Director de Planificación" },
   ],
 };

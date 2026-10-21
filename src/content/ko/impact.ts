@@ -80,4 +80,16 @@ export const impactPillars = [
     description:
       "2001년부터 여객선 교육과정 책임교수, 국내 최초 LNG 운반선·ECDIS·ISPS 교육과정 개발, 국가 R&D 50여 건 이상 수행.",
   },
+  {
+    date: "2025.11",
+    category: "VTS",
+    title: "2025년도 최우수 선박교통관제사 선발 경진대회 심사위원",
+    detail:
+      "해양경찰청이 해양경찰교육원에서 개최한 '25년도 최우수 선박교통관제사 선발 경진대회'에서 심사위원으로 관제사들의 관제 역량을 평가했습니다.",
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];

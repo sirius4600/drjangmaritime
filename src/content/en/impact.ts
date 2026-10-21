@@ -89,4 +89,16 @@ export const impactPillars = [
     description:
       "Responsible professor for passenger-ship safety training since 2001; built Korea's first LNG-carrier, ECDIS and ISPS training curricula; 50+ national R&D studies on maritime safety.",
   },
+  {
+    date: "2025.11",
+    category: "VTS",
+    title: "Judge, 2025 Best VTS Operator Competition",
+    detail:
+      "Served as a judge evaluating the operators' VTS skills at the Korea Coast Guard's 2025 Best Vessel Traffic Service Operator Competition, held at the Korea Coast Guard Academy.",
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];

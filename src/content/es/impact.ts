@@ -80,4 +80,16 @@ export const impactPillars = [
     description:
       "Profesor responsable de la formación en seguridad de buques de pasajeros desde 2001; creó los primeros programas de formación en buques metaneros (LNG), ECDIS e ISPS de Corea; más de 50 estudios nacionales de I+D en seguridad marítima.",
   },
+  {
+    date: "2025.11",
+    category: "VTS",
+    title: "Miembro del jurado, Concurso al Mejor Operador VTS de 2025",
+    detail:
+      "Formó parte del jurado que evaluó las competencias de los operadores en el Concurso al Mejor Operador del Servicio de Tráfico Marítimo (VTS) de 2025 de la Guardia Costera de Corea, celebrado en su Academia.",
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];
