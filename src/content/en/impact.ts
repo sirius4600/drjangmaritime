@@ -66,6 +66,18 @@ export const impactTimeline: ImpactEntry[] = [
       "Appeared on worktv's career-introduction series \"Today's Job\" to introduce the vessel traffic service (VTS) operator profession to the public.",
     images: ["/images/evidence/worktv-broadcast-2017.jpg"],
   },
+  {
+    date: "2025.11",
+    category: "VTS",
+    title: "Judge, 2025 Best VTS Operator Competition",
+    detail:
+      "Served as a judge evaluating the operators' VTS skills at the Korea Coast Guard's 2025 Best Vessel Traffic Service Operator Competition, held at the Korea Coast Guard Academy.",
+    images: [
+      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
+      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
+      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
+    ],
+  },
 ];
 
 export const impactPillars = [
@@ -88,17 +100,5 @@ export const impactPillars = [
     title: "Safety Education & Research",
     description:
       "Responsible professor for passenger-ship safety training since 2001; built Korea's first LNG-carrier, ECDIS and ISPS training curricula; 50+ national R&D studies on maritime safety.",
-  },
-  {
-    date: "2025.11",
-    category: "VTS",
-    title: "Judge, 2025 Best VTS Operator Competition",
-    detail:
-      "Served as a judge evaluating the operators' VTS skills at the Korea Coast Guard's 2025 Best Vessel Traffic Service Operator Competition, held at the Korea Coast Guard Academy.",
-    images: [
-      "/images/evidence/kcg-vts-competition-group-2025-01.jpg",
-      "/images/evidence/kcg-vts-competition-group-2025-02.jpg",
-      "/images/evidence/kcg-vts-competition-judge-seat-2025.jpg",
-    ],
   },
 ];
