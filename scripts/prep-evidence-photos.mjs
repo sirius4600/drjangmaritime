@@ -39,14 +39,6 @@ const jobs = [
     "skandi-connector-bridge-2026.jpg",
   ],
   [
-    "2026_busan_vts_mass_units_dusk.png",
-    "busan-vts-mass-units-dusk-2026.jpg",
-  ],
-  [
-    "2026_busan_vts_mass_unit_approach.png",
-    "busan-vts-mass-unit-approach-2026.jpg",
-  ],
-  [
     "2026_maritime_ax_seminar_upstage_presentation_busan.jpg",
     "maritime-ax-seminar-presentation-2026.jpg",
   ],
