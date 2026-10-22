@@ -13,6 +13,56 @@ export interface DailyLogEntry {
 // verified professional milestones; this is the human-interest counterpart.
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "ocean-bridge-ep03-green-ships-2026-10",
+    date: "2026.10.22",
+    title: "Ocean Bridge EP.03, Green Ships: Quo Vadis? The Unknown Future of Green Shipping",
+    excerpt:
+      "Prompted by the one-year delay of the IMO carbon rules everyone thought were settled, the third Ocean Bridge video looks at the uncertainty facing a ship that must sail for 25 years — and why that wave reaches not only shipping but all of us.",
+    body: [
+      "\"Quo vadis, Domine?\" — the old question of someone who has lost their way is now being asked by the whole shipping industry. A ship costs hundreds of millions of dollars and, once bought, sails for 25 years. Yet no one knows when the carbon rules it must follow over those 25 years will change. The third video on my YouTube channel Ocean Bridge is about this uncertainty and the big wave it brings.",
+      "Ships emit about 3% of the world's greenhouse gases (2.89% in the Fourth IMO GHG Study) — as much as a mid-sized country. Under the 2015 Paris Agreement this share was left to the International Maritime Organization (IMO), which set a goal of halving emissions by 2050 in 2018 and raised it to net zero around 2050 in 2023. The rule meant to enforce this is the Net-Zero Framework — in plain words, a carbon report card for every ship. Each year the cleanness of its fuel is scored, the pass line rises every year, ships that fall short pay, and ships that do better can sell their surplus.",
+      "In April 2025 the draft rules were approved in London by 63 votes to 16, and everyone believed the matter was essentially settled. Then the US government changed, and Washington opposed the rules as a \"global carbon tax\" that would shift costs onto American consumers and industry. At the extraordinary session in October, a proposal to postpone for one year passed 57 to 49. The video does not cast any side as the villain: opponents say forcing expensive fuels raises freight rates and prices; supporters say a patchwork of national rules would cost even more; and Europe has its own calculations. International rules ultimately stand on each country's politics — so even what is 'final' can be shaken. That is the first uncertainty.",
+      "The vote reopens in London on 4 December. Two thirds of member states must agree, and four roads lie ahead: the strongest proposal from Pacific island states whose land could disappear under rising seas, the current rules, a proposal to put no price on carbon, and compromise proposals in between. Even if adopted, the rules stop if states holding half the world's fleet object within ten months, and they would apply from 2028 at the earliest. Whichever road is taken, freight costs will rise.",
+      "The second wave is that the cost reaches all of us. In Korea, 99.7% of export and import cargo moves by sea, and almost all crude oil and gas arrives by ship. Measured by its share of GDP shipping looks small, but it is really the economy's blood vessels — we remember dozens of Korean ships stranded around the world when Hanjin Shipping collapsed. As the rules wobble, eight of ten Korean shipping companies are holding off on new ship orders (KOBC survey). In the IMO-commissioned comprehensive impact assessment (UNCTAD, model estimate), the same rules hit Korea's economy about twice as hard as the world average and Japan. The same wave rises higher on our side.",
+      "So the video ends with three points. First, we must know: a nation that lives by the sea must not become 'sea-blind'. Second, we must expect uncertainty: rather than betting everything on one answer, ships and plans should be able to survive whichever way things go. Third, we must prepare together. The Korean government is already doing a great deal — a green-ship transition plan, expanded finance for small and mid-sized shipping companies, regulatory consulting, a public-private council and national research on new fuels. On that foundation, government, shipowners, shipyards and research institutes need to strengthen their shared judgment, and we must start training seafarers who can handle new fuels now. We cannot stop the wave, but a ship that knows it is coming and prepares together can ride over it — and all of us are aboard that ship.",
+    ],
+    links: [
+      {
+        label: "▶ YouTube: Ocean Bridge EP.03, Green Ships (released 22 Oct 2026, Korean)",
+        href: "https://youtu.be/he01e93wC7o",
+      },
+      {
+        label: "IMO: Net-zero regulations approved (MEPC 83, April 2025)",
+        href: "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-approves-netzero-regulations.aspx",
+      },
+      {
+        label: "CIMAC: Extraordinary MEPC session postpones adoption by one year (57–49, Oct 2025)",
+        href: "https://www.cimac.com/news-press/news/extraordinary-imo-mepc-meeting-fails-to-adopt-net-zero-framework.html",
+      },
+      {
+        label: "IMO: Net-zero shipping talks to resume in 2026",
+        href: "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx",
+      },
+      {
+        label: "IMO: FAQs on the IMO Net-Zero Framework",
+        href: "https://www.imo.org/en/mediacentre/hottopics/pages/faqs-the-imo-net-zero-framework.aspx",
+      },
+      {
+        label: "Fourth IMO GHG Study 2020: shipping ≈ 2.89% of global emissions",
+        href: "https://www.imo.org/en/ourwork/environment/pages/fourth-imo-greenhouse-gas-study-2020.aspx",
+      },
+      {
+        label: "DNV: Regulatory uncertainty demands fleet strategies built for multiple futures (2026)",
+        href: "https://www.dnv.com/news/2026/DNV-Regulatory-uncertainty-demands-fleet-strategies-built-for-multiple-futures/",
+      },
+    ],
+    images: [
+      "/images/evidence/ocean-bridge-ep03-carbon-report-card.jpg",
+      "/images/evidence/ocean-bridge-ep03-four-roads-dec4.jpg",
+      "/images/evidence/ocean-bridge-ep03-korea-2x-wave.jpg",
+    ],
+  },
+  {
     id: "ocean-bridge-ep02-hormuz-2026-10",
     date: "2026.10.19",
     title: "Ocean Bridge EP.02, Hormuz: It Was No Accident That We Could Buy Cheap and Sell Freely",

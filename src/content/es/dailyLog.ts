@@ -2,6 +2,56 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "ocean-bridge-ep03-green-ships-2026-10",
+    date: "2026.10.22",
+    title: "Ocean Bridge EP.03, buques verdes: ¿Quo vadis? El futuro incierto del transporte marítimo verde",
+    excerpt:
+      "A raíz del aplazamiento de un año de las normas de carbono de la OMI que todos creían cerradas, el tercer video de Ocean Bridge examina la incertidumbre que enfrenta un buque que debe navegar 25 años, y por qué esa ola no solo alcanza al transporte marítimo, sino a todos nosotros.",
+    body: [
+      "«Quo vadis, Domine?»: la vieja pregunta de quien ha perdido el camino es hoy la misma que se hace toda la industria naviera. Un buque cuesta cientos de millones de dólares y, una vez comprado, navega 25 años. Sin embargo, nadie sabe cuándo cambiarán las normas de carbono que deberá cumplir durante esos 25 años. El tercer video de mi canal de YouTube Ocean Bridge trata de esta incertidumbre y de la gran ola que trae consigo.",
+      "Los buques emiten cerca del 3 % de los gases de efecto invernadero del mundo (2,89 % según el Cuarto Estudio de GEI de la OMI), tanto como un país mediano. Con el Acuerdo de París de 2015, esta parte quedó en manos de la Organización Marítima Internacional (OMI), que en 2018 se fijó reducir a la mitad las emisiones para 2050 y en 2023 elevó la meta a cero emisiones netas hacia 2050. La norma para cumplirlo es el Marco de Cero Emisiones Netas: en palabras sencillas, un boletín de calificaciones de carbono para cada buque. Cada año se puntúa lo limpio de su combustible, el umbral de aprobación sube año tras año, quien no llega paga y quien lo supera puede vender su excedente.",
+      "En abril de 2025 el borrador fue aprobado en Londres por 63 votos contra 16, y todos creyeron que el asunto estaba prácticamente decidido. Pero entretanto cambió el gobierno de Estados Unidos, que se opuso a las normas por considerarlas un «impuesto global al carbono» que trasladaría costos a sus consumidores e industria. En la sesión extraordinaria de octubre se aprobó por 57 a 49 una propuesta para aplazarlas un año. El video no presenta a nadie como villano: los opositores dicen que imponer combustibles caros eleva los fletes y los precios; los partidarios, que un mosaico de normas nacionales costaría aún más; y Europa tiene sus propios cálculos. Las normas internacionales se apoyan, al final, en la política de cada país; por eso incluso lo «definitivo» puede tambalearse. Esa es la primera incertidumbre.",
+      "La votación se reabre en Londres el 4 de diciembre. Se necesita el apoyo de dos tercios de los Estados miembros, y hay cuatro caminos por delante: la propuesta más ambiciosa de los Estados insulares del Pacífico, cuyos territorios podrían hundirse con la subida del mar; las normas actuales; una propuesta de no ponerle precio al carbono; y propuestas intermedias de compromiso. Aun si se adoptan, se detienen si los Estados con la mitad de la flota mundial se oponen en diez meses, y se aplicarían como muy pronto en 2028. Sea cual sea el camino, los fletes subirán.",
+      "La segunda ola es que el costo nos alcanza a todos. En Corea, el 99,7 % de la carga de exportación e importación viaja por mar, y casi todo el petróleo y el gas llega en barco. Medido por su peso en el PIB, el transporte marítimo parece pequeño, pero en realidad son los vasos sanguíneos de la economía: recordamos decenas de buques coreanos varados por todo el mundo cuando quebró Hanjin Shipping. Con las normas en el aire, ocho de cada diez navieras coreanas están aplazando sus pedidos de buques nuevos (encuesta de KOBC). En la evaluación integral de impacto encargada por la OMI (UNCTAD, estimación de modelo), las mismas normas golpean a la economía coreana con cerca del doble de fuerza que a la media mundial y a Japón. La misma ola llega más alta a nuestra orilla.",
+      "Por eso el video concluye con tres ideas. Primero, hay que saber: un país que vive del mar no debe volverse «ciego al mar». Segundo, hay que prever la incertidumbre: en lugar de apostarlo todo a una sola respuesta, buques y planes deben resistir vaya como vaya. Tercero, hay que prepararse juntos. El gobierno coreano ya hace mucho: un plan de transición a buques ecológicos, más financiación para navieras pequeñas y medianas, consultoría regulatoria, un consejo público-privado e investigación nacional sobre nuevos combustibles. Sobre esa base, gobierno, navieras, astilleros e institutos de investigación deben fortalecer su capacidad de decidir juntos, y debemos empezar ya a formar marinos capaces de manejar los nuevos combustibles. No podemos detener la ola, pero un buque que sabe que llega y se prepara en conjunto puede superarla; y en ese buque vamos todos.",
+    ],
+    links: [
+      {
+        label: "▶ YouTube: Ocean Bridge EP.03, buques verdes (publicado el 22 de octubre de 2026, en coreano)",
+        href: "https://youtu.be/he01e93wC7o",
+      },
+      {
+        label: "OMI: aprobación de las normas de cero emisiones netas (MEPC 83, abril de 2025, en inglés)",
+        href: "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-approves-netzero-regulations.aspx",
+      },
+      {
+        label: "CIMAC: la sesión extraordinaria del MEPC aplaza un año la adopción (57–49, octubre de 2025, en inglés)",
+        href: "https://www.cimac.com/news-press/news/extraordinary-imo-mepc-meeting-fails-to-adopt-net-zero-framework.html",
+      },
+      {
+        label: "OMI: las negociaciones de cero emisiones netas se reanudarán en 2026 (en inglés)",
+        href: "https://www.imo.org/en/mediacentre/pressbriefings/pages/imo-net-zero-shipping-talks-to-resume-in-2026.aspx",
+      },
+      {
+        label: "OMI: preguntas frecuentes sobre el Marco de Cero Emisiones Netas (en inglés)",
+        href: "https://www.imo.org/en/mediacentre/hottopics/pages/faqs-the-imo-net-zero-framework.aspx",
+      },
+      {
+        label: "Cuarto Estudio de GEI de la OMI (2020): el transporte marítimo ≈ 2,89 % de las emisiones mundiales (en inglés)",
+        href: "https://www.imo.org/en/ourwork/environment/pages/fourth-imo-greenhouse-gas-study-2020.aspx",
+      },
+      {
+        label: "DNV: la incertidumbre regulatoria exige estrategias de flota para múltiples futuros (2026, en inglés)",
+        href: "https://www.dnv.com/news/2026/DNV-Regulatory-uncertainty-demands-fleet-strategies-built-for-multiple-futures/",
+      },
+    ],
+    images: [
+      "/images/evidence/ocean-bridge-ep03-carbon-report-card.jpg",
+      "/images/evidence/ocean-bridge-ep03-four-roads-dec4.jpg",
+      "/images/evidence/ocean-bridge-ep03-korea-2x-wave.jpg",
+    ],
+  },
+  {
     id: "ocean-bridge-ep02-hormuz-2026-10",
     date: "2026.10.19",
     title: "Ocean Bridge EP.02, Ormuz: no fue casualidad que pudiéramos comprar barato y vender con libertad",
