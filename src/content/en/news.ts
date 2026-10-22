@@ -160,5 +160,23 @@ export const newsItems: NewsItem[] = [
     source: "Safety4Sea",
     sourceUrl: "https://safety4sea.com/cyber-extortion-group-targets-38-maritime-organizations/",
   },
+  {
+    id: "kmp-batumandi-ferry-fire-indonesia",
+    category: "safety",
+    title: "Ferry fire near Merak Port renews Indonesia safety scrutiny",
+    summary: "The KMP Batumandi ferry caught fire in the approach channel to Merak Port, Cilegon, on October 20, 2026. All passengers and crew were evacuated safely with no fatalities reported. The incident, occurring at approximately 16:15 WIB while en route from Bakauheni to Merak, has renewed attention on domestic ferry safety standards in Indonesia.",
+    date: "2026.10.23",
+    source: "Tempo.co",
+    sourceUrl: "https://en.tempo.co/read/2121998/kmp-batumandi-ferry-fire-raises-concerns-over-indonesias-maritime-safety",
+  },
+  {
+    id: "uscg-nvic-02-26-maritime-cyber-guidance",
+    category: "cyber",
+    title: "Coast Guard issues NVIC 02-26 maritime cybersecurity implementation guidance",
+    summary: "The U.S. Coast Guard released Navigation and Vessel Inspection Circular 02-26 on October 21, 2026, providing detailed compliance guidance for the 2025 maritime cybersecurity rule under 33 CFR Part 101, Subpart F. The circular includes section-by-section recommendations, sample Cybersecurity Officer designation letters, and templates to help U.S.-flagged vessels, port facilities, and Outer Continental Shelf facilities meet requirements, with cybersecurity plans due by July 16, 2027.",
+    date: "2026.10.23",
+    source: "U.S. Coast Guard / Executive Gov",
+    sourceUrl: "https://www.executivegov.com/articles/coast-guard-maritime-cybersecurity-guidance",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

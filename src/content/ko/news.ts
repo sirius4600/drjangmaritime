@@ -126,5 +126,23 @@ export const newsItems: NewsItem[] = [
     source: "Safety4Sea",
     sourceUrl: "https://safety4sea.com/cyber-extortion-group-targets-38-maritime-organizations/",
   },
+  {
+    id: "kmp-batumandi-ferry-fire-indonesia",
+    category: "safety",
+    title: "인도네시아 메라크항 인근 페리 화재로 안전 문제 재조명",
+    summary: "2026년 10월 20일 KMP Batumandi 페리가 칠레곤 메라크항 접근 수로에서 화재가 발생했다. 모든 승객과 승무원은 안전하게 대피했으며 사망자는 보고되지 않았다. Bakauheni에서 Merak으로 향하던 중 16:15 WIB경 발생한 이번 사고는 인도네시아 국내 페리 안전 기준에 대한 관심을 다시 불러일으키고 있다.",
+    date: "2026.10.23",
+    source: "Tempo.co",
+    sourceUrl: "https://en.tempo.co/read/2121998/kmp-batumandi-ferry-fire-raises-concerns-over-indonesias-maritime-safety",
+  },
+  {
+    id: "uscg-nvic-02-26-maritime-cyber-guidance",
+    category: "cyber",
+    title: "미 해안경비대, 해양 사이버보안 이행 지침 NVIC 02-26 발행",
+    summary: "미국 해안경비대는 2026년 10월 21일 NVIC(Navigation and Vessel Inspection Circular) 02-26을 발표하며 33 CFR Part 101, Subpart F 해양 사이버보안 규칙 준수를 위한 상세 지침을 제공했다. 이 회람은 미국 국적 선박, 항만 시설, 외대륙붕 시설을 대상으로 조항별 권고사항, 사이버보안 책임자 지정 서식 견본, 템플릿을 포함하며, 사이버보안 계획 제출 마감일은 2027년 7월 16일이다.",
+    date: "2026.10.23",
+    source: "U.S. Coast Guard / Executive Gov",
+    sourceUrl: "https://www.executivegov.com/articles/coast-guard-maritime-cybersecurity-guidance",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
