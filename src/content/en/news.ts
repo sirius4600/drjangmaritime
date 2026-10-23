@@ -178,5 +178,23 @@ export const newsItems: NewsItem[] = [
     source: "U.S. Coast Guard / Executive Gov",
     sourceUrl: "https://www.executivegov.com/articles/coast-guard-maritime-cybersecurity-guidance",
   },
+  {
+    id: "shanghai-melbourne-green-corridor-implementation",
+    category: "green",
+    title: "Shanghai–Melbourne Green Shipping Corridor Enters Implementation Phase",
+    summary: "The Port of Shanghai, Port of Melbourne, and C40 Cities launched an implementation plan for their green shipping corridor on October 21, 2026. The plan targets low-carbon container ships by 2035, with Shanghai setting a goal of one million tonnes annual bunkering capacity for green methanol and biofuels. Key measures include shore power infrastructure, voyage optimization through digitalization, and supply chain cooperation that could be replicated across other Australia–Asia trade routes.",
+    date: "2026.10.24",
+    source: "SAFETY4SEA",
+    sourceUrl: "https://safety4sea.com/shanghai-melbourne-green-shipping-corridor-enters-implementation-phase",
+  },
+  {
+    id: "china-green-shipping-corridor-leadership-gmf",
+    category: "green",
+    title: "China Now Linked to Nearly One-Fifth of Global Green Shipping Corridors",
+    summary: "A Global Maritime Forum report released October 22, 2026, reveals that China has rapidly become a global leader in green shipping corridors, with nearly one-fifth of worldwide corridor initiatives connecting to a Chinese port. The report identifies China's growing capabilities in green methanol and ammonia production as key factors supporting green corridor development, positioning the country as a central node in the emerging network of decarbonized maritime routes.",
+    date: "2026.10.24",
+    source: "Global Maritime Forum",
+    sourceUrl: "https://www.manifoldtimes.com/news/report-china-linked-to-nearly-one-fifth-of-global-green-shipping-corridor-initiatives/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

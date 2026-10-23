@@ -144,5 +144,23 @@ export const newsItems: NewsItem[] = [
     source: "U.S. Coast Guard / Executive Gov",
     sourceUrl: "https://www.executivegov.com/articles/coast-guard-maritime-cybersecurity-guidance",
   },
+  {
+    id: "shanghai-melbourne-green-corridor-implementation",
+    category: "green",
+    title: "상하이-멜버른 친환경 해운 회랑 이행 계획 발표",
+    summary: "상하이항, 멜버른항, C40 도시가 2026년 10월 21일 친환경 해운 회랑 이행 계획을 발표했다. 2035년까지 저탄소 컨테이너선 운항을 목표로 하며, 상하이는 그린 메탄올과 바이오 연료에 대한 연간 100만 톤의 벙커링 용량 확보를 계획하고 있다. 주요 조치로는 육상 전력 공급 인프라 구축, 디지털화를 통한 항로 최적화, 호주-아시아 항로로 확대 가능한 공급망 협력 등이 포함된다.",
+    date: "2026.10.24",
+    source: "SAFETY4SEA",
+    sourceUrl: "https://safety4sea.com/shanghai-melbourne-green-shipping-corridor-enters-implementation-phase",
+  },
+  {
+    id: "china-green-shipping-corridor-leadership-gmf",
+    category: "green",
+    title: "중국, 전 세계 친환경 해운 회랑의 5분의 1 참여",
+    summary: "2026년 10월 22일 발표된 글로벌 해사 포럼(Global Maritime Forum) 보고서에 따르면, 중국은 빠르게 친환경 해운 회랑 분야의 글로벌 리더로 부상하여 전 세계 회랑 이니셔티브의 약 5분의 1이 중국 항구와 연결되어 있다. 보고서는 중국의 그린 메탄올과 암모니아 생산 역량 증가가 친환경 회랑 개발을 지원하는 핵심 요인이며, 중국이 탈탄소 해운 네트워크의 중심 노드로 자리잡고 있다고 분석했다.",
+    date: "2026.10.24",
+    source: "Global Maritime Forum",
+    sourceUrl: "https://www.manifoldtimes.com/news/report-china-linked-to-nearly-one-fifth-of-global-green-shipping-corridor-initiatives/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
