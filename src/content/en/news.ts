@@ -196,5 +196,32 @@ export const newsItems: NewsItem[] = [
     source: "Global Maritime Forum",
     sourceUrl: "https://www.manifoldtimes.com/news/report-china-linked-to-nearly-one-fifth-of-global-green-shipping-corridor-initiatives/",
   },
+  {
+    id: "imo-blue-solutions-southeast-asia-launch",
+    category: "green",
+    title: "IMO Launches Blue Solutions Project for Southeast Asian Port Decarbonization",
+    summary: "IMO launched the Blue Solutions project on October 23 at the ASEAN Maritime Transport Working Group meeting in Phnom Penh to support maritime decarbonization across six Southeast Asian countries. The initiative, funded by Germany's International Climate Initiative with EUR 5.9 million for Phase 1, will run until January 2031 and focus on port and vessel electrification, cleaner technologies, and developing greenhouse gas emission baselines in Cambodia, Indonesia, Malaysia, the Philippines, Thailand, and Vietnam.",
+    date: "2026.10.25",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pages/whatsnew-2514.aspx",
+  },
+  {
+    id: "imo-remote-inspection-esp-code-framework",
+    category: "safety",
+    title: "IMO Adopts Remote Inspection Framework for Bulk Carriers and Oil Tankers",
+    summary: "IMO adopted amendments to the 2011 ESP Code through Resolution MSC.584(111), establishing a standardized framework for using Remote Inspection Techniques during surveys of bulk carriers and oil tankers. The new requirements, which enter into force January 1, 2028, replace the previous case-by-case approval process with comprehensive standards covering RIT systems certification, service provider approval, and survey execution for close-up structural inspections.",
+    date: "2026.10.25",
+    source: "SAFETY4SEA",
+    sourceUrl: "https://safety4sea.com/imo-adopts-new-framework-for-remote-inspections-of-bulk-carriers-and-oil-tankers/",
+  },
+  {
+    id: "uscg-nvic-02-26-cyber-guidance-release",
+    category: "cyber",
+    title: "U.S. Coast Guard Issues NVIC 02-26 Cybersecurity Implementation Guidance",
+    summary: "The U.S. Coast Guard released Navigation and Vessel Inspection Circular 02-26 on October 23 to guide maritime operators in complying with federal cybersecurity regulations under 33 CFR Part 101, Subpart F. The circular provides templates and methods for U.S.-flagged vessels, port facilities, and Outer Continental Shelf facilities regulated under the Maritime Transportation Security Act, with cybersecurity plans due July 16, 2027.",
+    date: "2026.10.25",
+    source: "U.S. Coast Guard",
+    sourceUrl: "https://industrialcyber.co/transport/us-coast-guard-releases-nvic-02-26-to-guide-maritime-operators-on-cybersecurity-plans-it-and-ot-risk-assessments/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

@@ -162,5 +162,32 @@ export const newsItems: NewsItem[] = [
     source: "Global Maritime Forum",
     sourceUrl: "https://www.manifoldtimes.com/news/report-china-linked-to-nearly-one-fifth-of-global-green-shipping-corridor-initiatives/",
   },
+  {
+    id: "imo-blue-solutions-southeast-asia-launch",
+    category: "green",
+    title: "IMO, 동남아 항만 탈탄소화 위한 블루 솔루션 프로젝트 출범",
+    summary: "IMO는 10월 23일 프놈펜에서 열린 아세안 해상운송 실무그룹 회의에서 동남아 6개국의 해운 탈탄소화를 지원할 블루 솔루션 프로젝트를 공식 출범했다. 독일 국제기후이니셔티브(IKI)가 1단계 590만 유로를 지원하는 이 사업은 2031년 1월까지 진행되며, 캄보디아·인도네시아·말레이시아·필리핀·태국·베트남을 대상으로 항만 및 선박 전기화, 청정기술 도입, 온실가스 배출 기준선 개발에 중점을 둔다.",
+    date: "2026.10.25",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pages/whatsnew-2514.aspx",
+  },
+  {
+    id: "imo-remote-inspection-esp-code-framework",
+    category: "safety",
+    title: "IMO, 산적화물선·유조선 원격검사 표준체계 채택",
+    summary: "IMO는 결의안 MSC.584(111)을 통해 2011 ESP Code 개정안을 채택하고, 산적화물선과 유조선 검사 시 원격검사기법(RIT) 사용을 위한 표준화된 체계를 확립했다. 2028년 1월 1일 발효되는 이 규정은 기존의 개별 승인 방식을 RIT 시스템 인증, 서비스 제공업체 승인, 밀접검사 실행절차를 포함한 종합 표준으로 대체한다.",
+    date: "2026.10.25",
+    source: "SAFETY4SEA",
+    sourceUrl: "https://safety4sea.com/imo-adopts-new-framework-for-remote-inspections-of-bulk-carriers-and-oil-tankers/",
+  },
+  {
+    id: "uscg-nvic-02-26-cyber-guidance-release",
+    category: "cyber",
+    title: "미 연안경비대, 해사 사이버보안 이행지침 NVIC 02-26 발행",
+    summary: "미 연안경비대는 10월 23일 연방 사이버보안 규정(33 CFR Part 101 Subpart F) 준수를 위한 항행 및 선박검사 회람 02-26을 발행했다. 이 회람은 해상교통보안법(MTSA) 적용 대상인 미국 기국 선박, 항만시설, 외대륙붕 시설을 위한 템플릿과 방법론을 제공하며, 사이버보안 계획 제출 기한은 2027년 7월 16일이다.",
+    date: "2026.10.25",
+    source: "U.S. Coast Guard",
+    sourceUrl: "https://industrialcyber.co/transport/us-coast-guard-releases-nvic-02-26-to-guide-maritime-operators-on-cybersecurity-plans-it-and-ot-risk-assessments/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
