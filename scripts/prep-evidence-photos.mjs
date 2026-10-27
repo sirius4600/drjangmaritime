@@ -78,6 +78,34 @@ const jobs = [
     "2025_kcg_best_vts_operator_competition_judge_seat.jpg",
     "kcg-vts-competition-judge-seat-2025.jpg",
   ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_44.jpg",
+    "expo-2026-signboard.jpg",
+  ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_27.jpg",
+    "expo-2026-ribbon-cutting.jpg",
+  ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_30.jpg",
+    "expo-2026-dignitaries.jpg",
+  ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_21.jpg",
+    "expo-2026-gobt-students.jpg",
+  ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_37.jpg",
+    "expo-2026-with-president-choi.jpg",
+  ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_13.jpg",
+    "expo-2026-booth-tour.jpg",
+  ],
+  [
+    "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_51.jpg",
+    "expo-2026-kimft-booth.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {

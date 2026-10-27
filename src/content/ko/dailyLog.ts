@@ -2,6 +2,41 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "maritime-mobility-safety-expo-2026-10",
+    date: "2026.10.26",
+    title: "2026 대한민국 해양모빌리티·안전 엑스포 개막식에 참석하다",
+    excerpt:
+      "부산항국제전시컨벤션센터(BPEX)에서 열린 제9회 대한민국 해양모빌리티·안전 엑스포 개막식에 해양수산부 산하 (사)한국해양안전진흥협회 대표로 참석했습니다.",
+    location: "부산항국제전시컨벤션센터(BPEX)",
+    body: [
+      "10월 26일, 부산항국제전시컨벤션센터(BPEX)에서 열린 '2026 대한민국 해양모빌리티·안전 엑스포' 개막식에 해양수산부 산하 (사)한국해양안전진흥협회 대표로 참석했습니다. 올해로 아홉 번째인 이 엑스포는 부산시와 해양수산부가 공동 주최하고, '2026 세계 해사의 날' 기념행사 및 '한국 해사주간'과 연계해 28일까지 사흘간 열립니다.",
+      "개막식에는 중앙해양안전심판원장, 오석근 부산시 경제부시장, 국립한국해양대학교 총장, 국립목포해양대학교 총장 등 해양 분야의 많은 분들이 함께했습니다. 테이프 커팅으로 막을 올린 뒤 내빈들과 함께 전시장을 돌며 참가 기업과 기관의 기술을 살펴보았습니다.",
+      "전시장은 자율운항·무인모빌리티, 친환경 모빌리티·탄소중립, 해양첨단안전·AI 재난대응, B2B 비즈니스관 등 4개 관으로 꾸며졌고, 자율운항선박과 수상 드론, 수소 선박과 선박용 연료전지, 해양 사이버보안, AI 기반 해양관측 기술 등이 소개되었습니다. 한국해양수산연수원도 부스를 마련해 선박 운항 시뮬레이터를 선보였습니다.",
+      "이번 개막식에는 한국해양수산연수원에서 GOBT(Global Onboard Training Programme)에 참여하고 있는 16개국 40명의 우리 학생들도 함께했습니다. 세계 각국에서 온 젊은 해기사들이 우리나라의 첨단 해양기술을 직접 보고, 함께 기념사진을 찍으며 즐거워하는 모습이 무척 뿌듯했습니다.",
+      "무엇보다 반가웠던 것은 오랜 친구인 국립목포해양대학교 최부홍 총장을 이 자리에서 만난 일입니다. 함께 사진을 남기며, 우리 바다의 안전과 해양 인재 양성을 위해 앞으로도 힘을 모으자는 이야기를 나누었습니다.",
+    ],
+    links: [
+      {
+        label:
+          "해사신문: '2026 대한민국 해양모빌리티·안전 엑스포' 부산서 개막",
+        href: "http://www.haesanews.com/news/articleView.html?idxno=152131",
+      },
+    ],
+    images: [
+      "/images/evidence/expo-2026-signboard.jpg",
+      "/images/evidence/expo-2026-ribbon-cutting.jpg",
+      "/images/evidence/expo-2026-dignitaries.jpg",
+      "/images/evidence/expo-2026-gobt-students.jpg",
+      "/images/evidence/expo-2026-with-president-choi.jpg",
+      "/images/evidence/expo-2026-booth-tour.jpg",
+      "/images/evidence/expo-2026-kimft-booth.jpg",
+    ],
+    video: {
+      src: "/videos/evidence/expo-2026-opening.mp4",
+      poster: "/images/evidence/expo-2026-opening-poster.jpg",
+    },
+  },
+  {
     id: "ocean-bridge-ep03-green-ships-2026-10",
     date: "2026.10.22",
     title: "오션브릿지 EP.03 친환경 선박 — 주여, 어디로 가시나이까? 친환경 선박의 알 수 없는 미래",

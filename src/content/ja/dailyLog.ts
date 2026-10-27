@@ -2,6 +2,41 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "maritime-mobility-safety-expo-2026-10",
+    date: "2026.10.26",
+    title: "2026 大韓民国海洋モビリティ・安全エキスポ開幕式に参加",
+    excerpt:
+      "釜山港国際展示コンベンションセンター（BPEX）で開かれた第9回大韓民国海洋モビリティ・安全エキスポの開幕式に、海洋水産部傘下の（社）韓国海洋安全振興協会代表として参加した。",
+    location: "釜山港国際展示コンベンションセンター（BPEX）",
+    body: [
+      "10月26日、釜山港国際展示コンベンションセンター（BPEX）で開かれた「2026 大韓民国海洋モビリティ・安全エキスポ」の開幕式に、海洋水産部傘下の（社）韓国海洋安全振興協会代表として参加した。今年で9回目となるこのエキスポは、釜山市と海洋水産部が共同主催し、「2026 世界海事デー」記念行事および「韓国海事週間」と連携して28日まで3日間開かれる。",
+      "開幕式には、中央海洋安全審判院長、オ・ソクグン釜山市経済副市長、国立韓国海洋大学校総長、国立木浦海洋大学校総長をはじめ、海洋分野の多くの方々が集まった。テープカットで幕を開けた後、来賓の方々と共に展示場を回り、参加企業や機関の技術を見学した。",
+      "展示場は自律運航・無人モビリティ、環境配慮型モビリティ・カーボンニュートラル、海洋先端安全・AI災害対応、B2Bビジネス館の4つの館で構成され、自律運航船や水上ドローン、水素船舶と船舶用燃料電池、海洋サイバーセキュリティ、AIによる海洋観測技術などが紹介された。韓国海洋水産研修院もブースを設け、操船シミュレーターを披露した。",
+      "開幕式には、韓国海洋水産研修院でGOBT（Global Onboard Training Programme）に参加している16か国40名の私たちの研修生も参加した。世界各国から来た若い海技者たちが韓国の先端海洋技術を直接見て、楽しそうに記念写真を撮る姿がとても誇らしかった。",
+      "何より嬉しかったのは、古くからの友人である国立木浦海洋大学校のチェ・ブホン総長にこの場で会えたことだ。一緒に写真を撮りながら、これからも海の安全と海洋人材の育成のために力を合わせようと語り合った。",
+    ],
+    links: [
+      {
+        label:
+          "海事新聞：「2026 大韓民国海洋モビリティ・安全エキスポ」釜山で開幕（韓国語）",
+        href: "http://www.haesanews.com/news/articleView.html?idxno=152131",
+      },
+    ],
+    images: [
+      "/images/evidence/expo-2026-signboard.jpg",
+      "/images/evidence/expo-2026-ribbon-cutting.jpg",
+      "/images/evidence/expo-2026-dignitaries.jpg",
+      "/images/evidence/expo-2026-gobt-students.jpg",
+      "/images/evidence/expo-2026-with-president-choi.jpg",
+      "/images/evidence/expo-2026-booth-tour.jpg",
+      "/images/evidence/expo-2026-kimft-booth.jpg",
+    ],
+    video: {
+      src: "/videos/evidence/expo-2026-opening.mp4",
+      poster: "/images/evidence/expo-2026-opening-poster.jpg",
+    },
+  },
+  {
     id: "ocean-bridge-ep03-green-ships-2026-10",
     date: "2026.10.22",
     title: "オーシャンブリッジ EP.03 環境配慮型船舶 — 主よ、どこへ行かれるのですか？ グリーンシップの見えない未来",

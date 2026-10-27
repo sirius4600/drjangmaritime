@@ -2,6 +2,41 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "maritime-mobility-safety-expo-2026-10",
+    date: "2026.10.26",
+    title: "Asistencia a la inauguración de la Expo de Movilidad y Seguridad Marítima de Corea 2026",
+    excerpt:
+      "Asistí a la ceremonia de inauguración de la 9.ª Expo de Movilidad y Seguridad Marítima de Corea, en el BPEX de Busan, como presidente de la Asociación Coreana para la Promoción de la Seguridad Marítima, entidad dependiente del Ministerio de Océanos y Pesca.",
+    location: "Centro Internacional de Exposiciones y Convenciones del Puerto de Busan (BPEX)",
+    body: [
+      "El 26 de octubre asistí a la ceremonia de inauguración de la Expo de Movilidad y Seguridad Marítima de Corea 2026, en el Centro Internacional de Exposiciones y Convenciones del Puerto de Busan (BPEX), como presidente de la Asociación Coreana para la Promoción de la Seguridad Marítima, entidad dependiente del Ministerio de Océanos y Pesca. En su novena edición, la expo está coorganizada por la Ciudad Metropolitana de Busan y el Ministerio de Océanos y Pesca, y se celebra durante tres días, hasta el 28, junto con los actos del Día Marítimo Mundial 2026 y la Semana Marítima de Corea.",
+      "La ceremonia reunió a numerosas figuras del sector marítimo, entre ellas el presidente del Tribunal Central de Seguridad Marítima de Corea, el vicealcalde económico de Busan, Oh Seok-geun, el rector de la Universidad Marítima y Oceánica de Corea y el rector de la Universidad Marítima Nacional de Mokpo. Tras el corte de cinta, recorrí la exposición con los demás invitados para conocer las tecnologías de las empresas e instituciones participantes.",
+      "La exposición se organizó en cuatro pabellones: movilidad autónoma y no tripulada, movilidad ecológica y neutralidad de carbono, seguridad marítima avanzada y respuesta a desastres con IA, y un pabellón de negocios B2B. Se presentaron buques autónomos, drones de superficie, buques de hidrógeno y pilas de combustible marinas, ciberseguridad marítima y observación oceánica basada en IA. El Instituto Coreano de Tecnología Marítima y Pesquera (KIMFT) también contó con un stand en el que mostró su simulador de maniobra de buques.",
+      "A la inauguración asistieron también cuarenta de nuestros alumnos de 16 países que participan actualmente en el Global Onboard Training Programme (GOBT) en el KIMFT. Me llenó de orgullo ver a estos jóvenes marinos de todo el mundo conocer de primera mano la tecnología marítima avanzada de Corea y posar con alegría para las fotos de grupo.",
+      "Lo mejor de todo fue reencontrarme con mi viejo amigo Choi Bu-hong, rector de la Universidad Marítima Nacional de Mokpo. Nos tomamos una foto juntos y hablamos de seguir uniendo fuerzas por la seguridad de nuestros mares y la formación de las nuevas generaciones de profesionales marítimos.",
+    ],
+    links: [
+      {
+        label:
+          "Haesa News: Inauguración en Busan de la Expo de Movilidad y Seguridad Marítima de Corea 2026 (en coreano)",
+        href: "http://www.haesanews.com/news/articleView.html?idxno=152131",
+      },
+    ],
+    images: [
+      "/images/evidence/expo-2026-signboard.jpg",
+      "/images/evidence/expo-2026-ribbon-cutting.jpg",
+      "/images/evidence/expo-2026-dignitaries.jpg",
+      "/images/evidence/expo-2026-gobt-students.jpg",
+      "/images/evidence/expo-2026-with-president-choi.jpg",
+      "/images/evidence/expo-2026-booth-tour.jpg",
+      "/images/evidence/expo-2026-kimft-booth.jpg",
+    ],
+    video: {
+      src: "/videos/evidence/expo-2026-opening.mp4",
+      poster: "/images/evidence/expo-2026-opening-poster.jpg",
+    },
+  },
+  {
     id: "ocean-bridge-ep03-green-ships-2026-10",
     date: "2026.10.22",
     title: "Ocean Bridge EP.03, buques verdes: ¿Quo vadis? El futuro incierto del transporte marítimo verde",

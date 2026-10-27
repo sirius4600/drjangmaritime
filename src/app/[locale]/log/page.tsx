@@ -8,6 +8,7 @@ import { Container } from "@/components/Container";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EvidencePhotos } from "@/components/EvidencePhotos";
+import { EvidenceGallery } from "@/components/EvidenceGallery";
 
 export async function generateMetadata({
   params,
@@ -96,12 +97,22 @@ export default async function DailyLogPage({
                       ))}
                     </ul>
                   )}
-                  {entry.images && entry.images.length > 0 && (
-                    <EvidencePhotos
-                      images={entry.images}
+                  {entry.video ? (
+                    <EvidenceGallery
+                      images={entry.images ?? []}
+                      video={entry.video}
                       alt={entry.title}
                       locale={locale}
                     />
+                  ) : (
+                    entry.images &&
+                    entry.images.length > 0 && (
+                      <EvidencePhotos
+                        images={entry.images}
+                        alt={entry.title}
+                        locale={locale}
+                      />
+                    )
                   )}
                 </article>
               ))}

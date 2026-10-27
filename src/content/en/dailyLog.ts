@@ -7,11 +7,47 @@ export interface DailyLogEntry {
   location?: string;
   images?: string[];
   links?: { label: string; href: string }[];
+  video?: { src: string; poster: string };
 }
 
 // Personal, occasional notes — not a formal CV record. See impact.ts for
 // verified professional milestones; this is the human-interest counterpart.
 export const dailyLogEntries: DailyLogEntry[] = [
+  {
+    id: "maritime-mobility-safety-expo-2026-10",
+    date: "2026.10.26",
+    title: "Attending the Opening of the 2026 Korea Maritime Mobility & Safety Expo",
+    excerpt:
+      "I attended the opening ceremony of the 9th Korea Maritime Mobility & Safety Expo at BPEX in Busan as President of the Korea Maritime Safety Promotion Association, an organization under the Ministry of Oceans and Fisheries.",
+    location: "Busan Port International Exhibition & Convention Center (BPEX)",
+    body: [
+      "On October 26, I attended the opening ceremony of the 2026 Korea Maritime Mobility & Safety Expo at the Busan Port International Exhibition & Convention Center (BPEX), as President of the Korea Maritime Safety Promotion Association, an organization under the Ministry of Oceans and Fisheries. Now in its ninth edition, the expo is co-hosted by Busan Metropolitan City and the Ministry of Oceans and Fisheries and runs for three days through the 28th, alongside the 2026 World Maritime Day celebrations and Korea Maritime Week.",
+      "The ceremony brought together many leaders of the maritime community, including the President of the Korea Maritime Safety Tribunal, Busan Economic Vice Mayor Oh Seok-geun, the President of Korea Maritime & Ocean University and the President of Mokpo National Maritime University. After the ribbon cutting, I toured the exhibition with the other guests to see the technologies of the participating companies and institutions.",
+      "The exhibition was organized into four halls: autonomous and unmanned mobility, eco-friendly mobility and carbon neutrality, advanced maritime safety and AI disaster response, and a B2B business hall. On show were autonomous ships, surface drones, hydrogen-powered vessels and marine fuel cells, maritime cybersecurity and AI-based ocean observation. The Korea Institute of Maritime and Fisheries Technology also ran a booth featuring its ship-handling simulator.",
+      "Forty of our trainees from 16 countries, currently taking part in the Global Onboard Training Programme (GOBT) at the Korea Institute of Maritime and Fisheries Technology, also joined the opening. It made me very proud to see these young seafarers from around the world experiencing Korea's advanced maritime technology first-hand and posing happily for group photos.",
+      "Best of all was meeting my old friend Choi Bu-hong, President of Mokpo National Maritime University. We took a photo together and talked about continuing to join forces for the safety of our seas and for training the next generation of maritime professionals.",
+    ],
+    links: [
+      {
+        label:
+          "Haesa News: 2026 Korea Maritime Mobility & Safety Expo opens in Busan (in Korean)",
+        href: "http://www.haesanews.com/news/articleView.html?idxno=152131",
+      },
+    ],
+    images: [
+      "/images/evidence/expo-2026-signboard.jpg",
+      "/images/evidence/expo-2026-ribbon-cutting.jpg",
+      "/images/evidence/expo-2026-dignitaries.jpg",
+      "/images/evidence/expo-2026-gobt-students.jpg",
+      "/images/evidence/expo-2026-with-president-choi.jpg",
+      "/images/evidence/expo-2026-booth-tour.jpg",
+      "/images/evidence/expo-2026-kimft-booth.jpg",
+    ],
+    video: {
+      src: "/videos/evidence/expo-2026-opening.mp4",
+      poster: "/images/evidence/expo-2026-opening-poster.jpg",
+    },
+  },
   {
     id: "ocean-bridge-ep03-green-ships-2026-10",
     date: "2026.10.22",
