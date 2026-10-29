@@ -189,5 +189,32 @@ export const newsItems: NewsItem[] = [
     source: "U.S. Coast Guard",
     sourceUrl: "https://industrialcyber.co/transport/us-coast-guard-releases-nvic-02-26-to-guide-maritime-operators-on-cybersecurity-plans-it-and-ot-risk-assessments/",
   },
+  {
+    id: "wmd-parallel-event-busan-2026",
+    category: "imo",
+    title: "부산 세계 해사의 날 병행행사, 글로벌 규정 이행 강화 촉구",
+    summary: "대한민국 부산에서 개최된 국제 회의(10월 26~27일)에서 각국 대표단은 글로벌 해운 규정의 효과적 이행을 위한 국가적 조치와 국제 협력 강화를 촉구했다. IMO 사무총장은 자율운항선박(MASS) 코드 채택, IMO 해운 디지털화 전략 승인, 대체연료 안전 지침 진전 등 2026년 주요 성과를 발표했다. IMO는 168개 회원국(전체의 94%)을 대상으로 해사 규정 이행 여부를 평가하는 첫 글로벌 감사 주기를 완료했다.",
+    date: "2026.10.30",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pressbriefings/pages/world-maritime-day-parallel-event-2026.aspx",
+  },
+  {
+    id: "iala-vdes-satellite-workshop-tokyo-2026",
+    category: "enav",
+    title: "IALA, 도쿄에서 위성 VDES 워크숍 개최",
+    summary: "국제항로표지기구(IALA)는 일본해상보안청, 해양정책연구소, 사사카와평화재단과 협력하여 2026년 11월 10일부터 13일까지 도쿄에서 위성 VDES 워크숍을 개최한다. 이 워크숍은 미래 해양 무선통신 및 e-Navigation 인프라의 핵심 기술인 위성 기반 VHF 데이터 교환 시스템을 다룬다.",
+    date: "2026.10.30",
+    source: "IALA",
+    sourceUrl: "https://events.iala-aism.org/",
+  },
+  {
+    id: "india-alternative-fuel-hub-study-imo-2026",
+    category: "green",
+    title: "인도, 대체 선박 연료 허브로 부상 가능성 확인",
+    summary: "10월 27일 발표된 신규 연구에 따르면 인도는 대체 선박 연료의 경쟁력 있는 역내 허브로 발전할 잠재력을 보유하고 있다. '인도의 대체 선박 연료 수요 및 가격 잠재력 연구'는 인도가 역내 해운 탈탄소화를 지원하기 위한 대체 연료 인프라와 공급 역량을 단계적으로 개발할 수 있는 경로를 제시한다.",
+    date: "2026.10.30",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pages/whatsnew.aspx",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

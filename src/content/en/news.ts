@@ -223,5 +223,32 @@ export const newsItems: NewsItem[] = [
     source: "U.S. Coast Guard",
     sourceUrl: "https://industrialcyber.co/transport/us-coast-guard-releases-nvic-02-26-to-guide-maritime-operators-on-cybersecurity-plans-it-and-ot-risk-assessments/",
   },
+  {
+    id: "wmd-parallel-event-busan-2026",
+    category: "imo",
+    title: "Maritime leaders call for stronger implementation at World Maritime Day Parallel Event in Busan",
+    summary: "International delegates meeting in Busan, Republic of Korea (26-27 October) called for stronger national action and international cooperation to ensure global shipping regulations are effectively implemented. IMO Secretary-General outlined 2026 milestones including adoption of the voluntary MASS Code, approval of the IMO Strategy on Maritime Digitalization, and progress on safety guidelines for alternative fuels. IMO completed its first global audit cycle, assessing 168 Member States (94% of membership) on implementation of maritime regulations.",
+    date: "2026.10.30",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pressbriefings/pages/world-maritime-day-parallel-event-2026.aspx",
+  },
+  {
+    id: "iala-vdes-satellite-workshop-tokyo-2026",
+    category: "enav",
+    title: "IALA to convene Workshop on Satellite VDES in Tokyo",
+    summary: "The International Organization for Marine Aids to Navigation, in partnership with Japan Coast Guard, Ocean Policy Research Institute, and Sasakawa Peace Foundation, will host a Workshop on VDES Satellites in Tokyo from 10 to 13 November 2026. The workshop addresses satellite-based VHF Data Exchange System, a key technology for future maritime radiocommunication and e-navigation infrastructure.",
+    date: "2026.10.30",
+    source: "IALA",
+    sourceUrl: "https://events.iala-aism.org/",
+  },
+  {
+    id: "india-alternative-fuel-hub-study-imo-2026",
+    category: "green",
+    title: "Study identifies pathway for India to develop competitive alternative marine fuel hub",
+    summary: "India has the potential to become a competitive regional hub for alternative marine fuels, according to a new study released on 27 October. The Study on Potential Demand and Pricing of Alternative Marine Fuels in India identifies a phased pathway for India to develop its alternative fuel infrastructure and supply capabilities to support maritime decarbonization in the region.",
+    date: "2026.10.30",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/en/mediacentre/pages/whatsnew.aspx",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
