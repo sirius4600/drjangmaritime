@@ -216,5 +216,32 @@ export const newsItems: NewsItem[] = [
     source: "IMO",
     sourceUrl: "https://www.imo.org/en/mediacentre/pages/whatsnew.aspx",
   },
+  {
+    id: "blue-initiative-maritime-vulnerability-database",
+    category: "cyber",
+    title: "블루 이니셔티브, 해양 전용 취약점 데이터베이스 출범",
+    summary: "Cydome, Rakuten Maritime, Bureau Veritas, ClassNK, MTS-ISAC으로 구성된 업계 연합이 10월 26일 블루 이니셔티브를 출범하며 해양 IT 및 OT 시스템에 영향을 미치는 사이버 취약점 무료 공개 데이터베이스를 제공한다. 해양 취약점 저장소는 35만 개 이상의 공개 CVE에서 관련 위험을 식별하는 과제를 해결하며, 출범 시 치명적 등급 2,004개를 포함해 29,505개 취약점을 추적하고 해양 전용 시스템에 영향을 미치는 37개를 포함한다.",
+    date: "2026.11.02",
+    source: "Infosecurity Magazine",
+    sourceUrl: "https://www.infosecurity-magazine.com/news/blue-initiative-maritime/",
+  },
+  {
+    id: "india-green-maritime-tools-inmarco-2026",
+    category: "green",
+    title: "인도, 탄소배출 및 육상전원 평가 도구 출시",
+    summary: "인도 해사행정청장이 10월 27일 INMARCO 2026에서 탈탄소화 계획 지원을 위한 두 가지 디지털 도구를 공개했다. TERI 소속 녹색항만 및 해운 우수센터가 개발한 이 도구들은 예상 탄소비용과 함께 선박 CO₂ 배출량을 평가하고 육상전원 도입 효과를 분석하여 Maritime India Vision 2030 목표를 지원한다.",
+    date: "2026.11.02",
+    source: "Maritime Gateway",
+    sourceUrl: "https://www.maritimegateway.com/green-maritime-digital-tools-launched-to-assess-ship-emissions-and-shore-power/",
+  },
+  {
+    id: "nimasa-itf-seafarer-wellbeing-mou-africa-first",
+    category: "seafarer",
+    title: "나이지리아, ITF와 아프리카 최초 선원 정신건강 MoU 체결",
+    summary: "나이지리아 해사안전청(NIMASA)과 국제운수노동자연맹이 10월 26일 교육 및 역량 구축을 통한 선원 정신건강 및 복지 증진을 위한 획기적인 양해각서를 체결했다. ITF가 아프리카 최초라고 밝힌 이 협약은 스트레스 관리에 관한 3일간의 강사 양성 프로그램을 포함하며, 나이지리아 교육기관 전반에 걸쳐 해양 교육과정에 복지 모듈을 통합한다.",
+    date: "2026.11.02",
+    source: "Ships & Ports",
+    sourceUrl: "https://shipsandports.com.ng/nimasa-itf-seal-landmark-deal-to-boost-seafarers-mental-health",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

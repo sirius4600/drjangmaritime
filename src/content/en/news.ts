@@ -250,5 +250,32 @@ export const newsItems: NewsItem[] = [
     source: "IMO",
     sourceUrl: "https://www.imo.org/en/mediacentre/pages/whatsnew.aspx",
   },
+  {
+    id: "blue-initiative-maritime-vulnerability-database",
+    category: "cyber",
+    title: "Blue Initiative Launches Maritime-Specific Vulnerability Database",
+    summary: "An industry coalition including Cydome, Rakuten Maritime, Bureau Veritas, ClassNK, and MTS-ISAC launched the Blue Initiative on October 26, offering a free public database of cyber vulnerabilities affecting maritime IT and OT systems. The Maritime Vulnerabilities Repository addresses the challenge of identifying relevant risks from over 350,000 published CVEs, launching with 29,505 vulnerabilities tracked, including 2,004 rated critical and 37 affecting maritime-only systems.",
+    date: "2026.11.02",
+    source: "Infosecurity Magazine",
+    sourceUrl: "https://www.infosecurity-magazine.com/news/blue-initiative-maritime/",
+  },
+  {
+    id: "india-green-maritime-tools-inmarco-2026",
+    category: "green",
+    title: "India Launches Carbon Emission and Shore Power Assessment Tools",
+    summary: "India's Director General of Maritime Administration unveiled two digital tools at INMARCO 2026 on October 27 to support decarbonization planning. Developed by the National Centre of Excellence in Green Ports and Shipping at TERI, the tools assess vessel CO₂ emissions with indicative carbon costs and evaluate shore power implementation benefits, supporting Maritime India Vision 2030 objectives.",
+    date: "2026.11.02",
+    source: "Maritime Gateway",
+    sourceUrl: "https://www.maritimegateway.com/green-maritime-digital-tools-launched-to-assess-ship-emissions-and-shore-power/",
+  },
+  {
+    id: "nimasa-itf-seafarer-wellbeing-mou-africa-first",
+    category: "seafarer",
+    title: "Nigeria Signs Africa's First Seafarer Mental Health MoU with ITF",
+    summary: "The Nigerian Maritime Administration and Safety Agency (NIMASA) and the International Transport Workers' Federation signed a landmark MoU on October 26 to promote seafarer mental health and wellbeing through training and capacity building. The agreement, described by ITF as the first of its kind in Africa, includes a three-day Train the Trainers Programme on stress management and will integrate wellbeing modules into maritime training curricula across Nigerian institutions.",
+    date: "2026.11.02",
+    source: "Ships & Ports",
+    sourceUrl: "https://shipsandports.com.ng/nimasa-itf-seal-landmark-deal-to-boost-seafarers-mental-health",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
