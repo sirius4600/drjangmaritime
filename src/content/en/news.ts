@@ -277,5 +277,14 @@ export const newsItems: NewsItem[] = [
     source: "Ships & Ports",
     sourceUrl: "https://shipsandports.com.ng/nimasa-itf-seal-landmark-deal-to-boost-seafarers-mental-health",
   },
+  {
+    id: "imo-council-138-shipping-security-mandate",
+    category: "imo",
+    title: "IMO Council 138 concludes with seafarer protection pledge and SG mandate extension",
+    summary: "The IMO Council's 138th session, held November 2–6 in London, condemned attacks on commercial shipping in conflict zones including the Strait of Hormuz and Black Sea, and reaffirmed the protection of seafarers from unlawful measures. Secretary-General Arsenio Dominguez highlighted decisions on maritime security, digital-systems funding, and governance reforms; the Council recommended extending his mandate. The session also addressed budget matters, technical cooperation, and the 2027 IMO Gender Equality Award.",
+    date: "2026.11.11",
+    source: "SAFETY4SEA",
+    sourceUrl: "https://safety4sea.com/imo-reaffirms-commitment-to-protecting-international-shipping-routes-and-seafarers/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

@@ -243,5 +243,14 @@ export const newsItems: NewsItem[] = [
     source: "Ships & Ports",
     sourceUrl: "https://shipsandports.com.ng/nimasa-itf-seal-landmark-deal-to-boost-seafarers-mental-health",
   },
+  {
+    id: "imo-council-138-shipping-security-mandate",
+    category: "imo",
+    title: "IMO 이사회 138차 회의, 선원 보호 천명 및 사무총장 임기 연장 권고",
+    summary: "11월 2일부터 6일까지 런던에서 개최된 IMO 이사회 제138차 회의는 호르무즈 해협과 흑해 등 분쟁 지역의 상선 공격을 규탄하고 선원을 불법적 조치로부터 보호할 것을 재확인했다. Arsenio Dominguez 사무총장은 해사 보안, 디지털 시스템 자금 지원, 거버넌스 개혁에 관한 결정 사항을 강조했으며, 이사회는 그의 임기 연장을 권고했다. 이번 회의에서는 예산, 기술 협력, 2027년 IMO 성평등상도 논의됐다.",
+    date: "2026.11.11",
+    source: "SAFETY4SEA",
+    sourceUrl: "https://safety4sea.com/imo-reaffirms-commitment-to-protecting-international-shipping-routes-and-seafarers/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
