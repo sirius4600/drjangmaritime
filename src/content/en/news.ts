@@ -286,5 +286,23 @@ export const newsItems: NewsItem[] = [
     source: "SAFETY4SEA",
     sourceUrl: "https://safety4sea.com/imo-reaffirms-commitment-to-protecting-international-shipping-routes-and-seafarers/",
   },
+  {
+    id: "west-africa-marine-pollution-mou-2026",
+    category: "safety",
+    title: "Six West African States Validate Draft Marine Pollution Response Agreement",
+    summary: "Six West African countries—Cabo Verde, The Gambia, Guinea, Guinea-Bissau, Mauritania, and Senegal—have technically validated a draft Memorandum of Understanding to strengthen regional cooperation and mutual assistance during oil spills and marine pollution emergencies. The agreement, developed during a workshop in Banjul (November 2026), will cover over 1.2 million square kilometres of shared West African waters and supports implementation of the 1990 Oil Pollution Preparedness Convention.",
+    date: "2026.11.17",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/",
+  },
+  {
+    id: "pacific-sids-imo-workshops-fiji-2026",
+    category: "imo",
+    title: "Pacific Island States Strengthen IMO Implementation Through Fiji Workshops",
+    summary: "Maritime officials from 10 Pacific Small Island Developing States participated in workshops held in Nadi, Fiji (November 2-10, 2026) focused on strengthening national frameworks to implement IMO instruments. Organized by IMO with the Maritime Safety Authority of Fiji under the IMO-Korea SMART-C Leaders Project, the workshops covered flag State implementation, port State control, and incorporation of SOLAS, MARPOL, and STCW conventions into national legislation.",
+    date: "2026.11.17",
+    source: "IMO",
+    sourceUrl: "https://www.hellenicshippingnews.com/pacific-island-states-advance-implementation-of-imo-instruments/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

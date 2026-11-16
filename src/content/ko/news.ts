@@ -252,5 +252,23 @@ export const newsItems: NewsItem[] = [
     source: "SAFETY4SEA",
     sourceUrl: "https://safety4sea.com/imo-reaffirms-commitment-to-protecting-international-shipping-routes-and-seafarers/",
   },
+  {
+    id: "west-africa-marine-pollution-mou-2026",
+    category: "safety",
+    title: "서아프리카 6개국, 해양오염 대응 협정 초안 검증 완료",
+    summary: "카보베르데, 감비아, 기니, 기니비사우, 모리타니, 세네갈 등 서아프리카 6개국이 유류 유출 및 해양오염 비상사태 발생 시 지역 협력과 상호 지원을 강화하기 위한 양해각서 초안을 기술적으로 검증했다. 반줄에서 개최된 워크숍(2026년 11월)에서 개발된 이 협정은 120만 평방킬로미터 이상의 서아프리카 공동 수역을 대상으로 하며, 1990년 유류오염 대비 협약 이행을 지원한다.",
+    date: "2026.11.17",
+    source: "IMO",
+    sourceUrl: "https://www.imo.org/",
+  },
+  {
+    id: "pacific-sids-imo-workshops-fiji-2026",
+    category: "imo",
+    title: "태평양 도서국, 피지 워크숍 통해 IMO 이행 역량 강화",
+    summary: "태평양 소도서개발국(SIDS) 10개국의 해양 당국자들이 IMO 협약 이행을 위한 국가 체계 강화를 목표로 피지 나디에서 열린 워크숍(2026년 11월 2~10일)에 참가했다. IMO-한국 SMART-C Leaders 프로젝트 하에 IMO와 피지 해사안전청이 주관한 이번 워크숍은 기국 이행, 항만국통제, SOLAS·MARPOL·STCW 협약의 국내법 반영 등을 다뤘다.",
+    date: "2026.11.17",
+    source: "IMO",
+    sourceUrl: "https://www.hellenicshippingnews.com/pacific-island-states-advance-implementation-of-imo-instruments/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
