@@ -14,6 +14,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
       "お忙しい中時間を割いて温かく迎えてくださったセンター長と釜山港海上交通管制センターの管制官の皆さんに、心から感謝申し上げたい。この研修生たちが近い将来、海の安全を担う頼もしい管制官へと成長することを応援している。",
     ],
     images: [
+      "/images/evidence/busan-vts-visit-2026-exterior.jpg",
       "/images/evidence/busan-vts-visit-2026-entrance-group.jpg",
       "/images/evidence/busan-vts-visit-2026-control-room.jpg",
       "/images/evidence/busan-vts-visit-2026-briefing.jpg",

@@ -107,6 +107,10 @@ const jobs = [
     "expo-2026-kimft-booth.jpg",
   ],
   [
+    "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_01_exterior_crop.jpg",
+    "busan-vts-visit-2026-exterior.jpg",
+  ],
+  [
     "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_11.jpg",
     "busan-vts-visit-2026-entrance-group.jpg",
   ],
