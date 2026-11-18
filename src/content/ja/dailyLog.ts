@@ -2,6 +2,26 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "busan-vts-trainees-visit-2026-11",
+    date: "2026.11.17",
+    title: "新任管制官の研修生たちと釜山港海上交通管制センターを訪問",
+    excerpt:
+      "新任管制官の研修生たちと釜山港海上交通管制センター（釜山VTS）を訪れ、センター長の案内で実際の管制の現場を見学した。",
+    location: "釜山港海上交通管制センター",
+    body: [
+      "新任管制官の研修生たちと一緒に、釜山港海上交通管制センター（釜山VTS）を訪問した。教室で学んだ管制業務が実際の現場でどのように行われているのかを、研修生たちに直接見て感じてほしかった。",
+      "センター長が自らセンターの役割と釜山港の交通状況を説明してくださり、研修生たちは管制室で、先輩管制官たちが韓国で最も忙しい港の船舶の流れを見守り安全を守る姿を間近で見学した。研修生たちの目には、まもなくこの席に座る者としての期待と責任感が感じられた。",
+      "お忙しい中時間を割いて温かく迎えてくださったセンター長と釜山港海上交通管制センターの管制官の皆さんに、心から感謝申し上げたい。この研修生たちが近い将来、海の安全を担う頼もしい管制官へと成長することを応援している。",
+    ],
+    images: [
+      "/images/evidence/busan-vts-visit-2026-entrance.jpg",
+      "/images/evidence/busan-vts-visit-2026-control-room.jpg",
+      "/images/evidence/busan-vts-visit-2026-briefing.jpg",
+      "/images/evidence/busan-vts-visit-2026-observation.jpg",
+      "/images/evidence/busan-vts-visit-2026-lecture-room.jpg",
+    ],
+  },
+  {
     id: "maritime-mobility-safety-expo-2026-10",
     date: "2026.10.26",
     title: "2026 大韓民国海洋モビリティ・安全エキスポ開幕式に参加",

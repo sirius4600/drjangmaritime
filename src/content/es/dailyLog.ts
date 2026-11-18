@@ -2,6 +2,26 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "busan-vts-trainees-visit-2026-11",
+    date: "2026.11.17",
+    title: "Visita al Centro VTS del Puerto de Busan con nuestros nuevos alumnos operadores VTS",
+    excerpt:
+      "Con nuestros nuevos alumnos operadores VTS visité el Centro del Servicio de Tráfico Marítimo del Puerto de Busan, donde el director del centro nos mostró el trabajo real de la sala de control.",
+    location: "Centro VTS del Puerto de Busan",
+    body: [
+      "Visité el Centro del Servicio de Tráfico Marítimo del Puerto de Busan (Busan VTS) junto con nuestros nuevos alumnos operadores VTS. Quería que vieran y sintieran por sí mismos cómo se lleva a cabo en la práctica el trabajo que aprenden en el aula.",
+      "El director del centro nos explicó personalmente la función del centro y la situación del tráfico en el puerto de Busan, y en la sala de control los alumnos observaron de cerca cómo los operadores con experiencia vigilan el flujo de buques del puerto más activo de Corea y mantienen su seguridad. En sus miradas se notaba a la vez la ilusión y el sentido de la responsabilidad de quienes pronto ocuparán esos mismos puestos.",
+      "Mi más sincero agradecimiento al director del centro y a los operadores VTS del puerto de Busan por dedicarnos su tiempo y recibirnos con tanta calidez. Deseo que estos alumnos lleguen pronto a ser operadores fiables que protejan la seguridad de nuestros mares.",
+    ],
+    images: [
+      "/images/evidence/busan-vts-visit-2026-entrance.jpg",
+      "/images/evidence/busan-vts-visit-2026-control-room.jpg",
+      "/images/evidence/busan-vts-visit-2026-briefing.jpg",
+      "/images/evidence/busan-vts-visit-2026-observation.jpg",
+      "/images/evidence/busan-vts-visit-2026-lecture-room.jpg",
+    ],
+  },
+  {
     id: "maritime-mobility-safety-expo-2026-10",
     date: "2026.10.26",
     title: "Asistencia a la inauguración de la Expo de Movilidad y Seguridad Marítima de Corea 2026",

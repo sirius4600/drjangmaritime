@@ -14,6 +14,26 @@ export interface DailyLogEntry {
 // verified professional milestones; this is the human-interest counterpart.
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "busan-vts-trainees-visit-2026-11",
+    date: "2026.11.17",
+    title: "Visiting Busan Port VTS Center with Our New VTS Operator Trainees",
+    excerpt:
+      "With our new VTS operator trainees, I visited the Busan Port Vessel Traffic Service Center, where the center director showed us the real work of the control room.",
+    location: "Busan Port VTS Center",
+    body: [
+      "I visited the Busan Port Vessel Traffic Service Center (Busan VTS) together with our new VTS operator trainees. I wanted them to see and feel for themselves how the work they learn in the classroom is carried out in the field.",
+      "The center director personally briefed us on the center's role and the traffic situation of Busan Port, and in the control room the trainees watched up close as experienced operators monitored the flow of ships through Korea's busiest port and kept it safe. In their eyes I could see both the excitement and the sense of responsibility of people who will soon be sitting in those very seats.",
+      "My deep thanks to the center director and the VTS operators of Busan Port for making time in their busy schedule and welcoming us so warmly. I look forward to seeing these trainees grow into dependable operators who keep our seas safe.",
+    ],
+    images: [
+      "/images/evidence/busan-vts-visit-2026-entrance.jpg",
+      "/images/evidence/busan-vts-visit-2026-control-room.jpg",
+      "/images/evidence/busan-vts-visit-2026-briefing.jpg",
+      "/images/evidence/busan-vts-visit-2026-observation.jpg",
+      "/images/evidence/busan-vts-visit-2026-lecture-room.jpg",
+    ],
+  },
+  {
     id: "maritime-mobility-safety-expo-2026-10",
     date: "2026.10.26",
     title: "Attending the Opening of the 2026 Korea Maritime Mobility & Safety Expo",

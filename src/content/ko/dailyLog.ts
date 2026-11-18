@@ -2,6 +2,26 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "busan-vts-trainees-visit-2026-11",
+    date: "2026.11.17",
+    title: "신임 관제사 교육생들과 부산항 해상교통관제센터를 방문하다",
+    excerpt:
+      "신임 관제사 교육생들과 함께 부산항 해상교통관제센터(부산 VTS)를 찾아 센터장님의 안내로 실제 관제 현장을 둘러보았습니다.",
+    location: "부산항 해상교통관제센터",
+    body: [
+      "신임 관제사 교육생들과 함께 부산항 해상교통관제센터(부산 VTS)를 방문했습니다. 강의실에서 배운 관제 업무가 실제 현장에서 어떻게 이루어지는지 직접 보고 느끼게 하고 싶었습니다.",
+      "센터장님께서 직접 센터의 역할과 부산항의 교통 상황을 설명해 주셨고, 교육생들은 관제실에서 선배 관제사들이 우리나라에서 가장 바쁜 항만의 선박 흐름을 지켜보며 안전을 지키는 모습을 가까이에서 살펴보았습니다. 교육생들의 눈빛에서 곧 이 자리에 서게 될 사람으로서의 설렘과 책임감이 함께 느껴졌습니다.",
+      "바쁘신 가운데 시간을 내어 따뜻하게 맞아 주신 센터장님과 부산항 해상교통관제센터 관제사 여러분께 깊이 감사드립니다. 이 교육생들이 머지않아 우리 바다의 안전을 책임지는 든든한 관제사로 성장하기를 응원합니다.",
+    ],
+    images: [
+      "/images/evidence/busan-vts-visit-2026-entrance.jpg",
+      "/images/evidence/busan-vts-visit-2026-control-room.jpg",
+      "/images/evidence/busan-vts-visit-2026-briefing.jpg",
+      "/images/evidence/busan-vts-visit-2026-observation.jpg",
+      "/images/evidence/busan-vts-visit-2026-lecture-room.jpg",
+    ],
+  },
+  {
     id: "maritime-mobility-safety-expo-2026-10",
     date: "2026.10.26",
     title: "2026 대한민국 해양모빌리티·안전 엑스포 개막식에 참석하다",

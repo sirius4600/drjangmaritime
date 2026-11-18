@@ -106,6 +106,26 @@ const jobs = [
     "2026_maritime_mobility_safety_expo/2026_maritime_mobility_safety_expo_51.jpg",
     "expo-2026-kimft-booth.jpg",
   ],
+  [
+    "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_01.jpg",
+    "busan-vts-visit-2026-entrance.jpg",
+  ],
+  [
+    "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_05.jpg",
+    "busan-vts-visit-2026-control-room.jpg",
+  ],
+  [
+    "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_04.jpg",
+    "busan-vts-visit-2026-briefing.jpg",
+  ],
+  [
+    "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_09.jpg",
+    "busan-vts-visit-2026-observation.jpg",
+  ],
+  [
+    "2026_busan_vts_new_operator_trainees_visit/2026_busan_vts_trainees_visit_14.jpg",
+    "busan-vts-visit-2026-lecture-room.jpg",
+  ],
 ];
 
 for (const [srcName, outName] of jobs) {
