@@ -14,7 +14,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
       "Mi más sincero agradecimiento al director del centro y a los operadores VTS del puerto de Busan por dedicarnos su tiempo y recibirnos con tanta calidez. Deseo que estos alumnos lleguen pronto a ser operadores fiables que protejan la seguridad de nuestros mares.",
     ],
     images: [
-      "/images/evidence/busan-vts-visit-2026-exterior.jpg",
+      "/images/evidence/busan-vts-visit-2026-building.jpg",
       "/images/evidence/busan-vts-visit-2026-entrance-group.jpg",
       "/images/evidence/busan-vts-visit-2026-control-room.jpg",
       "/images/evidence/busan-vts-visit-2026-briefing.jpg",

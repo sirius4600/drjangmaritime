@@ -14,7 +14,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
       "바쁘신 가운데 시간을 내어 따뜻하게 맞아 주신 센터장님과 부산항 해상교통관제센터 관제사 여러분께 깊이 감사드립니다. 이 교육생들이 머지않아 우리 바다의 안전을 책임지는 든든한 관제사로 성장하기를 응원합니다.",
     ],
     images: [
-      "/images/evidence/busan-vts-visit-2026-exterior.jpg",
+      "/images/evidence/busan-vts-visit-2026-building.jpg",
       "/images/evidence/busan-vts-visit-2026-entrance-group.jpg",
       "/images/evidence/busan-vts-visit-2026-control-room.jpg",
       "/images/evidence/busan-vts-visit-2026-briefing.jpg",
