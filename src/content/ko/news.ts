@@ -270,5 +270,32 @@ export const newsItems: NewsItem[] = [
     source: "IMO",
     sourceUrl: "https://www.hellenicshippingnews.com/pacific-island-states-advance-implementation-of-imo-instruments/",
   },
+  {
+    id: "santos-port-cyber-attack-november-2026",
+    category: "cyber",
+    title: "산투스항만청 사이버 공격 피해, 시스템 복구 중",
+    summary: "2026년 11월 6일 중남미 최대 항만인 브라질 산투스항이 사이버 공격을 받아 관리 시스템과 인터넷 접속이 중단되었다. 11월 16일 현재 산투스항만청은 주요 내부 시스템이 최종 테스트 단계에 있으며 선박 운항과 화물 작업은 대체 절차로 계속되고 있다고 밝혔다. 브라질 연방경찰이 이번 사건에 대한 수사를 시작했다.",
+    date: "2026.11.21",
+    source: "Santos Port Authority",
+    sourceUrl: "https://continuityofoperations.substack.com/p/another-port-cyber-attack-and-a-new",
+  },
+  {
+    id: "india-seafarers-safety-initiative-eas-2026",
+    category: "seafarer",
+    title: "인도, 제21차 동아시아정상회의서 선원 안전 이니셔티브 출범",
+    summary: "2026년 11월 17일 마닐라에서 열린 제21차 동아시아정상회의에서 나렌드라 모디 인도 총리가 선원 안전 이니셔티브를 발표하며 회원국 간 합동 훈련과 비상 대응 협력 강화를 제안했다. 이번 발표는 IMO가 중동에서 발생한 130건의 상선 공격과 25명의 선원 사망을 보고한 가운데 이루어졌다. 모디 총리는 해양 안보와 항행의 자유가 지역 번영을 위한 공동 책임이라고 강조했다.",
+    date: "2026.11.21",
+    source: "Prime Minister of India / Maritime Gateway",
+    sourceUrl: "https://maritimegateway.com/india-launches-seafarers-safety-initiative-for-joint-training-and-emergency-response",
+  },
+  {
+    id: "imo-mepc85-net-zero-framework-december-2026",
+    category: "green",
+    title: "IMO 넷제로 프레임워크, MEPC 85 이후 12월 4일 표결 예정",
+    summary: "2026년 11월 18일 9개 주요 해운단체가 MEPC 85(11월 30일~12월 3일) 개최를 앞두고 IMO 넷제로 프레임워크 채택을 촉구하는 공동성명을 발표했다. 최종 채택을 위한 임시회의 재개는 MEPC 85의 확인을 거쳐 12월 4일로 예정되어 있다. 이 프레임워크는 5,000 GT 이상 선박(전 세계 해운 배출량의 85%)에 적용되는 글로벌 온실가스 규제 및 가격 책정 체계를 수립하게 된다.",
+    date: "2026.11.21",
+    source: "IMO / Clean Shipping Coalition",
+    sourceUrl: "https://cyprusshippingnews.com/2026/11/20/shipping-industry-urges-governments-to-agree-on-global-ghg-regulations-to-provide-regulatory-certainty-and-incentivize-maritime-decarbonization",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

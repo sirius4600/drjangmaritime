@@ -304,5 +304,32 @@ export const newsItems: NewsItem[] = [
     source: "IMO",
     sourceUrl: "https://www.hellenicshippingnews.com/pacific-island-states-advance-implementation-of-imo-instruments/",
   },
+  {
+    id: "santos-port-cyber-attack-november-2026",
+    category: "cyber",
+    title: "Santos Port Authority Hit by Cyberattack, Systems Under Recovery",
+    summary: "On 6 November 2026, Brazil's Port of Santos, Latin America's largest cargo port, suffered a cyberattack affecting administrative systems and internet access. As of 16 November, the Santos Port Authority reported main internal systems were in final testing phases; ship movements and cargo operations continued under alternative procedures. Brazil's Federal Police opened an investigation into the incident.",
+    date: "2026.11.21",
+    source: "Santos Port Authority",
+    sourceUrl: "https://continuityofoperations.substack.com/p/another-port-cyber-attack-and-a-new",
+  },
+  {
+    id: "india-seafarers-safety-initiative-eas-2026",
+    category: "seafarer",
+    title: "India Launches Seafarers' Safety Initiative at 21st East Asia Summit",
+    summary: "On 17 November 2026 in Manila, Prime Minister Narendra Modi announced a Seafarers' Safety Initiative at the 21st East Asia Summit, proposing enhanced cooperation in joint training and emergency response among member nations. The announcement came as the IMO reported 130 verified attacks on commercial vessels in the Middle East and 25 confirmed seafarer deaths since the conflict began. Modi emphasized that maritime security and freedom of navigation are collective responsibilities for the region's prosperity.",
+    date: "2026.11.21",
+    source: "Prime Minister of India / Maritime Gateway",
+    sourceUrl: "https://maritimegateway.com/india-launches-seafarers-safety-initiative-for-joint-training-and-emergency-response",
+  },
+  {
+    id: "imo-mepc85-net-zero-framework-december-2026",
+    category: "green",
+    title: "IMO Net-Zero Framework Vote Scheduled for 4 December After MEPC 85",
+    summary: "Nine major shipping associations issued a joint statement on 18 November 2026 urging governments to adopt the IMO Net-Zero Framework ahead of MEPC 85 (30 November–3 December 2026). The resumed extraordinary session for formal adoption is scheduled for 4 December, subject to MEPC 85 confirmation. The framework would establish global greenhouse gas regulations and pricing for ships over 5,000 GT, applying to 85% of global shipping emissions.",
+    date: "2026.11.21",
+    source: "IMO / Clean Shipping Coalition",
+    sourceUrl: "https://cyprusshippingnews.com/2026/11/20/shipping-industry-urges-governments-to-agree-on-global-ghg-regulations-to-provide-regulatory-certainty-and-incentivize-maritime-decarbonization",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
