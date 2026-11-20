@@ -9,7 +9,12 @@ export function Hero3D({ greeting, tapHint }: { greeting: string; tapHint: strin
   const bubbleRef = useRef<HTMLDivElement>(null);
   const sceneRef = useRef<HeroScene | null>(null);
   const [ready, setReady] = useState(false);
-  const [showBubble, setShowBubble] = useState(true);
+  const [showBubble, setShowBubble] = useState(false);
+  const [bubbleKey, setBubbleKey] = useState(0);
+  const say = () => {
+    setShowBubble(true);
+    setBubbleKey((k) => k + 1);
+  };
 
   useEffect(() => {
     const host = hostRef.current;
@@ -29,8 +34,10 @@ export function Hero3D({ greeting, tapHint }: { greeting: string; tapHint: strin
               const b = bubbleRef.current;
               if (b) b.style.transform = `translate(${Math.round(x)}px, ${Math.round(y)}px) translate(-20%, -100%)`;
             },
+            onWave: say,
           });
           setReady(true);
+          say();
         } catch {
           // WebGL을 쓸 수 없는 환경: 배경만 보여 준다.
         }
@@ -46,21 +53,21 @@ export function Hero3D({ greeting, tapHint }: { greeting: string; tapHint: strin
 
   useEffect(() => {
     if (!showBubble) return;
-    const hide = window.setTimeout(() => setShowBubble(false), 6000);
+    const hide = window.setTimeout(() => setShowBubble(false), 5500);
     return () => window.clearTimeout(hide);
-  }, [showBubble]);
+  }, [showBubble, bubbleKey]);
 
   return (
     <div className="absolute inset-0">
-      <div ref={hostRef} className="absolute inset-0 cursor-pointer" onPointerDown={() => setShowBubble(true)} />
+      <div ref={hostRef} className="absolute inset-0 cursor-pointer" />
       {ready && (
         <div
           ref={bubbleRef}
           className={`pointer-events-none absolute left-0 top-0 transition-opacity duration-500 ${showBubble ? "opacity-100" : "opacity-0"}`}
         >
-          <div className="relative whitespace-nowrap rounded-2xl bg-white px-4 py-2 text-[13px] font-semibold text-ink shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)]">
+          <div className="relative whitespace-nowrap rounded-2xl border-2 border-[#0f9aa4] bg-[#ffffff] px-4 py-2 text-[14px] font-bold text-[#0b1420] shadow-[0_12px_30px_-8px_rgba(0,0,0,0.6)]">
             {greeting}
-            <span className="absolute -bottom-1.5 left-[20%] h-3 w-3 rotate-45 bg-white" />
+            <span className="absolute -bottom-[7px] left-[20%] h-3 w-3 rotate-45 border-b-2 border-r-2 border-[#0f9aa4] bg-[#ffffff]" />
           </div>
         </div>
       )}
@@ -69,9 +76,8 @@ export function Hero3D({ greeting, tapHint }: { greeting: string; tapHint: strin
           type="button"
           onClick={() => {
             sceneRef.current?.wave();
-            setShowBubble(true);
           }}
-          className="absolute bottom-4 right-4 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[12px] font-medium text-paper-on-navy backdrop-blur transition-colors hover:bg-white/20"
+          className="absolute bottom-4 right-4 rounded-full border border-[#3df2c4]/60 bg-[#061322]/85 px-3.5 py-1.5 text-[12px] font-semibold text-[#ffffff] backdrop-blur transition-colors hover:bg-[#0f9aa4]"
         >
           👋 {tapHint}
         </button>

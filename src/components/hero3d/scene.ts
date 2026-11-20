@@ -3,6 +3,8 @@
 // 레이더 원 안에서 선박들이 표적 고리를 달고 지나간다. 마우스를 따라 고개를 돌리고, 누르면 손을 흔들며 뛴다.
 // 화면 밖이거나 탭이 숨으면 그리기를 멈춘다. 모든 도형은 코드로 만든다(외부 모델·텍스처 파일 없음).
 import * as THREE from "three";
+import { createVessel, createLabel, type VesselKind, type Vessel } from "./ships";
+import { createSky, createSea, createRadarTower, createHarbor, createDockProps, MAX_TARGETS } from "./environment";
 
 export type HeroScene = { dispose: () => void; wave: () => void };
 
@@ -10,6 +12,7 @@ type Opts = {
   mobile: boolean;
   reducedMotion: boolean;
   onCharacterScreenPos?: (x: number, y: number) => void;
+  onWave?: () => void;
 };
 
 const C = {
@@ -218,51 +221,6 @@ function createProfessor(quality: number) {
   return { root, body, head, arms, eyes: eyeGroup };
 }
 
-// 작은 선박(선체 + 선교 + 굴뚝)
-function createShip(color: number, scale: number) {
-  const g = new THREE.Group();
-  const hullShape = new THREE.Shape();
-  hullShape.moveTo(-0.9, 0);
-  hullShape.lineTo(0.7, 0);
-  hullShape.quadraticCurveTo(1.05, 0, 1.15, 0.0);
-  hullShape.lineTo(0.7, 0.32);
-  hullShape.lineTo(-0.9, 0.32);
-  hullShape.closePath();
-  // 위에서 본 선체 모양을 세로로 밀어 올림
-  const top = new THREE.Shape();
-  top.moveTo(-1, -0.28);
-  top.lineTo(0.6, -0.28);
-  top.quadraticCurveTo(1.25, 0, 0.6, 0.28);
-  top.lineTo(-1, 0.28);
-  top.closePath();
-  const hullGeo = new THREE.ExtrudeGeometry(top, { depth: 0.3, bevelEnabled: true, bevelSize: 0.04, bevelThickness: 0.04, bevelSegments: 2 });
-  hullGeo.rotateX(-Math.PI / 2);
-  const hull = new THREE.Mesh(hullGeo, new THREE.MeshStandardMaterial({ color, roughness: 0.6 }));
-  hull.position.y = -0.1;
-  g.add(hull);
-  const deck = new THREE.Mesh(new THREE.BoxGeometry(1.5, 0.05, 0.5), new THREE.MeshStandardMaterial({ color: 0xd9dee4, roughness: 0.8 }));
-  deck.position.set(-0.15, 0.24, 0);
-  g.add(deck);
-  const bridge = new THREE.Mesh(new THREE.BoxGeometry(0.35, 0.32, 0.46), new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.5 }));
-  bridge.position.set(-0.7, 0.42, 0);
-  g.add(bridge);
-  const win = new THREE.Mesh(new THREE.BoxGeometry(0.02, 0.07, 0.4), new THREE.MeshBasicMaterial({ color: 0xffe9a8 }));
-  win.position.set(-0.52, 0.5, 0);
-  g.add(win);
-  const funnel = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.07, 0.2, 10), new THREE.MeshStandardMaterial({ color: 0xc0392b }));
-  funnel.position.set(-0.85, 0.66, 0);
-  g.add(funnel);
-  // 컨테이너 몇 개
-  const boxColors = [0x2e86de, 0xe67e22, 0x27ae60, 0xc0392b];
-  for (let i = 0; i < 3; i++) {
-    const b = new THREE.Mesh(new THREE.BoxGeometry(0.28, 0.16, 0.42), new THREE.MeshStandardMaterial({ color: boxColors[(i + color) % 4], roughness: 0.7 }));
-    b.position.set(-0.2 + i * 0.3, 0.35, 0);
-    g.add(b);
-  }
-  g.scale.setScalar(scale);
-  return g;
-}
-
 export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
   const { mobile, reducedMotion } = opts;
   const quality = mobile ? 0.6 : 1;
@@ -282,27 +240,36 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
   host.appendChild(renderer.domElement);
 
   const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x0b2238, 18, 46);
-  const camera = new THREE.PerspectiveCamera(mobile ? 40 : 32, W() / H(), 0.1, 120);
+  scene.fog = new THREE.Fog(0x1a2d42, 30, 125);
+  const camera = new THREE.PerspectiveCamera(mobile ? 40 : 32, W() / H(), 0.1, 400);
 
   // 캐릭터 위치: 데스크톱은 오른쪽, 휴대폰은 가운데
   const focus = mobile ? new THREE.Vector3(0, 1.3, 0) : new THREE.Vector3(2.6, 1.4, 0);
-  const camBase = mobile ? new THREE.Vector3(0, 2.4, 10.5) : new THREE.Vector3(0.6, 3.0, 12.5);
+  const camBase = mobile ? new THREE.Vector3(0, 2.6, 10.5) : new THREE.Vector3(0.6, 3.0, 12.5);
   camera.position.copy(camBase);
-  const lookTarget = mobile ? new THREE.Vector3(0.3, 1.25, 0) : new THREE.Vector3(1.2, 1.5, 0);
+  const lookTarget = mobile ? new THREE.Vector3(0.3, 1.45, 0) : new THREE.Vector3(1.2, 1.6, 0);
   camera.lookAt(lookTarget);
 
-  // 빛: 해 질 녘
-  scene.add(new THREE.HemisphereLight(0xcfe6ff, 0x0b2238, 0.9));
-  const sun = new THREE.DirectionalLight(0xffe2c0, 2.2);
-  sun.position.set(-5, 8, 7);
-  sun.castShadow = true;
+  // 해는 왼쪽 뒤 수평선 가까이 (노을)
+  const sunDir = new THREE.Vector3(-0.55, 0.07, -0.83).normalize();
+  const sky = createSky(sunDir);
+  scene.add(sky);
+
+  // 빛: 노을빛 주광 + 하늘빛 + 청록 테두리빛
+  scene.add(new THREE.HemisphereLight(0xbcd9ff, 0x0b2238, 1.0));
+  const sun = new THREE.DirectionalLight(0xffd2a8, 2.4);
+  sun.position.set(-6, 7, 7);
+  sun.castShadow = !mobile;
   sun.shadow.mapSize.set(1024, 1024);
   sun.shadow.camera.left = -4;
   sun.shadow.camera.right = 6;
   sun.shadow.camera.top = 5;
   sun.shadow.camera.bottom = -3;
-  scene.add(sun);
+  sun.target.position.copy(focus);
+  scene.add(sun, sun.target);
+  const back = new THREE.DirectionalLight(0xff9a5c, 1.2);
+  back.position.set(-10, 3, -20);
+  scene.add(back);
   const rimLight = new THREE.PointLight(C.accent, 14, 14);
   rimLight.position.set(focus.x + 2.5, 3, -1.5);
   scene.add(rimLight);
@@ -310,55 +277,21 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
   fill.position.set(focus.x - 2, 2, 3);
   scene.add(fill);
 
-  // 바다: 사인파 겹친 수면 셰이더
-  const seaSeg = mobile ? 80 : 160;
-  const seaGeo = new THREE.PlaneGeometry(90, 60, seaSeg, Math.round(seaSeg * 0.66));
-  seaGeo.rotateX(-Math.PI / 2);
-  const seaMat = new THREE.ShaderMaterial({
-    transparent: true,
-    uniforms: {
-      uTime: { value: 0 },
-      uDeep: { value: new THREE.Color(0x061a30) },
-      uMid: { value: new THREE.Color(0x0f5a8f) },
-      uTop: { value: new THREE.Color(0x2ec4b6) },
-      uSun: { value: new THREE.Vector3(-0.4, 0.5, -0.75).normalize() },
-      uSunCol: { value: new THREE.Color(0xffc48a) },
-    },
-    vertexShader: `
-      uniform float uTime; varying float vH; varying vec3 vPos;
-      float wave(vec2 p){ return sin(p.x*0.45+uTime*0.8)*0.18 + sin(p.y*0.7+uTime*1.1)*0.12 + sin((p.x+p.y)*1.3+uTime*1.6)*0.05; }
-      void main(){ vec3 p = position; p.y += wave(p.xz); vH = p.y; vPos = (modelMatrix*vec4(p,1.0)).xyz; gl_Position = projectionMatrix*viewMatrix*vec4(vPos,1.0); }`,
-    fragmentShader: `
-      uniform vec3 uDeep; uniform vec3 uMid; uniform vec3 uTop; uniform vec3 uSun; uniform vec3 uSunCol; varying float vH; varying vec3 vPos;
-      void main(){
-        vec3 n = normalize(cross(dFdx(vPos), dFdy(vPos)));
-        float h = smoothstep(-0.3, 0.35, vH);
-        vec3 col = mix(uDeep, uMid, h); col = mix(col, uTop, smoothstep(0.2, 0.38, vH)*0.3);
-        vec3 v = normalize(cameraPosition - vPos);
-        float spec = pow(max(dot(reflect(-uSun, n), v), 0.0), 40.0);
-        float fres = pow(1.0 - max(dot(n, v), 0.0), 3.0);
-        col += uSunCol*spec*0.5 + uTop*fres*0.2;
-        float fade = smoothstep(40.0, 14.0, length(vPos.xz - cameraPosition.xz));
-        gl_FragColor = vec4(col, fade);
-      }`,
-  });
-  const sea = new THREE.Mesh(seaGeo, seaMat);
-  sea.position.y = -0.35;
+  // VTS 레이더 타워 (캐릭터 오른쪽 뒤 바위섬)
+  const towerPos = mobile ? new THREE.Vector3(2.6, -0.15, -4.2) : new THREE.Vector3(focus.x + 3.6, -0.15, -4.4);
+  const tower = createRadarTower();
+  tower.group.position.copy(towerPos);
+  tower.group.scale.setScalar(mobile ? 0.62 : 0.72);
+  scene.add(tower.group);
+
+  // 바다 (수면에 레이더 화면을 그린다)
+  const radarR = mobile ? 11 : 16;
+  const { sea, uniforms: seaU } = createSea(sunDir, mobile, new THREE.Vector2(towerPos.x, towerPos.z), radarR);
   scene.add(sea);
 
-  // 별
-  {
-    const n = mobile ? 120 : 260;
-    const pos = new Float32Array(n * 3);
-    for (let i = 0; i < n; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 80;
-      pos[i * 3 + 1] = 6 + Math.random() * 18;
-      pos[i * 3 + 2] = -25 - Math.random() * 10;
-    }
-    const g = new THREE.BufferGeometry();
-    g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
-    scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffffff, size: 0.09, transparent: true, opacity: 0.8 })));
-  }
+  // 먼 항만
+  const harbor = createHarbor(mobile);
+  scene.add(harbor.group);
 
   // 둥근 부두
   const dock = new THREE.Group();
@@ -374,73 +307,45 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
   const pillar = new THREE.Mesh(new THREE.CylinderGeometry(1.1, 0.9, 1.4, 32), new THREE.MeshStandardMaterial({ color: 0x24384a, roughness: 0.8 }));
   pillar.position.y = -0.85;
   dock.add(pillar);
+  dock.add(createDockProps());
 
-  // VTS 레이더 마스트
-  const radarBase = new THREE.Vector3(focus.x + (mobile ? 1.8 : 2.4), -0.2, -3.2);
-  const mast = new THREE.Group();
-  mast.position.copy(radarBase);
-  mast.scale.setScalar(0.8);
-  scene.add(mast);
-  const mastM = new THREE.MeshStandardMaterial({ color: 0xe8edf2, roughness: 0.5 });
-  const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.12, 3.6, 12), mastM);
-  pole.position.y = 1.6;
-  mast.add(pole);
-  const platform = new THREE.Mesh(new THREE.CylinderGeometry(0.32, 0.32, 0.08, 20), mastM);
-  platform.position.y = 3.4;
-  mast.add(platform);
-  const radarHead = new THREE.Group();
-  radarHead.position.y = 3.55;
-  mast.add(radarHead);
-  const antenna = new THREE.Mesh(new THREE.BoxGeometry(1.6, 0.1, 0.12), new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.3 }));
-  radarHead.add(antenna);
-  const beacon = new THREE.Mesh(new THREE.SphereGeometry(0.06, 10, 10), new THREE.MeshBasicMaterial({ color: 0xff4d4d }));
-  beacon.position.set(0, 3.85, 0);
-  mast.add(beacon);
-
-  // 바다 위 레이더 원 + 회전하는 쓸기 부채꼴
-  const radarR = mobile ? 6 : 8.5;
-  const radarCenter = new THREE.Vector3(radarBase.x - (mobile ? 1.5 : 2.5), -0.2, -1);
-  const radarGroup = new THREE.Group();
-  radarGroup.position.copy(radarCenter);
-  scene.add(radarGroup);
-  const ringM = new THREE.MeshBasicMaterial({ color: C.accent, transparent: true, opacity: 0.35, depthWrite: false });
-  [0.33, 0.66, 1].forEach((f) => {
-    const r = new THREE.Mesh(new THREE.RingGeometry(radarR * f - 0.03, radarR * f, 96), ringM);
-    r.rotation.x = -Math.PI / 2;
-    radarGroup.add(r);
+  // 선박: 항로마다 한 척. [종류, z, 방향, 속도, 시작 x, 이름표]
+  type Lane = [VesselKind, number, 1 | -1, number, number, boolean];
+  const lanesDesk: Lane[] = [
+    ["tug", -5.0, 1, 1.1, -10, true],
+    ["ferry", -7.3, -1, 1.25, 9, true],
+    ["container", -10.3, 1, 0.85, -3, true],
+    ["fishing", -13.0, 1, 0.55, 9, true],
+    ["tanker", -15.7, -1, 0.7, 2, true],
+    ["fishing", -18.3, -1, 0.5, -12, false],
+    ["carCarrier", -21.2, 1, 0.8, -15, true],
+    ["container", -25.5, -1, 0.7, 6, false],
+    ["container", -31, 1, 0.65, -20, false],
+  ];
+  const lanesMob: Lane[] = [
+    ["ferry", -9.5, -1, 0.9, 6, false],
+    ["container", -13, 1, 0.7, -3, false],
+    ["fishing", -16.5, -1, 0.45, 2, false],
+    ["tanker", -20, 1, 0.55, -8, false],
+    ["carCarrier", -25, -1, 0.6, 9, false],
+  ];
+  const lanes = mobile ? lanesMob : lanesDesk;
+  const wrap = mobile ? 15 : 26;
+  type Ship = { v: Vessel; kind: VesselKind; x: number; z: number; dir: 1 | -1; speed: number; bob: number; label?: THREE.Sprite };
+  const ships: Ship[] = lanes.map(([kind, z, dir, speed, x0, labeled], i) => {
+    const v = createVessel(kind, i);
+    v.group.rotation.y = dir > 0 ? 0 : Math.PI;
+    v.wake.uniforms.uSpeed.value = speed;
+    scene.add(v.group);
+    const s: Ship = { v, kind, x: x0, z, dir, speed, bob: i * 1.7 };
+    if (labeled) {
+      s.label = createLabel(v.label, speed * 12.5);
+      s.label.scale.set(0.094, 0.0212, 1);
+      scene.add(s.label);
+    }
+    return s;
   });
-  const sweepM = new THREE.ShaderMaterial({
-    transparent: true,
-    depthWrite: false,
-    blending: THREE.AdditiveBlending,
-    uniforms: { uCol: { value: new THREE.Color(C.accent) } },
-    vertexShader: `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
-    fragmentShader: `uniform vec3 uCol; varying vec2 vUv;
-      void main(){ vec2 p = vUv-0.5; float a = atan(p.y,p.x); float t = clamp(a/0.9,0.0,1.0); float r = length(p)*2.0;
-        float alpha = (a>0.0 && a<0.9) ? (1.0-t)*0.35*smoothstep(1.0,0.2,r) : 0.0; gl_FragColor = vec4(uCol, alpha); }`,
-  });
-  const sweep = new THREE.Mesh(new THREE.CircleGeometry(radarR, 64), sweepM);
-  sweep.rotation.x = -Math.PI / 2;
-  sweep.position.y = 0.01;
-  radarGroup.add(sweep);
-
-  // 선박들 (항로 위를 지나가며 표적 고리를 단다)
-  type Ship = { obj: THREE.Group; ring: THREE.Mesh; speed: number; z: number; x: number; dir: number; bob: number };
-  const ships: Ship[] = [];
-  const lanes = mobile
-    ? [[-3.5, 1, 0.55], [-6, -1, 0.45]]
-    : [[-5.5, 1, 0.6], [-8, -1, 0.5], [-12, 1, 0.42], [-4, -1, 0.35]];
-  lanes.forEach(([z, dir, sc], i) => {
-    const obj = createShip(i, sc);
-    obj.rotation.y = dir > 0 ? 0 : Math.PI;
-    const ring = new THREE.Mesh(
-      new THREE.RingGeometry(0.9, 1.0, 40),
-      new THREE.MeshBasicMaterial({ color: C.accent, transparent: true, opacity: 0.7, depthWrite: false }),
-    );
-    ring.rotation.x = -Math.PI / 2;
-    scene.add(obj, ring);
-    ships.push({ obj, ring, speed: 0.5 + i * 0.12, z, dir, x: -14 + i * 7, bob: i * 1.3 });
-  });
+  seaU.uTargetN.value = Math.min(ships.length, MAX_TARGETS);
 
   // 캐릭터
   const CHAR_SCALE = mobile ? 1.35 : 1.25;
@@ -454,9 +359,11 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
   let waveT = reducedMotion ? 0 : 2.4; // 처음 등장할 때 손 흔들기
   let jumpT = 0;
   let introT = 0;
+  let nextAutoWave = 14;
   const startWave = () => {
     waveT = 2.4;
     jumpT = 0.7;
+    opts.onWave?.();
   };
 
   const onMove = (e: PointerEvent) => {
@@ -503,23 +410,46 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
     pointer.x += (pointer.tx - pointer.x) * Math.min(1, dt * 4);
     pointer.y += (pointer.ty - pointer.y) * Math.min(1, dt * 4);
 
-    seaMat.uniforms.uTime.value = t;
-    radarHead.rotation.y = t * 1.6;
-    sweep.rotation.z = -t * 1.6;
-    (beacon.material as THREE.MeshBasicMaterial).color.setHSL(0, 1, 0.45 + 0.25 * (Math.sin(t * 4) > 0.6 ? 1 : 0));
+    seaU.uTime.value = t;
+    if (!reducedMotion && t > nextAutoWave) {
+      nextAutoWave = t + 14;
+      startWave();
+    }
+    sky.position.copy(camera.position);
+    // 레이더: 안테나 회전(약 20rpm)과 수면 레이더의 쓸기 각도를 맞춘다
+    const sweep = t * 2.1;
+    seaU.uSweep.value = sweep;
+    tower.head.rotation.y = Math.PI / 2 - sweep;
+    const flash = Math.sin(t * 3.2) > 0.75 ? 1 : 0;
+    (tower.beacon.material as THREE.MeshBasicMaterial).color.setRGB(0.35 + 0.65 * flash, 0.05, 0.05);
+    tower.beaconLight.intensity = flash * 2.5;
+    harbor.craneLights.forEach((l, i) => (l.material as THREE.MeshBasicMaterial).color.setRGB(Math.sin(t * 2 + i) > 0.2 ? 1 : 0.25, 0.12, 0.12));
 
-    // 선박 이동
-    ships.forEach((s) => {
+    // 선박 이동 + 레이더 표적
+    ships.forEach((s, i) => {
       s.x += s.speed * dt * s.dir;
-      if (s.x > 16) s.x = -16;
-      if (s.x < -16) s.x = 16;
-      const y = -0.25 + Math.sin(t * 1.4 + s.bob) * 0.05;
-      s.obj.position.set(s.x, y, s.z);
-      s.obj.rotation.z = Math.sin(t * 1.1 + s.bob) * 0.03;
-      s.ring.position.set(s.x, -0.18, s.z);
-      const pulse = (t * 0.8 + s.bob) % 1;
-      s.ring.scale.setScalar(0.8 + pulse * 0.8);
-      (s.ring.material as THREE.MeshBasicMaterial).opacity = 0.7 * (1 - pulse);
+      const lim = wrap + s.v.length / 2;
+      if (s.x > lim) s.x = -lim;
+      if (s.x < -lim) s.x = lim;
+      const y = -0.3 + Math.sin(t * 1.2 + s.bob) * 0.03;
+      s.v.group.position.set(s.x, y, s.z);
+      s.v.group.rotation.x = Math.sin(t * 0.9 + s.bob) * 0.02;
+      s.v.group.rotation.z = Math.sin(t * 0.7 + s.bob * 2) * 0.012;
+      s.v.wake.uniforms.uTime.value = t;
+      if (i < MAX_TARGETS) {
+        const bearing = Math.atan2(s.z - towerPos.z, s.x - towerPos.x);
+        const behind = (((sweep - bearing) % (Math.PI * 2)) + Math.PI * 2) % (Math.PI * 2);
+        seaU.uTargets.value[i].set(s.x, s.z, s.v.length * 0.5 + 0.35, Math.exp(-behind * 1.1));
+        seaU.uHeading.value[i].set(s.dir, 0);
+      }
+      if (s.label) {
+        s.label.position.set(s.x, y + (s.kind === "tug" || s.kind === "fishing" ? 1.9 : 2.9), s.z);
+        // 왼쪽 글자 영역(화면 왼쪽 절반)과 화면 끝에서는 이름표를 숨긴다
+        tmp.copy(s.label.position).project(camera);
+        const op = THREE.MathUtils.clamp((tmp.x - 0.02) * 6, 0, 1) * THREE.MathUtils.clamp((0.95 - tmp.x) * 8, 0, 1);
+        (s.label.material as THREE.SpriteMaterial).opacity = op;
+        s.label.visible = op > 0.01;
+      }
     });
 
     // 등장: 아래에서 튀어 오르며 커짐
@@ -557,8 +487,8 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
     left.rotation.z = -0.12 - Math.sin(t * 2.2) * 0.03;
 
     // 깜빡임 대신 웃는 눈을 살짝 눌렀다 펴기
-    const blink = (t % 4.2) < 0.12 ? 0.35 : 1;
-    prof.eyes.forEach((e) => e.scale.set(1, blink, 1));
+    const eyeBlink = (t % 4.2) < 0.12 ? 0.35 : 1;
+    prof.eyes.forEach((e) => e.scale.set(1, eyeBlink, 1));
 
     // 카메라 시차
     camera.position.set(camBase.x + pointer.x * 0.6, camBase.y + pointer.y * 0.3, camBase.z);
