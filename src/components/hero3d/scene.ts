@@ -405,6 +405,8 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
   let raf = 0;
   let disposed = false;
   const tmp = new THREE.Vector3();
+  const charNdc = new THREE.Vector3();
+  const charTop = new THREE.Vector3();
 
   function update(dt: number, t: number) {
     pointer.x += (pointer.tx - pointer.x) * Math.min(1, dt * 4);
@@ -424,6 +426,12 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
     (tower.beacon.material as THREE.MeshBasicMaterial).color.setRGB(0.35 + 0.65 * flash, 0.05, 0.05);
     tower.beaconLight.intensity = flash * 2.5;
     harbor.craneLights.forEach((l, i) => (l.material as THREE.MeshBasicMaterial).color.setRGB(Math.sin(t * 2 + i) > 0.2 ? 1 : 0.25, 0.12, 0.12));
+
+    // 캐릭터가 화면에서 차지하는 영역(머리 위 ~ 발): 이름표가 이 안에 들어오면 숨긴다
+    prof.root.getWorldPosition(charNdc).project(camera);
+    prof.head.getWorldPosition(charTop);
+    charTop.y += 0.8 * prof.root.scale.y;
+    charTop.project(camera);
 
     // 선박 이동 + 레이더 표적
     ships.forEach((s, i) => {
@@ -446,7 +454,12 @@ export function mountHeroScene(host: HTMLElement, opts: Opts): HeroScene {
         s.label.position.set(s.x, y + (s.kind === "tug" || s.kind === "fishing" ? 1.9 : 2.9), s.z);
         // 왼쪽 글자 영역(화면 왼쪽 절반)과 화면 끝에서는 이름표를 숨긴다
         tmp.copy(s.label.position).project(camera);
-        const op = THREE.MathUtils.clamp((tmp.x - 0.02) * 6, 0, 1) * THREE.MathUtils.clamp((0.95 - tmp.x) * 8, 0, 1);
+        const edge = THREE.MathUtils.clamp((tmp.x - 0.02) * 6, 0, 1) * THREE.MathUtils.clamp((0.95 - tmp.x) * 8, 0, 1);
+        const halfW = (charTop.y - charNdc.y) * 0.42 / camera.aspect + 0.12;
+        const inX = Math.abs(tmp.x - charNdc.x) / halfW;
+        const inY = tmp.y > charNdc.y - 0.05 && tmp.y < charTop.y + 0.12;
+        const awayFromChar = inY ? THREE.MathUtils.clamp((inX - 1) * 4, 0, 1) : 1;
+        const op = edge * awayFromChar;
         (s.label.material as THREE.SpriteMaterial).opacity = op;
         s.label.visible = op > 0.01;
       }
