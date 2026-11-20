@@ -4,7 +4,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
   {
     id: "komsa-maritime-content-contest-judge-2026-11",
     date: "2026.11.20",
-    title: "2026年 海洋安全コンテンツ公募展の審査委員を務める",
+    title: "2026年 海洋安全コンテンツ公募展 審査委員",
     excerpt:
       "海洋水産部・海洋警察庁・韓国海洋交通安全公団（KOMSA）が共同で開く「2026年 海洋安全コンテンツ公募展」の審査に参加した。特に子どもたちの絵とショート動画が際立っていた。",
     location: "ソウル",

@@ -28,7 +28,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
   {
     id: "komsa-maritime-content-contest-judge-2026-11",
     date: "2026.11.20",
-    title: "Judging the 2026 Maritime Safety Content Contest",
+    title: "Judge, 2026 Maritime Safety Content Contest",
     excerpt:
       "I served as a judge for the 2026 Maritime Safety Content Contest, held jointly by the Ministry of Oceans and Fisheries, the Korea Coast Guard and the Korea Maritime Transportation Safety Authority (KOMSA). The children's drawings and short-form videos stood out.",
     location: "Seoul",
