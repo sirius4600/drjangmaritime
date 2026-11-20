@@ -24,6 +24,8 @@ export interface UiDictionary {
     subtext: string;
     primaryCta: string;
     secondaryCta: string;
+    greeting: string;
+    tapHint: string;
   };
   whyThisSite: {
     heading: string;
@@ -163,6 +165,8 @@ const ko: UiDictionary = {
       "30년의 해양안전·VTS·IMO 경험을 바탕으로, 이제는 해양 위험성 인텔리전스를 위한 AI와 데이터 도구를 만들고 있습니다.",
     primaryCta: "Maritime Intelligence 살펴보기",
     secondaryCta: "협업 제안하기",
+    greeting: "안녕하세요, 장은규입니다!",
+    tapHint: "캐릭터를 눌러 보세요",
   },
   whyThisSite: {
     heading: "결이 다른 해양 플랫폼",
@@ -318,6 +322,8 @@ const en: UiDictionary = {
       "Three decades of maritime safety, VTS and IMO experience, now building the AI and data tools for maritime risk intelligence.",
     primaryCta: "Explore Maritime Intelligence",
     secondaryCta: "Work with Dr. Jang",
+    greeting: "Hello, I'm Unkyu Jang!",
+    tapHint: "Tap the character",
   },
   whyThisSite: {
     heading: "A different kind of maritime platform",
@@ -474,6 +480,8 @@ const ja: UiDictionary = {
       "30年にわたる海上安全・VTS・IMOでの経験を土台に、いま海洋リスクインテリジェンスのためのAI・データツールを構築しています。",
     primaryCta: "Maritime Intelligenceを見る",
     secondaryCta: "協業のご相談",
+    greeting: "こんにちは、チャン・ウンギュです！",
+    tapHint: "キャラクターをタップ",
   },
   whyThisSite: {
     heading: "一線を画す海洋プラットフォーム",
@@ -629,6 +637,8 @@ const es: UiDictionary = {
       "Tres décadas de experiencia en seguridad marítima, VTS y la OMI, ahora dedicadas a construir las herramientas de IA y datos para la inteligencia de riesgo marítimo.",
     primaryCta: "Explorar Maritime Intelligence",
     secondaryCta: "Colaborar con el Dr. Jang",
+    greeting: "¡Hola, soy Unkyu Jang!",
+    tapHint: "Toca al personaje",
   },
   whyThisSite: {
     heading: "Una plataforma marítima diferente",
