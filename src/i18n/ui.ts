@@ -40,6 +40,8 @@ export interface UiDictionary {
     heading: string;
     subtext: string;
     viewAll: string;
+    articlesHeading: string;
+    readOriginal: string;
   };
   conferenceInsights: {
     heading: string;
@@ -195,6 +197,8 @@ const ko: UiDictionary = {
     subtext:
       "공식 이력이 아닌, 현장에서 만난 사람들과 순간들에 대한 개인적인 기록입니다.",
     viewAll: "전체 글 보기",
+    articlesHeading: "관련 기사 스크랩",
+    readOriginal: "기사 원문 보기",
   },
   conferenceInsights: {
     heading: "컨퍼런스 인사이트",
@@ -354,6 +358,8 @@ const en: UiDictionary = {
     subtext:
       "Not a formal record — personal notes on the people and moments encountered along the way.",
     viewAll: "View all entries",
+    articlesHeading: "Press clippings",
+    readOriginal: "Read the original",
   },
   conferenceInsights: {
     heading: "Conference Insights",
@@ -510,6 +516,8 @@ const ja: UiDictionary = {
     subtext:
       "正式な経歴ではなく、現場で出会った人々や瞬間についての個人的な記録です。",
     viewAll: "すべて見る",
+    articlesHeading: "関連記事スクラップ",
+    readOriginal: "記事の原文を読む",
   },
   conferenceInsights: {
     heading: "カンファレンス・インサイト",
@@ -670,6 +678,8 @@ const es: UiDictionary = {
     subtext:
       "No es un registro oficial, sino notas personales sobre las personas y los momentos vividos en el camino.",
     viewAll: "Ver todas las entradas",
+    articlesHeading: "Recortes de prensa",
+    readOriginal: "Leer el original",
   },
   conferenceInsights: {
     heading: "Insights de Conferencias",

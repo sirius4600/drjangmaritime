@@ -9,6 +9,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { EvidencePhotos } from "@/components/EvidencePhotos";
 import { EvidenceGallery } from "@/components/EvidenceGallery";
+import { ArticleScraps } from "@/components/ArticleScraps";
 
 export async function generateMetadata({
   params,
@@ -81,6 +82,13 @@ export default async function DailyLogPage({
                       <p key={i}>{paragraph}</p>
                     ))}
                   </div>
+                  {entry.articles && entry.articles.length > 0 && (
+                    <ArticleScraps
+                      articles={entry.articles}
+                      heading={ui.dailyLog.articlesHeading}
+                      readOriginal={ui.dailyLog.readOriginal}
+                    />
+                  )}
                   {entry.links && entry.links.length > 0 && (
                     <ul className="mt-4 max-w-2xl space-y-1.5 text-[14px]">
                       {entry.links.map((link) => (
