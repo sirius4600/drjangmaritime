@@ -24,7 +24,9 @@ export function ArticleScraps({
             href={a.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group relative block border border-dashed border-[#c9bfa8] bg-[#fbf8f1] px-5 pb-4 pt-5 text-[#2a2620] shadow-[0_8px_18px_-12px_rgba(60,45,20,0.45)] transition-transform hover:-translate-y-0.5 ${
+            className={`group relative block border border-dashed px-5 pb-4 pt-5 text-[#2a2620] shadow-[0_8px_18px_-12px_rgba(60,45,20,0.45)] transition-transform hover:-translate-y-0.5 ${
+              a.past ? "border-[#b9b6ae] bg-[#ecebe7] saturate-50" : "border-[#c9bfa8] bg-[#fbf8f1]"
+            } ${
               i % 2 ? "sm:rotate-[0.6deg]" : "sm:-rotate-[0.6deg]"
             }`}
           >
@@ -33,7 +35,11 @@ export function ArticleScraps({
               className="absolute -top-2.5 left-1/2 h-5 w-16 -translate-x-1/2 rotate-[-3deg] bg-[#f3e3a3]/80 shadow-sm"
             />
             {a.tag && (
-              <span className="mb-2 inline-block rounded-sm bg-[#0c7c85] px-1.5 py-0.5 text-[10.5px] font-bold tracking-wide text-[#ffffff]">
+              <span
+                className={`mb-2 inline-block rounded-sm px-1.5 py-0.5 text-[10.5px] font-bold tracking-wide text-[#ffffff] ${
+                  a.past ? "bg-[#6b665c]" : "bg-[#0c7c85]"
+                }`}
+              >
                 {a.tag}
               </span>
             )}

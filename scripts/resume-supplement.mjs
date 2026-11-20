@@ -142,6 +142,7 @@ export const committeeHistory = {
     { period: "2023.12~2024.04", org: "해양수산부 해사안전정책과", role: "IMO 전문가 위원회 고문" },
     { period: "2025.11", org: "해양경찰청", role: "2025년도 최우수 선박교통관제사 선발 경진대회 심사위원" },
     { period: "2021.06~2025.12", org: "한국항해항만학회", role: "기획이사" },
+    { period: "2026.11", org: "해양수산부·해양경찰청·한국해양교통안전공단", role: "2026년 해양안전 콘텐츠 공모전 심사위원" },
   ],
   en: [
     { period: "2002~", org: "KIMFT", role: "Responsible Professor, Passenger Ship Training Program" },
@@ -193,6 +194,7 @@ export const committeeHistory = {
     { period: "2023.12~2024.04", org: "Ministry of Oceans and Fisheries, Maritime Safety Policy Division", role: "Advisor, IMO Expert Committee" },
     { period: "2025.11", org: "Korea Coast Guard", role: "Judge, 2025 Best VTS Operator Competition" },
     { period: "2021.06~2025.12", org: "Korean Institute of Navigation and Port Research (KINPR)", role: "Planning Director" },
+    { period: "2026.11", org: "Ministry of Oceans and Fisheries · Korea Coast Guard · KOMSA", role: "Judge, 2026 Maritime Safety Content Contest" },
   ],
   ja: [
     { period: "2002~", org: "韓国海洋水産研修院", role: "旅客船教育課程 責任教授" },
@@ -244,6 +246,7 @@ export const committeeHistory = {
     { period: "2023.12~2024.04", org: "海洋水産部 海事安全政策課", role: "IMO専門家委員会顧問" },
     { period: "2025.11", org: "海洋警察庁", role: "2025年度 最優秀船舶交通管制官選抜競技大会 審査委員" },
     { period: "2021.06~2025.12", org: "韓国航海港湾学会", role: "企画理事" },
+    { period: "2026.11", org: "海洋水産部・海洋警察庁・韓国海洋交通安全公団", role: "2026年 海洋安全コンテンツ公募展 審査委員" },
   ],
   es: [
     { period: "2002~", org: "KIMFT", role: "Profesor Responsable, Programa de Formación de Buques de Pasajeros" },
@@ -295,6 +298,7 @@ export const committeeHistory = {
     { period: "2023.12~2024.04", org: "Ministerio de Océanos y Pesca, División de Política de Seguridad Marítima", role: "Asesor, Comité de Expertos de la OMI" },
     { period: "2025.11", org: "Guardia Costera de Corea", role: "Miembro del jurado, Concurso al Mejor Operador VTS de 2025" },
     { period: "2021.06~2025.12", org: "Instituto Coreano de Investigación en Navegación y Puertos (KINPR)", role: "Director de Planificación" },
+    { period: "2026.11", org: "Ministerio de Océanos y Pesca · Guardia Costera de Corea · KOMSA", role: "Miembro del jurado, Concurso de Contenidos de Seguridad Marítima 2026" },
   ],
 };
 

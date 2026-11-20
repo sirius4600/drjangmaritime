@@ -5,6 +5,8 @@ export interface DailyLogArticle {
   summary: string;
   href: string;
   tag?: string;
+  /** 지난 회차 자료: 올해 것과 헷갈리지 않게 회색으로 구분해 보여 준다 */
+  past?: boolean;
 }
 
 export interface DailyLogEntry {
@@ -33,7 +35,8 @@ export const dailyLogEntries: DailyLogEntry[] = [
     body: [
       "Today in Seoul I served as a judge for the 2026 Maritime Safety Content Contest. Held jointly by the Ministry of Oceans and Fisheries, the Korea Coast Guard and the Korea Maritime Transportation Safety Authority (KOMSA), this nationwide contest gathers works that explain essential safety at sea, such as wearing life jackets, never sailing under the influence, safe fishing and fire prevention, in terms everyone can relate to. It was a cold day, but the works we reviewed were warm-hearted and excellent.",
       "This year the contest grew to five categories: alongside drawings (for primary-school children and younger), AI design and AI short-form video, it added emoji and a \"maritime traffic safety radio\" category. Entries were accepted from 24 August to 22 October, and 41 prizes will be awarded, including the Minister of Oceans and Fisheries Award, the Commissioner General of the Korea Coast Guard Award and the KOMSA Chairperson's Award (total prize money KRW 22.2 million). Results are due at the end of November.",
-      "The drawings and short-form videos made by children were especially outstanding. Their view of the sea and of safety was honest and inventive, and many short videos carried a clear safety message in just a few seconds. Last year's (2025) grand prizes went to a primary-school pupil's drawing that turned a toy pirate roulette into a \"safety rules roulette\", an AI poster that packaged life-saving gear like everyday medicine, and a short video that teaches the pre-departure checklist as a catchy song. Year after year, the public's ideas become valuable material for maritime safety education.",
+      "The drawings and short-form videos made by children were especially outstanding. Their view of the sea and of safety was honest and inventive, and many short videos carried a clear safety message in just a few seconds. This year's (2026) winners will be announced officially at the end of November, and I will introduce them then.",
+      "For reference, the following are not this year's winners but last year's (2025) grand-prize works: a primary-school pupil's drawing that turned a toy pirate roulette into a \"safety rules roulette\", an AI poster that packaged life-saving gear like everyday medicine, and a short video that teaches the pre-departure checklist as a catchy song. Year after year, the public's ideas become valuable material for maritime safety education.",
       "I am writing this on a late-night train home. My sincere thanks to every participant for their wonderful work, to the KOMSA staff who prepared the contest and supported the judging, and to my fellow judges.",
     ],
     articles: [
@@ -43,7 +46,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         title: "MOF and Coast Guard launch Maritime Safety Content Contest in five categories incl. AI short-form and emoji (in Korean)",
         summary: "Announcement of the 2026 contest (24 Aug–22 Oct), run by MOF, the Coast Guard and KOMSA, with new emoji and maritime traffic safety radio categories.",
         href: "http://www.haesanews.com/news/articleView.html?idxno=150384",
-        tag: "2026 contest",
+        tag: "This year (2026): contest opens",
       },
       {
         outlet: "News Seoul",
@@ -51,23 +54,25 @@ export const dailyLogEntries: DailyLogEntry[] = [
         title: "Designing safety at sea: the 2026 Maritime Safety Content Contest opens (in Korean)",
         summary: "Themes include life jackets and no drink-sailing; drawings are for primary-school children and younger, other categories open to all. 41 winners, KRW 22.2 million in prizes.",
         href: "https://newsseoul.co.kr/news/view/1065601818107814",
-        tag: "2026 contest",
+        tag: "This year (2026): contest opens",
       },
       {
         outlet: "KOMSA",
-        date: "2026.02",
-        title: "2025 Maritime Safety Content Contest — collection of winning works (in Korean)",
-        summary: "Official PDF collection of last year's 30 winning works in drawing, AI design, AI short-form and policy ideas, including the grand-prize drawing \"Safety Roulette\".",
+        date: "2025 contest",
+        title: "[Last year] 2025 Maritime Safety Content Contest — collection of winning works (in Korean)",
+        summary: "※ Not this year's (2026) winners. Official collection of the 30 winning works from last year's 2025 contest (published Feb 2026). This year's winners are due at the end of November.",
         href: "https://www.komsa.or.kr/prog/contestWinner/edu/sub03_05/list.do",
-        tag: "2025 winners",
+        tag: "Last year (2025) winners · not 2026",
+        past: true,
       },
       {
         outlet: "Haesa News",
         date: "2025.08.24",
-        title: "MOF and Coast Guard open the 2025 Maritime Safety Content Contest, introducing AI categories (in Korean)",
-        summary: "Last year's announcement, when AI design and AI short-form video categories were introduced for the first time.",
+        title: "[Last year] MOF and Coast Guard open the 2025 Maritime Safety Content Contest, introducing AI categories (in Korean)",
+        summary: "Last year's (2025) announcement, when AI design and AI short-form video categories were introduced for the first time.",
         href: "http://www.haesanews.com/news/articleView.html?idxno=140916",
-        tag: "2025 contest",
+        tag: "Last year (2025) contest",
+        past: true,
       },
     ],
   },
