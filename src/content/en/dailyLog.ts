@@ -5,6 +5,8 @@ export interface DailyLogArticle {
   summary: string;
   href: string;
   tag?: string;
+  /** 기사 대표 그림(포스터·표지 등), public 경로 */
+  image?: string;
   /** 지난 회차 자료: 올해 것과 헷갈리지 않게 회색으로 구분해 보여 준다 */
   past?: boolean;
 }
@@ -28,7 +30,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
   {
     id: "komsa-maritime-content-contest-judge-2026-11",
     date: "2026.11.20",
-    title: "Judge, 2026 Maritime Safety Content Contest",
+    title: "2026 Maritime Safety Content Contest Judging",
     excerpt:
       "I served as a judge for the 2026 Maritime Safety Content Contest, held jointly by the Ministry of Oceans and Fisheries, the Korea Coast Guard and the Korea Maritime Transportation Safety Authority (KOMSA). The children's drawings and short-form videos stood out.",
     location: "Seoul",
@@ -47,14 +49,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         summary: "Announcement of the 2026 contest (24 Aug–22 Oct), run by MOF, the Coast Guard and KOMSA, with new emoji and maritime traffic safety radio categories.",
         href: "http://www.haesanews.com/news/articleView.html?idxno=150384",
         tag: "This year (2026): contest opens",
-      },
-      {
-        outlet: "News Seoul",
-        date: "2026.08.23",
-        title: "Designing safety at sea: the 2026 Maritime Safety Content Contest opens (in Korean)",
-        summary: "Themes include life jackets and no drink-sailing; drawings are for primary-school children and younger, other categories open to all. 41 winners, KRW 22.2 million in prizes.",
-        href: "https://newsseoul.co.kr/news/view/1065601818107814",
-        tag: "This year (2026): contest opens",
+        image: "/images/news/2026-maritime-safety-content-contest-poster.jpg",
       },
       {
         outlet: "KOMSA",
@@ -64,15 +59,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         href: "https://www.komsa.or.kr/prog/contestWinner/edu/sub03_05/list.do",
         tag: "Last year (2025) winners · not 2026",
         past: true,
-      },
-      {
-        outlet: "Haesa News",
-        date: "2025.08.24",
-        title: "[Last year] MOF and Coast Guard open the 2025 Maritime Safety Content Contest, introducing AI categories (in Korean)",
-        summary: "Last year's (2025) announcement, when AI design and AI short-form video categories were introduced for the first time.",
-        href: "http://www.haesanews.com/news/articleView.html?idxno=140916",
-        tag: "Last year (2025) contest",
-        past: true,
+        image: "/images/news/2025-maritime-safety-content-contest-winners-cover.jpg",
       },
     ],
   },

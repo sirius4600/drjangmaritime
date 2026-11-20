@@ -4,7 +4,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
   {
     id: "komsa-maritime-content-contest-judge-2026-11",
     date: "2026.11.20",
-    title: "2026年 海洋安全コンテンツ公募展 審査委員",
+    title: "2026年 海洋安全コンテンツ公募展 審査",
     excerpt:
       "海洋水産部・海洋警察庁・韓国海洋交通安全公団（KOMSA）が共同で開く「2026年 海洋安全コンテンツ公募展」の審査に参加した。特に子どもたちの絵とショート動画が際立っていた。",
     location: "ソウル",
@@ -23,14 +23,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         summary: "海洋水産部・海洋警察庁・KOMSAが8月24日〜10月22日に2026年公募展を開催。絵文字と海洋交通安全ラジオ部門を新設。",
         href: "http://www.haesanews.com/news/articleView.html?idxno=150384",
         tag: "今年（2026）公募展の開催",
-      },
-      {
-        outlet: "ニュースソウル",
-        date: "2026.08.23",
-        title: "海の安全をデザインする…「2026年 海洋安全コンテンツ公募展」開催（韓国語）",
-        summary: "救命胴衣・飲酒運航禁止などがテーマ。絵は小学生以下、その他は誰でも応募可能。受賞41名、賞金総額2,220万ウォン。",
-        href: "https://newsseoul.co.kr/news/view/1065601818107814",
-        tag: "今年（2026）公募展の開催",
+        image: "/images/news/2026-maritime-safety-content-contest-poster.jpg",
       },
       {
         outlet: "韓国海洋交通安全公団",
@@ -40,15 +33,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         href: "https://www.komsa.or.kr/prog/contestWinner/edu/sub03_05/list.do",
         tag: "昨年（2025）受賞作・今年ではない",
         past: true,
-      },
-      {
-        outlet: "海事新聞（韓国）",
-        date: "2025.08.24",
-        title: "［昨年］海洋水産部・海洋警察「2025 海洋安全コンテンツ公募展」開催…AI部門を初導入（韓国語）",
-        summary: "昨年（2025年）の開催記事。このときAIデザインとAIショート動画部門が初めて導入された。",
-        href: "http://www.haesanews.com/news/articleView.html?idxno=140916",
-        tag: "昨年（2025）公募展",
-        past: true,
+        image: "/images/news/2025-maritime-safety-content-contest-winners-cover.jpg",
       },
     ],
   },

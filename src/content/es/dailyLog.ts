@@ -4,7 +4,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
   {
     id: "komsa-maritime-content-contest-judge-2026-11",
     date: "2026.11.20",
-    title: "Jurado del Concurso de Contenidos de Seguridad Marítima 2026",
+    title: "Evaluación del Concurso de Contenidos de Seguridad Marítima 2026",
     excerpt:
       "Formé parte del jurado del Concurso de Contenidos de Seguridad Marítima 2026, organizado por el Ministerio de Océanos y Pesca, la Guardia Costera de Corea y la Autoridad Coreana de Seguridad del Transporte Marítimo (KOMSA). Destacaron los dibujos y vídeos cortos de los niños.",
     location: "Seúl",
@@ -23,14 +23,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         summary: "Anuncio del concurso 2026 (24 ago–22 oct) con nuevas categorías de emoticonos y radio de seguridad del tráfico marítimo.",
         href: "http://www.haesanews.com/news/articleView.html?idxno=150384",
         tag: "Este año (2026): apertura",
-      },
-      {
-        outlet: "News Seoul",
-        date: "2026.08.23",
-        title: "Diseñar la seguridad en el mar: abre el Concurso de Contenidos de Seguridad Marítima 2026 (en coreano)",
-        summary: "Temas como el chaleco salvavidas y la prohibición de navegar bebido; 41 premiados y 22,2 millones de wones en premios.",
-        href: "https://newsseoul.co.kr/news/view/1065601818107814",
-        tag: "Este año (2026): apertura",
+        image: "/images/news/2026-maritime-safety-content-contest-poster.jpg",
       },
       {
         outlet: "KOMSA",
@@ -40,15 +33,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         href: "https://www.komsa.or.kr/prog/contestWinner/edu/sub03_05/list.do",
         tag: "Premiados del año pasado (2025) · no 2026",
         past: true,
-      },
-      {
-        outlet: "Haesa News",
-        date: "2025.08.24",
-        title: "[Año pasado] Abre el Concurso de Contenidos de Seguridad Marítima 2025, con categorías de IA por primera vez (en coreano)",
-        summary: "Anuncio del año pasado (2025), cuando se introdujeron por primera vez las categorías de diseño y vídeo corto con IA.",
-        href: "http://www.haesanews.com/news/articleView.html?idxno=140916",
-        tag: "Concurso del año pasado (2025)",
-        past: true,
+        image: "/images/news/2025-maritime-safety-content-contest-winners-cover.jpg",
       },
     ],
   },

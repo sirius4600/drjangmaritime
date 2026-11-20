@@ -4,7 +4,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
   {
     id: "komsa-maritime-content-contest-judge-2026-11",
     date: "2026.11.20",
-    title: "2026년 해양안전 콘텐츠 공모전 심사위원",
+    title: "2026년 해양안전 콘텐츠 공모전 심사",
     excerpt:
       "해양수산부·해양경찰청·한국해양교통안전공단(KOMSA)이 함께 연 「2026년 해양안전 콘텐츠 공모전」 심사에 참여했습니다. 특히 어린이들의 그림과 숏폼 영상이 돋보였습니다.",
     location: "서울",
@@ -23,14 +23,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         summary: "해양수산부·해양경찰청·KOMSA가 8월 24일~10월 22일 「2026년 해양안전 콘텐츠 공모전」을 연다는 소식. 이모티콘과 해양교통안전 라디오 분야가 새로 생겼습니다.",
         href: "http://www.haesanews.com/news/articleView.html?idxno=150384",
         tag: "올해(2026) 공모전 개최",
-      },
-      {
-        outlet: "뉴스서울",
-        date: "2026.08.23",
-        title: "바다의 안전을 디자인하다…'2026년 해양안전 콘텐츠 공모전' 개최",
-        summary: "구명조끼 착용·음주운항 금지 등 해양안전을 주제로, 그림 분야는 초등학생 이하, 나머지는 누구나 참여. 수상자 41명에게 총상금 2,220만 원.",
-        href: "https://newsseoul.co.kr/news/view/1065601818107814",
-        tag: "올해(2026) 공모전 개최",
+        image: "/images/news/2026-maritime-safety-content-contest-poster.jpg",
       },
       {
         outlet: "한국해양교통안전공단",
@@ -40,15 +33,7 @@ export const dailyLogEntries: DailyLogEntry[] = [
         href: "https://www.komsa.or.kr/prog/contestWinner/edu/sub03_05/list.do",
         tag: "지난해(2025) 수상작 · 올해 아님",
         past: true,
-      },
-      {
-        outlet: "해사신문",
-        date: "2025.08.24",
-        title: "[지난해] 해수부·해경, '2025 해양안전 콘텐츠 공모전' 개최…AI 분야 첫 도입",
-        summary: "지난해(2025년) 공모전 개최 기사입니다. 이때 AI 디자인물과 AI 숏폼 영상 분야가 처음 도입되었습니다.",
-        href: "http://www.haesanews.com/news/articleView.html?idxno=140916",
-        tag: "지난해(2025) 공모전",
-        past: true,
+        image: "/images/news/2025-maritime-safety-content-contest-winners-cover.jpg",
       },
     ],
   },

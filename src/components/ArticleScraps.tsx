@@ -34,6 +34,15 @@ export function ArticleScraps({
               aria-hidden="true"
               className="absolute -top-2.5 left-1/2 h-5 w-16 -translate-x-1/2 rotate-[-3deg] bg-[#f3e3a3]/80 shadow-sm"
             />
+            {a.image && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={a.image}
+                alt={a.title}
+                loading="lazy"
+                className={`mb-3 h-56 w-full border border-[#2a2620]/15 object-cover object-top ${a.past ? "grayscale-[35%]" : ""}`}
+              />
+            )}
             {a.tag && (
               <span
                 className={`mb-2 inline-block rounded-sm px-1.5 py-0.5 text-[10.5px] font-bold tracking-wide text-[#ffffff] ${
