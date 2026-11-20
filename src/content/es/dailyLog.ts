@@ -2,6 +2,19 @@ import type { DailyLogEntry } from "../en/dailyLog";
 
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "komsa-maritime-content-contest-judge-2026-11",
+    date: "2026.11.20",
+    title: "Jurado del Concurso Nacional de Contenidos Marítimos 2026 de KOMSA",
+    excerpt:
+      "En Seúl formé parte del jurado del Concurso Nacional de Contenidos Marítimos 2026 de la Autoridad Coreana de Seguridad del Transporte Marítimo (KOMSA). Destacaron los dibujos y los vídeos cortos de los niños.",
+    location: "Seúl",
+    body: [
+      "Hoy en Seúl formé parte del jurado del Concurso Nacional de Contenidos Marítimos 2026 organizado por la Autoridad Coreana de Seguridad del Transporte Marítimo (KOMSA). Hacía frío, pero las obras que evaluamos eran cálidas y excelentes.",
+      "Destacaron especialmente los dibujos y los vídeos cortos hechos por niños. Su mirada sobre el mar y la seguridad era sincera e ingeniosa, y muchos vídeos lograban transmitir con claridad un mensaje de seguridad marítima en pocos segundos. Fue una alegría ver crecer el cariño por el mar en las nuevas generaciones.",
+      "Escribo estas líneas en un tren de regreso a altas horas de la noche. Mi más sincero agradecimiento a todos los participantes por sus magníficas obras, al personal de KOMSA que preparó el concurso y apoyó la evaluación, y a mis compañeros del jurado.",
+    ],
+  },
+  {
     id: "busan-vts-trainees-visit-2026-11",
     date: "2026.11.17",
     title: "Visita al Centro VTS del Puerto de Busan con nuestros nuevos alumnos operadores VTS",

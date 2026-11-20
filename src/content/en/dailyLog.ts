@@ -14,6 +14,19 @@ export interface DailyLogEntry {
 // verified professional milestones; this is the human-interest counterpart.
 export const dailyLogEntries: DailyLogEntry[] = [
   {
+    id: "komsa-maritime-content-contest-judge-2026-11",
+    date: "2026.11.20",
+    title: "Judging the 2026 KOMSA National Maritime Content Contest",
+    excerpt:
+      "In Seoul I served as a judge for the 2026 National Maritime Content Contest of the Korea Maritime Transportation Safety Authority (KOMSA). The children's drawings and short-form videos stood out.",
+    location: "Seoul",
+    body: [
+      "Today in Seoul I served as a judge for the 2026 National Maritime Content Contest held by the Korea Maritime Transportation Safety Authority (KOMSA). It was a cold day, but the works we reviewed were warm-hearted and excellent.",
+      "The drawings and short-form videos made by children were especially outstanding. Their view of the sea and of safety was honest and inventive, and many of the short videos carried a clear maritime safety message in just a few seconds. It was heartening to see a love for the sea growing in the next generation.",
+      "I am writing this on a late-night train back home. My sincere thanks to every participant for their wonderful work, to the KOMSA staff who prepared the contest and supported the judging, and to my fellow judges.",
+    ],
+  },
+  {
     id: "busan-vts-trainees-visit-2026-11",
     date: "2026.11.17",
     title: "Visiting Busan Port VTS Center with Our New VTS Operator Trainees",
