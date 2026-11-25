@@ -297,5 +297,23 @@ export const newsItems: NewsItem[] = [
     source: "IMO / Clean Shipping Coalition",
     sourceUrl: "https://cyprusshippingnews.com/2026/11/20/shipping-industry-urges-governments-to-agree-on-global-ghg-regulations-to-provide-regulatory-certainty-and-incentivize-maritime-decarbonization",
   },
+  {
+    id: "us-ports-cyberattack-surge-november-2026",
+    category: "cyber",
+    title: "미국 항만, 사이버 공격 시도 급증",
+    summary: "미국 주요 항만들이 증가하는 사이버 보안 위협에 직면하고 있으며, 로스앤젤레스 항만은 2026년 8월 한 달간 1억 2천만 건의 사이버 공격 시도를 차단했다. 코퍼스 크리스티 항만은 매일 수백에서 수천 건의 공격 시도를 받고 있으며, 마셜 제도 해사국은 11월 초 8월 미국행 선박 2척의 의심 사건 조사 이후 선박 네트워크 대상 사이버 공격에 대해 경고했다.",
+    date: "2026.11.26",
+    source: "Safety4Sea",
+    sourceUrl: "https://safety4sea.com/us-ports-face-mounting-cybersecurity-threats/",
+  },
+  {
+    id: "imo-mepc85-nzf-decision-november-2026",
+    category: "green",
+    title: "IMO 회원국, 넷제로 프레임워크 결정 앞두고 2주의 중대 국면",
+    summary: "2026년 11월 23-27일 및 11월 30일-12월 4일 런던에서 개최되는 IMO MEPC 85 회의에서 청정해운연합은 회원국들에게 넷제로 프레임워크의 지체 없는 채택을 촉구했다. 선박 배출가스 감축을 목표로 하는 이 프레임워크는 11월 22일 합의 없이 종료된 COP31 이후 압박을 받고 있다. 업계 관계자들은 지속적인 지연이 국가 및 지역별 기후 규정의 복잡한 혼재를 초래할 위험이 있다고 경고한다.",
+    date: "2026.11.26",
+    source: "Cyprus Shipping News",
+    sourceUrl: "https://cyprusshippingnews.com/2026/11/25/time-ticking-two-weeks-for-governments-to-green-light-framework-for-cutting-shipping-em/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

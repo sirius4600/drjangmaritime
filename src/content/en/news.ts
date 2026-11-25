@@ -331,5 +331,23 @@ export const newsItems: NewsItem[] = [
     source: "IMO / Clean Shipping Coalition",
     sourceUrl: "https://cyprusshippingnews.com/2026/11/20/shipping-industry-urges-governments-to-agree-on-global-ghg-regulations-to-provide-regulatory-certainty-and-incentivize-maritime-decarbonization",
   },
+  {
+    id: "us-ports-cyberattack-surge-november-2026",
+    category: "cyber",
+    title: "US Ports Report Surge in Cyberattack Attempts",
+    summary: "Major US ports are facing mounting cybersecurity threats, with the Port of Los Angeles blocking 120 million attempted cyberattacks in August 2026 alone. The Port of Corpus Christi reports receiving hundreds or thousands of daily attack attempts, while the Marshall Islands Maritime Administrator warned in early November of targeted cyberattacks on shipboard networks following investigations into suspected cyber incidents involving two US-bound vessels in August.",
+    date: "2026.11.26",
+    source: "Safety4Sea",
+    sourceUrl: "https://safety4sea.com/us-ports-face-mounting-cybersecurity-threats/",
+  },
+  {
+    id: "imo-mepc85-nzf-decision-november-2026",
+    category: "green",
+    title: "IMO Member States Face Critical Two Weeks on Net-Zero Framework",
+    summary: "As IMO's MEPC 85 session opens in London from November 23-27 and November 30-December 4, 2026, the Clean Shipping Coalition calls on member states to adopt the Net-Zero Framework without further delay. The framework, intended to reduce shipping emissions, faces pressure after COP31 closed on November 22 without agreement. Industry stakeholders warn that continued delay risks creating a costly patchwork of national and regional climate rules.",
+    date: "2026.11.26",
+    source: "Cyprus Shipping News",
+    sourceUrl: "https://cyprusshippingnews.com/2026/11/25/time-ticking-two-weeks-for-governments-to-green-light-framework-for-cutting-shipping-em/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
