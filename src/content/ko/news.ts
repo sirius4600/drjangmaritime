@@ -315,5 +315,14 @@ export const newsItems: NewsItem[] = [
     source: "Cyprus Shipping News",
     sourceUrl: "https://cyprusshippingnews.com/2026/11/25/time-ticking-two-weeks-for-governments-to-green-light-framework-for-cutting-shipping-em/",
   },
+  {
+    id: "maersk-whitearmor-cyber-incident-november-2026",
+    category: "cyber",
+    title: "Maersk, WhiteArmor 주장 이후 레거시 시스템 데이터 유출 확인",
+    summary: "2026년 11월 11일, Maersk는 과거 인수 과정에서 승계된 로컬 레거시 시스템에서 무단 접근 및 데이터 추출이 발생했음을 확인했다. WhiteArmor 랜섬웨어 그룹은 11월 7일 Maersk를 유출 사이트에 등록하며 LF Logistics 플랫폼에서 약 100 GB의 데이터를 탈취했다고 주장하고 30일 내 비트코인으로 500만 달러를 요구했다. Maersk는 초기 조사 결과 민감 데이터 유출 가능성은 낮으며 다른 시스템과 고객 운영에는 영향이 없다고 밝혔다.",
+    date: "2026.11.27",
+    source: "Industrial Cyber",
+    sourceUrl: "https://industrialcyber.co/ransomware/maersk-investigates-legacy-system-breach-after-whitearmor-ransomware-group-claims-100gb-logistics-data-theft/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

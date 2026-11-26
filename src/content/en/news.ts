@@ -349,5 +349,14 @@ export const newsItems: NewsItem[] = [
     source: "Cyprus Shipping News",
     sourceUrl: "https://cyprusshippingnews.com/2026/11/25/time-ticking-two-weeks-for-governments-to-green-light-framework-for-cutting-shipping-em/",
   },
+  {
+    id: "maersk-whitearmor-cyber-incident-november-2026",
+    category: "cyber",
+    title: "Maersk Confirms Data Theft from Legacy System Following WhiteArmor Claims",
+    summary: "On November 11, 2026, Maersk confirmed unauthorized access and data extraction from a local legacy system inherited through a previous acquisition. The WhiteArmor ransomware group listed Maersk on its leak site on November 7, claiming to have stolen approximately 100 GB of data from the LF Logistics platform and demanding $5 million in Bitcoin within 30 days. Maersk stated that initial findings suggest no sensitive data were disclosed and that other systems and customer operations remain unaffected.",
+    date: "2026.11.27",
+    source: "Industrial Cyber",
+    sourceUrl: "https://industrialcyber.co/ransomware/maersk-investigates-legacy-system-breach-after-whitearmor-ransomware-group-claims-100gb-logistics-data-theft/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
