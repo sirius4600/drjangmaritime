@@ -324,5 +324,23 @@ export const newsItems: NewsItem[] = [
     source: "Industrial Cyber",
     sourceUrl: "https://industrialcyber.co/ransomware/maersk-investigates-legacy-system-breach-after-whitearmor-ransomware-group-claims-100gb-logistics-data-theft/",
   },
+  {
+    id: "tanker-cyberattacks-investigation-november-2026",
+    category: "cyber",
+    title: "미국, 상선 50척 대상 사이버 공격 의혹 조사",
+    summary: "11월 23일 보도에 따르면 미 당국이 석유, 액화석유가스, 화학물질 등 위험화물을 운송하는 최대 50척의 선박을 대상으로 한 사이버 공격 의혹을 조사 중이다. 해당 공격은 해상 네트워크에 사용되는 Fortinet 라우터의 취약점을 악용한 것으로 보이며, 일부 선박은 폭파 위협이나 금품 요구를 받았다. 마셜제도 해사청은 11월 초 2026년 8월 미국행 선박 2척의 의심 사건 조사 이후 선박 네트워크 대상 공격에 대해 경고한 바 있다.",
+    date: "2026.11.28",
+    source: "The Wall Street Journal / Safety4Sea",
+    sourceUrl: "https://dig.watch/updates/suspected-maritime-cyberattacks-security-concerns",
+  },
+  {
+    id: "imo-nextwave-seafarers-cadet-training-workshop-2026",
+    category: "seafarer",
+    title: "IMO, 사관생 훈련 기회 확대 위한 글로벌 워크숍 개최",
+    summary: "11월 20일 IMO는 런던 본부에서 NextWave Seafarers 글로벌 워크숍을 개최하여 25개국 이상에서 온 80명 이상의 참가자가 의무 승선 훈련 배치 장벽을 논의했다. 많은 해기사 지망생들이 훈련을 완료하고 자격증을 취득하는 데 필요한 승선 경력을 확보하기 위해 장기간 대기하고 있다. BIMCO/ICS 선원 인력 보고서 2026에 따르면 유자격 해기사 부족이 심화되고 있으며, 정부·해운사·해사교육기관 간 협력을 통한 인력 파이프라인 확대가 시급함을 강조하고 있다.",
+    date: "2026.11.28",
+    source: "Safety4Sea",
+    sourceUrl: "https://safety4sea.com/imo-seeks-to-expand-onboard-training-opportunities-for-cadets/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];

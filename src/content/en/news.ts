@@ -358,5 +358,23 @@ export const newsItems: NewsItem[] = [
     source: "Industrial Cyber",
     sourceUrl: "https://industrialcyber.co/ransomware/maersk-investigates-legacy-system-breach-after-whitearmor-ransomware-group-claims-100gb-logistics-data-theft/",
   },
+  {
+    id: "tanker-cyberattacks-investigation-november-2026",
+    category: "cyber",
+    title: "US Investigates Suspected Cyberattacks on 50 Commercial Tankers",
+    summary: "US authorities are investigating suspected cyber incidents involving as many as 50 vessels carrying oil, liquefied petroleum gas, chemicals and other hazardous cargo, according to reports published November 23. The campaign appears to involve exploitation of Fortinet routers used in maritime networks, with some vessels receiving bomb threats or ransom demands. The Marshall Islands Maritime Administrator had previously warned of targeted shipboard network attacks in early November following investigations into suspected incidents involving two US-bound vessels in August 2026.",
+    date: "2026.11.28",
+    source: "The Wall Street Journal / Safety4Sea",
+    sourceUrl: "https://dig.watch/updates/suspected-maritime-cyberattacks-security-concerns",
+  },
+  {
+    id: "imo-nextwave-seafarers-cadet-training-workshop-2026",
+    category: "seafarer",
+    title: "IMO Hosts Global Workshop to Expand Cadet Training Opportunities",
+    summary: "On November 20, IMO hosted the NextWave Seafarers Global Workshop in London, bringing together over 80 participants from more than 25 countries to address barriers to mandatory onboard training placements. Many aspiring maritime professionals face prolonged waiting periods to secure the sea-time required to complete their training and obtain professional qualifications. The BIMCO/ICS Seafarer Workforce Report 2026 highlights a growing shortage of qualified officers, underscoring the urgent need to expand the industry's talent pipeline through cooperation between governments, shipping companies and maritime training institutions.",
+    date: "2026.11.28",
+    source: "Safety4Sea",
+    sourceUrl: "https://safety4sea.com/imo-seeks-to-expand-onboard-training-opportunities-for-cadets/",
+  },
 // --- daily-append-marker: the daily research job inserts new items just above this line. Do not remove or edit it. ---
 ];
